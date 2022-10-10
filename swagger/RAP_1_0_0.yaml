@@ -1,0 +1,196 @@
+openapi: 3.0.0
+info:
+  x-api-id: be447a40-ee4z-11e9-81b4-2a2ae2dbcce4
+  x-audience: external-public
+  x-summary: TRASPORTI - Invio dati trasporto pubblico
+  title: "RAP - Regional Access Point"
+  version: 1.0.0
+  description: API dedicate alla gestione dei file NeTEx per interscambio NAP - RAP
+  termsOfService: "http://swagger.io/terms/"
+  license:
+    name: "GNU General Public License, version 2"
+    url: "https://www.gnu.org/licenses/old-licenses/gpl-2.0.html"
+servers:
+  - url: https://server.test.it/netex/api/v1
+    description: Server di test
+  - url: https://server.prod.it/netex/api/v1
+    description: Server di prod
+security:
+  - bearerAuth: []
+tags:
+  - name: Elenco Servizi
+    description: API per la gestione dei file NeTEx
+paths:
+  /xsdzip:
+    get:
+      tags:
+        - Elenco Servizi
+      summary: Ottiene una versione dei file XSD utilizzati per la generazione dei file NeTEx
+      responses:
+        "200":
+          $ref: "#/components/responses/200_Ok_xsdzip"
+        "401":
+          $ref: "#/components/responses/401_Unauthorized"
+        "404":
+          $ref: "#/components/responses/404_NotFound"
+        "500":
+          $ref: "#/components/responses/500_Internal"
+  /convertedNetex:
+    get:
+      tags:
+        - Elenco Servizi
+      summary: Ottiene le informazioni di cosa viene reso disponibile per lo scaricamento
+      responses:
+        "200":
+          $ref: "#/components/responses/200_Ok_converted"
+        "401":
+          $ref: "#/components/responses/401_Unauthorized"
+        "404":
+          $ref: "#/components/responses/404_NotFound"
+        "500":
+          $ref: "#/components/responses/500_Internal"
+  /downloadVersion:
+    get:
+      tags:
+        - Elenco Servizi
+      summary: Scarica i dati veri e propri in formato NeTEx
+      parameters:
+        - name: level
+          in: query
+          required: true
+          schema:
+            type: number
+            enum: [1,2]
+            default: 1
+          description: Livello del profilo italiano
+        - name: agencyCode
+          in: query
+          required: true
+          schema:
+            type: string
+            example: CCA-VCO
+          description: "Raggruppamento di appartenenza del dato"
+        - name: gzVersion
+          in: query
+          required: false
+          schema:
+            type: boolean
+            enum: [true, false]
+            default: true
+          description: "Formato di download del file (true=zip, false=xml)"
+      responses:
+        "200":
+          $ref: "#/components/responses/200_Ok_download"
+        "400":
+          $ref: "#/components/responses/400_BadRequest"
+        "401":
+          $ref: "#/components/responses/401_Unauthorized"
+        "404":
+          $ref: "#/components/responses/404_NotFound"
+        "500":
+          $ref: "#/components/responses/500_Internal"
+components:
+  responses:
+    200_Ok_xsdzip:
+      content:
+        application/gzip:
+          schema:
+            type: string
+            format: binary
+            example: "Attached gzip file as binary string"
+      description: Ok
+    200_Ok_converted:
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "#/components/schemas/converted"
+      description: Ok
+    200_Ok_download:
+      content:
+        application/gzip:
+          schema:
+            type: string
+            format: binary
+            example: "Attached gzip file as binary string"
+      description: Ok
+    400_BadRequest:
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+      description: Bad Request
+    401_Unauthorized:
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+      description: Unauthorized
+    404_NotFound:
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+      description: Not Found
+    500_Internal:
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+      description: Internal server error
+  schemas:
+    converted:
+      title: Response_converted
+      type: object
+      properties:
+        agencyCode:
+          description: "Raggruppamento di appartenenza del dato"
+          example: "CCA-VCO"
+          type: string
+        convertionDate:
+          description: "Data di esecuzione della conversione (YYYY-MM-DD hh:mm:ss)"
+          example: "2022-08-12 14:12:35"
+          type: string
+        idVersion:
+          description: "Versione di elaborazione"
+          example: "1"
+          type: string
+        xsdVersion:
+          description: "Versione di xsd utilizzata per la conversione"
+          example: "1.0"
+          type: string
+    Error:
+      title: Error
+      type: object
+      properties:
+        title:
+          description: "Una breve descrizione dell'errore"
+          example: "Descrizione dell'errore"
+          type: string
+        detail:
+          description: "Dettagli dell'errore"
+          example: "Descrizione estesa dell'errore"
+          type: string
+        status:
+          description: "Il codice HTTP dell'errore"
+          example: 401
+          exclusiveMaximum: true
+          format: int32
+          maximum: 600
+          minimum: 100
+          type: integer
+        type:
+          default: "about:blank"
+          description: Un URI assoluto che identifica il tipo di problema
+          example: "https://www.rfc-editor.org/rfc/rfc7235#section-3.1"
+          format: uri
+          type: string
+        timestamp:
+          description: "Timestamp dell'errore"
+          example: "Timestamp dell'errore in formato YYYY-MM-DD hh:mm:ss"
+          type: string
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
