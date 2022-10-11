@@ -157,9 +157,9 @@ components:
           example: "1"
           type: string
         xsdVersion:
-          description: "Versione di xsd utilizzata per la conversione"
-          example: "1.0"
-          type: string
+          description: "Soglia massima di versione xsd utilizzata per la conversione"
+          example: 1
+          type: number
     Error:
       title: Error
       type: object
