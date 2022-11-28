@@ -118,7 +118,7 @@ NeTEX italian Profile EPIP + Level 2
 								<FromDate>2021-01-01T00:00:00</FromDate>
 								<ToDate>2099-12-31T00:00:00</ToDate>
 							</ValidBetween>
-							<OrganisationRef xsi:type="OperatorRefStructure" ref="IT:ITC1:Operator:metroATMMILANO:ATMMILANO">ATMMilano</OrganisationRef>
+							<OrganisationRef ref="IT:ITC1:Operator:metroATMMILANO:ATMMILANO">ATMMilano</OrganisationRef>
 							<AccountingCode>ATMMilano</AccountingCode>
 							<AccountingType>contract</AccountingType>
 						</JourneyAccounting>
@@ -948,12 +948,6 @@ NeTEX italian Profile EPIP + Level 2
 									<TrainElement id="IT:ITC1:TrainElement:metroATMMILANO:1" version="any">
 										<TrainElementType>carriage</TrainElementType>
 										<FareClasses>any</FareClasses>
-										<PassengerCapacity id="IT:ITC1:PassengerCapacity:3a">
-											<SeatingCapacity>23</SeatingCapacity>
-											<StandingCapacity>73</StandingCapacity>
-											<SpecialPlaceCapacity>2</SpecialPlaceCapacity>
-											<WheelchairPlaceCapacity>2</WheelchairPlaceCapacity>
-										</PassengerCapacity>
 									</TrainElement>
 								</TrainComponent>
 								<TrainComponent id="IT:ITC1:TrainComponent:metroATMMILANO:2" version="any" order="2">
@@ -10460,7 +10454,6 @@ NeTEX italian Profile EPIP + Level 2
 							<SideText>Milano</SideText>
 							<FrontText>Milano</FrontText>
 							<PublicCode>01</PublicCode>
-							<PrivateCode>01</PrivateCode>
 						</DestinationDisplay>
 						<DestinationDisplay version="any" id="IT:ITC1:DestinationDisplay:trenoFS:dest:2">
 							<Name>Verona Centrale F.S.</Name>
