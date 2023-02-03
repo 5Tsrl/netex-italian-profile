@@ -154,8 +154,8 @@ components:
           type: string
         idVersion:
           description: "Versione di elaborazione"
-          example: "1"
-          type: string
+          example: 1
+          type: number
         xsdVersion:
           description: "Soglia massima di versione xsd utilizzata per la conversione"
           example: 1
