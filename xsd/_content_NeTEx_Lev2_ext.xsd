@@ -724,6 +724,7 @@ POIs will be provided in NeTEx datasets; they will in most cases be defined in e
 (INSPIRE, OSM, SPOI, or commercial datasets) and be referenced by SITE CONNECTIONs.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:element>
+				<xsd:element name="parkings" type="parkingsL2_RelStructure" minOccurs="0"/>
 				<xsd:element ref="tariffZones" minOccurs="0"/>
 			</xsd:sequence>
 		</xsd:choice>
@@ -890,6 +891,117 @@ POIs will be provided in NeTEx datasets; they will in most cases be defined in e
         </xsd:sequence>
         <xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
     </xsd:complexType>
+	<!-- parte aggiuntiva legata al parking diversa dalla versione povera dell'epip -->
+	<xsd:complexType name="parkingsL2_RelStructure">
+		<xsd:sequence>
+			<xsd:element name="Parking" type="ParkingL2_VersionStructure" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:complexType name="ParkingL2_VersionStructure">
+		<xsd:sequence>
+			<xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:element ref="Name" minOccurs="0"/>
+			<!-- aggiunto ShortName da GroupOfEntitiesGroup NeTEx -->
+			<xsd:element ref="ShortName" minOccurs="0"/>
+			<xsd:element ref="Description" minOccurs="0"/>
+			<xsd:element ref="Centroid" minOccurs="0"/>
+			<!-- aggiunto Polygon da ZoneGroup NeTEx -->
+			<xsd:element ref="gml:Polygon" minOccurs="0"/>
+			<!-- aggiunto RoadAddress da AddressablePlaceGroup NeTEx -->
+			<xsd:element ref="RoadAddress" minOccurs="0"/>
+			<!-- aggiunto OperatorRef da SiteGroup dove c'è OrganisationRef NeTEx? -->
+			<xsd:element ref="OperatorRef" minOccurs="0"/>
+			<xsd:element ref="Covered" minOccurs="0"/>
+			<!-- originariamente in ParkingGroup NeTEx (inizio) -->
+			<xsd:element ref="ParentSiteRef" minOccurs="0"/>
+			<!-- aggiunto ParkingType da ParkingDetailsGroup in ParkingGroup -->
+			<xsd:element name="ParkingType" type="ParkingTypeEnumeration" minOccurs="0"/>
+			<xsd:element ref="ParkingVehicleTypes" minOccurs="0"/>
+			<!-- aggiunto ParkingLayout da ParkingDetailsGroup in ParkingGroup -->
+			<xsd:element name="ParkingLayout" type="ParkingLayoutEnumeration" minOccurs="0"/>
+			<!-- aggiunto PrincipalCapacity da ParkingDetailsGroup in ParkingGroup -->
+			<xsd:element name="PrincipalCapacity" type="xsd:integer" minOccurs="0"/>
+			<xsd:element ref="TotalCapacity" minOccurs="0"/>
+			<!-- aggiunto ProhibitedForHazardousMaterials da ParkingDetailsGroup in ParkingGroup -->
+			<xsd:element name="ProhibitedForHazardousMaterials" type="xsd:boolean" default="true" minOccurs="0"/>
+			<xsd:element ref="RechargingAvailable" minOccurs="0"/>
+			<!-- aggiunto Secure da ParkingDetailsGroup in ParkingGroup -->
+			<xsd:element name="Secure" type="xsd:boolean" minOccurs="0"/>
+			<xsd:element ref="ParkingPaymentProcess" minOccurs="0"/>
+			<!-- aggiunto ParkingReservation da ParkingChargeGroup in ParkingGroup -->
+			<xsd:element name="ParkingReservation" type="ParkingReservationEnumeration" minOccurs="0"/>
+			<!-- aggiunto vehicleEntrances da ParkingVehicleGroup in ParkingGroup -->
+			<xsd:element name="vehicleEntrances" type="vehicleEntrances_RelStructure" minOccurs="0"/>
+			<!-- originariamente in ParkingGroup NeTEx (fine) -->
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:simpleType name="ParkingTypeEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for PARKING types.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="parkAndRide"/>
+			<xsd:enumeration value="liftShareParking"/>
+			<xsd:enumeration value="urbanParking"/>
+			<xsd:enumeration value="airportParking"/>
+			<xsd:enumeration value="trainStationParking"/>
+			<xsd:enumeration value="exhibitionCentreParking"/>
+			<xsd:enumeration value="rentalCarParking"/>
+			<xsd:enumeration value="shoppingCentreParking"/>
+			<xsd:enumeration value="motorwayParking"/>
+			<xsd:enumeration value="roadside"/>
+			<xsd:enumeration value="parkingZone"/>
+			<xsd:enumeration value="cycleRental"/>
+			<xsd:enumeration value="undefined"/>
+			<xsd:enumeration value="other"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="ParkingLayoutEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for PARKING Layout types.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="covered"/>
+			<xsd:enumeration value="openSpace"/>
+			<xsd:enumeration value="multistorey"/>
+			<xsd:enumeration value="underground"/>
+			<xsd:enumeration value="roadside"/>
+			<xsd:enumeration value="undefined"/>
+			<xsd:enumeration value="other"/>
+			<xsd:enumeration value="onPavement"/>
+			<xsd:enumeration value="cycleHire">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED 1.2.2 Use onPavement instead</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="ParkingReservationEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for PARKING User types.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="reservationRequired"/>
+			<xsd:enumeration value="reservationAllowed"/>
+			<xsd:enumeration value="noReservations"/>
+			<xsd:enumeration value="registrationRequired"/>
+			<xsd:enumeration value="other"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="vehicleEntrances_RelStructure">
+		<xsd:sequence>
+			<xsd:element name="ParkingEntranceForVehicles" type="ParkingEntranceForVehicles_VersionStructure" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:complexType name="ParkingEntranceForVehicles_VersionStructure">
+		<xsd:sequence>
+			<xsd:element ref="RoadAddress" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
 	<!-- versioni di Site e figli con quay modificate (presi da epip) (fine) -->
 	<!-- versioni di Service e figli con route modificato (presi da epip) (inizio) -->
 	<xsd:complexType name="ServiceFrameL2_VersionStructure">
