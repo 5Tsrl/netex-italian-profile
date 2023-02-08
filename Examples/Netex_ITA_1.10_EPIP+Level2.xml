@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2017 rel. 3 sp1 (x64) (http://www.altova.com) by Rossella Panero (5T S.r.l.) -->
 <!--
 NeTEX italian Profile EPIP + Level 2
 -->
-<PublicationDelivery xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:siri="http://www.siri.org.uk/siri" version="any" xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.netex.org.uk/netex ../xsd/NeTEx_publication.xsd">
+<PublicationDelivery xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:siri="http://www.siri.org.uk/siri" version="any" xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.netex.org.uk/netex ../NeTEx_publication_Lev2.xsd">
 	<PublicationTimestamp>2021-01-01T12:00:00.000+02:00</PublicationTimestamp>
 	<ParticipantRef>RAP</ParticipantRef>
 	<Description>Esempio di profilo italiano del NeTEx EPIP + Livello 2</Description>
@@ -104,7 +103,7 @@ NeTEX italian Profile EPIP + Level 2
 						<!--=====contratto Ferro ATV Movalia===== -->
 						<JourneyAccounting version="any" id="IT:ITC1:JourneyAccounting:busATV:1VR">
 							<validityConditions>
-								<ValidityConditionRef ref="IT:ITC1:busATV:vc:1"/>
+								<ValidityConditionRef ref="IT:ITC1:ValidityCondition:busATV:vc:1"/>
 							</validityConditions>
 							<Name>Contratto Verona</Name>
 							<Description>Contratto Verona</Description>
@@ -706,6 +705,7 @@ NeTEX italian Profile EPIP + Level 2
 							<PrivateCode>002</PrivateCode>
 							<capacities>
 								<PassengerCapacity id="IT:ITC1:PassengerCapacity:2">
+									<TotalCapacity>59</TotalCapacity>
 									<SeatingCapacity>54</SeatingCapacity>
 									<StandingCapacity>5</StandingCapacity>
 									<SpecialPlaceCapacity>0</SpecialPlaceCapacity>
@@ -2291,7 +2291,7 @@ NeTEX italian Profile EPIP + Level 2
 							<StopPlaceType>other</StopPlaceType>
 							<!-- ============QUAYS ===================- -->
 							<quays>
-								<Quay id="IT:ITC1:" version="any">
+								<Quay id="IT:ITC1:Quay:busATS:001MI" version="any">
 									<Name>Capolinea Autostradale</Name>
 									<Description>Capolinea Autostradale - TO-MI</Description>
 									<Centroid>
@@ -19497,6 +19497,12 @@ NeTEX italian Profile EPIP + Level 2
 						</ServiceJourneyPattern>
 						<!--- =============PluService=============-->
 						<ServiceJourneyPattern id="IT:ITC1:ServiceJourneyPattern:metroATMMILANO:M2_3_317" version="any">
+							<!-- da epip
+							<ValidBetween>
+								<FromDate>2021-01-01T00:00:00</FromDate>
+								<ToDate>2022-12-31T00:00:00</ToDate>
+							</ValidBetween>
+							-->
 							<Name>M2_3</Name>
 							<ShortName>M2_3</ShortName>
 							<Description>m2 - linea verde</Description>
@@ -19749,6 +19755,12 @@ NeTEX italian Profile EPIP + Level 2
 							</linksInSequence>
 						</ServiceJourneyPattern>
 						<ServiceJourneyPattern id="IT:ITC1:ServiceJourneyPattern:metroATMMILANO:M2_18_335" version="any">
+							<!-- da epip
+							<ValidBetween>
+								<FromDate>2021-01-01T00:00:00</FromDate>
+								<ToDate>2022-12-31T00:00:00</ToDate>
+							</ValidBetween>
+							-->
 							<Name>M2_18</Name>
 							<ShortName>M2_18</ShortName>
 							<Description>m2 - linea verde</Description>
@@ -20001,6 +20013,12 @@ NeTEX italian Profile EPIP + Level 2
 							</linksInSequence>
 						</ServiceJourneyPattern>
 						<ServiceJourneyPattern id="IT:ITC1:ServiceJourneyPattern:metroATMMILANO:M1_3_343" version="any">
+							<!-- da epip
+							<ValidBetween>
+								<FromDate>2021-01-01T00:00:00</FromDate>
+								<ToDate>2022-12-31T00:00:00</ToDate>
+							</ValidBetween>
+							-->
 							<Name>M1_3</Name>
 							<ShortName>M1_3</ShortName>
 							<Description>m1 - linea rossa</Description>
@@ -20261,6 +20279,12 @@ NeTEX italian Profile EPIP + Level 2
 							</linksInSequence>
 						</ServiceJourneyPattern>
 						<ServiceJourneyPattern id="IT:ITC1:ServiceJourneyPattern:metroATMMILANO:M1_6_348" version="any">
+							<!-- da epip
+							<ValidBetween>
+								<FromDate>2021-01-01T00:00:00</FromDate>
+								<ToDate>2022-12-31T00:00:00</ToDate>
+							</ValidBetween>
+							-->
 							<Name>M1_6</Name>
 							<ShortName>M1_6</ShortName>
 							<Description>m1 - linea rossa</Description>
@@ -20889,7 +20913,7 @@ NeTEX italian Profile EPIP + Level 2
 									<CateringFacilityList> buffet</CateringFacilityList>
 									<FareClasses> firstClass standardClass</FareClasses>
 									<MobilityFacilityList> stepFreeAccess suitableForWheelchairs</MobilityFacilityList>
-									<NuisanceFacilityList> mobilePhoneFreeZone noSmoking 							</NuisanceFacilityList>
+									<NuisanceFacilityList> mobilePhoneFreeZone noSmoking</NuisanceFacilityList>
 									<PassengerCommsFacilityList>publicWifi </PassengerCommsFacilityList>
 									<PassengerInformationFacilityList>nextStopIndicator passengerInformationDisplay realTimeConnections stopAnnouncements </PassengerInformationFacilityList>
 									<SanitaryFacilityList> toilet wheelChairAccessToilet</SanitaryFacilityList>
@@ -20976,6 +21000,23 @@ NeTEX italian Profile EPIP + Level 2
 								</TimetabledPassingTime>
 							</passingTimes>
 							<facilities>
+								<!-- da epip
+								<ServiceFacilitySet version="any" id="IT:ITC1:ServiceFacilitySet:trenoFS:2">
+									<AssistanceFacilityList>boardingAssistance conductor wheechairAssistance</AssistanceFacilityList>
+									<CateringFacilityList> buffet</CateringFacilityList>
+									<FareClasses> firstClass standardClass</FareClasses>
+									<MobilityFacilityList> stepFreeAccess suitableForWheelchairs</MobilityFacilityList>
+									<NuisanceFacilityList> mobilePhoneFreeZone noSmoking 							</NuisanceFacilityList>
+									<PassengerCommsFacilityList>publicWifi </PassengerCommsFacilityList>
+									<PassengerInformationFacilityList>nextStopIndicator passengerInformationDisplay realTimeConnections stopAnnouncements </PassengerInformationFacilityList>
+									<SanitaryFacilityList> toilet wheelChairAccessToilet</SanitaryFacilityList>
+									<TicketingServiceFacilityList> purchase</TicketingServiceFacilityList>
+									<AccommodationAccessList> reservation</AccommodationAccessList>
+									<AccommodationFacilityList> couchette seating sleeper</AccommodationFacilityList>
+									<CouchetteFacilityList> C2 C4 C6 T2</CouchetteFacilityList>
+									<LuggageCarriageFacilityList> baggageStorage baggageVan cyclesAllowedWithReservation luggageRacks</LuggageCarriageFacilityList>
+								</ServiceFacilitySet>
+								-->
 								<ServiceFacilitySetRef ref="IT:ITC1:ServiceFacilitySet:trenoFS:1"/>
 							</facilities>
 						</ServiceJourney>

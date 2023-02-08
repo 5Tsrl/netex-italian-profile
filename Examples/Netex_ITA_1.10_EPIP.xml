@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-NeTEX italian Profile 
+NeTEX italian Profile EPIP
 -->
 <PublicationDelivery xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:siri="http://www.siri.org.uk/siri" version="1.10" xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.netex.org.uk/netex ../NeTEx_publication_EPIP.xsd">
 	<PublicationTimestamp>2021-01-01T12:00:00.000+02:00</PublicationTimestamp>
 	<ParticipantRef>RAP</ParticipantRef>
-	<Description>Esempio di profilo italiano del NeTEx</Description>
+	<Description>Esempio di profilo italiano del NeTEx EPIP</Description>
 	<dataObjects>
 		<CompositeFrame id="epd:IT:ITC1:CompositeFrame_EU_PI_STOP_OFFER:ita" version="any">
 			<ValidBetween>
@@ -395,10 +395,6 @@ NeTEX italian Profile
 						</Operator>
 						<!--- =======operatori PluService======== -->
 						<Operator id="IT:ITC1:Operator:metroATMMILANO:ATMMILANO" version="any">
-							<ValidBetween>
-								<FromDate>2021-02-26T00:00:00</FromDate>
-								<ToDate>2021-03-30T00:00:00</ToDate>
-							</ValidBetween>
 							<Name>ATMMilano</Name>
 							<ShortName>ATMMilano</ShortName>
 							<LegalName>ATMMilano</LegalName>
@@ -422,6 +418,7 @@ NeTEX italian Profile
 						<VehicleType id="IT:ITC1:VehicleType:busATS:001" version="any">
 							<capacities>
 								<PassengerCapacity id="IT:ITC1:PassengerCapacity:1">
+									<TotalCapacity>60</TotalCapacity>
 									<SeatingCapacity>55</SeatingCapacity>
 									<StandingCapacity>3</StandingCapacity>
 									<SpecialPlaceCapacity>1</SpecialPlaceCapacity>
@@ -537,7 +534,7 @@ NeTEX italian Profile
 						<Train version="any" id="IT:ITC1:Train:trenoFS:2">
 							<Name>Milano - Verona</Name>
 							<Description>E 2 2 2 2 2 2 R 1 1 X</Description>
-							<SelfPropelled> true</SelfPropelled>
+							<SelfPropelled>true</SelfPropelled>
 							<components>
 								<TrainComponent version="any" id="IT:ITC1:TrainComponent:trenoFS:2_01" order="1">
 									<Label>Carriage K</Label>
@@ -699,7 +696,6 @@ NeTEX italian Profile
 				</ResourceFrame>
 				<SiteFrame id="epd:IT:ITC1:SiteFrame_EU_PI_STOP:ita" version="any">
 					<TypeOfFrameRef ref="epip:EU_PI_STOP" versionRef="any"/>
-					<!--- =======FRAME DEFAULTS======== -->
 					<topographicPlaces>
 						<TopographicPlace id="IT:ITC1:TopographicPlace:trenoFS:milanocentrale" version="any">
 							<Descriptor>
@@ -9694,7 +9690,6 @@ NeTEX italian Profile
 				</SiteFrame>
 				<ServiceFrame id="epd:IT:ITC1:ServiceFrame_EU_PI_NETWORK:ita" version="any">
 					<TypeOfFrameRef ref="epip:EU_PI_NETWORK" versionRef="any"/>
-					<!--- =======Network======== -->
 					<Network id="IT:ITC1:Network:metroATMMILANO:20" version="any">
 						<ValidBetween>
 							<FromDate>2021-01-01T00:00:00</FromDate>
@@ -19953,10 +19948,10 @@ NeTEX italian Profile
 					</vehicleJourneys>
 					<journeyInterchanges>
 						<ServiceJourneyInterchange id="IT:ITC1:ServiceJourneyInterchange:trenoFS:1" version="any">
-							<FromPointRef version="any" ref="IT:ITC1:ScheduledStopPoint:trenoFS:milanocentrale"/>
-							<ToPointRef version="any" ref="IT:ITC1:ScheduledStopPoint:trenoFS:milanocentrale"/>
-							<FromJourneyRef version="any" ref="IT:ITC1:ServiceJourney:trenoFS:1"/>
-							<ToJourneyRef version="any" ref="IT:ITC1:ServiceJourney:trenoFS:2"/>
+							<FromPointRef ref="IT:ITC1:ScheduledStopPoint:trenoFS:milanocentrale"/>
+							<ToPointRef ref="IT:ITC1:ScheduledStopPoint:trenoFS:milanocentrale"/>
+							<FromJourneyRef ref="IT:ITC1:ServiceJourney:trenoFS:1"/>
+							<ToJourneyRef ref="IT:ITC1:ServiceJourney:trenoFS:2"/>
 						</ServiceJourneyInterchange>
 					</journeyInterchanges>
 				</TimetableFrame>
