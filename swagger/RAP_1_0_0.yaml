@@ -59,7 +59,7 @@ paths:
           in: query
           required: true
           schema:
-            type: number
+            type: integer
             enum: [1,2]
             default: 1
           description: Livello del profilo italiano
@@ -155,11 +155,11 @@ components:
         idVersion:
           description: "Versione di elaborazione"
           example: 1
-          type: number
+          type: integer
         xsdVersion:
           description: "Soglia massima di versione xsd utilizzata per la conversione"
           example: 1
-          type: number
+          type: integer
     Error:
       title: Error
       type: object
