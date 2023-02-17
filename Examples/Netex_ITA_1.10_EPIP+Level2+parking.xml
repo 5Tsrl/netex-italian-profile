@@ -10363,18 +10363,73 @@ NeTEX italian Profile EPIP + Level 2
 									</gml:LinearRing>
 								</gml:exterior>
 							</gml:Polygon>
-							<RoadAddress id="IT:ITC1:RoadAddress:parcheggiTorino:ra:Porta_Nuova" version="any">
-								<Centroid>
-									<Location>
-										<Longitude>7.67798</Longitude>
-										<Latitude>45.06234</Latitude>
-										<Precision>1</Precision>
-									</Location>
-								</Centroid>
-								<RoadNumber>1</RoadNumber>
-								<RoadName>via Sacchi</RoadName>
-							</RoadAddress>
 							<OperatorRef ref="IT:ITC1:Operator:parcheggiTorino:parcheggiTorino"/>
+							<entrances>
+					            <ParkingPassengerEntrance id="IT:ITC1:ParkingPassengerEntrance:parcheggiTorino:ppe:Porta_Nuova_AccessoPedonale1" version="any">
+					                <Centroid>
+					                    <Location>
+					                        <Longitude>7.67798</Longitude>
+					                        <Latitude>45.06234</Latitude>
+					                        <Precision>1</Precision>
+					                    </Location>
+					                </Centroid>
+					                <PostalAddress id="IT:ITC1:PostalAddress:parcheggiTorino:ppe:Porta_Nuova_AccessoPedonale1_Indirizzo" version="any">
+					                    <CountryName>Italia</CountryName>
+					                    <Street>via Sacchi 1</Street>
+					                    <Town>Torino</Town>
+					                    <PostCode>10121</PostCode>
+					                </PostalAddress>
+					            </ParkingPassengerEntrance>
+					            <ParkingPassengerEntrance id="IT:ITC1:ParkingPassengerEntrance:parcheggiTorino:ppe:Porta_Nuova_AccessoPedonale2" version="any">
+					                <Centroid>
+					                    <Location>
+					                        <Longitude>7.67798</Longitude>
+					                        <Latitude>45.06234</Latitude>
+					                        <Precision>1</Precision>
+					                    </Location>
+					                </Centroid>
+					                <PostalAddress id="IT:ITC1:PostalAddress:parcheggiTorino:ppe:Porta_Nuova_AccessoPedonale1_Indirizzo2" version="any">
+					                    <CountryName>Italia</CountryName>
+					                    <Street>corso Vittorio Emanuele II, 58</Street>
+					                    <Town>Torino</Town>
+					                    <PostCode>10121</PostCode>
+					                </PostalAddress>
+					            </ParkingPassengerEntrance>
+					            <ParkingEntranceForVehicles id="IT:ITC1:ParkingEntranceForVehicles:parcheggiTorino:pefv:Porta_Nuova_EntrataVeicoli1" version="any">
+					                <Centroid>
+					                    <Location>
+					                        <Longitude>7.67798</Longitude>
+					                        <Latitude>45.06234</Latitude>
+					                        <Precision>1</Precision>
+					                    </Location>
+					                </Centroid>
+					                <PostalAddress id="IT:ITC1:PostalAddress:parcheggiTorino:pefv:Porta_Nuova_EntrataVeicoli1_Indirizzo" version="any">
+					                    <CountryName>Italia</CountryName>
+					                    <Street>via Sacchi 1</Street>
+					                    <Town>Torino</Town>
+					                    <PostCode>10121</PostCode>
+					                </PostalAddress>
+					                <IsEntry>true</IsEntry>
+					                <IsExit>false</IsExit>
+					            </ParkingEntranceForVehicles>
+					            <ParkingEntranceForVehicles id="IT:ITC1:ParkingEntranceForVehicles:parcheggiTorino:pefv:Porta_Nuova_UscitaVeicoli1" version="any">
+					                <Centroid>
+					                    <Location>
+					                        <Longitude>7.67798</Longitude>
+					                        <Latitude>45.06234</Latitude>
+					                        <Precision>1</Precision>
+					                    </Location>
+					                </Centroid>
+					                <PostalAddress id="IT:ITC1:PostalAddress:parcheggiTorino:pefv:Porta_Nuova_UscitaVeicoli1_Indirizzo" version="any">
+					                    <CountryName>Italia</CountryName>
+					                    <Street>via Sacchi 1</Street>
+					                    <Town>Torino</Town>
+					                    <PostCode>10121</PostCode>
+					                </PostalAddress>
+					                <IsEntry>false</IsEntry>
+					                <IsExit>true</IsExit>
+					            </ParkingEntranceForVehicles>
+					        </entrances>
 							<ParkingType>parkAndRide</ParkingType>
 							<ParkingVehicleTypes>car cycle</ParkingVehicleTypes>
 							<ParkingLayout>roadside</ParkingLayout>
@@ -10384,21 +10439,6 @@ NeTEX italian Profile EPIP + Level 2
 							<RechargingAvailable>true</RechargingAvailable>
 							<Secure>true</Secure>
 							<ParkingReservation>reservationAllowed</ParkingReservation>
-							<vehicleEntrances>
-								<ParkingEntranceForVehicles id="IT:ITC1:ParkingEntranceForVehicles:parcheggiTorino:Entrance:Porta_Nuova" version="any">
-									<RoadAddress id="IT:ITC1:RoadAddress:parcheggiTorino:rae:Porta_Nuova" version="any">
-										<Centroid>
-											<Location>
-												<Longitude>7.67798</Longitude>
-												<Latitude>45.06234</Latitude>
-												<Precision>1</Precision>
-											</Location>
-										</Centroid>
-										<RoadNumber>1</RoadNumber>
-										<RoadName>via Sacchi</RoadName>
-									</RoadAddress>
-								</ParkingEntranceForVehicles>
-							</vehicleEntrances>
 						</Parking>
 					</parkings>
 				</SiteFrame>
