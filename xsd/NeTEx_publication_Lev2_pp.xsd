@@ -2,7 +2,7 @@
 <!--Note that this simplified XSD does not in any way replace the full NeTEx XSD. It is not guaranteed that the XSD is free from errors.-->
 <xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:netex="http://www.netex.org.uk/netex" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" version="1.1.1" id="NeTEx_publication_Lev2">
 	<xsd:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="gml_combo_v3_2_1_simplified.xsd"/>
-	<xsd:include schemaLocation="_content_NeTEx_Lev2_pp_ext.xsd"/>
+	<xsd:include schemaLocation="_content_NeTEx_Lev2_ext.xsd"/>
 	<xsd:annotation>
 		<xsd:documentation>The intention of this XSD is to provide a simplified schema that represents a subset of the full NeTEx-schema covering the European Passenger Information Profile.
 		This file should not be interpreted as being normative. Neither does this XSD replace the offical NeTEx XSD schemas. It should be used in addition to the offical NeTEx XSD schemas and not instead of.
