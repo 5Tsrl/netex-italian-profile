@@ -10439,6 +10439,123 @@ NeTEX italian Profile EPIP + Level 2
 							<RechargingAvailable>true</RechargingAvailable>
 							<Secure>true</Secure>
 							<ParkingReservation>reservationAllowed</ParkingReservation>
+							<parkingProperties>
+								<ParkingProperties id="IT:ITC1:ParkingProperties:parcheggiTorino:pc1" version="any">
+									<spaces>
+										<ParkingCapacity id="IT:ITC1:ParkingCapacity:parcheggiTorino:pc" version="any">
+											<NumberOfSpaces>100</NumberOfSpaces>
+											<NumberOfSpacesWithRechargePoint>10</NumberOfSpacesWithRechargePoint>
+										</ParkingCapacity>
+									</spaces>
+								</ParkingProperties>
+							</parkingProperties>
+						</Parking>
+						<Parking id="IT:ITC1:Parking:parcheggiBikeSharingTorino:p:Porta_Nuova" version="any">
+							<Name>Parcheggio Porta Nuova</Name>
+							<ShortName>Porta Nuova</ShortName>
+							<Centroid>
+								<Location>
+									<Longitude>7.67798</Longitude>
+									<Latitude>45.06234</Latitude>
+									<Precision>1</Precision>
+								</Location>
+							</Centroid>
+							<gml:Polygon gml:id="parcheggiBikeSharingTorinoGeom">
+								<gml:exterior>
+									<gml:LinearRing>
+										<gml:pos>7.67798 45.06234</gml:pos>
+										<gml:pos>7.67798 45.06234</gml:pos>
+										<gml:pos>7.67798 45.06234</gml:pos>
+										<gml:pos>7.67798 45.06234</gml:pos>
+									</gml:LinearRing>
+								</gml:exterior>
+							</gml:Polygon>
+							<OperatorRef ref="IT:ITC1:Operator:parcheggiTorino:parcheggiTorino"/>
+							<entrances>
+					            <ParkingPassengerEntrance id="IT:ITC1:ParkingPassengerEntrance:parcheggiBikeSharingTorino:ppe:Porta_Nuova_AccessoPedonale1" version="any">
+					                <Centroid>
+					                    <Location>
+					                        <Longitude>7.67798</Longitude>
+					                        <Latitude>45.06234</Latitude>
+					                        <Precision>1</Precision>
+					                    </Location>
+					                </Centroid>
+					                <PostalAddress id="IT:ITC1:PostalAddress:parcheggiBikeSharingTorino:ppe:Porta_Nuova_AccessoPedonale1_Indirizzo" version="any">
+					                    <CountryName>Italia</CountryName>
+					                    <Street>via Sacchi 1</Street>
+					                    <Town>Torino</Town>
+					                    <PostCode>10121</PostCode>
+					                </PostalAddress>
+					            </ParkingPassengerEntrance>
+					            <ParkingPassengerEntrance id="IT:ITC1:ParkingPassengerEntrance:parcheggiBikeSharingTorino:ppe:Porta_Nuova_AccessoPedonale2" version="any">
+					                <Centroid>
+					                    <Location>
+					                        <Longitude>7.67798</Longitude>
+					                        <Latitude>45.06234</Latitude>
+					                        <Precision>1</Precision>
+					                    </Location>
+					                </Centroid>
+					                <PostalAddress id="IT:ITC1:PostalAddress:parcheggiBikeSharingTorino:ppe:Porta_Nuova_AccessoPedonale1_Indirizzo2" version="any">
+					                    <CountryName>Italia</CountryName>
+					                    <Street>corso Vittorio Emanuele II, 58</Street>
+					                    <Town>Torino</Town>
+					                    <PostCode>10121</PostCode>
+					                </PostalAddress>
+					            </ParkingPassengerEntrance>
+					            <ParkingEntranceForVehicles id="IT:ITC1:ParkingEntranceForVehicles:parcheggiBikeSharingTorino:pefv:Porta_Nuova_EntrataVeicoli1" version="any">
+					                <Centroid>
+					                    <Location>
+					                        <Longitude>7.67798</Longitude>
+					                        <Latitude>45.06234</Latitude>
+					                        <Precision>1</Precision>
+					                    </Location>
+					                </Centroid>
+					                <PostalAddress id="IT:ITC1:PostalAddress:parcheggiBikeSharingTorino:pefv:Porta_Nuova_EntrataVeicoli1_Indirizzo" version="any">
+					                    <CountryName>Italia</CountryName>
+					                    <Street>via Sacchi 1</Street>
+					                    <Town>Torino</Town>
+					                    <PostCode>10121</PostCode>
+					                </PostalAddress>
+					                <IsEntry>true</IsEntry>
+					                <IsExit>false</IsExit>
+					            </ParkingEntranceForVehicles>
+					            <ParkingEntranceForVehicles id="IT:ITC1:ParkingEntranceForVehicles:parcheggiBikeSharingTorino:pefv:Porta_Nuova_UscitaVeicoli1" version="any">
+					                <Centroid>
+					                    <Location>
+					                        <Longitude>7.67798</Longitude>
+					                        <Latitude>45.06234</Latitude>
+					                        <Precision>1</Precision>
+					                    </Location>
+					                </Centroid>
+					                <PostalAddress id="IT:ITC1:PostalAddress:parcheggiBikeSharingTorino:pefv:Porta_Nuova_UscitaVeicoli1_Indirizzo" version="any">
+					                    <CountryName>Italia</CountryName>
+					                    <Street>via Sacchi 1</Street>
+					                    <Town>Torino</Town>
+					                    <PostCode>10121</PostCode>
+					                </PostalAddress>
+					                <IsEntry>false</IsEntry>
+					                <IsExit>true</IsExit>
+					            </ParkingEntranceForVehicles>
+					        </entrances>
+					        <ParkingType>cycleRental</ParkingType>
+							<ParkingVehicleTypes>cycle eCycle</ParkingVehicleTypes>
+							<ParkingLayout>roadside</ParkingLayout>
+							<PrincipalCapacity>20</PrincipalCapacity>
+							<TotalCapacity>20</TotalCapacity>
+							<ProhibitedForHazardousMaterials>true</ProhibitedForHazardousMaterials>
+							<RechargingAvailable>true</RechargingAvailable>
+							<Secure>true</Secure>
+							<ParkingReservation>reservationAllowed</ParkingReservation>
+							<parkingProperties>
+								<ParkingProperties id="IT:ITC1:ParkingProperties:parcheggiBikeSharingTorino:pc1" version="any">
+									<spaces>
+										<ParkingCapacity id="IT:ITC1:ParkingCapacity:parcheggiBikeSharingTorino:pc" version="any">
+											<NumberOfSpaces>20</NumberOfSpaces>
+											<NumberOfSpacesWithRechargePoint>5</NumberOfSpacesWithRechargePoint>
+										</ParkingCapacity>
+									</spaces>
+								</ParkingProperties>
+							</parkingProperties>
 						</Parking>
 					</parkings>
 				</SiteFrame>
