@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2017 rel. 3 sp1 (x64) (http://www.altova.com) by Rossella Panero (5T S.r.l.) -->
 <!--
-NeTEX italian Profile EPIP + Level 2 + Fare-->
+NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 <PublicationDelivery xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:siri="http://www.siri.org.uk/siri" version="any" xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../NeTEx-master_2022-08-29/xsd/NeTEx_publication.xsd">
 	<PublicationTimestamp>2021-01-01T12:00:00.000+02:00</PublicationTimestamp>
 	<ParticipantRef>RAP</ParticipantRef>
-	<Description>Esempio di profilo italiano del NeTEx EPIP + Livello 2 + Fare</Description>
+	<Description>Esempio di profilo italiano del NeTEx EPIP + Livello 2 + Fare + Alternative Modes</Description>
 	<dataObjects>
-		<!--Composite Frame EPIP LV2 -->
+		<!--Composite Frame EPIP LV2 (EPIP - Livello 1 + Livello 2)-->
 		<CompositeFrame id="epd:IT:ITC1:CompositeFrame_EU_PI_STOP_OFFER:EPIP:ita" version="any">
 			<ValidBetween>
 				<FromDate>2021-01-01T00:00:00.000+02:00</FromDate>
@@ -22719,7 +22719,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare-->
 				</TimetableFrame>
 			</frames>
 		</CompositeFrame>
-		<!--Composite Frame Fare TPL -->
+		<!--Composite Frame Fare TPL (FARE - Livello 3)-->
 		<CompositeFrame id="epd:IT:ITC1:CompositeFrame_EU_PI_STOP_OFFER:FARE:TPL:ita" version="any">
 			<ValidBetween>
 				<FromDate>2021-01-01T00:00:00.000+02:00</FromDate>
@@ -23121,6 +23121,13 @@ NeTEX italian Profile EPIP + Level 2 + Fare-->
 										<FareTableRef ref="IT:ITC1:busATS:ft:1"/>
 									</fareTables>
 									<FareProductRef ref="IT:ITC1:busATS:pfp:1"/>
+									<prices>
+										<SalesOfferPackagePrice id="IT:ITC1:busATS:sopp:1a" version="any">
+											<DiscountingRule id="IT:ITC1:busATS:sopp:1a" version="any">
+												<Factor>1</Factor>
+											</DiscountingRule>
+										</SalesOfferPackagePrice>
+									</prices>
 								</SalesOfferPackageElement>
 							</salesOfferPackageElements>
 						</SalesOfferPackage>
@@ -23135,6 +23142,13 @@ NeTEX italian Profile EPIP + Level 2 + Fare-->
 										<FareTableRef ref="IT:ITC1:busATS:ft:2"/>
 									</fareTables>
 									<FareProductRef ref="IT:ITC1:busATS:pfp:8"/>
+									<prices>
+										<SalesOfferPackagePrice id="IT:ITC1:busATS:sopp:8" version="any">
+											<DiscountingRule id="IT:ITC1:busATS:sopp:8" version="any">
+												<Factor>1</Factor>
+											</DiscountingRule>
+										</SalesOfferPackagePrice>
+									</prices>
 								</SalesOfferPackageElement>
 							</salesOfferPackageElements>
 						</SalesOfferPackage>
@@ -23183,6 +23197,13 @@ NeTEX italian Profile EPIP + Level 2 + Fare-->
 									<fareTables>
 										<FareTableRef ref="IT:ITC1:busATS:ft:distanceMatrix1_1"/>
 									</fareTables>
+									<prices>
+										<SalesOfferPackagePrice id="IT:ITC1:busATS:sopp:distanceMatrix1_1" version="any">
+											<DiscountingRule id="IT:ITC1:busATS:pr:distanceMatrix1_1" version="any">
+												<Factor>1</Factor>
+											</DiscountingRule>
+										</SalesOfferPackagePrice>
+									</prices>
 								</SalesOfferPackageElement>
 							</salesOfferPackageElements>
 						</SalesOfferPackage>
@@ -23196,6 +23217,13 @@ NeTEX italian Profile EPIP + Level 2 + Fare-->
 									<fareTables>
 										<FareTableRef ref="IT:ITC1:busATS:ft:distanceMatrix1_2"/>
 									</fareTables>
+									<prices>
+										<SalesOfferPackagePrice id="IT:ITC1:busATS:sopp:distanceMatrix1_2" version="any">
+											<DiscountingRule id="IT:ITC1:busATS:pr:distanceMatrix1_2" version="any">
+												<Factor>1</Factor>
+											</DiscountingRule>
+										</SalesOfferPackagePrice>
+									</prices>
 								</SalesOfferPackageElement>
 							</salesOfferPackageElements>
 						</SalesOfferPackage>
@@ -23209,6 +23237,13 @@ NeTEX italian Profile EPIP + Level 2 + Fare-->
 									<fareTables>
 										<FareTableRef ref="IT:ITC1:busATS:ft:distanceMatrix1_3"/>
 									</fareTables>
+									<prices>
+										<SalesOfferPackagePrice id="IT:ITC1:busATS:sopp:distanceMatrix1_3" version="any">
+											<DiscountingRule id="IT:ITC1:busATS:pr:distanceMatrix1_3" version="any">
+												<Factor>1</Factor>
+											</DiscountingRule>
+										</SalesOfferPackagePrice>
+									</prices>
 								</SalesOfferPackageElement>
 							</salesOfferPackageElements>
 						</SalesOfferPackage>
@@ -23222,6 +23257,13 @@ NeTEX italian Profile EPIP + Level 2 + Fare-->
 									<fareTables>
 										<FareTableRef ref="IT:ITC1:busATS:ft:geographicalInterval0-5"/>
 									</fareTables>
+									<prices>
+										<SalesOfferPackagePrice id="IT:ITC1:busATS:sopp:0-5km" version="any">
+											<DiscountingRule id="IT:ITC1:busATS:pr:0-5km" version="any">
+												<Factor>1</Factor>
+											</DiscountingRule>
+										</SalesOfferPackagePrice>
+									</prices>
 								</SalesOfferPackageElement>
 							</salesOfferPackageElements>
 						</SalesOfferPackage>
@@ -23235,6 +23277,13 @@ NeTEX italian Profile EPIP + Level 2 + Fare-->
 									<fareTables>
 										<FareTableRef ref="IT:ITC1:busATS:ft:geographicalInterval5-10"/>
 									</fareTables>
+									<prices>
+										<SalesOfferPackagePrice id="IT:ITC1:busATS:sopp:5-10km" version="any">
+											<DiscountingRule id="IT:ITC1:busATS:pr:5-10km" version="any">
+												<Factor>1</Factor>
+											</DiscountingRule>
+										</SalesOfferPackagePrice>
+									</prices>
 								</SalesOfferPackageElement>
 							</salesOfferPackageElements>
 						</SalesOfferPackage>
@@ -23242,7 +23291,152 @@ NeTEX italian Profile EPIP + Level 2 + Fare-->
 				</FareFrame>
 			</frames>
 		</CompositeFrame>
-		<!--Composite Frame Fare Bike Sharing -->
+		<!--Composite Frame Fare Parking (FARE - Livello 3)-->
+		<CompositeFrame id="epd:IT:ITC1:CompositeFrame_EU_PI_STOP_OFFER:FARE:Parking:ita" version="any">
+			<ValidBetween>
+				<FromDate>2021-01-01T00:00:00.000+02:00</FromDate>
+				<ToDate>2021-12-31T23:59:59.999+02:00</ToDate>
+			</ValidBetween>
+			<TypeOfFrameRef ref="epip:EU_PI_LINE_OFFER" versionRef="any"/>
+			<!--- =======FRAME DEFAULTS======== -->
+			<FrameDefaults>
+				<DefaultCodespaceRef ref="ita"/>
+			</FrameDefaults>
+			<frames>
+				<FareFrame id="epd:IT:ITC1:FareFrame_EU_PI_FARE:Parking:ita" version="any">
+					<!--<TypeOfFrameRef ref="epip:EU_PI_FARE" versionRef="any">-->
+					<FrameDefaults>
+						<DefaultCurrency>EUR</DefaultCurrency>
+					</FrameDefaults>
+					<tariffs>
+						<Tariff id="IT:ITC1:parcheggiTorino:tf:1" version="any">
+							<timeIntervals>
+								<TimeInterval id="IT:ITC1:parcheggiTorino:ti:1min" version="any">
+									<Description>Intervallo a minuti per tariffe Parcheggio</Description>
+									<Duration>PT1M</Duration>
+								</TimeInterval>
+							</timeIntervals>
+							<fareStructureElements>
+								<FareStructureElement id="IT:ITC1:parcheggiTorino:fse:1min" version="any">
+									<fareStructureElementsInSequence>
+										<FareStructureElementInSequence id="IT:ITC1:parcheggiTorino:fseis:3" version="any" order="1">
+											<GenericParameterAssignment id="IT:ITC1:parcheggiTorino:gpafs:2a" version="any" order="1">
+												<TimeIntervalRef ref="IT:ITC1:parcheggiTorino:ti:1min"/>
+											</GenericParameterAssignment>
+										</FareStructureElementInSequence>
+									</fareStructureElementsInSequence>
+								</FareStructureElement>
+							</fareStructureElements>
+						</Tariff>
+					</tariffs>
+					<validableElements>
+						<ValidableElement id="IT:ITC1:parcheggiTorino::ve:2" version="any">
+							<Name>Parcheggio 2 ore</Name>
+							<fareStructureElements>
+								<FareStructureElementRef ref="IT:ITC1:parcheggiTorino:fse:1h"/>
+							</fareStructureElements>
+						</ValidableElement>
+					</validableElements>
+					<usageParameters>
+						<UserProfile id="IT:ITC1:parcheggiTorino:up:1" version="any">
+							<UserType>anyone</UserType>
+							<MinimumAge>14</MinimumAge>
+							<MaximumAge>100</MaximumAge>
+						</UserProfile>
+					</usageParameters>
+					<fareProducts>
+						<PreassignedFareProduct id="IT:ITC1:parcheggiTorino:pfp:1" version="any">
+							<ValidBetween>
+								<FromDate>2022-01-01T00:00:00.000+02:00</FromDate>
+								<ToDate>2022-12-31T00:00:00.000+02:00</ToDate>
+							</ValidBetween>
+							<Name>Tariffa parcheggi a ore</Name>
+							<Description>IT:ITC1:parcheggiTorino:fse:2h</Description>
+							<ChargingMomentType>atEndOfChargePeriod</ChargingMomentType>
+							<validityParameterAssignments>
+								<!--Parcheggio-->
+								<GenericParameterAssignment id="IT:ITC1:parcheggiTorino:gpa:1" order="1" version="any">
+									<limitations>
+										<UserProfileRef ref="IT:ITC1:parcheggiTorino:up:1"/>
+									</limitations>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+							<validableElements>
+								<ValidableElementRef ref="IT:ITC1:parcheggiTorino::ve:2"/>
+							</validableElements>
+							<tariffs>
+								<ParkingTariffRef ref="IT:ITC1:parcheggiTorino:pt:1"/>
+							</tariffs>
+						</PreassignedFareProduct>
+					</fareProducts>
+					<fareTables>
+						<FareTable id="IT:ITC1:parcheggiTorino:ft:1min" version="any">
+							<prices>
+								<FareStructureElementPrice id="IT:ITC1:parcheggiTorino:cep:1min" version="any">
+									<Name>Tariffa parcheggi</Name>
+									<Description>Tariffa parcheggi (tariffa ore)</Description>
+									<Amount>0.10</Amount>
+									<CanBeCumulative>false</CanBeCumulative>
+									<FareStructureElementRef ref="IT:ITC1:parcheggiTorino:fse:1min"/>
+								</FareStructureElementPrice>
+							</prices>
+						</FareTable>
+					</fareTables>
+					<distributionChannels>
+						<DistributionChannel id="IT:ITC1:parcheggiTorino:dc:1" version="any">
+							<Name>Rete di vendita parcheggi</Name>
+							<Description>Dettagli rete di vendita parcheggi</Description>
+							<DistributionChannelType>atStop</DistributionChannelType>
+							<OperatorRef ref="IT:ITC1:Operator:parcheggiTorino:parcheggiTorino"/>
+							<PaymentMethods>cashAndCard</PaymentMethods>
+						</DistributionChannel>
+					</distributionChannels>
+					<salesOfferPackages>
+						<SalesOfferPackage id="IT:ITC1:parcheggiTorino:sop:15" version="any">
+							<distributionAssignments>
+								<DistributionAssignment id="IT:ITC1:parcheggiTorino:da:15" version="any" order="1">
+									<DistributionChannelRef ref="IT:ITC1:parcheggiTorino:dc:1"/>
+								</DistributionAssignment>
+							</distributionAssignments>
+							<salesOfferPackageElements>
+								<!-- Tariffa parcheggi con fattore per numero minuti-->
+								<SalesOfferPackageElement id="IT:ITC1:parcheggiTorino:sope:18min" version="any" order="1">
+									<fareTables>
+										<FareTableRef ref="IT:ITC1:parcheggiTorino:ft:1min"/>
+									</fareTables>
+									<FareProductRef ref="IT:ITC1:parcheggiTorino:pfp:1"/>
+									<prices>
+										<SalesOfferPackagePrice id="IT:ITC1:parcheggiTorino:sopp:18min" version="any">
+											<DiscountingRule id="IT:ITC1:parcheggiTorino:pr:18min" version="any">
+												<Factor>18</Factor>
+												<DiscountAsPercentage>0</DiscountAsPercentage>
+											</DiscountingRule>
+										</SalesOfferPackagePrice>
+									</prices>
+								</SalesOfferPackageElement>
+							</salesOfferPackageElements>
+						</SalesOfferPackage>
+					</salesOfferPackages>
+					<parkingTariffs>
+						<ParkingTariff id="IT:ITC1:parcheggiTorino:pt:1" version="any">
+							<ValidBetween>
+								<FromDate>2022-01-01T00:00:00.000+02:00</FromDate>
+								<ToDate>2022-12-31T00:00:00.000+02:00</ToDate>
+							</ValidBetween>
+							<OperatorRef ref="IT:ITC1:parcheggiTorino:OP:parcheggiTorino"/>
+							<timeIntervals>
+								<TimeIntervalRef ref="IT:ITC1:parcheggiTorino:ti:1min"/>
+							</timeIntervals>
+							<ParkingStayType>midTerm</ParkingStayType>
+							<appliesTo>
+								<ParkingRef ref="IT:ITC1:parcheggiTorino:p:Porta_Nuova"/>
+							</appliesTo>
+						</ParkingTariff>
+					</parkingTariffs>
+				</FareFrame>
+			</frames>
+		</CompositeFrame>
+		<!--Composite Frame Fare Bike Sharing (FARE + ALTERNATIVE MODES - Livello 3 + Livello 4)-->
 		<CompositeFrame id="epd:IT:ITC1:CompositeFrame_EU_PI_STOP_OFFER:FARE:BikeSharing:ita" version="any">
 			<ValidBetween>
 				<FromDate>2021-01-01T00:00:00.000+02:00</FromDate>
@@ -23271,29 +23465,12 @@ NeTEX italian Profile EPIP + Level 2 + Fare-->
 									<Duration>PT10M</Duration>
 								</TimeInterval>
 							</timeIntervals>
-							<timeStructureFactors>
-								<TimeStructureFactor id="IT:ITC1:BikeSharingTorino:tsf:01" version="any">
-									<TimeIntervalRef ref="IT:ITC1:BikeSharingTorino:ti:1min"/>
-								</TimeStructureFactor>
-								<TimeStructureFactor id="IT:ITC1:BikeSharingTorino:tsf:10" version="any">
-									<TimeIntervalRef ref="IT:ITC1:BikeSharingTorino:ti:10min"/>
-								</TimeStructureFactor>
-							</timeStructureFactors>
 							<fareStructureElements>
 								<FareStructureElement id="IT:ITC1:BikeSharingTorino:fse:1min" version="any">
 									<fareStructureElementsInSequence>
-										<FareStructureElementInSequence id="IT:ITC1:BikeSharingTorino:fseis:2" version="any" order="2">
-											<GenericParameterAssignment id="IT:ITC1:BikeSharingTorino:gpafs:2" version="any" order="2">
+										<FareStructureElementInSequence id="IT:ITC1:BikeSharingTorino:fseis:2" version="any" order="1">
+											<GenericParameterAssignment id="IT:ITC1:BikeSharingTorino:gpafs:2" version="any" order="1">
 												<TimeIntervalRef ref="IT:ITC1:BikeSharingTorino:ti:1min"/>
-											</GenericParameterAssignment>
-										</FareStructureElementInSequence>
-									</fareStructureElementsInSequence>
-								</FareStructureElement>
-								<FareStructureElement id="IT:ITC1:BikeSharingTorino:fse:10min" version="any">
-									<fareStructureElementsInSequence>
-										<FareStructureElementInSequence id="IT:ITC1:BikeSharingTorino:fseis:3" version="any" order="2">
-											<GenericParameterAssignment id="IT:ITC1:BikeSharingTorino:gpafs:2a" version="any" order="2">
-												<TimeIntervalRef ref="IT:ITC1:BikeSharingTorino:ti:10min"/>
 											</GenericParameterAssignment>
 										</FareStructureElementInSequence>
 									</fareStructureElementsInSequence>
@@ -23404,8 +23581,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare-->
 									</fareTables>
 									<FareProductRef ref="IT:ITC1:BikeSharingTorino:pfp:1"/>
 									<prices>
-										<SalesOfferPackagePrice id="IT:ITC1:BikeSharingTorino:sopp:1min" version="any">
-											<DiscountingRule id="IT:ITC1:BikeSharingTorino:pr:1min" version="any">
+										<SalesOfferPackagePrice id="IT:ITC1:BikeSharingTorino:sopp:15min" version="any">
+											<DiscountingRule id="IT:ITC1:BikeSharingTorino:pr:15min" version="any">
 												<Factor>15</Factor>
 											</DiscountingRule>
 										</SalesOfferPackagePrice>
@@ -23472,157 +23649,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare-->
 				</MobilityServiceFrame>
 			</frames>
 		</CompositeFrame>
-		<!--Composite Frame Fare Parking -->
-		<CompositeFrame id="epd:IT:ITC1:CompositeFrame_EU_PI_STOP_OFFER:FARE:Parking:ita" version="any">
-			<ValidBetween>
-				<FromDate>2021-01-01T00:00:00.000+02:00</FromDate>
-				<ToDate>2021-12-31T23:59:59.999+02:00</ToDate>
-			</ValidBetween>
-			<TypeOfFrameRef ref="epip:EU_PI_LINE_OFFER" versionRef="any"/>
-			<!--- =======FRAME DEFAULTS======== -->
-			<FrameDefaults>
-				<DefaultCodespaceRef ref="ita"/>
-			</FrameDefaults>
-			<frames>
-				<FareFrame id="epd:IT:ITC1:FareFrame_EU_PI_FARE:Parking:ita" version="any">
-					<!--<TypeOfFrameRef ref="epip:EU_PI_FARE" versionRef="any">-->
-					<FrameDefaults>
-						<DefaultCurrency>EUR</DefaultCurrency>
-					</FrameDefaults>
-					<tariffs>
-						<Tariff id="IT:ITC1:parcheggiTorino:tf:1" version="any">
-							<timeIntervals>
-								<TimeInterval id="IT:ITC1:parcheggiTorino:ti:1" version="any">
-									<Description>Intervallo a ore per tariffe Parcheggio</Description>
-									<Duration>PT1H</Duration>
-								</TimeInterval>
-							</timeIntervals>
-							<timeStructureFactors>
-								<TimeStructureFactor id="IT:ITC1:parcheggiTorino:tsf:1" version="any">
-									<TimeIntervalRef ref="IT:ITC1:parcheggiTorino:ti:1"/>
-								</TimeStructureFactor>
-							</timeStructureFactors>
-							<fareStructureElements>
-								<FareStructureElement id="IT:ITC1:parcheggiTorino:fse:1h" version="any">
-									<fareStructureElementsInSequence>
-										<FareStructureElementInSequence id="IT:ITC1:parcheggiTorino:fseis:3" version="any" order="1">
-											<GenericParameterAssignment id="IT:ITC1:parcheggiTorino:gpafs:2a" version="any" order="1">
-												<TimeIntervalRef ref="IT:ITC1:parcheggiTorino:ti:1"/>
-											</GenericParameterAssignment>
-										</FareStructureElementInSequence>
-									</fareStructureElementsInSequence>
-								</FareStructureElement>
-							</fareStructureElements>
-						</Tariff>
-					</tariffs>
-					<validableElements>
-						<ValidableElement id="IT:ITC1:parcheggiTorino::ve:2" version="any">
-							<Name>Parcheggio 2 ore</Name>
-							<fareStructureElements>
-								<FareStructureElementRef ref="IT:ITC1:parcheggiTorino:fse:1h"/>
-							</fareStructureElements>
-						</ValidableElement>
-					</validableElements>
-					<usageParameters>
-						<UserProfile id="IT:ITC1:parcheggiTorino:up:1" version="any">
-							<UserType>anyone</UserType>
-							<MinimumAge>14</MinimumAge>
-							<MaximumAge>100</MaximumAge>
-						</UserProfile>
-					</usageParameters>
-					<fareProducts>
-						<PreassignedFareProduct id="IT:ITC1:parcheggiTorino:pfp:1" version="any">
-							<ValidBetween>
-								<FromDate>2022-01-01T00:00:00.000+02:00</FromDate>
-								<ToDate>2022-12-31T00:00:00.000+02:00</ToDate>
-							</ValidBetween>
-							<Name>Tariffa parcheggi a ore</Name>
-							<Description>IT:ITC1:parcheggiTorino:fse:2h</Description>
-							<ChargingMomentType>atEndOfChargePeriod</ChargingMomentType>
-							<validityParameterAssignments>
-								<!--Parcheggio-->
-								<GenericParameterAssignment id="IT:ITC1:parcheggiTorino:gpa:1" order="1" version="any">
-									<limitations>
-										<UserProfileRef ref="IT:ITC1:parcheggiTorino:up:1"/>
-									</limitations>
-								</GenericParameterAssignment>
-							</validityParameterAssignments>
-							<validableElements>
-								<ValidableElementRef ref="IT:ITC1:parcheggiTorino::ve:2"/>
-							</validableElements>
-							<tariffs>
-								<ParkingTariffRef ref="IT:ITC1:parcheggiTorino:pt:1"/>
-							</tariffs>
-						</PreassignedFareProduct>
-					</fareProducts>
-					<fareTables>
-						<FareTable id="IT:ITC1:parcheggiTorino:ft:1h" version="any">
-							<prices>
-								<FareStructureElementPrice id="IT:ITC1:parcheggiTorino:cep:1h" version="any">
-									<Name>Tariffa parcheggi</Name>
-									<Description>Tariffa parcheggi (tariffa ore)</Description>
-									<!--<Amount>1.50</Amount>-->
-									<CanBeCumulative>false</CanBeCumulative>
-									<FareStructureElementRef ref="IT:ITC1:parcheggiTorino:fse:1h"/>
-								</FareStructureElementPrice>
-							</prices>
-						</FareTable>
-					</fareTables>
-					<distributionChannels>
-						<DistributionChannel id="IT:ITC1:parcheggiTorino:dc:1" version="any">
-							<Name>Rete di vendita parcheggi</Name>
-							<Description>Dettagli rete di vendita parcheggi</Description>
-							<DistributionChannelType>atStop</DistributionChannelType>
-							<OperatorRef ref="IT:ITC1:Operator:parcheggiTorino:parcheggiTorino"/>
-							<PaymentMethods>cashAndCard</PaymentMethods>
-						</DistributionChannel>
-					</distributionChannels>
-					<salesOfferPackages>
-						<SalesOfferPackage id="IT:ITC1:parcheggiTorino:sop:15" version="any">
-							<distributionAssignments>
-								<DistributionAssignment id="IT:ITC1:parcheggiTorino:da:15" version="any" order="1">
-									<DistributionChannelRef ref="IT:ITC1:parcheggiTorino:dc:1"/>
-								</DistributionAssignment>
-							</distributionAssignments>
-							<salesOfferPackageElements>
-								<!-- Tariffa parcheggi con fattore per numero minuti-->
-								<SalesOfferPackageElement id="IT:ITC1:parcheggiTorino:sope:2h" version="any" order="1">
-									<fareTables>
-										<FareTableRef ref="IT:ITC1:parcheggiTorino:ft:1h"/>
-									</fareTables>
-									<FareProductRef ref="IT:ITC1:parcheggiTorino:pfp:1"/>
-									<prices>
-										<SalesOfferPackagePrice id="IT:ITC1:parcheggiTorino:sopp:2h" version="any">
-											<DiscountingRule id="IT:ITC1:parcheggiTorino:pr:1h" version="any">
-												<Factor>2</Factor>
-												<DiscountAsPercentage>10</DiscountAsPercentage>
-											</DiscountingRule>
-										</SalesOfferPackagePrice>
-									</prices>
-								</SalesOfferPackageElement>
-							</salesOfferPackageElements>
-						</SalesOfferPackage>
-					</salesOfferPackages>
-					<parkingTariffs>
-						<ParkingTariff id="IT:ITC1:parcheggiTorino:pt:1" version="any">
-							<ValidBetween>
-								<FromDate>2022-01-01T00:00:00.000+02:00</FromDate>
-								<ToDate>2022-12-31T00:00:00.000+02:00</ToDate>
-							</ValidBetween>
-							<OperatorRef ref="IT:ITC1:parcheggiTorino:OP:parcheggiTorino"/>
-							<timeIntervals>
-								<TimeIntervalRef ref="IT:ITC1:parcheggiTorino:ti:1"/>
-							</timeIntervals>
-							<ParkingStayType>midTerm</ParkingStayType>
-							<appliesTo>
-								<ParkingRef ref="IT:ITC1:parcheggiTorino:p:Porta_Nuova"/>
-							</appliesTo>
-						</ParkingTariff>
-					</parkingTariffs>
-				</FareFrame>
-			</frames>
-		</CompositeFrame>
-		<!--Composite Frame Fare Car Sharing -->
+		<!--Composite Frame Fare Car Sharing (FARE + ALTERNATIVE MODES - Livello 3 + Livello 4)-->
 		<CompositeFrame id="epd:IT:ITC1:CompositeFrame_EU_PI_STOP_OFFER:FARE:carSharing:ita" version="any">
 			<ValidBetween>
 				<FromDate>2021-01-01T00:00:00.000+02:00</FromDate>
