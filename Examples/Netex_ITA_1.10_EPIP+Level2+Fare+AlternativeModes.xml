@@ -7,6 +7,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare-->
 	<ParticipantRef>RAP</ParticipantRef>
 	<Description>Esempio di profilo italiano del NeTEx EPIP + Livello 2 + Fare</Description>
 	<dataObjects>
+		<!--Composite Frame EPIP LV2 -->
 		<CompositeFrame id="epd:IT:ITC1:CompositeFrame_EU_PI_STOP_OFFER:EPIP:ita" version="any">
 			<ValidBetween>
 				<FromDate>2021-01-01T00:00:00.000+02:00</FromDate>
@@ -22718,6 +22719,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare-->
 				</TimetableFrame>
 			</frames>
 		</CompositeFrame>
+		<!--Composite Frame Fare TPL -->
 		<CompositeFrame id="epd:IT:ITC1:CompositeFrame_EU_PI_STOP_OFFER:FARE:TPL:ita" version="any">
 			<ValidBetween>
 				<FromDate>2021-01-01T00:00:00.000+02:00</FromDate>
@@ -23240,6 +23242,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare-->
 				</FareFrame>
 			</frames>
 		</CompositeFrame>
+		<!--Composite Frame Fare Bike Sharing -->
 		<CompositeFrame id="epd:IT:ITC1:CompositeFrame_EU_PI_STOP_OFFER:FARE:BikeSharing:ita" version="any">
 			<ValidBetween>
 				<FromDate>2021-01-01T00:00:00.000+02:00</FromDate>
@@ -23469,6 +23472,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare-->
 				</MobilityServiceFrame>
 			</frames>
 		</CompositeFrame>
+		<!--Composite Frame Fare Parking -->
 		<CompositeFrame id="epd:IT:ITC1:CompositeFrame_EU_PI_STOP_OFFER:FARE:Parking:ita" version="any">
 			<ValidBetween>
 				<FromDate>2021-01-01T00:00:00.000+02:00</FromDate>
@@ -23618,6 +23622,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare-->
 				</FareFrame>
 			</frames>
 		</CompositeFrame>
+		<!--Composite Frame Fare Car Sharing -->
 		<CompositeFrame id="epd:IT:ITC1:CompositeFrame_EU_PI_STOP_OFFER:FARE:carSharing:ita" version="any">
 			<ValidBetween>
 				<FromDate>2021-01-01T00:00:00.000+02:00</FromDate>
