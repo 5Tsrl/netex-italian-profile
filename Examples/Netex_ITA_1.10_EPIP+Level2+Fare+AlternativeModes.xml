@@ -1137,29 +1137,6 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							<OperatorRef ref="IT:ITC1:CarSharingTorino:OP:CarSharingTorino"/>
 							<VehicleTypeRef ref="IT:ITC1:CarSharingTorino:vehicleType:Car01"/>
 						</Vehicle>
-						<!--- ====== veicolo BikeSharing======== -->
-						<Vehicle id="IT:ITC1:BikeSharingTorino:VE:01" version="any">
-							<ValidBetween>
-								<FromDate>2021-01-01T00:00:00</FromDate>
-								<ToDate>2022-12-31T00:00:00</ToDate>
-							</ValidBetween>
-							<Name>01</Name>
-							<ShortName>01</ShortName>
-							<PrivateCode>01</PrivateCode>
-							<OperatorRef ref="IT:ITC1:BikeSharingTorino:OP:BikeSharingTorino"/>
-							<VehicleTypeRef ref="IT:ITC1:BikeSharingTorino:vehicleType:Bike01"/>
-						</Vehicle>
-						<Vehicle id="IT:ITC1:BikeSharingTorino:VE:02" version="any">
-							<ValidBetween>
-								<FromDate>2021-01-01T00:00:00</FromDate>
-								<ToDate>2021-12-31T00:00:00</ToDate>
-							</ValidBetween>
-							<Name>02</Name>
-							<ShortName>02</ShortName>
-							<PrivateCode>02</PrivateCode>
-							<OperatorRef ref="IT:ITC1:BikeSharingTorino:OP:BikeSharingTorino"/>
-							<VehicleTypeRef ref="IT:ITC1:BikeSharingTorino:vehicleType:Bike01"/>
-						</Vehicle>
 					</vehicles>
 				</ResourceFrame>
 				<SiteFrame id="epd:IT:ITC1:SiteFrame_EU_PI_STOP:ita" version="any">
@@ -22780,7 +22757,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 								</FareStructureElement>
 								<FareStructureElement id="IT:ITC1:busATS:fse:1" version="any">
 									<fareStructureElementsInSequence>
-										<FareStructureElementInSequence id="IT:ITC1:busATS:fseis:1" version="any" order="2">
+										<FareStructureElementInSequence id="IT:ITC1:busATS:fseis:1" version="any" order="1">
 											<GenericParameterAssignment id="IT:ITC1:busATS:gpafs:1" version="any" order="2">
 												<validityParameters>
 													<OperatorRef ref="IT:ITC1:parcheggiTorino:OP:parcheggiTorino"/>
@@ -22897,10 +22874,10 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 								<ValidableElementRef ref="IT:ITC1:busATS:ve:1"/>
 							</validableElements>
 							<tariffs>
-								<ParkingTariffRef ref="IT:ITC1:parcheggiTorino:pt:1"/>
+								<ParkingTariffRef ref="IT:ITC1:parcheggiTorino:pt:1a"/>
 							</tariffs>
 						</PreassignedFareProduct>
-						<PreassignedFareProduct id="IT:ITC1:busATS:pfp:1+8" version="any">
+						<PreassignedFareProduct id="IT:ITC1:busATS:pfp:1+8" version="2">
 							<ValidBetween>
 								<FromDate>2022-01-01T00:00:00.000+02:00</FromDate>
 								<ToDate>2022-12-31T00:00:00.000+02:00</ToDate>
@@ -22958,7 +22935,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 								<ValidableElementRef ref="IT:ITC1:busATS:ve:8"/>
 							</validableElements>
 							<tariffs>
-								<ParkingTariffRef ref="IT:ITC1:parcheggiTorino:pt:1"/>
+								<ParkingTariffRef ref="IT:ITC1:parcheggiTorino:pt:1a"/>
 							</tariffs>
 						</PreassignedFareProduct>
 						<PreassignedFareProduct id="IT:ITC1:busATS:pfp:8" version="any">
@@ -23016,6 +22993,136 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							</validityParameterAssignments>
 							<validableElements>
 								<ValidableElementRef ref="IT:ITC1:busATS:ve:8"/>
+							</validableElements>
+						</PreassignedFareProduct>
+						<PreassignedFareProduct id="IT:ITC1:busATS:pfp:dm1" version="any">
+							<ValidBetween>
+								<FromDate>2022-01-01T00:00:00.000+02:00</FromDate>
+								<ToDate>2022-12-31T00:00:00.000+02:00</ToDate>
+							</ValidBetween>
+							<Name>Annuale</Name>
+							<Description>Corsa OD1</Description>
+							<ChargingMomentType>beforeTravel</ChargingMomentType>
+							<validityParameterAssignments>
+								<!-- Corse OD1-->
+								<GenericParameterAssignment id="IT:ITC1:busATS:gpa:2c" order="1" version="any">
+									<!--<ValidableElementRef ref="IT:ITC1:busATS:ve:8"/>-->
+									<!--									<AccessRightInProductRef ref="IT:ITC1:busATS:arip:2"></AccessRightInProductRef>-->
+									<limitations>
+										<UserProfileRef ref="IT:ITC1:busATS:up:1"/>
+									</limitations>
+									<validityParameters>
+										<OperatorRef ref="IT:ITC1:busATS:op:1"/>
+										<VehicleTypeRef ref="IT:ITC1:busATS:vehicleType:001"/>
+									</validityParameters>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+							<validableElements>
+								<ValidableElementRef ref="IT:ITC1:busATS::ve:1_1"/>
+							</validableElements>
+						</PreassignedFareProduct>
+						<PreassignedFareProduct id="IT:ITC1:busATS:pfp:dm2" version="any">
+							<ValidBetween>
+								<FromDate>2022-01-01T00:00:00.000+02:00</FromDate>
+								<ToDate>2022-12-31T00:00:00.000+02:00</ToDate>
+							</ValidBetween>
+							<Name>Annuale</Name>
+							<Description>Corsa OD2</Description>
+							<ChargingMomentType>beforeTravel</ChargingMomentType>
+							<validityParameterAssignments>
+								<!-- Corse OD2-->
+								<GenericParameterAssignment id="IT:ITC1:busATS:gpa:2d" order="1" version="any">
+									<!--<ValidableElementRef ref="IT:ITC1:busATS:ve:8"/>-->
+									<!--									<AccessRightInProductRef ref="IT:ITC1:busATS:arip:2"></AccessRightInProductRef>-->
+									<limitations>
+										<UserProfileRef ref="IT:ITC1:busATS:up:1"/>
+									</limitations>
+									<validityParameters>
+										<OperatorRef ref="IT:ITC1:busATS:op:1"/>
+										<VehicleTypeRef ref="IT:ITC1:busATS:vehicleType:001"/>
+									</validityParameters>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+							<validableElements>
+								<ValidableElementRef ref="IT:ITC1:busATS::ve:1_2"/>
+							</validableElements>
+						</PreassignedFareProduct>
+						<PreassignedFareProduct id="IT:ITC1:busATS:pfp:dm3" version="any">
+							<ValidBetween>
+								<FromDate>2022-01-01T00:00:00.000+02:00</FromDate>
+								<ToDate>2022-12-31T00:00:00.000+02:00</ToDate>
+							</ValidBetween>
+							<Name>Annuale</Name>
+							<Description>Corsa OD3</Description>
+							<ChargingMomentType>beforeTravel</ChargingMomentType>
+							<validityParameterAssignments>
+								<!-- Corse OD3-->
+								<GenericParameterAssignment id="IT:ITC1:busATS:gpa:2e" order="1" version="any">
+									<!--<ValidableElementRef ref="IT:ITC1:busATS:ve:8"/>-->
+									<!--									<AccessRightInProductRef ref="IT:ITC1:busATS:arip:2"></AccessRightInProductRef>-->
+									<limitations>
+										<UserProfileRef ref="IT:ITC1:busATS:up:1"/>
+									</limitations>
+									<validityParameters>
+										<OperatorRef ref="IT:ITC1:busATS:op:1"/>
+										<VehicleTypeRef ref="IT:ITC1:busATS:vehicleType:001"/>
+									</validityParameters>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+							<validableElements>
+								<ValidableElementRef ref="IT:ITC1:busATS::ve:1_3"/>
+							</validableElements>
+						</PreassignedFareProduct>
+						<PreassignedFareProduct id="IT:ITC1:busATS:pfp:gi0-5" version="any">
+							<ValidBetween>
+								<FromDate>2022-01-01T00:00:00.000+02:00</FromDate>
+								<ToDate>2022-12-31T00:00:00.000+02:00</ToDate>
+							</ValidBetween>
+							<Name>Annuale</Name>
+							<Description>Corsa Pentachilometrica 0-5km</Description>
+							<ChargingMomentType>beforeTravel</ChargingMomentType>
+							<validityParameterAssignments>
+								<!--Corsa Pentachilometrica 0-5km-->
+								<GenericParameterAssignment id="IT:ITC1:busATS:gpa:2f" order="1" version="any">
+									<!--<ValidableElementRef ref="IT:ITC1:busATS:ve:8"/>-->
+									<!--									<AccessRightInProductRef ref="IT:ITC1:busATS:arip:2"></AccessRightInProductRef>-->
+									<limitations>
+										<UserProfileRef ref="IT:ITC1:busATS:up:1"/>
+									</limitations>
+									<validityParameters>
+										<OperatorRef ref="IT:ITC1:busATS:op:1"/>
+										<VehicleTypeRef ref="IT:ITC1:busATS:vehicleType:001"/>
+									</validityParameters>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+							<validableElements>
+								<ValidableElementRef ref="IT:ITC1:busATS::ve:0-5"/>
+							</validableElements>
+						</PreassignedFareProduct>
+						<PreassignedFareProduct id="IT:ITC1:busATS:pfp:gi5-10" version="any">
+							<ValidBetween>
+								<FromDate>2022-01-01T00:00:00.000+02:00</FromDate>
+								<ToDate>2022-12-31T00:00:00.000+02:00</ToDate>
+							</ValidBetween>
+							<Name>Annuale</Name>
+							<Description>Corsa Pentachilometrica 5-10km</Description>
+							<ChargingMomentType>beforeTravel</ChargingMomentType>
+							<validityParameterAssignments>
+								<!--Corsa Pentachilometrica 5-10km-->
+								<GenericParameterAssignment id="IT:ITC1:busATS:gpa:3f" order="1" version="any">
+									<!--<ValidableElementRef ref="IT:ITC1:busATS:ve:8"/>-->
+									<!--									<AccessRightInProductRef ref="IT:ITC1:busATS:arip:2"></AccessRightInProductRef>-->
+									<limitations>
+										<UserProfileRef ref="IT:ITC1:busATS:up:1"/>
+									</limitations>
+									<validityParameters>
+										<OperatorRef ref="IT:ITC1:busATS:op:1"/>
+										<VehicleTypeRef ref="IT:ITC1:busATS:vehicleType:001"/>
+									</validityParameters>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+							<validableElements>
+								<ValidableElementRef ref="IT:ITC1:busATS::ve:5-10"/>
 							</validableElements>
 						</PreassignedFareProduct>
 					</fareProducts>
@@ -23123,9 +23230,9 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<FareProductRef ref="IT:ITC1:busATS:pfp:1"/>
 									<prices>
 										<SalesOfferPackagePrice id="IT:ITC1:busATS:sopp:1a" version="any">
-											<DiscountingRule id="IT:ITC1:busATS:sopp:1a" version="any">
+											<PricingRule id="IT:ITC1:busATS:sopp:pr1a" version="any">
 												<Factor>1</Factor>
-											</DiscountingRule>
+											</PricingRule>
 										</SalesOfferPackagePrice>
 									</prices>
 								</SalesOfferPackageElement>
@@ -23133,7 +23240,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 						</SalesOfferPackage>
 						<SalesOfferPackage id="IT:ITC1:busATS:sop:2" version="any">
 							<distributionAssignments>
-								<DistributionAssignmentRef ref="IT:ITC1:busATS:dc:1"/>
+								<DistributionAssignmentRef ref="IT:ITC1:busATS:da:1"/>
 							</distributionAssignments>
 							<salesOfferPackageElements>
 								<!-- Tariffa parcheggio-->
@@ -23144,9 +23251,9 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<FareProductRef ref="IT:ITC1:busATS:pfp:8"/>
 									<prices>
 										<SalesOfferPackagePrice id="IT:ITC1:busATS:sopp:8" version="any">
-											<DiscountingRule id="IT:ITC1:busATS:sopp:8" version="any">
+											<PricingRule id="IT:ITC1:busATS:sopp:pr2a" version="any">
 												<Factor>1</Factor>
-											</DiscountingRule>
+											</PricingRule>
 										</SalesOfferPackagePrice>
 									</prices>
 								</SalesOfferPackageElement>
@@ -23154,7 +23261,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 						</SalesOfferPackage>
 						<SalesOfferPackage id="IT:ITC1:busATS:sop:3" version="any">
 							<distributionAssignments>
-								<DistributionAssignmentRef ref="IT:ITC1:busATS:dc:1"/>
+								<DistributionAssignmentRef ref="IT:ITC1:busATS:da:1"/>
 							</distributionAssignments>
 							<salesOfferPackageElements>
 								<!-- Tariffa park & ride-->
@@ -23167,7 +23274,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 										<SalesOfferPackagePrice id="IT:ITC1:busATS:sopp:1" version="any">
 											<DiscountingRule id="IT:ITC1:busATS:dr:1" version="any">
 												<Factor>1</Factor>
-												<DiscountAsValue>0.7</DiscountAsValue>
+												<DiscountAsPercentage>70</DiscountAsPercentage>
 											</DiscountingRule>
 										</SalesOfferPackagePrice>
 									</prices>
@@ -23181,6 +23288,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 										<SalesOfferPackagePrice id="IT:ITC1:busATS:sopp:2" version="any">
 											<DiscountingRule id="IT:ITC1:busATS:sopp:2" version="any">
 												<Factor>1</Factor>
+												<DiscountAsPercentage>0</DiscountAsPercentage>
 											</DiscountingRule>
 										</SalesOfferPackagePrice>
 									</prices>
@@ -23197,11 +23305,12 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<fareTables>
 										<FareTableRef ref="IT:ITC1:busATS:ft:distanceMatrix1_1"/>
 									</fareTables>
+									<FareProductRef ref="IT:ITC1:busATS:pfp:dm1"/>
 									<prices>
 										<SalesOfferPackagePrice id="IT:ITC1:busATS:sopp:distanceMatrix1_1" version="any">
-											<DiscountingRule id="IT:ITC1:busATS:pr:distanceMatrix1_1" version="any">
+											<PricingRule id="IT:ITC1:busATS:pr:distanceMatrix1_1" version="any">
 												<Factor>1</Factor>
-											</DiscountingRule>
+											</PricingRule>
 										</SalesOfferPackagePrice>
 									</prices>
 								</SalesOfferPackageElement>
@@ -23217,11 +23326,12 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<fareTables>
 										<FareTableRef ref="IT:ITC1:busATS:ft:distanceMatrix1_2"/>
 									</fareTables>
+									<FareProductRef ref="IT:ITC1:busATS:pfp:dm2"/>
 									<prices>
 										<SalesOfferPackagePrice id="IT:ITC1:busATS:sopp:distanceMatrix1_2" version="any">
-											<DiscountingRule id="IT:ITC1:busATS:pr:distanceMatrix1_2" version="any">
+											<PricingRule id="IT:ITC1:busATS:pr:distanceMatrix1_2" version="any">
 												<Factor>1</Factor>
-											</DiscountingRule>
+											</PricingRule>
 										</SalesOfferPackagePrice>
 									</prices>
 								</SalesOfferPackageElement>
@@ -23237,11 +23347,12 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<fareTables>
 										<FareTableRef ref="IT:ITC1:busATS:ft:distanceMatrix1_3"/>
 									</fareTables>
+									<FareProductRef ref="IT:ITC1:busATS:pfp:dm3"/>
 									<prices>
 										<SalesOfferPackagePrice id="IT:ITC1:busATS:sopp:distanceMatrix1_3" version="any">
-											<DiscountingRule id="IT:ITC1:busATS:pr:distanceMatrix1_3" version="any">
+											<PricingRule id="IT:ITC1:busATS:pr:distanceMatrix1_3" version="any">
 												<Factor>1</Factor>
-											</DiscountingRule>
+											</PricingRule>
 										</SalesOfferPackagePrice>
 									</prices>
 								</SalesOfferPackageElement>
@@ -23257,11 +23368,12 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<fareTables>
 										<FareTableRef ref="IT:ITC1:busATS:ft:geographicalInterval0-5"/>
 									</fareTables>
+									<FareProductRef ref="IT:ITC1:busATS:pfp:gi0-5"/>
 									<prices>
 										<SalesOfferPackagePrice id="IT:ITC1:busATS:sopp:0-5km" version="any">
-											<DiscountingRule id="IT:ITC1:busATS:pr:0-5km" version="any">
+											<PricingRule id="IT:ITC1:busATS:pr:0-5km" version="any">
 												<Factor>1</Factor>
-											</DiscountingRule>
+											</PricingRule>
 										</SalesOfferPackagePrice>
 									</prices>
 								</SalesOfferPackageElement>
@@ -23277,17 +23389,34 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<fareTables>
 										<FareTableRef ref="IT:ITC1:busATS:ft:geographicalInterval5-10"/>
 									</fareTables>
+									<FareProductRef ref="IT:ITC1:busATS:pfp:gi5-10"/>
 									<prices>
 										<SalesOfferPackagePrice id="IT:ITC1:busATS:sopp:5-10km" version="any">
-											<DiscountingRule id="IT:ITC1:busATS:pr:5-10km" version="any">
+											<PricingRule id="IT:ITC1:busATS:pr:5-10km" version="any">
 												<Factor>1</Factor>
-											</DiscountingRule>
+											</PricingRule>
 										</SalesOfferPackagePrice>
 									</prices>
 								</SalesOfferPackageElement>
 							</salesOfferPackageElements>
 						</SalesOfferPackage>
 					</salesOfferPackages>
+					<parkingTariffs>
+						<ParkingTariff id="IT:ITC1:parcheggiTorino:pt:1a" version="any">
+							<ValidBetween>
+								<FromDate>2022-01-01T00:00:00.000+02:00</FromDate>
+								<ToDate>2022-12-31T00:00:00.000+02:00</ToDate>
+							</ValidBetween>
+							<OperatorRef ref="IT:ITC1:parcheggiTorino:OP:parcheggiTorino"/>
+							<timeIntervals>
+								<TimeIntervalRef ref="IT:ITC1:parcheggiTorino:ti:1min"/>
+							</timeIntervals>
+							<ParkingStayType>midTerm</ParkingStayType>
+							<appliesTo>
+								<ParkingRef ref="IT:ITC1:parcheggiTorino:p:Porta_Nuova"/>
+							</appliesTo>
+						</ParkingTariff>
+					</parkingTariffs>
 				</FareFrame>
 			</frames>
 		</CompositeFrame>
@@ -23333,7 +23462,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 						<ValidableElement id="IT:ITC1:parcheggiTorino::ve:2" version="any">
 							<Name>Parcheggio 2 ore</Name>
 							<fareStructureElements>
-								<FareStructureElementRef ref="IT:ITC1:parcheggiTorino:fse:1h"/>
+								<FareStructureElementRef ref="IT:ITC1:parcheggiTorino:fse:1min"/>
 							</fareStructureElements>
 						</ValidableElement>
 					</validableElements>
@@ -23448,6 +23577,53 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 				<DefaultCodespaceRef ref="ita"/>
 			</FrameDefaults>
 			<frames>
+				<ResourceFrame id="epd:IT:ITC1:ResourceFrame_EU_PI_COMMON:ita:BikeSharing" version="any">
+					<!--- =======Tipi veicolo 5T======== -->
+					<vehicleModelProfiles>
+						<CycleModelProfile id="IT:ITC1:BikeSharingTorino:vehicleType:Bike01" version="any">
+							<ChildSeat>olderChild</ChildSeat>
+							<Battery>false</Battery>
+							<Lamps>true</Lamps>
+							<Pump>true</Pump>
+							<Basket>true</Basket>
+							<Lock>true</Lock>
+						</CycleModelProfile>
+						<CycleModelProfile id="IT:ITC1:BikeSharingTorino:vehicleType:Bike02" version="any">
+							<ChildSeat>olderChild</ChildSeat>
+							<Battery>true</Battery>
+							<Lamps>true</Lamps>
+							<Pump>true</Pump>
+							<Basket>true</Basket>
+							<Lock>true</Lock>
+						</CycleModelProfile>
+					</vehicleModelProfiles>
+					<!--- =======Veicoli======== -->
+					<vehicles>
+						<!--- ====== veicolo BikeSharing======== -->
+						<Vehicle id="IT:ITC1:BikeSharingTorino:VE:01" version="any">
+							<ValidBetween>
+								<FromDate>2021-01-01T00:00:00</FromDate>
+								<ToDate>2022-12-31T00:00:00</ToDate>
+							</ValidBetween>
+							<Name>01</Name>
+							<ShortName>01</ShortName>
+							<PrivateCode>01</PrivateCode>
+							<OperatorRef ref="IT:ITC1:BikeSharingTorino:OP:BikeSharingTorino"/>
+							<CycleModelProfileRef ref="T:ITC1:BikeSharingTorino:vehicleType:Bike01"/>
+						</Vehicle>
+						<Vehicle id="IT:ITC1:BikeSharingTorino:VE:02" version="any">
+							<ValidBetween>
+								<FromDate>2021-01-01T00:00:00</FromDate>
+								<ToDate>2021-12-31T00:00:00</ToDate>
+							</ValidBetween>
+							<Name>02</Name>
+							<ShortName>02</ShortName>
+							<PrivateCode>02</PrivateCode>
+							<OperatorRef ref="IT:ITC1:BikeSharingTorino:OP:BikeSharingTorino"/>
+							<CycleModelProfileRef ref="T:ITC1:BikeSharingTorino:vehicleType:Bike02"/>
+						</Vehicle>
+					</vehicles>
+				</ResourceFrame>
 				<FareFrame id="epd:IT:ITC1:FareFrame_EU_PI_FARE:BikeSharing:ita" version="any">
 					<!--<TypeOfFrameRef ref="epip:EU_PI_FARE" versionRef="any">-->
 					<FrameDefaults>
@@ -23483,12 +23659,6 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							<Name>Sblocco+1 minuto utilizzo</Name>
 							<fareStructureElements>
 								<FareStructureElementRef ref="IT:ITC1:BikeSharingTorino:fse:1min"/>
-							</fareStructureElements>
-						</ValidableElement>
-						<ValidableElement id="IT:ITC1:BikeSharingTorino::ve:10" version="any">
-							<Name>Sblocco+1 minuto utilizzo</Name>
-							<fareStructureElements>
-								<FareStructureElementRef ref="IT:ITC1:BikeSharingTorino:fse:10min"/>
 							</fareStructureElements>
 						</ValidableElement>
 					</validableElements>
@@ -23569,9 +23739,9 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<FareProductRef ref="IT:ITC1:BikeSharingTorino:pfp:1"/>
 									<prices>
 										<SalesOfferPackagePrice id="IT:ITC1:BikeSharingTorino:sopp:sblocco" version="any">
-											<DiscountingRule id="IT:ITC1:BikeSharingTorino:pr:sblocco" version="any">
+											<PricingRule id="IT:ITC1:BikeSharingTorino:pr:sblocco" version="any">
 												<Factor>1</Factor>
-											</DiscountingRule>
+											</PricingRule>
 										</SalesOfferPackagePrice>
 									</prices>
 								</SalesOfferPackageElement>
@@ -23582,9 +23752,9 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<FareProductRef ref="IT:ITC1:BikeSharingTorino:pfp:1"/>
 									<prices>
 										<SalesOfferPackagePrice id="IT:ITC1:BikeSharingTorino:sopp:15min" version="any">
-											<DiscountingRule id="IT:ITC1:BikeSharingTorino:pr:15min" version="any">
+											<PricingRule id="IT:ITC1:BikeSharingTorino:pr:15min" version="any">
 												<Factor>15</Factor>
-											</DiscountingRule>
+											</PricingRule>
 										</SalesOfferPackagePrice>
 									</prices>
 								</SalesOfferPackageElement>
@@ -23607,9 +23777,6 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 								<VehicleRef ref="IT:ITC1:BikeSharingTorino:VE:02"/>
 							</members>
 							<OperatorRef ref="IT:ITC1:BikeSharingTorino:OP:BikeSharingTorino"/>
-							<transportTypes>
-								<VehicleTypeRef ref="IT:ITC1:BikeSharingTorino:vehicleType:Bike01"/>
-							</transportTypes>
 						</Fleet>
 					</fleets>
 					<modesOfOperation>

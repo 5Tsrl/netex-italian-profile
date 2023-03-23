@@ -2,7 +2,7 @@
 <!--
 NeTEX italian Profile EPIP
 -->
-<PublicationDelivery xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:siri="http://www.siri.org.uk/siri" version="1.10" xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.netex.org.uk/netex ../NeTEx_publication_EPIP.xsd">
+<PublicationDelivery xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:siri="http://www.siri.org.uk/siri" version="1.10" xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.netex.org.uk/netex ../xsd/NeTEx_publication_EPIP.xsd">
 	<PublicationTimestamp>2021-01-01T12:00:00.000+02:00</PublicationTimestamp>
 	<ParticipantRef>RAP</ParticipantRef>
 	<Description>Esempio di profilo italiano del NeTEx EPIP</Description>
@@ -18413,7 +18413,7 @@ NeTEX italian Profile EPIP
 								</TimetabledPassingTime>
 							</passingTimes>
 						</ServiceJourney>
-						<ServiceJourney id="IT:ITC1:ServiceJourney:busATS:001_01_01R" version="any">
+						<ServiceJourney id="IT:ITC1:ServiceJourney:busATS:001_01_01R" version="1">
 							<Name>Corsa 1 Milano - Torino</Name>
 							<Distance>60000</Distance>
 							<TransportMode>bus</TransportMode>
