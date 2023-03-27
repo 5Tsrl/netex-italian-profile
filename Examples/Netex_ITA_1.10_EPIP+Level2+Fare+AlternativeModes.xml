@@ -1110,33 +1110,6 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							<OperatorRef ref="IT:ITC1:Operator:metroATMMILANO:ATMMILANO">ATMMILANO</OperatorRef>
 							<TrainRef ref="IT:ITC1:Train:metroATMMILANO:LEONARDO">LEONARDO</TrainRef>
 						</Vehicle>
-						<!--- ====== veicolo CarSharing======== -->
-						<Vehicle id="IT:ITC1:CarSharingTorino:VE:01" version="any">
-							<ValidBetween>
-								<FromDate>2021-01-01T00:00:00</FromDate>
-								<ToDate>2022-12-31T00:00:00</ToDate>
-							</ValidBetween>
-							<Name>01</Name>
-							<ShortName>01</ShortName>
-							<RegistrationNumber>AA000AA</RegistrationNumber>
-							<OperationalNumber>Car01</OperationalNumber>
-							<PrivateCode>01</PrivateCode>
-							<OperatorRef ref="IT:ITC1:CarSharingTorino:OP:CarSharingTorino"/>
-							<VehicleTypeRef ref="IT:ITC1:CarSharingTorino:vehicleType:Car01"/>
-						</Vehicle>
-						<Vehicle id="IT:ITC1:CarSharingTorino:VE:02" version="any">
-							<ValidBetween>
-								<FromDate>2021-01-01T00:00:00</FromDate>
-								<ToDate>2021-12-31T00:00:00</ToDate>
-							</ValidBetween>
-							<Name>02</Name>
-							<ShortName>02</ShortName>
-							<RegistrationNumber>AA001AA</RegistrationNumber>
-							<OperationalNumber>Car02</OperationalNumber>
-							<PrivateCode>02</PrivateCode>
-							<OperatorRef ref="IT:ITC1:CarSharingTorino:OP:CarSharingTorino"/>
-							<VehicleTypeRef ref="IT:ITC1:CarSharingTorino:vehicleType:Car01"/>
-						</Vehicle>
 					</vehicles>
 				</ResourceFrame>
 				<SiteFrame id="epd:IT:ITC1:SiteFrame_EU_PI_STOP:ita" version="any">
@@ -23578,6 +23551,24 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 			</FrameDefaults>
 			<frames>
 				<ResourceFrame id="epd:IT:ITC1:ResourceFrame_EU_PI_COMMON:ita:BikeSharing" version="any">
+					<organisations>
+						<TravelAgent id="IT:ITC1:TravelAgent:BikeSharing:11" version="any">
+							<Name>Bike Sharing S.r.l.</Name>
+							<ShortName>Bike Sharing</ShortName>
+							<ContactDetails>
+								<Email>mario.bike@bike.it</Email>
+								<Phone>+39-011-453502</Phone>
+								<Url>www.bike.it</Url>
+							</ContactDetails>
+							<OrganisationType>travelAgent</OrganisationType>
+							<Address id="IT:ITC1:Address:BikeSharing:1b">
+								<CountryName>Italia</CountryName>
+								<Street>piazza Castello 1</Street>
+								<Town>Milano</Town>
+								<PostCode>20121</PostCode>
+							</Address>
+						</TravelAgent>
+					</organisations>
 					<!--- =======Tipi veicolo 5T======== -->
 					<vehicleModelProfiles>
 						<CycleModelProfile id="IT:ITC1:BikeSharingTorino:vehicleType:Bike01" version="any">
@@ -23636,10 +23627,6 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<Description>Bike Sharing 1 minuto utilizzo</Description>
 									<Duration>PT1M</Duration>
 								</TimeInterval>
-								<TimeInterval id="IT:ITC1:BikeSharingTorino:ti:10min" version="any">
-									<Description>Bike Sharing 10 min utilizzo</Description>
-									<Duration>PT10M</Duration>
-								</TimeInterval>
 							</timeIntervals>
 							<fareStructureElements>
 								<FareStructureElement id="IT:ITC1:BikeSharingTorino:fse:1min" version="any">
@@ -23689,6 +23676,9 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									</validityParameters>
 								</GenericParameterAssignment>
 							</validityParameterAssignments>
+							<validableElements>
+								<ValidableElementRef ref="IT:ITC1:BikeSharingTorino::ve:1"/>
+							</validableElements>
 						</PreassignedFareProduct>
 					</fareProducts>
 					<fareTables>
@@ -23719,7 +23709,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							<Name>Rete di vendita ATS</Name>
 							<Description>Dettagli rete di vendita BikeSharing</Description>
 							<DistributionChannelType>agency</DistributionChannelType>
-							<TravelAgentRef ref="IT:ITC1:BikeSharingTorino:TravelAgent:1"/>
+							<TravelAgentRef ref="IT:ITC1:TravelAgent:BikeSharing:11"/>
 							<PaymentMethods>creditCard</PaymentMethods>
 						</DistributionChannel>
 					</distributionChannels>
@@ -23825,6 +23815,207 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 			<TypeOfFrameRef ref="epip:EU_PI_LINE_OFFER" versionRef="any"/>
 			<!--- =======FRAME DEFAULTS======== -->
 			<frames>
+				<ResourceFrame id="epd:IT:ITC1:ResourceFrame_EU_PI_COMMON:ita:CarSharing" version="any">
+					<organisations>
+						<TravelAgent id="IT:ITC1:TravelAgent:CarSharing:11" version="any">
+							<Name>CarSharing S.r.l.</Name>
+							<ShortName>CarSharing</ShortName>
+							<ContactDetails>
+								<Email>mario.car@car.it</Email>
+								<Phone>+39-011-453502</Phone>
+								<Url>www.car.it</Url>
+							</ContactDetails>
+							<OrganisationType>travelAgent</OrganisationType>
+							<Address id="IT:ITC1:Address:CarSharing:1b">
+								<CountryName>Italia</CountryName>
+								<Street>piazza Castello 1</Street>
+								<Town>Milano</Town>
+								<PostCode>20121</PostCode>
+							</Address>
+						</TravelAgent>
+					</organisations>
+					<!--- =======Tipi veicolo 5T======== -->
+					<vehicleModelProfiles>
+						<CarModelProfile id="IT:ITC1:CarSharingTorino:vehicleType:Car01" version="any">
+							<ChildSeat>baby</ChildSeat>
+							<Seats>4</Seats>
+							<Doors>5</Doors>
+							<Transmission>automatic</Transmission>
+							<CruiseControl>true</CruiseControl>
+							<SatNav>true</SatNav>
+							<AirConditioning>true</AirConditioning>
+							<Convertible>false</Convertible>
+							<UsbPowerSockets>true</UsbPowerSockets>
+							<WinterTyres>false</WinterTyres>
+							<Chains>true</Chains>
+							<TrailerHitch>true</TrailerHitch>
+							<RoofRack>true</RoofRack>
+							<CycleRack>false</CycleRack>
+							<SkiRack>false</SkiRack>
+						</CarModelProfile>
+						<CarModelProfile id="IT:ITC1:CarSharingTorino:vehicleType:Car02" version="any">
+							<ChildSeat>baby</ChildSeat>
+							<Seats>4</Seats>
+							<Doors>5</Doors>
+							<Transmission>automatic4WheelDrive</Transmission>
+							<CruiseControl>true</CruiseControl>
+							<SatNav>true</SatNav>
+							<AirConditioning>true</AirConditioning>
+							<Convertible>false</Convertible>
+							<UsbPowerSockets>true</UsbPowerSockets>
+							<WinterTyres>false</WinterTyres>
+							<Chains>true</Chains>
+							<TrailerHitch>true</TrailerHitch>
+							<RoofRack>true</RoofRack>
+							<CycleRack>false</CycleRack>
+							<SkiRack>false</SkiRack>
+						</CarModelProfile>
+					</vehicleModelProfiles>
+					<!--- =======Veicoli======== -->
+					<vehicles>
+						<!--- ====== veicolo CarSharing======== -->
+						<Vehicle id="IT:ITC1:CarSharingTorino:VE:01" version="any">
+							<ValidBetween>
+								<FromDate>2021-01-01T00:00:00</FromDate>
+								<ToDate>2022-12-31T00:00:00</ToDate>
+							</ValidBetween>
+							<Name>01</Name>
+							<ShortName>01</ShortName>
+							<RegistrationNumber>AA000AA</RegistrationNumber>
+							<OperationalNumber>ABC000000000000AA</OperationalNumber>
+							<PrivateCode>01</PrivateCode>
+							<OperatorRef ref="IT:ITC1:CarSharingTorino:OP:CarSharingTorino"/>
+							<CarModelProfileRef ref="IT:ITC1:CarSharingTorino:vehicleType:Car01"/>
+						</Vehicle>
+						<Vehicle id="IT:ITC1:CarSharingTorino:VE:02" version="any">
+							<ValidBetween>
+								<FromDate>2021-01-01T00:00:00</FromDate>
+								<ToDate>2021-12-31T00:00:00</ToDate>
+							</ValidBetween>
+							<Name>02</Name>
+							<ShortName>02</ShortName>
+							<RegistrationNumber>AA000AB</RegistrationNumber>
+							<OperationalNumber>ABC000000000000AB</OperationalNumber>
+							<PrivateCode>02</PrivateCode>
+							<OperatorRef ref="IT:ITC1:CarSharingTorino:OP:CarSharingTorino"/>
+							<CarModelProfileRef ref="IT:ITC1:CarSharingTorino:vehicleType:Car02"/>
+						</Vehicle>
+					</vehicles>
+				</ResourceFrame>
+				<FareFrame id="epd:IT:ITC1:FareFrame_EU_PI_FARE:CarSharing:ita" version="any">
+					<!--<TypeOfFrameRef ref="epip:EU_PI_FARE" versionRef="any">-->
+					<FrameDefaults>
+						<DefaultCurrency>EUR</DefaultCurrency>
+					</FrameDefaults>
+					<tariffs>
+						<Tariff id="IT:ITC1:CarSharing:tf:1" version="any">
+							<timeIntervals>
+								<TimeInterval id="IT:ITC1:CarSharingTorino:ti:1min" version="any">
+									<Description>Car Sharing 1 minuto utilizzo</Description>
+									<Duration>PT1M</Duration>
+								</TimeInterval>
+							</timeIntervals>
+							<fareStructureElements>
+								<FareStructureElement id="IT:ITC1:CarSharingTorino:fse:1min" version="any">
+									<fareStructureElementsInSequence>
+										<FareStructureElementInSequence id="IT:ITC1:CarSharingTorino:fseis:2" version="any" order="1">
+											<GenericParameterAssignment id="IT:ITC1:CarSharingTorino:gpafs:2" version="any" order="1">
+												<TimeIntervalRef ref="IT:ITC1:CarSharingTorino:ti:1min"/>
+											</GenericParameterAssignment>
+										</FareStructureElementInSequence>
+									</fareStructureElementsInSequence>
+								</FareStructureElement>
+							</fareStructureElements>
+						</Tariff>
+					</tariffs>
+					<validableElements>
+						<ValidableElement id="IT:ITC1:CarSharingTorino::ve:1" version="any">
+							<Name>1 minuto utilizzo</Name>
+							<fareStructureElements>
+								<FareStructureElementRef ref="IT:ITC1:CarSharingTorino:fse:1min"/>
+							</fareStructureElements>
+						</ValidableElement>
+					</validableElements>
+					<usageParameters>
+						<UserProfile id="IT:ITC1:CArSharingTorino:up:1" version="any">
+							<UserType>anyone</UserType>
+							<MinimumAge>21</MinimumAge>
+							<MaximumAge>100</MaximumAge>
+						</UserProfile>
+					</usageParameters>
+					<fareProducts>
+						<PreassignedFareProduct id="IT:ITC1:CarSharingTorino:pfp:1" version="any">
+							<ValidBetween>
+								<FromDate>2022-01-01T00:00:00.000+02:00</FromDate>
+								<ToDate>2022-12-31T00:00:00.000+02:00</ToDate>
+							</ValidBetween>
+							<Name>Tariffa Car sharing a minuti</Name>
+							<Description>Tariffa Car sharing a minuti</Description>
+							<ChargingMomentType>atEndOfTravel</ChargingMomentType>
+							<validityParameterAssignments>
+								<!-- Corsa singola Car Sharing -->
+								<GenericParameterAssignment id="IT:ITC1:CarSharingTorino:gpa:1" order="1" version="any">
+									<limitations>
+										<UserProfileRef ref="IT:ITC1:CarSharingTorino:up:1"/>
+									</limitations>
+									<validityParameters>
+										<MobilityServiceConstraintZoneRef ref="IT:ITC1:CarSharingTorino:msc:1"/>
+									</validityParameters>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+							<validableElements>
+								<ValidableElementRef ref="IT:ITC1:CarSharingTorino::ve:1"/>
+							</validableElements>
+						</PreassignedFareProduct>
+					</fareProducts>
+					<fareTables>
+						<FareTable id="IT:ITC1:CarSharingTorino:ft:1min" version="any">
+							<prices>
+								<FareStructureElementPrice id="IT:ITC1:CarSharingTorino:cep:1min" version="any">
+									<Name>Tariffa car sharing</Name>
+									<Description>Tariffa car sharing (tariffa minuto)</Description>
+									<Amount>2</Amount>
+									<CanBeCumulative>false</CanBeCumulative>
+									<FareStructureElementRef ref="IT:ITC1:CarSharingTorino:fse:1min"/>
+								</FareStructureElementPrice>
+							</prices>
+						</FareTable>
+					</fareTables>
+					<distributionChannels>
+						<DistributionChannel id="IT:ITC1:CarSharingTorino:dc:1" version="any">
+							<Name>Rete di vendita ATS</Name>
+							<Description>Dettagli rete di vendita CarSharing</Description>
+							<DistributionChannelType>agency</DistributionChannelType>
+							<TravelAgentRef ref="IT:ITC1:BikeSharingTorino:TravelAgent:1"/>
+							<PaymentMethods>creditCard</PaymentMethods>
+						</DistributionChannel>
+					</distributionChannels>
+					<salesOfferPackages>
+						<SalesOfferPackage id="IT:ITC1:CarSharingTorino:sop:30" version="any">
+							<distributionAssignments>
+								<DistributionAssignment id="IT:ITC1:CarSharingTorino:da:15" version="any" order="1">
+									<DistributionChannelRef ref="IT:ITC1:TravelAgent:CarSharing:11"/>
+								</DistributionAssignment>
+							</distributionAssignments>
+							<salesOfferPackageElements>
+								<!-- Tariffa Car sharing + fattore per numero minuti-->
+								<SalesOfferPackageElement id="IT:ITC1:CarSharingTorino:sope:30min" version="any" order="1">
+									<fareTables>
+										<FareTableRef ref="IT:ITC1:CarSharingTorino:ft:1min"/>
+									</fareTables>
+									<FareProductRef ref="IT:ITC1:CarSharingTorino:pfp:1"/>
+									<prices>
+										<SalesOfferPackagePrice id="IT:ITC1:CarSharingTorino:sopp:30min" version="any">
+											<PricingRule id="IT:ITC1:CarSharingTorino:pr:30min" version="any">
+												<Factor>30</Factor>
+											</PricingRule>
+										</SalesOfferPackagePrice>
+									</prices>
+								</SalesOfferPackageElement>
+							</salesOfferPackageElements>
+						</SalesOfferPackage>
+					</salesOfferPackages>
+				</FareFrame>
 				<MobilityServiceFrame id="epd:IT:ITC1:MobilityServiceFrame_EU_PI_MOBILITY:CarSharing:ita" version="any">
 					<FrameDefaults>
 						<DefaultCurrency>EUR</DefaultCurrency>
@@ -23839,10 +24030,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 								<VehicleRef ref="IT:ITC1:CarSharingTorino:VE:01"/>
 								<VehicleRef ref="IT:ITC1:CarSharingTorino:VE:02"/>
 							</members>
-							<OperatorRef ref="IT:ITC1:BikeSharingTorino:OP:BikeSharingTorino"/>
-							<transportTypes>
-								<VehicleTypeRef ref="IT:ITC1:BikeSharingTorino:vehicleType:Bike01"/>
-							</transportTypes>
+							<OperatorRef ref="IT:ITC1:CarSharingTorino:OP:CarSharingTorino"/>
 						</Fleet>
 					</fleets>
 					<modesOfOperation>
