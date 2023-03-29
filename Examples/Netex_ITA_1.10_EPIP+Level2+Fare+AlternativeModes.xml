@@ -23187,6 +23187,13 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							<PaymentMethods>cashAndCard</PaymentMethods>
 						</DistributionChannel>
 					</distributionChannels>
+					<typesOfTravelDocuments>
+						<TypeOfTravelDocument id="IT:ITC1:busATS:ttd:1" version="any">
+							<HasPhoto>true</HasPhoto>
+							<MediaType>card</MediaType>
+							<MachineReadable>chip</MachineReadable>
+						</TypeOfTravelDocument>
+					</typesOfTravelDocuments>
 					<salesOfferPackages>
 						<SalesOfferPackage id="IT:ITC1:busATS:sop:1" version="any">
 							<distributionAssignments>
@@ -23200,6 +23207,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<fareTables>
 										<FareTableRef ref="IT:ITC1:busATS:ft:1"/>
 									</fareTables>
+									<TypeOfTravelDocumentRef ref="IT:ITC1:busATS:ttd:1"/>
 									<FareProductRef ref="IT:ITC1:busATS:pfp:1"/>
 									<prices>
 										<SalesOfferPackagePrice id="IT:ITC1:busATS:sopp:1a" version="any">
@@ -23413,7 +23421,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 					<tariffs>
 						<Tariff id="IT:ITC1:parcheggiTorino:tf:1" version="any">
 							<timeIntervals>
-								<TimeInterval id="IT:ITC1:parcheggiTorino:ti:1min" version="any">
+								<TimeInterval id="IT:ITC1:parcheggiTorino:ti:1min" version="1">
 									<Description>Intervallo a minuti per tariffe Parcheggio</Description>
 									<Duration>PT1M</Duration>
 								</TimeInterval>
@@ -23726,7 +23734,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<fareTables>
 										<FareTableRef ref="IT:ITC1:BikeSharingTorino:ft:sblocco"/>
 									</fareTables>
-									<FareProductRef ref="IT:ITC1:BikeSharingTorino:pfp:1"/>
+									<FareProductRef ref="IT:ITC1:BikeSharingTorino:pfp:1" version="any"/>
 									<prices>
 										<SalesOfferPackagePrice id="IT:ITC1:BikeSharingTorino:sopp:sblocco" version="any">
 											<PricingRule id="IT:ITC1:BikeSharingTorino:pr:sblocco" version="any">
