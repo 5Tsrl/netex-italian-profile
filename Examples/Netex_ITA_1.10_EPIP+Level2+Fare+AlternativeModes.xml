@@ -592,6 +592,22 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							</Address>
 						</Authority>
 						<!--- =======operatori 5T======== -->
+						<TravelAgent id="IT:ITC1:TravelAgent:busATS:11" version="1">
+							<Name>Autostradale S.r.l.</Name>
+							<ShortName>Autostradale</ShortName>
+							<ContactDetails>
+								<Email>mario.autostradale@autostradale.it</Email>
+								<Phone>+39-011-453502</Phone>
+								<Url>www.autostradale.it</Url>
+							</ContactDetails>
+							<OrganisationType>operator</OrganisationType>
+							<Address id="IT:ITC1:Address:busATS:1b">
+								<CountryName>Italia</CountryName>
+								<Street>piazza Castello 1</Street>
+								<Town>Milano</Town>
+								<PostCode>20121</PostCode>
+							</Address>
+						</TravelAgent>
 						<Operator id="IT:ITC1:Operator:busATS:11" version="1">
 							<Name>Autostradale S.r.l.</Name>
 							<ShortName>Autostradale</ShortName>
@@ -702,7 +718,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 								</Department>
 							</departments>
 						</Operator>
-						<!--- =======operatori Sosta======== -->
+						<!--- =======operatori parcheggi======== -->
 						<Operator id="IT:ITC1:Operator:parcheggiTorino:parcheggiTorino" version="1">
 							<PrivateCode>Parcheggi Torino</PrivateCode>
 							<Name>Parcheggi Torino</Name>
@@ -1076,23 +1092,6 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							<TrainRef ref="IT:ITC1:Train:metroATMMILANO:LEONARDO" version="1">LEONARDO</TrainRef>
 						</VehicleModel>
 					</vehicleModels>
-					<!--- ====== VehicleModelProfile======== -->
-					<vehicleModelProfiles>
-						<CarModelProfile id="IT:ITC1:CarSharingTorino:VMP:CarRenault" version="1">
-							<Seats>5</Seats>
-							<Doors>5</Doors>
-							<CruiseControl>true</CruiseControl>
-							<SatNav>true</SatNav>
-							<AirConditioning>true</AirConditioning>
-							<UsbPowerSockets>true</UsbPowerSockets>
-							<WinterTyres>false</WinterTyres>
-						</CarModelProfile>
-						<CycleModelProfile id="IT:ITC1:BikeSharingTorino:VMP:BikeBianchi" version="1">
-							<Battery>true</Battery>
-							<Lamps>true</Lamps>
-							<Basket>true</Basket>
-						</CycleModelProfile>
-					</vehicleModelProfiles>
 					<!--- =======Veicoli======== -->
 					<vehicles>
 						<!--- ====== veicolo 5T======== -->
@@ -17315,6 +17314,84 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 								</gml:interior>
 							</gml:Polygon>
 						</TariffZone>
+						<TariffZone id="IT:ITC1:busATS:TZ:1" version="1">
+							<ValidBetween>
+								<FromDate>2021-01-01T00:00:00</FromDate>
+								<ToDate>2022-12-31T00:00:00</ToDate>
+							</ValidBetween>
+							<Name>015146</Name>
+							<ShortName>015146</ShortName>
+							<Description>Milano</Description>
+							<PrivateCode>015146_64</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>9.20940900000889</Longitude>
+									<Latitude>45.4853180023985</Latitude>
+								</Location>
+							</Centroid>
+							<gml:Polygon gml:id="TZ1">
+								<gml:interior>
+									<gml:LinearRing>
+										<gml:pos>10.70968 45.57503</gml:pos>
+										<gml:pos>10.70974 45.57506</gml:pos>
+										<gml:pos>10.70986 45.57495</gml:pos>
+										<gml:pos>10.70979 45.57493</gml:pos>
+									</gml:LinearRing>
+								</gml:interior>
+							</gml:Polygon>
+						</TariffZone>
+						<TariffZone id="IT:ITC1:busATS:TZ:2" version="1">
+							<ValidBetween>
+								<FromDate>2021-01-01T00:00:00</FromDate>
+								<ToDate>2022-12-31T00:00:00</ToDate>
+							</ValidBetween>
+							<Name>015146</Name>
+							<ShortName>015146</ShortName>
+							<Description>Milano</Description>
+							<PrivateCode>015146_64</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>9.20940900000889</Longitude>
+									<Latitude>45.4853180023985</Latitude>
+								</Location>
+							</Centroid>
+							<gml:Polygon gml:id="TZ2">
+								<gml:interior>
+									<gml:LinearRing>
+										<gml:pos>10.70968 45.57503</gml:pos>
+										<gml:pos>10.70974 45.57506</gml:pos>
+										<gml:pos>10.70986 45.57495</gml:pos>
+										<gml:pos>10.70979 45.57493</gml:pos>
+									</gml:LinearRing>
+								</gml:interior>
+							</gml:Polygon>
+						</TariffZone>
+						<TariffZone id="IT:ITC1:busATS:TZ:3" version="1">
+							<ValidBetween>
+								<FromDate>2021-01-01T00:00:00</FromDate>
+								<ToDate>2022-12-31T00:00:00</ToDate>
+							</ValidBetween>
+							<Name>015146</Name>
+							<ShortName>015146</ShortName>
+							<Description>Milano</Description>
+							<PrivateCode>015146_64</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>9.20940900000889</Longitude>
+									<Latitude>45.4853180023985</Latitude>
+								</Location>
+							</Centroid>
+							<gml:Polygon gml:id="TZ3">
+								<gml:interior>
+									<gml:LinearRing>
+										<gml:pos>10.70968 45.57503</gml:pos>
+										<gml:pos>10.70974 45.57506</gml:pos>
+										<gml:pos>10.70986 45.57495</gml:pos>
+										<gml:pos>10.70979 45.57493</gml:pos>
+									</gml:LinearRing>
+								</gml:interior>
+							</gml:Polygon>
+						</TariffZone>
 					</tariffZones>
 					<!--- =======StopAssignment======== -->
 					<stopAssignments>
@@ -22223,12 +22300,12 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 								<GeographicalInterval id="IT:ITC1:busATS:gi:0-5" version="1">
 									<StartGeographicalValue>0</StartGeographicalValue>
 									<EndGeographicalValue>5</EndGeographicalValue>
-									<GeographicalUnitRef ref="">IT:ITC1:busATS:gu:1</GeographicalUnitRef>
+									<GeographicalUnitRef ref="IT:ITC1:busATS:gu:1" version="1"/>
 								</GeographicalInterval>
 								<GeographicalInterval id="IT:ITC1:busATS:gi:5-10" version="1">
 									<StartGeographicalValue>5.1</StartGeographicalValue>
 									<EndGeographicalValue>10</EndGeographicalValue>
-									<GeographicalUnitRef ref="">IT:ITC1:busATS:gu:1</GeographicalUnitRef>
+									<GeographicalUnitRef ref="IT:ITC1:busATS:gu:1" version="1"/>
 								</GeographicalInterval>
 							</geographicalIntervals>
 							<timeIntervals>
@@ -22247,7 +22324,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 										<FareStructureElementInSequence id="IT:ITC1:busATS:fseis:8" version="1" order="1">
 											<GenericParameterAssignment id="IT:ITC1:busATS:gpafs:8" version="1" order="1">
 												<validityParameters>
-													<OperatorRef ref="IT:ITC1:busATS:Operator:11"/>
+													<OperatorRef ref="IT:ITC1:Operator:busATS:11" version="1"/>
 												</validityParameters>
 											</GenericParameterAssignment>
 										</FareStructureElementInSequence>
@@ -22258,40 +22335,40 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 										<FareStructureElementInSequence id="IT:ITC1:busATS:fseis:1" version="1" order="1">
 											<GenericParameterAssignment id="IT:ITC1:busATS:gpafs:1" version="1" order="2">
 												<validityParameters>
-													<OperatorRef ref="IT:ITC1:parcheggiTorino:OP:parcheggiTorino"/>
+													<OperatorRef ref="IT:ITC1:Operator:parcheggiTorino:parcheggiTorino" version="1"/>
 												</validityParameters>
 											</GenericParameterAssignment>
 										</FareStructureElementInSequence>
 									</fareStructureElementsInSequence>
 								</FareStructureElement>
 								<FareStructureElement id="IT:ITC1:busATS:distanceMatrix1_1" version="1">
-									<DistanceMatrixElementRef ref="IT:ITC1:busATS:dm:1"/>
+									<DistanceMatrixElementRef ref="IT:ITC1:busATS:dm:1" version="1"/>
 								</FareStructureElement>
 								<FareStructureElement id="IT:ITC1:busATS:distanceMatrix1_2" version="1">
-									<DistanceMatrixElementRef ref="IT:ITC1:busATS:dm:2"/>
+									<DistanceMatrixElementRef ref="IT:ITC1:busATS:dm:2" version="1"/>
 								</FareStructureElement>
 								<FareStructureElement id="IT:ITC1:busATS:distanceMatrix1_3" version="1">
-									<DistanceMatrixElementRef ref="IT:ITC1:busATS:dm:3"/>
+									<DistanceMatrixElementRef ref="IT:ITC1:busATS:dm:3" version="1"/>
 								</FareStructureElement>
 								<FareStructureElement id="IT:ITC1:busATS:geographicalInterval0-5" version="1">
-									<GeographicalIntervalRef ref="IT:ITC1:busATS:gi:0-5"/>
+									<GeographicalIntervalRef ref="IT:ITC1:busATS:gi:0-5" version="1"/>
 								</FareStructureElement>
 								<FareStructureElement id="IT:ITC1:busATS:geographicalInterval5-10" version="1">
-									<GeographicalIntervalRef ref="IT:ITC1:busATS:gi:5-10"/>
+									<GeographicalIntervalRef ref="IT:ITC1:busATS:gi:5-10" version="1"/>
 								</FareStructureElement>
 							</fareStructureElements>
 							<distanceMatrixElements>
 								<DistanceMatrixElement id="IT:ITC1:busATS:dm:1" version="1">
-									<StartTariffZoneRef ref="IT:ITC1:busATS:TZ:1"/>
-									<EndTariffZoneRef ref="IT:ITC1:busATS:TZ:2"/>
+									<StartTariffZoneRef ref="IT:ITC1:busATS:TZ:1" version="1"/>
+									<EndTariffZoneRef ref="IT:ITC1:busATS:TZ:2" version="1"/>
 								</DistanceMatrixElement>
 								<DistanceMatrixElement id="IT:ITC1:busATS:dm:2" version="1">
-									<StartTariffZoneRef ref="IT:ITC1:busATS:TZ:2"/>
-									<EndTariffZoneRef ref="IT:ITC1:metroATMMILANO:TZ:015146_64"/>
+									<StartTariffZoneRef ref="IT:ITC1:busATS:TZ:2" version="1"/>
+									<EndTariffZoneRef ref="IT:ITC1:busATS:TZ:3" version="1"/>
 								</DistanceMatrixElement>
 								<DistanceMatrixElement id="IT:ITC1:busATS:dm:3" version="1">
-									<StartTariffZoneRef ref="IT:ITC1:busATS:TZ:1"/>
-									<EndTariffZoneRef ref="IT:ITC1:metroATMMILANO:TZ:015146_64"/>
+									<StartTariffZoneRef ref="IT:ITC1:busATS:TZ:1" version="1"/>
+									<EndTariffZoneRef ref="IT:ITC1:busATS:TZ:3" version="1"/>
 								</DistanceMatrixElement>
 							</distanceMatrixElements>
 						</Tariff>
@@ -22300,43 +22377,43 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 						<ValidableElement id="IT:ITC1:busATS:ve:8" version="1">
 							<Name>Biglietto urbano</Name>
 							<fareStructureElements>
-								<FareStructureElementRef ref="IT:ITC1:busATS:fse:8"/>
+								<FareStructureElementRef ref="IT:ITC1:busATS:fse:8" version="1"/>
 							</fareStructureElements>
 						</ValidableElement>
 						<ValidableElement id="IT:ITC1:busATS:ve:1" version="1">
 							<Name>Parcheggio</Name>
 							<fareStructureElements>
-								<FareStructureElementRef ref="IT:ITC1:busATS:fse:1"/>
+								<FareStructureElementRef ref="IT:ITC1:busATS:fse:1" version="1"/>
 							</fareStructureElements>
 						</ValidableElement>
 						<ValidableElement id="IT:ITC1:busATS::ve:1_1" version="1">
 							<Name>TariffaOD1</Name>
 							<fareStructureElements>
-								<FareStructureElementRef ref="IT:ITC1:busATS:distanceMatrix1_1"/>
+								<FareStructureElementRef ref="IT:ITC1:busATS:distanceMatrix1_1" version="1"/>
 							</fareStructureElements>
 						</ValidableElement>
 						<ValidableElement id="IT:ITC1:busATS::ve:1_2" version="1">
 							<Name>TariffaOD2</Name>
 							<fareStructureElements>
-								<FareStructureElementRef ref="IT:ITC1:busATS:distanceMatrix1_2"/>
+								<FareStructureElementRef ref="IT:ITC1:busATS:distanceMatrix1_2" version="1"/>
 							</fareStructureElements>
 						</ValidableElement>
 						<ValidableElement id="IT:ITC1:busATS::ve:1_3" version="1">
 							<Name>TariffaOD3</Name>
 							<fareStructureElements>
-								<FareStructureElementRef ref="IT:ITC1:busATS:distanceMatrix1_3"/>
+								<FareStructureElementRef ref="IT:ITC1:busATS:distanceMatrix1_3" version="1"/>
 							</fareStructureElements>
 						</ValidableElement>
 						<ValidableElement id="IT:ITC1:busATS::ve:0-5" version="1">
 							<Name>Tariffa pentachilometrica da 0 a 5KM</Name>
 							<fareStructureElements>
-								<FareStructureElementRef ref="IT:ITC1:busATS:geographicalInterval0-5"/>
+								<FareStructureElementRef ref="IT:ITC1:busATS:geographicalInterval0-5" version="1"/>
 							</fareStructureElements>
 						</ValidableElement>
 						<ValidableElement id="IT:ITC1:busATS::ve:5-10" version="1">
 							<Name>Tariffa pentachilometrica da 0 a 5KM</Name>
 							<fareStructureElements>
-								<FareStructureElementRef ref="IT:ITC1:busATS:geographicalInterval5-10"/>
+								<FareStructureElementRef ref="IT:ITC1:busATS:geographicalInterval5-10" version="1"/>
 							</fareStructureElements>
 						</ValidableElement>
 					</validableElements>
@@ -22369,13 +22446,13 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							<Description>Tariffa parcheggio</Description>
 							<ChargingMomentType>atEndOfChargePeriod</ChargingMomentType>
 							<validableElements>
-								<ValidableElementRef ref="IT:ITC1:busATS:ve:1"/>
+								<ValidableElementRef ref="IT:ITC1:busATS:ve:1" version="1"/>
 							</validableElements>
 							<tariffs>
-								<ParkingTariffRef ref="IT:ITC1:parcheggiTorino:pt:1a"/>
+								<ParkingTariffRef ref="IT:ITC1:parcheggiTorino:pt:1a" version="1"/>
 							</tariffs>
 						</PreassignedFareProduct>
-						<PreassignedFareProduct id="IT:ITC1:busATS:pfp:1+8" version="2">
+						<PreassignedFareProduct id="IT:ITC1:busATS:pfp:1+8" version="1">
 							<ValidBetween>
 								<FromDate>2022-01-01T00:00:00.000+02:00</FromDate>
 								<ToDate>2022-12-31T00:00:00.000+02:00</ToDate>
@@ -22389,13 +22466,13 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<!--<ValidableElementRef ref="IT:ITC1:busATS:ve:8"/>-->
 									<!--									<AccessRightInProductRef ref="IT:ITC1:busATS:arip:1"></AccessRightInProductRef>-->
 									<limitations>
-										<UsageValidityPeriodRef ref="IT:ITC1:busATS:uvp:1"/>
-										<UserProfileRef ref="IT:ITC1:busATS:up:1"/>
+										<UsageValidityPeriodRef ref="IT:ITC1:busATS:uvp:1" version="1"/>
+										<UserProfileRef ref="IT:ITC1:busATS:up:1" version="1"/>
 									</limitations>
 									<validityParameters>
-										<OperatorRef ref="IT:ITC1:busATS:op:1"/>
-										<TrainRef ref="IT:ITC1:metroATMMILANO:TR:LEONARDO"/>
-										<TariffZoneRef ref="IT:ITC1:busATS:tz:1"/>
+										<OperatorRef ref="IT:ITC1:Operator:busATS:11" version="1"/>
+										<TrainRef ref="IT:ITC1:Train:metroATMMILANO:LEONARDO" version="1"/>
+										<TariffZoneRef ref="IT:ITC1:busATS:TZ:1" version="1"/>
 									</validityParameters>
 								</GenericParameterAssignment>
 								<!-- Corse in 90 minuti bus -->
@@ -22403,37 +22480,37 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<!--<ValidableElementRef ref="IT:ITC1:busATS:ve:8"/>-->
 									<!--									<AccessRightInProductRef ref="IT:ITC1:busATS:arip:2"></AccessRightInProductRef>-->
 									<limitations>
-										<UserProfileRef ref="IT:ITC1:busATS:up:1"/>
+										<UserProfileRef ref="IT:ITC1:busATS:up:1" version="1"/>
 									</limitations>
 									<validityParameters>
-										<TariffZoneRef ref="IT:ITC1:busATS:tz:2"/>
-										<TariffZoneRef ref="IT:ITC1:busATS:tz:4"/>
-										<OperatorRef ref="IT:ITC1:busATS:op:1"/>
-										<VehicleTypeRef ref="IT:ITC1:busATS:vehicleType:001"/>
+										<TariffZoneRef ref="IT:ITC1:busATS:TZ:2" version="1"/>
+										<TariffZoneRef ref="IT:ITC1:busATS:TZ:3" version="1"/>
+										<OperatorRef ref="IT:ITC1:Operator:busATS:11" version="1"/>
+										<VehicleTypeRef ref="IT:ITC1:VehicleType:busATS:001" version="1"/>
 									</validityParameters>
-									<TimeIntervalRef ref="IT:ITC1:busATS:ti:1"/>
+									<TimeIntervalRef ref="IT:ITC1:busATS:ti:1" version="1"/>
 								</GenericParameterAssignment>
 								<!-- Corse singola treno -->
 								<GenericParameterAssignment id="IT:ITC1:busATS:gpa:3b" order="3" version="1">
 									<!--<ValidableElementRef ref="IT:ITC1:busATS:ve:8"/>-->
 									<!--									<AccessRightInProductRef ref="IT:ITC1:busATS:arip:3"></AccessRightInProductRef>-->
 									<limitations>
-										<UsageValidityPeriodRef ref="IT:ITC1:busATS:uvp:3"/>
-										<UserProfileRef ref="IT:ITC1:busATS:up:1"/>
+										<UsageValidityPeriodRef ref="IT:ITC1:busATS:uvp:3" version="1"/>
+										<UserProfileRef ref="IT:ITC1:busATS:up:1" version="1"/>
 									</limitations>
 									<validityParameters>
-										<TariffZoneRef ref="IT:ITC1:busATS:tz:3"/>
-										<OperatorRef ref="IT:ITC1:busATS:op:1"/>
-										<TrainRef ref="IT:ITC1:trenoFS:trn:1"/>
+										<TariffZoneRef ref="IT:ITC1:busATS:TZ:3" version="1"/>
+										<OperatorRef ref="IT:ITC1:Operator:busATS:11" version="1"/>
+										<TrainRef ref="IT:ITC1:Train:trenoFS:1" version="1"/>
 									</validityParameters>
 								</GenericParameterAssignment>
 							</validityParameterAssignments>
 							<validableElements>
-								<ValidableElementRef ref="IT:ITC1:busATS:ve:1"/>
-								<ValidableElementRef ref="IT:ITC1:busATS:ve:8"/>
+								<ValidableElementRef ref="IT:ITC1:busATS:ve:1" version="1"/>
+								<ValidableElementRef ref="IT:ITC1:busATS:ve:8" version="1"/>
 							</validableElements>
 							<tariffs>
-								<ParkingTariffRef ref="IT:ITC1:parcheggiTorino:pt:1a"/>
+								<ParkingTariffRef ref="IT:ITC1:parcheggiTorino:pt:1a" version="1"/>
 							</tariffs>
 						</PreassignedFareProduct>
 						<PreassignedFareProduct id="IT:ITC1:busATS:pfp:8" version="1">
@@ -22450,13 +22527,13 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<!--<ValidableElementRef ref="IT:ITC1:busATS:ve:8"/>-->
 									<!--									<AccessRightInProductRef ref="IT:ITC1:busATS:arip:1"></AccessRightInProductRef>-->
 									<limitations>
-										<UsageValidityPeriodRef ref="IT:ITC1:busATS:uvp:1"/>
-										<UserProfileRef ref="IT:ITC1:busATS:up:1"/>
+										<UsageValidityPeriodRef ref="IT:ITC1:busATS:uvp:1" version="1"/>
+										<UserProfileRef ref="IT:ITC1:busATS:up:1" version="1"/>
 									</limitations>
 									<validityParameters>
-										<OperatorRef ref="IT:ITC1:busATS:op:1"/>
-										<TrainRef ref="IT:ITC1:metroATMMILANO:TR:LEONARDO"/>
-										<TariffZoneRef ref="IT:ITC1:busATS:tz:1"/>
+										<OperatorRef ref="IT:ITC1:Operator:busATS:11" version="1"/>
+										<TrainRef ref="IT:ITC1:Train:metroATMMILANO:LEONARDO" version="1"/>
+										<TariffZoneRef ref="IT:ITC1:busATS:TZ:1" version="1"/>
 									</validityParameters>
 								</GenericParameterAssignment>
 								<!-- Corse in 90 minuti bus -->
@@ -22464,33 +22541,33 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<!--<ValidableElementRef ref="IT:ITC1:busATS:ve:8"/>-->
 									<!--									<AccessRightInProductRef ref="IT:ITC1:busATS:arip:2"></AccessRightInProductRef>-->
 									<limitations>
-										<UserProfileRef ref="IT:ITC1:busATS:up:1"/>
+										<UserProfileRef ref="IT:ITC1:busATS:up:1" version="1"/>
 									</limitations>
 									<validityParameters>
-										<TariffZoneRef ref="IT:ITC1:busATS:tz:2"/>
-										<TariffZoneRef ref="IT:ITC1:busATS:tz:4"/>
-										<OperatorRef ref="IT:ITC1:busATS:op:1"/>
-										<VehicleTypeRef ref="IT:ITC1:busATS:vehicleType:001"/>
+										<TariffZoneRef ref="IT:ITC1:busATS:TZ:2" version="1"/>
+										<TariffZoneRef ref="IT:ITC1:busATS:TZ:3" version="1"/>
+										<OperatorRef ref="IT:ITC1:Operator:busATS:11" version="1"/>
+										<VehicleTypeRef ref="IT:ITC1:VehicleType:busATS:001" version="1"/>
 									</validityParameters>
-									<TimeIntervalRef ref="IT:ITC1:busATS:ti:1"/>
+									<TimeIntervalRef ref="IT:ITC1:busATS:ti:1" version="1"/>
 								</GenericParameterAssignment>
 								<!-- Corse singola treno -->
 								<GenericParameterAssignment id="IT:ITC1:busATS:gpa:3c" order="3" version="1">
 									<!--<ValidableElementRef ref="IT:ITC1:busATS:ve:8"/>-->
 									<!--									<AccessRightInProductRef ref="IT:ITC1:busATS:arip:3"></AccessRightInProductRef>-->
 									<limitations>
-										<UsageValidityPeriodRef ref="IT:ITC1:busATS:uvp:3"/>
-										<UserProfileRef ref="IT:ITC1:busATS:up:1"/>
+										<UsageValidityPeriodRef ref="IT:ITC1:busATS:uvp:3" version="1"/>
+										<UserProfileRef ref="IT:ITC1:busATS:up:1" version="1"/>
 									</limitations>
 									<validityParameters>
-										<TariffZoneRef ref="IT:ITC1:busATS:tz:3"/>
-										<OperatorRef ref="IT:ITC1:busATS:op:1"/>
-										<TrainRef ref="IT:ITC1:trenoFS:trn:1"/>
+										<TariffZoneRef ref="IT:ITC1:busATS:TZ:3" version="1"/>
+										<OperatorRef ref="IT:ITC1:Operator:busATS:11" version="1"/>
+										<TrainRef ref="IT:ITC1:Train:trenoFS:1" version="1"/>
 									</validityParameters>
 								</GenericParameterAssignment>
 							</validityParameterAssignments>
 							<validableElements>
-								<ValidableElementRef ref="IT:ITC1:busATS:ve:8"/>
+								<ValidableElementRef ref="IT:ITC1:busATS:ve:8" version="1"/>
 							</validableElements>
 						</PreassignedFareProduct>
 						<PreassignedFareProduct id="IT:ITC1:busATS:pfp:dm1" version="1">
@@ -22507,16 +22584,16 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<!--<ValidableElementRef ref="IT:ITC1:busATS:ve:8"/>-->
 									<!--									<AccessRightInProductRef ref="IT:ITC1:busATS:arip:2"></AccessRightInProductRef>-->
 									<limitations>
-										<UserProfileRef ref="IT:ITC1:busATS:up:1"/>
+										<UserProfileRef ref="IT:ITC1:busATS:up:1" version="1"/>
 									</limitations>
 									<validityParameters>
-										<OperatorRef ref="IT:ITC1:busATS:op:1"/>
-										<VehicleTypeRef ref="IT:ITC1:busATS:vehicleType:001"/>
+										<OperatorRef ref="IT:ITC1:Operator:busATS:11" version="1"/>
+										<VehicleTypeRef ref="IT:ITC1:VehicleType:busATS:001" version="1"/>
 									</validityParameters>
 								</GenericParameterAssignment>
 							</validityParameterAssignments>
 							<validableElements>
-								<ValidableElementRef ref="IT:ITC1:busATS::ve:1_1"/>
+								<ValidableElementRef ref="IT:ITC1:busATS::ve:1_1" version="1"/>
 							</validableElements>
 						</PreassignedFareProduct>
 						<PreassignedFareProduct id="IT:ITC1:busATS:pfp:dm2" version="1">
@@ -22533,16 +22610,16 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<!--<ValidableElementRef ref="IT:ITC1:busATS:ve:8"/>-->
 									<!--									<AccessRightInProductRef ref="IT:ITC1:busATS:arip:2"></AccessRightInProductRef>-->
 									<limitations>
-										<UserProfileRef ref="IT:ITC1:busATS:up:1"/>
+										<UserProfileRef ref="IT:ITC1:busATS:up:1" version="1"/>
 									</limitations>
 									<validityParameters>
-										<OperatorRef ref="IT:ITC1:busATS:op:1"/>
-										<VehicleTypeRef ref="IT:ITC1:busATS:vehicleType:001"/>
+										<OperatorRef ref="IT:ITC1:Operator:busATS:11" version="1"/>
+										<VehicleTypeRef ref="IT:ITC1:VehicleType:busATS:001" version="1"/>
 									</validityParameters>
 								</GenericParameterAssignment>
 							</validityParameterAssignments>
 							<validableElements>
-								<ValidableElementRef ref="IT:ITC1:busATS::ve:1_2"/>
+								<ValidableElementRef ref="IT:ITC1:busATS::ve:1_2" version="1"/>
 							</validableElements>
 						</PreassignedFareProduct>
 						<PreassignedFareProduct id="IT:ITC1:busATS:pfp:dm3" version="1">
@@ -22559,16 +22636,16 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<!--<ValidableElementRef ref="IT:ITC1:busATS:ve:8"/>-->
 									<!--									<AccessRightInProductRef ref="IT:ITC1:busATS:arip:2"></AccessRightInProductRef>-->
 									<limitations>
-										<UserProfileRef ref="IT:ITC1:busATS:up:1"/>
+										<UserProfileRef ref="IT:ITC1:busATS:up:1" version="1"/>
 									</limitations>
 									<validityParameters>
-										<OperatorRef ref="IT:ITC1:busATS:op:1"/>
-										<VehicleTypeRef ref="IT:ITC1:busATS:vehicleType:001"/>
+										<OperatorRef ref="IT:ITC1:Operator:busATS:11" version="1"/>
+										<VehicleTypeRef ref="IT:ITC1:VehicleType:busATS:001" version="1"/>
 									</validityParameters>
 								</GenericParameterAssignment>
 							</validityParameterAssignments>
 							<validableElements>
-								<ValidableElementRef ref="IT:ITC1:busATS::ve:1_3"/>
+								<ValidableElementRef ref="IT:ITC1:busATS::ve:1_3" version="1"/>
 							</validableElements>
 						</PreassignedFareProduct>
 						<PreassignedFareProduct id="IT:ITC1:busATS:pfp:gi0-5" version="1">
@@ -22585,16 +22662,16 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<!--<ValidableElementRef ref="IT:ITC1:busATS:ve:8"/>-->
 									<!--									<AccessRightInProductRef ref="IT:ITC1:busATS:arip:2"></AccessRightInProductRef>-->
 									<limitations>
-										<UserProfileRef ref="IT:ITC1:busATS:up:1"/>
+										<UserProfileRef ref="IT:ITC1:busATS:up:1" version="1"/>
 									</limitations>
 									<validityParameters>
-										<OperatorRef ref="IT:ITC1:busATS:op:1"/>
-										<VehicleTypeRef ref="IT:ITC1:busATS:vehicleType:001"/>
+										<OperatorRef ref="IT:ITC1:Operator:busATS:11" version="1"/>
+										<VehicleTypeRef ref="IT:ITC1:VehicleType:busATS:001" version="1"/>
 									</validityParameters>
 								</GenericParameterAssignment>
 							</validityParameterAssignments>
 							<validableElements>
-								<ValidableElementRef ref="IT:ITC1:busATS::ve:0-5"/>
+								<ValidableElementRef ref="IT:ITC1:busATS::ve:0-5" version="1"/>
 							</validableElements>
 						</PreassignedFareProduct>
 						<PreassignedFareProduct id="IT:ITC1:busATS:pfp:gi5-10" version="1">
@@ -22611,16 +22688,16 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<!--<ValidableElementRef ref="IT:ITC1:busATS:ve:8"/>-->
 									<!--									<AccessRightInProductRef ref="IT:ITC1:busATS:arip:2"></AccessRightInProductRef>-->
 									<limitations>
-										<UserProfileRef ref="IT:ITC1:busATS:up:1"/>
+										<UserProfileRef ref="IT:ITC1:busATS:up:1" version="1"/>
 									</limitations>
 									<validityParameters>
-										<OperatorRef ref="IT:ITC1:busATS:op:1"/>
-										<VehicleTypeRef ref="IT:ITC1:busATS:vehicleType:001"/>
+										<OperatorRef ref="IT:ITC1:Operator:busATS:11" version="1"/>
+										<VehicleTypeRef ref="IT:ITC1:VehicleType:busATS:001" version="1"/>
 									</validityParameters>
 								</GenericParameterAssignment>
 							</validityParameterAssignments>
 							<validableElements>
-								<ValidableElementRef ref="IT:ITC1:busATS::ve:5-10"/>
+								<ValidableElementRef ref="IT:ITC1:busATS::ve:5-10" version="1"/>
 							</validableElements>
 						</PreassignedFareProduct>
 					</fareProducts>
@@ -22632,7 +22709,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<Description>Tariffa biglietto urbano</Description>
 									<Amount>1.70</Amount>
 									<CanBeCumulative>false</CanBeCumulative>
-									<FareStructureElementRef ref="IT:ITC1:busATS:fse:8"/>
+									<FareStructureElementRef ref="IT:ITC1:busATS:fse:8" version="1"/>
 								</FareStructureElementPrice>
 							</prices>
 						</FareTable>
@@ -22643,7 +22720,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<Description>Tariffa parcheggio 30 min</Description>
 									<Amount>1.00</Amount>
 									<CanBeCumulative>false</CanBeCumulative>
-									<FareStructureElementRef ref="IT:ITC1:busATS:fse:1"/>
+									<FareStructureElementRef ref="IT:ITC1:busATS:fse:1" version="1"/>
 								</FareStructureElementPrice>
 							</prices>
 						</FareTable>
@@ -22654,7 +22731,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<Description>Tariffa Torino - Carisio</Description>
 									<Amount>6.00</Amount>
 									<CanBeCumulative>false</CanBeCumulative>
-									<FareStructureElementRef ref="IT:ITC1:busATS:distanceMatrix1_1"/>
+									<FareStructureElementRef ref="IT:ITC1:busATS:distanceMatrix1_1" version="1"/>
 								</FareStructureElementPrice>
 							</prices>
 						</FareTable>
@@ -22665,7 +22742,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<Description>Tariffa Carisio - Milano</Description>
 									<Amount>7.00</Amount>
 									<CanBeCumulative>false</CanBeCumulative>
-									<FareStructureElementRef ref="IT:ITC1:busATS:distanceMatrix1_2"/>
+									<FareStructureElementRef ref="IT:ITC1:busATS:distanceMatrix1_2" version="1"/>
 								</FareStructureElementPrice>
 							</prices>
 						</FareTable>
@@ -22676,7 +22753,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<Description>Tariffa Torino - Milano</Description>
 									<Amount>13.00</Amount>
 									<CanBeCumulative>false</CanBeCumulative>
-									<FareStructureElementRef ref="IT:ITC1:busATS:distanceMatrix1_3"/>
+									<FareStructureElementRef ref="IT:ITC1:busATS:distanceMatrix1_3" version="1"/>
 								</FareStructureElementPrice>
 							</prices>
 						</FareTable>
@@ -22687,7 +22764,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<Description>Tariffa 0-5km</Description>
 									<Amount>10.00</Amount>
 									<CanBeCumulative>false</CanBeCumulative>
-									<FareStructureElementRef ref="IT:ITC1:busATS:geographicalInterval0-5"/>
+									<FareStructureElementRef ref="IT:ITC1:busATS:geographicalInterval0-5" version="1"/>
 								</FareStructureElementPrice>
 							</prices>
 						</FareTable>
@@ -22698,7 +22775,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<Description>Tariffa 5-1-10km</Description>
 									<Amount>11.00</Amount>
 									<CanBeCumulative>false</CanBeCumulative>
-									<FareStructureElementRef ref="IT:ITC1:busATS:geographicalInterval5-10"/>
+									<FareStructureElementRef ref="IT:ITC1:busATS:geographicalInterval5-10" version="1"/>
 								</FareStructureElementPrice>
 							</prices>
 						</FareTable>
@@ -22708,7 +22785,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							<Name>Rete di vendita ATS</Name>
 							<Description>Dettagli rete di vendita ATS</Description>
 							<DistributionChannelType>agency</DistributionChannelType>
-							<TravelAgentRef ref="IT:ITC1:parcheggiTorino:TravelAgent:1"/>
+							<TravelAgentRef ref="IT:ITC1:TravelAgent:busATS:11" version="1"/>
 							<PaymentMethods>cashAndCard</PaymentMethods>
 						</DistributionChannel>
 					</distributionChannels>
@@ -22723,7 +22800,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 						<SalesOfferPackage id="IT:ITC1:busATS:sop:1" version="1">
 							<distributionAssignments>
 								<DistributionAssignment id="IT:ITC1:busATS:da:1" version="1" order="1">
-									<DistributionChannelRef ref="IT:ITC1:busATS:dc:1"/>
+									<DistributionChannelRef ref="IT:ITC1:busATS:dc:1" version="1"/>
 								</DistributionAssignment>
 							</distributionAssignments>
 							<salesOfferPackageElements>
@@ -22732,7 +22809,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<fareTables>
 										<FareTableRef ref="IT:ITC1:busATS:ft:1"/>
 									</fareTables>
-									<TypeOfTravelDocumentRef ref="IT:ITC1:busATS:ttd:1"/>
+									<TypeOfTravelDocumentRef ref="IT:ITC1:busATS:ttd:1" version="1"/>
 									<FareProductRef ref="IT:ITC1:busATS:pfp:1"/>
 									<prices>
 										<SalesOfferPackagePrice id="IT:ITC1:busATS:sopp:1a" version="1">
@@ -22746,15 +22823,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 						</SalesOfferPackage>
 						<SalesOfferPackage id="IT:ITC1:busATS:sop:2" version="1">
 							<distributionAssignments>
-								<DistributionAssignmentRef ref="IT:ITC1:busATS:da:1"/>
+								<DistributionAssignmentRef ref="IT:ITC1:busATS:da:1" version="1"/>
 							</distributionAssignments>
 							<salesOfferPackageElements>
 								<!-- Tariffa parcheggio-->
 								<SalesOfferPackageElement id="IT:ITC1:busATS:sope:2" version="1" order="1">
 									<fareTables>
-										<FareTableRef ref="IT:ITC1:busATS:ft:2"/>
+										<FareTableRef ref="IT:ITC1:busATS:ft:2" version="1"/>
 									</fareTables>
-									<FareProductRef ref="IT:ITC1:busATS:pfp:8"/>
+									<FareProductRef ref="IT:ITC1:busATS:pfp:8" version="1"/>
 									<prices>
 										<SalesOfferPackagePrice id="IT:ITC1:busATS:sopp:8" version="1">
 											<PricingRule id="IT:ITC1:busATS:sopp:pr2a" version="1">
@@ -22767,15 +22844,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 						</SalesOfferPackage>
 						<SalesOfferPackage id="IT:ITC1:busATS:sop:3" version="1">
 							<distributionAssignments>
-								<DistributionAssignmentRef ref="IT:ITC1:busATS:da:1"/>
+								<DistributionAssignmentRef ref="IT:ITC1:busATS:da:1" version="1"/>
 							</distributionAssignments>
 							<salesOfferPackageElements>
 								<!-- Tariffa park & ride-->
 								<SalesOfferPackageElement id="IT:ITC1:busATS:sope:1+2" version="1" order="1">
 									<fareTables>
-										<FareTableRef ref="IT:ITC1:busATS:fsep:1"/>
+										<FareTableRef ref="IT:ITC1:busATS:ft:1" version="1"/>
 									</fareTables>
-									<FareProductRef ref="IT:ITC1:busATS:pfp:1"/>
+									<FareProductRef ref="IT:ITC1:busATS:pfp:1" version="1"/>
 									<prices>
 										<SalesOfferPackagePrice id="IT:ITC1:busATS:sopp:1" version="1">
 											<DiscountingRule id="IT:ITC1:busATS:dr:1" version="1">
@@ -22787,9 +22864,9 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 								</SalesOfferPackageElement>
 								<SalesOfferPackageElement id="IT:ITC1:busATS:sope:1+2" version="1" order="2">
 									<fareTables>
-										<FareTableRef ref="IT:ITC1:busATS:fsep:2"/>
+										<FareTableRef ref="IT:ITC1:busATS:ft:2" version="1"/>
 									</fareTables>
-									<FareProductRef ref="IT:ITC1:busATS:pfp:8"/>
+									<FareProductRef ref="IT:ITC1:busATS:pfp:8" version="1"/>
 									<prices>
 										<SalesOfferPackagePrice id="IT:ITC1:busATS:sopp:2" version="1">
 											<DiscountingRule id="IT:ITC1:busATS:sopp:2" version="1">
@@ -22803,15 +22880,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 						</SalesOfferPackage>
 						<SalesOfferPackage id="IT:ITC1:busATS:sop:dm1" version="1">
 							<distributionAssignments>
-								<DistributionAssignmentRef ref="IT:ITC1:busATS:dc:1"/>
+								<DistributionAssignmentRef ref="IT:ITC1:busATS:dc:1" version="1"/>
 							</distributionAssignments>
 							<salesOfferPackageElements>
 								<!-- Tariffa Torino - Carisio-->
 								<SalesOfferPackageElement id="IT:ITC1:busATS:sope:dm1" version="1" order="1">
 									<fareTables>
-										<FareTableRef ref="IT:ITC1:busATS:ft:distanceMatrix1_1"/>
+										<FareTableRef ref="IT:ITC1:busATS:ft:distanceMatrix1_1" version="1"/>
 									</fareTables>
-									<FareProductRef ref="IT:ITC1:busATS:pfp:dm1"/>
+									<FareProductRef ref="IT:ITC1:busATS:pfp:dm1" version="1"/>
 									<prices>
 										<SalesOfferPackagePrice id="IT:ITC1:busATS:sopp:distanceMatrix1_1" version="1">
 											<PricingRule id="IT:ITC1:busATS:pr:distanceMatrix1_1" version="1">
@@ -22824,15 +22901,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 						</SalesOfferPackage>
 						<SalesOfferPackage id="IT:ITC1:busATS:sop:dm2" version="1">
 							<distributionAssignments>
-								<DistributionAssignmentRef ref="IT:ITC1:busATS:dc:1"/>
+								<DistributionAssignmentRef ref="IT:ITC1:busATS:dc:1" version="1"/>
 							</distributionAssignments>
 							<salesOfferPackageElements>
 								<!-- Tariffa Carisio - Milano-->
 								<SalesOfferPackageElement id="IT:ITC1:busATS:sope:dm2" version="1" order="1">
 									<fareTables>
-										<FareTableRef ref="IT:ITC1:busATS:ft:distanceMatrix1_2"/>
+										<FareTableRef ref="IT:ITC1:busATS:ft:distanceMatrix1_2" version="1"/>
 									</fareTables>
-									<FareProductRef ref="IT:ITC1:busATS:pfp:dm2"/>
+									<FareProductRef ref="IT:ITC1:busATS:pfp:dm2" version="1"/>
 									<prices>
 										<SalesOfferPackagePrice id="IT:ITC1:busATS:sopp:distanceMatrix1_2" version="1">
 											<PricingRule id="IT:ITC1:busATS:pr:distanceMatrix1_2" version="1">
@@ -22845,15 +22922,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 						</SalesOfferPackage>
 						<SalesOfferPackage id="IT:ITC1:busATS:sop:dm3" version="1">
 							<distributionAssignments>
-								<DistributionAssignmentRef ref="IT:ITC1:busATS:dc:1"/>
+								<DistributionAssignmentRef ref="IT:ITC1:busATS:dc:1" version="1"/>
 							</distributionAssignments>
 							<salesOfferPackageElements>
 								<!-- Tariffa Torino - Milano-->
 								<SalesOfferPackageElement id="IT:ITC1:busATS:sope:dm3" version="1" order="1">
 									<fareTables>
-										<FareTableRef ref="IT:ITC1:busATS:ft:distanceMatrix1_3"/>
+										<FareTableRef ref="IT:ITC1:busATS:ft:distanceMatrix1_3" version="1"/>
 									</fareTables>
-									<FareProductRef ref="IT:ITC1:busATS:pfp:dm3"/>
+									<FareProductRef ref="IT:ITC1:busATS:pfp:dm3" version="1"/>
 									<prices>
 										<SalesOfferPackagePrice id="IT:ITC1:busATS:sopp:distanceMatrix1_3" version="1">
 											<PricingRule id="IT:ITC1:busATS:pr:distanceMatrix1_3" version="1">
@@ -22866,15 +22943,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 						</SalesOfferPackage>
 						<SalesOfferPackage id="IT:ITC1:busATS:sop:gi0-5" version="1">
 							<distributionAssignments>
-								<DistributionAssignmentRef ref="IT:ITC1:busATS:dc:1"/>
+								<DistributionAssignmentRef ref="IT:ITC1:busATS:dc:1" version="1"/>
 							</distributionAssignments>
 							<salesOfferPackageElements>
 								<!-- Tariffa 0-5km-->
 								<SalesOfferPackageElement id="IT:ITC1:busATS:sope:gi1" version="1" order="1">
 									<fareTables>
-										<FareTableRef ref="IT:ITC1:busATS:ft:geographicalInterval0-5"/>
+										<FareTableRef ref="IT:ITC1:busATS:ft:geographicalInterval0-5" version="1"/>
 									</fareTables>
-									<FareProductRef ref="IT:ITC1:busATS:pfp:gi0-5"/>
+									<FareProductRef ref="IT:ITC1:busATS:pfp:gi0-5" version="1"/>
 									<prices>
 										<SalesOfferPackagePrice id="IT:ITC1:busATS:sopp:0-5km" version="1">
 											<PricingRule id="IT:ITC1:busATS:pr:0-5km" version="1">
@@ -22887,15 +22964,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 						</SalesOfferPackage>
 						<SalesOfferPackage id="IT:ITC1:busATS:sop:gi5-10" version="1">
 							<distributionAssignments>
-								<DistributionAssignmentRef ref="IT:ITC1:busATS:dc:1"/>
+								<DistributionAssignmentRef ref="IT:ITC1:busATS:dc:1" version="1"/>
 							</distributionAssignments>
 							<salesOfferPackageElements>
 								<!-- Tariffa 5.1-10km-->
 								<SalesOfferPackageElement id="IT:ITC1:busATS:sope:gi2" version="1" order="1">
 									<fareTables>
-										<FareTableRef ref="IT:ITC1:busATS:ft:geographicalInterval5-10"/>
+										<FareTableRef ref="IT:ITC1:busATS:ft:geographicalInterval5-10" version="1"/>
 									</fareTables>
-									<FareProductRef ref="IT:ITC1:busATS:pfp:gi5-10"/>
+									<FareProductRef ref="IT:ITC1:busATS:pfp:gi5-10" version="1"/>
 									<prices>
 										<SalesOfferPackagePrice id="IT:ITC1:busATS:sopp:5-10km" version="1">
 											<PricingRule id="IT:ITC1:busATS:pr:5-10km" version="1">
@@ -22913,13 +22990,13 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 								<FromDate>2022-01-01T00:00:00.000+02:00</FromDate>
 								<ToDate>2022-12-31T00:00:00.000+02:00</ToDate>
 							</ValidBetween>
-							<OperatorRef ref="IT:ITC1:parcheggiTorino:OP:parcheggiTorino"/>
+							<OperatorRef ref="IT:ITC1:Operator:parcheggiTorino:parcheggiTorino" version="1"/>
 							<timeIntervals>
-								<TimeIntervalRef ref="IT:ITC1:parcheggiTorino:ti:1min"/>
+								<TimeIntervalRef ref="IT:ITC1:parcheggiTorino:ti:1min" version="1"/>
 							</timeIntervals>
 							<ParkingStayType>midTerm</ParkingStayType>
 							<appliesTo>
-								<ParkingRef ref="IT:ITC1:parcheggiTorino:p:Porta_Nuova"/>
+								<ParkingRef ref="IT:ITC1:Parking:parcheggiTorino:p:Porta_Nuova" version="1"/>
 							</appliesTo>
 						</ParkingTariff>
 					</parkingTariffs>
@@ -22956,7 +23033,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<fareStructureElementsInSequence>
 										<FareStructureElementInSequence id="IT:ITC1:parcheggiTorino:fseis:3" version="1" order="1">
 											<GenericParameterAssignment id="IT:ITC1:parcheggiTorino:gpafs:2a" version="1" order="1">
-												<TimeIntervalRef ref="IT:ITC1:parcheggiTorino:ti:1min"/>
+												<TimeIntervalRef ref="IT:ITC1:parcheggiTorino:ti:1min" version="1"/>
 											</GenericParameterAssignment>
 										</FareStructureElementInSequence>
 									</fareStructureElementsInSequence>
@@ -22968,7 +23045,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 						<ValidableElement id="IT:ITC1:parcheggiTorino::ve:2" version="1">
 							<Name>Parcheggio 2 ore</Name>
 							<fareStructureElements>
-								<FareStructureElementRef ref="IT:ITC1:parcheggiTorino:fse:1min"/>
+								<FareStructureElementRef ref="IT:ITC1:parcheggiTorino:fse:1min" version="1"/>
 							</fareStructureElements>
 						</ValidableElement>
 					</validableElements>
@@ -22992,15 +23069,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 								<!--Parcheggio-->
 								<GenericParameterAssignment id="IT:ITC1:parcheggiTorino:gpa:1" order="1" version="1">
 									<limitations>
-										<UserProfileRef ref="IT:ITC1:parcheggiTorino:up:1"/>
+										<UserProfileRef ref="IT:ITC1:parcheggiTorino:up:1" version="1"/>
 									</limitations>
 								</GenericParameterAssignment>
 							</validityParameterAssignments>
 							<validableElements>
-								<ValidableElementRef ref="IT:ITC1:parcheggiTorino::ve:2"/>
+								<ValidableElementRef ref="IT:ITC1:parcheggiTorino::ve:2" version="1"/>
 							</validableElements>
 							<tariffs>
-								<ParkingTariffRef ref="IT:ITC1:parcheggiTorino:pt:1"/>
+								<ParkingTariffRef ref="IT:ITC1:parcheggiTorino:pt:1" version="1"/>
 							</tariffs>
 						</PreassignedFareProduct>
 					</fareProducts>
@@ -23012,7 +23089,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<Description>Tariffa parcheggi (tariffa ore)</Description>
 									<Amount>0.10</Amount>
 									<CanBeCumulative>false</CanBeCumulative>
-									<FareStructureElementRef ref="IT:ITC1:parcheggiTorino:fse:1min"/>
+									<FareStructureElementRef ref="IT:ITC1:parcheggiTorino:fse:1min" version="1"/>
 								</FareStructureElementPrice>
 							</prices>
 						</FareTable>
@@ -23022,7 +23099,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							<Name>Rete di vendita parcheggi</Name>
 							<Description>Dettagli rete di vendita parcheggi</Description>
 							<DistributionChannelType>atStop</DistributionChannelType>
-							<OperatorRef ref="IT:ITC1:Operator:parcheggiTorino:parcheggiTorino"/>
+							<OperatorRef ref="IT:ITC1:Operator:parcheggiTorino:parcheggiTorino" version="1"/>
 							<PaymentMethods>cashAndCard</PaymentMethods>
 						</DistributionChannel>
 					</distributionChannels>
@@ -23037,17 +23114,17 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 						<SalesOfferPackage id="IT:ITC1:parcheggiTorino:sop:15" version="1">
 							<distributionAssignments>
 								<DistributionAssignment id="IT:ITC1:parcheggiTorino:da:15" version="1" order="1">
-									<DistributionChannelRef ref="IT:ITC1:parcheggiTorino:dc:1"/>
+									<DistributionChannelRef ref="IT:ITC1:parcheggiTorino:dc:1" version="1"/>
 								</DistributionAssignment>
 							</distributionAssignments>
 							<salesOfferPackageElements>
 								<!-- Tariffa parcheggi con fattore per numero minuti-->
 								<SalesOfferPackageElement id="IT:ITC1:parcheggiTorino:sope:18min" version="1" order="1">
 									<fareTables>
-										<FareTableRef ref="IT:ITC1:parcheggiTorino:ft:1min"/>
+										<FareTableRef ref="IT:ITC1:parcheggiTorino:ft:1min" version="1"/>
 									</fareTables>
-									<TypeOfTravelDocumentRef ref="IT:ITC1:parking:ttd:1"/>
-									<FareProductRef ref="IT:ITC1:parcheggiTorino:pfp:1"/>
+									<TypeOfTravelDocumentRef ref="IT:ITC1:parking:ttd:1" version="1"/>
+									<FareProductRef ref="IT:ITC1:parcheggiTorino:pfp:1" version="1"/>
 									<prices>
 										<SalesOfferPackagePrice id="IT:ITC1:parcheggiTorino:sopp:18min" version="1">
 											<DiscountingRule id="IT:ITC1:parcheggiTorino:pr:18min" version="1">
@@ -23066,13 +23143,13 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 								<FromDate>2022-01-01T00:00:00.000+02:00</FromDate>
 								<ToDate>2022-12-31T00:00:00.000+02:00</ToDate>
 							</ValidBetween>
-							<OperatorRef ref="IT:ITC1:parcheggiTorino:OP:parcheggiTorino"/>
+							<OperatorRef ref="IT:ITC1:Operator:parcheggiTorino:parcheggiTorino" version="1"/>
 							<timeIntervals>
-								<TimeIntervalRef ref="IT:ITC1:parcheggiTorino:ti:1min"/>
+								<TimeIntervalRef ref="IT:ITC1:parcheggiTorino:ti:1min" version="1"/>
 							</timeIntervals>
 							<ParkingStayType>midTerm</ParkingStayType>
 							<appliesTo>
-								<ParkingRef ref="IT:ITC1:parcheggiTorino:p:Porta_Nuova"/>
+								<ParkingRef ref="IT:ITC1:Parking:parcheggiBikeSharingTorino:p:Porta_Nuova" version="1"/>
 							</appliesTo>
 						</ParkingTariff>
 					</parkingTariffs>
@@ -23093,6 +23170,26 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 			<frames>
 				<ResourceFrame id="epd:IT:ITC1:ResourceFrame_EU_PI_COMMON:ita:BikeSharing" version="1">
 					<organisations>
+						<!--- =======operatori bikeSharing======== -->
+						<Operator id="IT:ITC1:Operator:BikeSharing:BikeSharing" version="1">
+							<PrivateCode>BikeSharing</PrivateCode>
+							<Name>BikeSharing</Name>
+							<ShortName>BikeSharing</ShortName>
+							<LegalName>BikeSharing</LegalName>
+							<TradingName>BikeSharing</TradingName>
+							<ContactDetails>
+								<Email>resp1@ParcheggiTorino.it</Email>
+								<Phone>+39-02-006600</Phone>
+								<Url>www.ParcheggiTorino.it</Url>
+							</ContactDetails>
+							<OrganisationType>operator</OrganisationType>
+							<Address id="IT:ITC1:Address:ParcheggiTorino:2b">
+								<CountryName>Italia</CountryName>
+								<Street>Stazione Porta Nuova</Street>
+								<Town>Torino</Town>
+								<PostCode>10200</PostCode>
+							</Address>
+						</Operator>
 						<TravelAgent id="IT:ITC1:TravelAgent:BikeSharing:11" version="1">
 							<Name>Bike Sharing S.r.l.</Name>
 							<ShortName>Bike Sharing</ShortName>
@@ -23140,8 +23237,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							<Name>01</Name>
 							<ShortName>01</ShortName>
 							<PrivateCode>01</PrivateCode>
-							<OperatorRef ref="IT:ITC1:BikeSharingTorino:OP:BikeSharingTorino"/>
-							<CycleModelProfileRef ref="T:ITC1:BikeSharingTorino:vehicleType:Bike01"/>
+							<OperatorRef ref="IT:ITC1:Operator:BikeSharing:BikeSharing" version="1"/>
+							<CycleModelProfileRef ref="IT:ITC1:BikeSharingTorino:vehicleType:Bike01" version="1"/>
 						</Vehicle>
 						<Vehicle id="IT:ITC1:BikeSharingTorino:VE:02" version="1">
 							<ValidBetween>
@@ -23151,8 +23248,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							<Name>02</Name>
 							<ShortName>02</ShortName>
 							<PrivateCode>02</PrivateCode>
-							<OperatorRef ref="IT:ITC1:BikeSharingTorino:OP:BikeSharingTorino"/>
-							<CycleModelProfileRef ref="T:ITC1:BikeSharingTorino:vehicleType:Bike02"/>
+							<OperatorRef ref="IT:ITC1:Operator:BikeSharing:BikeSharing" version="1"/>
+							<CycleModelProfileRef ref="IT:ITC1:BikeSharingTorino:vehicleType:Bike02" version="1"/>
 						</Vehicle>
 					</vehicles>
 				</ResourceFrame>
@@ -23174,7 +23271,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<fareStructureElementsInSequence>
 										<FareStructureElementInSequence id="IT:ITC1:BikeSharingTorino:fseis:2" version="1" order="1">
 											<GenericParameterAssignment id="IT:ITC1:BikeSharingTorino:gpafs:2" version="1" order="1">
-												<TimeIntervalRef ref="IT:ITC1:BikeSharingTorino:ti:1min"/>
+												<TimeIntervalRef ref="IT:ITC1:BikeSharingTorino:ti:1min" version="1"/>
 											</GenericParameterAssignment>
 										</FareStructureElementInSequence>
 									</fareStructureElementsInSequence>
@@ -23186,7 +23283,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 						<ValidableElement id="IT:ITC1:BikeSharingTorino::ve:1" version="1">
 							<Name>Sblocco+1 minuto utilizzo</Name>
 							<fareStructureElements>
-								<FareStructureElementRef ref="IT:ITC1:BikeSharingTorino:fse:1min"/>
+								<FareStructureElementRef ref="IT:ITC1:BikeSharingTorino:fse:1min" version="1"/>
 							</fareStructureElements>
 						</ValidableElement>
 					</validableElements>
@@ -23210,15 +23307,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 								<!-- Corsa singola Bike Sharing -->
 								<GenericParameterAssignment id="IT:ITC1:BikeSharingTorino:gpa:1" order="1" version="1">
 									<limitations>
-										<UserProfileRef ref="IT:ITC1:BikeSharingTorino:up:1"/>
+										<UserProfileRef ref="IT:ITC1:BikeSharingTorino:up:1" version="1"/>
 									</limitations>
 									<validityParameters>
-										<MobilityServiceConstraintZoneRef ref="IT:ITC1:BikeSharingTorino:msc:1"/>
+										<MobilityServiceConstraintZoneRef ref="IT:ITC1:BikeSharingTorino:msc:1" version="1"/>
 									</validityParameters>
 								</GenericParameterAssignment>
 							</validityParameterAssignments>
 							<validableElements>
-								<ValidableElementRef ref="IT:ITC1:BikeSharingTorino::ve:1"/>
+								<ValidableElementRef ref="IT:ITC1:BikeSharingTorino::ve:1" version="1"/>
 							</validableElements>
 						</PreassignedFareProduct>
 					</fareProducts>
@@ -23240,7 +23337,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<Description>Tariffa bike sharing (tariffa minuto)</Description>
 									<Amount>0.25</Amount>
 									<CanBeCumulative>false</CanBeCumulative>
-									<FareStructureElementRef ref="IT:ITC1:BikeSharingTorino:fse:1min"/>
+									<FareStructureElementRef ref="IT:ITC1:BikeSharingTorino:fse:1min" version="1"/>
 								</FareStructureElementPrice>
 							</prices>
 						</FareTable>
@@ -23250,7 +23347,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							<Name>Rete di vendita ATS</Name>
 							<Description>Dettagli rete di vendita BikeSharing</Description>
 							<DistributionChannelType>agency</DistributionChannelType>
-							<TravelAgentRef ref="IT:ITC1:TravelAgent:BikeSharing:11"/>
+							<TravelAgentRef ref="IT:ITC1:TravelAgent:BikeSharing:11" version="1"/>
 							<PaymentMethods>creditCard</PaymentMethods>
 						</DistributionChannel>
 					</distributionChannels>
@@ -23265,16 +23362,16 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 						<SalesOfferPackage id="IT:ITC1:BikeSharingTorino:sop:15" version="1">
 							<distributionAssignments>
 								<DistributionAssignment id="IT:ITC1:BikeSharingTorino:da:15" version="1" order="1">
-									<DistributionChannelRef ref="IT:ITC1:BikeSharingTorino:dc:1"/>
+									<DistributionChannelRef ref="IT:ITC1:BikeSharingTorino:dc:1" version="1"/>
 								</DistributionAssignment>
 							</distributionAssignments>
 							<salesOfferPackageElements>
 								<!-- Tariffa bike sharing sblocco + fattore per numero minuti-->
 								<SalesOfferPackageElement id="IT:ITC1:BikeSharingTorino:sope:sblocco+15min" version="1" order="1">
 									<fareTables>
-										<FareTableRef ref="IT:ITC1:BikeSharingTorino:ft:sblocco"/>
+										<FareTableRef ref="IT:ITC1:BikeSharingTorino:ft:sblocco" version="1"/>
 									</fareTables>
-									<TypeOfTravelDocumentRef ref="IT:ITC1:BikeSharing:ttd:1"/>
+									<TypeOfTravelDocumentRef ref="IT:ITC1:BikeSharing:ttd:1" version="1"/>
 									<FareProductRef ref="IT:ITC1:BikeSharingTorino:pfp:1" version="1"/>
 									<prices>
 										<SalesOfferPackagePrice id="IT:ITC1:BikeSharingTorino:sopp:sblocco" version="1">
@@ -23286,10 +23383,10 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 								</SalesOfferPackageElement>
 								<SalesOfferPackageElement id="IT:ITC1:BikeSharingTorino:sope:sblocco+15min" version="1" order="2">
 									<fareTables>
-										<FareTableRef ref="IT:ITC1:BikeSharingTorino:ft:1min"/>
+										<FareTableRef ref="IT:ITC1:BikeSharingTorino:ft:1min" version="1"/>
 									</fareTables>
-									<TypeOfTravelDocumentRef ref="IT:ITC1:BikeSharing:ttd:1"/>
-									<FareProductRef ref="IT:ITC1:BikeSharingTorino:pfp:1"/>
+									<TypeOfTravelDocumentRef ref="IT:ITC1:BikeSharing:ttd:1" version="1"/>
+									<FareProductRef ref="IT:ITC1:BikeSharingTorino:pfp:1" version="1"/>
 									<prices>
 										<SalesOfferPackagePrice id="IT:ITC1:BikeSharingTorino:sopp:15min" version="1">
 											<PricingRule id="IT:ITC1:BikeSharingTorino:pr:15min" version="1">
@@ -23313,10 +23410,10 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 								<ToDate>2022-12-31T00:00:00.000+02:00</ToDate>
 							</ValidBetween>
 							<members>
-								<VehicleRef ref="IT:ITC1:BikeSharingTorino:VE:01"/>
-								<VehicleRef ref="IT:ITC1:BikeSharingTorino:VE:02"/>
+								<VehicleRef ref="IT:ITC1:BikeSharingTorino:VE:01" version="1"/>
+								<VehicleRef ref="IT:ITC1:BikeSharingTorino:VE:02" version="1"/>
 							</members>
-							<OperatorRef ref="IT:ITC1:BikeSharingTorino:OP:BikeSharingTorino"/>
+							<OperatorRef ref="IT:ITC1:Operator:BikeSharing:BikeSharing" version="1"/>
 						</Fleet>
 					</fleets>
 					<modesOfOperation>
@@ -23331,10 +23428,10 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 					</modesOfOperation>
 					<mobilityServices>
 						<VehicleSharingService id="IT:ITC1:BikeSharingTorino:VSS:1" version="1">
-							<VehicleSharingRef ref="IT:ITC1:BikeSharingTorino:VS:1"/>
+							<VehicleSharingRef ref="IT:ITC1:BikeSharingTorino:VS:1" version="1"/>
 							<FloatingVehicles>false</FloatingVehicles>
 							<fleets>
-								<FleetRef ref="IT:ITC1:BikeSharingTorino:fleet:1"/>
+								<FleetRef ref="IT:ITC1:BikeSharingTorino:fleet:1" version="1"/>
 							</fleets>
 						</VehicleSharingService>
 					</mobilityServices>
@@ -23350,7 +23447,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									</gml:LinearRing>
 								</gml:interior>
 							</gml:Polygon>
-							<VehicleSharingServiceRef ref="IT:ITC1:BikeSharingTorino:VSS:1"/>
+							<VehicleSharingServiceRef ref="IT:ITC1:BikeSharingTorino:VSS:1" version="1"/>
 						</MobilityServiceConstraintZone>
 					</mobilityServiceConstraintZones>
 				</MobilityServiceFrame>
@@ -23367,6 +23464,25 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 			<frames>
 				<ResourceFrame id="epd:IT:ITC1:ResourceFrame_EU_PI_COMMON:ita:CarSharing" version="1">
 					<organisations>
+						<Operator id="IT:ITC1:Operator:CarSharing:CarSharing" version="1">
+							<PrivateCode>CarSharing</PrivateCode>
+							<Name>CarSharing</Name>
+							<ShortName>CarSharing</ShortName>
+							<LegalName>CarSharing</LegalName>
+							<TradingName>CarSharing</TradingName>
+							<ContactDetails>
+								<Email>resp1@ParcheggiTorino.it</Email>
+								<Phone>+39-02-006600</Phone>
+								<Url>www.ParcheggiTorino.it</Url>
+							</ContactDetails>
+							<OrganisationType>operator</OrganisationType>
+							<Address id="IT:ITC1:Address:ParcheggiTorino:2b">
+								<CountryName>Italia</CountryName>
+								<Street>Stazione Porta Nuova</Street>
+								<Town>Torino</Town>
+								<PostCode>10200</PostCode>
+							</Address>
+						</Operator>
 						<TravelAgent id="IT:ITC1:TravelAgent:CarSharing:11" version="1">
 							<Name>CarSharing S.r.l.</Name>
 							<ShortName>CarSharing</ShortName>
@@ -23434,8 +23550,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							<RegistrationNumber>AA000AA</RegistrationNumber>
 							<OperationalNumber>ABC000000000000AA</OperationalNumber>
 							<PrivateCode>01</PrivateCode>
-							<OperatorRef ref="IT:ITC1:CarSharingTorino:OP:CarSharingTorino"/>
-							<CarModelProfileRef ref="IT:ITC1:CarSharingTorino:vehicleType:Car01"/>
+							<OperatorRef ref="IT:ITC1:Operator:CarSharing:CarSharing" version="1"/>
+							<CarModelProfileRef ref="IT:ITC1:CarSharingTorino:vehicleType:Car01" version="1"/>
 						</Vehicle>
 						<Vehicle id="IT:ITC1:CarSharingTorino:VE:02" version="1">
 							<ValidBetween>
@@ -23447,8 +23563,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							<RegistrationNumber>AA000AB</RegistrationNumber>
 							<OperationalNumber>ABC000000000000AB</OperationalNumber>
 							<PrivateCode>02</PrivateCode>
-							<OperatorRef ref="IT:ITC1:CarSharingTorino:OP:CarSharingTorino"/>
-							<CarModelProfileRef ref="IT:ITC1:CarSharingTorino:vehicleType:Car02"/>
+							<OperatorRef ref="IT:ITC1:Operator:CarSharing:CarSharing" version="1"/>
+							<CarModelProfileRef ref="IT:ITC1:CarSharingTorino:vehicleType:Car02" version="1"/>
 						</Vehicle>
 					</vehicles>
 				</ResourceFrame>
@@ -23470,7 +23586,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<fareStructureElementsInSequence>
 										<FareStructureElementInSequence id="IT:ITC1:CarSharingTorino:fseis:2" version="1" order="1">
 											<GenericParameterAssignment id="IT:ITC1:CarSharingTorino:gpafs:2" version="1" order="1">
-												<TimeIntervalRef ref="IT:ITC1:CarSharingTorino:ti:1min"/>
+												<TimeIntervalRef ref="IT:ITC1:CarSharingTorino:ti:1min" version="1"/>
 											</GenericParameterAssignment>
 										</FareStructureElementInSequence>
 									</fareStructureElementsInSequence>
@@ -23482,7 +23598,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 						<ValidableElement id="IT:ITC1:CarSharingTorino::ve:1" version="1">
 							<Name>1 minuto utilizzo</Name>
 							<fareStructureElements>
-								<FareStructureElementRef ref="IT:ITC1:CarSharingTorino:fse:1min"/>
+								<FareStructureElementRef ref="IT:ITC1:CarSharingTorino:fse:1min" version="1"/>
 							</fareStructureElements>
 						</ValidableElement>
 					</validableElements>
@@ -23506,15 +23622,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 								<!-- Corsa singola Car Sharing -->
 								<GenericParameterAssignment id="IT:ITC1:CarSharingTorino:gpa:1" order="1" version="1">
 									<limitations>
-										<UserProfileRef ref="IT:ITC1:CarSharingTorino:up:1"/>
+										<UserProfileRef ref="IT:ITC1:CArSharingTorino:up:1" version="1"/>
 									</limitations>
 									<validityParameters>
-										<MobilityServiceConstraintZoneRef ref="IT:ITC1:CarSharingTorino:msc:1"/>
+										<MobilityServiceConstraintZoneRef ref="IT:ITC1:CarSharingTorino:msc:1" version="1"/>
 									</validityParameters>
 								</GenericParameterAssignment>
 							</validityParameterAssignments>
 							<validableElements>
-								<ValidableElementRef ref="IT:ITC1:CarSharingTorino::ve:1"/>
+								<ValidableElementRef ref="IT:ITC1:CarSharingTorino::ve:1" version="1"/>
 							</validableElements>
 						</PreassignedFareProduct>
 					</fareProducts>
@@ -23526,7 +23642,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<Description>Tariffa car sharing (tariffa minuto)</Description>
 									<Amount>2</Amount>
 									<CanBeCumulative>false</CanBeCumulative>
-									<FareStructureElementRef ref="IT:ITC1:CarSharingTorino:fse:1min"/>
+									<FareStructureElementRef ref="IT:ITC1:CarSharingTorino:fse:1min" version="1"/>
 								</FareStructureElementPrice>
 							</prices>
 						</FareTable>
@@ -23536,7 +23652,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							<Name>Rete di vendita ATS</Name>
 							<Description>Dettagli rete di vendita CarSharing</Description>
 							<DistributionChannelType>agency</DistributionChannelType>
-							<TravelAgentRef ref="IT:ITC1:BikeSharingTorino:TravelAgent:1"/>
+							<TravelAgentRef ref="IT:ITC1:TravelAgent:CarSharing:11" version="1"/>
 							<PaymentMethods>creditCard</PaymentMethods>
 						</DistributionChannel>
 					</distributionChannels>
@@ -23551,17 +23667,17 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 						<SalesOfferPackage id="IT:ITC1:CarSharingTorino:sop:30" version="1">
 							<distributionAssignments>
 								<DistributionAssignment id="IT:ITC1:CarSharingTorino:da:15" version="1" order="1">
-									<DistributionChannelRef ref="IT:ITC1:TravelAgent:CarSharing:11"/>
+									<DistributionChannelRef ref="IT:ITC1:CarSharingTorino:dc:1" version="1"/>
 								</DistributionAssignment>
 							</distributionAssignments>
 							<salesOfferPackageElements>
 								<!-- Tariffa Car sharing + fattore per numero minuti-->
 								<SalesOfferPackageElement id="IT:ITC1:CarSharingTorino:sope:30min" version="1" order="1">
 									<fareTables>
-										<FareTableRef ref="IT:ITC1:CarSharingTorino:ft:1min"/>
+										<FareTableRef ref="IT:ITC1:CarSharingTorino:ft:1min" version="1"/>
 									</fareTables>
-									<TypeOfTravelDocumentRef ref="IT:ITC1:CarSharing:ttd:1"/>
-									<FareProductRef ref="IT:ITC1:CarSharingTorino:pfp:1"/>
+									<TypeOfTravelDocumentRef ref="IT:ITC1:CarSharing:ttd:1" version="1"/>
+									<FareProductRef ref="IT:ITC1:CarSharingTorino:pfp:1" version="1"/>
 									<prices>
 										<SalesOfferPackagePrice id="IT:ITC1:CarSharingTorino:sopp:30min" version="1">
 											<PricingRule id="IT:ITC1:CarSharingTorino:pr:30min" version="1">
@@ -23585,10 +23701,10 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 								<ToDate>2022-12-31T00:00:00.000+02:00</ToDate>
 							</ValidBetween>
 							<members>
-								<VehicleRef ref="IT:ITC1:CarSharingTorino:VE:01"/>
-								<VehicleRef ref="IT:ITC1:CarSharingTorino:VE:02"/>
+								<VehicleRef ref="IT:ITC1:CarSharingTorino:VE:01" version="1"/>
+								<VehicleRef ref="IT:ITC1:CarSharingTorino:VE:02" version="1"/>
 							</members>
-							<OperatorRef ref="IT:ITC1:CarSharingTorino:OP:CarSharingTorino"/>
+							<OperatorRef ref="IT:ITC1:Operator:CarSharing:CarSharing" version="1"/>
 						</Fleet>
 					</fleets>
 					<modesOfOperation>
@@ -23603,10 +23719,10 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 					</modesOfOperation>
 					<mobilityServices>
 						<VehicleSharingService id="IT:ITC1:CarSharingTorino:VSS:1" version="1">
-							<VehicleSharingRef ref="IT:ITC1:CarSharingTorino:VS:1"/>
+							<VehicleSharingRef ref="IT:ITC1:CarSharingTorino:VS:1" version="1"/>
 							<FloatingVehicles>true</FloatingVehicles>
 							<fleets>
-								<FleetRef ref="IT:ITC1:CarSharingTorino:fleet:1"/>
+								<FleetRef ref="IT:ITC1:CarSharingTorino:fleet:1" version="1"/>
 							</fleets>
 						</VehicleSharingService>
 					</mobilityServices>
@@ -23622,7 +23738,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									</gml:LinearRing>
 								</gml:interior>
 							</gml:Polygon>
-							<VehicleSharingServiceRef ref="IT:ITC1:CarSharingTorino:VSS:1"/>
+							<VehicleSharingServiceRef ref="IT:ITC1:CarSharingTorino:VSS:1" version="1"/>
 						</MobilityServiceConstraintZone>
 					</mobilityServiceConstraintZones>
 				</MobilityServiceFrame>
