@@ -30,27 +30,6 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 				<GeneralFrame id="epd:IT:ITC1:GeneralFrame_EU_CONTRACTS:ita" version="1">
 					<TypeOfFrameRef ref="netex:EU_CONTRACTS" versionRef="1"/>
 					<members>
-						<OrganisationPart id="IT:ITC1:op:busATS:AMP" version="1">
-							<AuthorityRef ref="IT:ITC1:Authority:busATS:AMP" version="1"/>
-						</OrganisationPart>
-						<OrganisationPart id="IT:ITC1:op:busATS:RL" version="1">
-							<AuthorityRef ref="IT:ITC1:Authority:busATS:RL" version="1"/>
-						</OrganisationPart>
-						<OrganisationPart id="IT:ITC1:op:trenoFS:AT" version="1">
-							<AuthorityRef ref="IT:ITC1:Authority:trenoFS:AT" version="1"/>
-						</OrganisationPart>
-						<OrganisationPart id="IT:ITC1:op:trenoFS:FI" version="1">
-							<AuthorityRef ref="IT:ITC1:Authority:trenoFS:FI" version="1"/>
-						</OrganisationPart>
-						<OrganisationPart id="IT:ITC1:op:busATV:EGV" version="1">
-							<AuthorityRef ref="IT:ITC1:Authority:busATV:EGV" version="1"/>
-						</OrganisationPart>
-						<OrganisationPart id="IT:ITC1:op:metroATMMILANO:ATMMILANO" version="1">
-							<AuthorityRef ref="IT:ITC1:Authority:metroATMMILANO:ATMMILANO" version="1"/>
-						</OrganisationPart>
-						
-						
-						
 						<!-- =====contratto Piemonte ===== -->
 						<JourneyAccounting id="IT:ITC1:JourneyAccounting:busATS:1A" version="1">
 							<ValidBetween>
@@ -409,25 +388,27 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<StakeholderRoleType>Control</StakeholderRoleType>
 									<!--<TypeOfResponsibilityRoleRef ref="IT:ITC1:busATS:typeOfResponsibilityRole:AFFIDANTE"/>-->
 									<ResponsibleOrganisationRef ref="IT:ITC1:Authority:busATS:AMP" version="1"/>
-									<ResponsiblePartRef ref="IT:ITC1:op:busATS:AMP" version="1"/>
+									<ResponsiblePartRef ref="IT:ITC1:JourneyAccounting:busATS:1A"/>
 								</ResponsibilityRoleAssignment>
-								<ResponsibilityRoleAssignment id="IT:ITC1:ResponsibilityRoleAssignment:busATS:JourneyAccounting:1A:Affidatario" version="1">
+								<!--								<ResponsibilityRoleAssignment id="IT:ITC1:ResponsibilityRoleAssignment:busATS:JourneyAccounting:1A:Affidatario" version="1">
 									<StakeholderRoleType>EntityLegalOwnership</StakeholderRoleType>
-									<!--									<TypeOfResponsibilityRoleRef ref="IT:ITC1:busATS:typeOfResponsibilityRole:AFFIDATARIO"/>-->
-									<ResponsibleOrganisationRef ref="IT:ITC1:GroupOfOperators:busATS:Consortium:RP" version="1"/>
+									-->
+								<!--									<TypeOfResponsibilityRoleRef ref="IT:ITC1:busATS:typeOfResponsibilityRole:AFFIDATARIO"/>-->
+								<!--
+									<ResponsibleOrganisationRef ref="IT:ITC1:GroupOfOperators:busATS:Consortium:RP"/>
 									<ResponsiblePartRef ref="IT:ITC1:JourneyAccounting:busATS:1A" version="1"/>
-								</ResponsibilityRoleAssignment>
+								</ResponsibilityRoleAssignment>-->
 								<ResponsibilityRoleAssignment id="IT:ITC1:ResponsibilityRoleAssignment:busATS:JourneyAccounting:1A:Esercente:01" version="1">
 									<StakeholderRoleType>Operation</StakeholderRoleType>
 									<!--									<TypeOfResponsibilityRoleRef ref="IT:ITC1:busATS:typeOfResponsibilityRole:ESERCENTE"/>-->
 									<ResponsibleOrganisationRef ref="IT:ITC1:Operator:busATS:11" version="1"/>
-									<ResponsiblePartRef ref="IT:ITC1:JourneyAccounting:busATS:1A" version="1"/>
+									<ResponsiblePartRef ref="IT:ITC1:JourneyAccounting:busATS:1A"/>
 								</ResponsibilityRoleAssignment>
 								<ResponsibilityRoleAssignment id="IT:ITC1:ResponsibilityRoleAssignment:busATS:JourneyAccounting:1A:Esercente:02" version="1">
 									<StakeholderRoleType>Operation</StakeholderRoleType>
 									<!--									<TypeOfResponsibilityRoleRef ref="IT:ITC1:busATS:typeOfResponsibilityRole:ESERCENTE"/>-->
-									<ResponsibleOrganisationRef ref="IT:ITC1:Operator:busATS:11" version="1"/>
-									<ResponsiblePartRef ref="IT:ITC1:JourneyAccounting:busATS:1A" version="1"/>
+									<ResponsibleOrganisationRef ref="IT:ITC1:Operator:busATS:43" version="1"/>
+									<ResponsiblePartRef ref="IT:ITC1:JourneyAccounting:busATS:1A"/>
 								</ResponsibilityRoleAssignment>
 							</roles>
 						</ResponsibilitySet>
@@ -437,25 +418,27 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<StakeholderRoleType>Control</StakeholderRoleType>
 									<!--									<TypeOfResponsibilityRoleRef ref="IT:ITC1:busATS:typeOfResponsibilityRole:AFFIDANTE"/>-->
 									<ResponsibleOrganisationRef ref="IT:ITC1:Authority:busATS:AMP" version="1"/>
-									<ResponsiblePartRef ref="IT:ITC1:JourneyAccounting:busATS:1B" version="1"/>
+									<ResponsiblePartRef ref="IT:ITC1:JourneyAccounting:busATS:1B"/>
 								</ResponsibilityRoleAssignment>
-								<ResponsibilityRoleAssignment id="IT:ITC1:ResponsibilityRoleAssignment:busATS:JourneyAccounting:1B:Affidatario" version="1">
+								<!--<ResponsibilityRoleAssignment id="IT:ITC1:ResponsibilityRoleAssignment:busATS:JourneyAccounting:1B:Affidatario" version="1">
 									<StakeholderRoleType>EntityLegalOwnership</StakeholderRoleType>
-									<!--									<TypeOfResponsibilityRoleRef ref="IT:ITC1:busATS:typeOfResponsibilityRole:AFFIDATARIO"/>-->
+									-->
+								<!--									<TypeOfResponsibilityRoleRef ref="IT:ITC1:busATS:typeOfResponsibilityRole:AFFIDATARIO"/>-->
+								<!--
 									<ResponsibleOrganisationRef ref="IT:ITC1:GroupOfOperators:busATS:Consortium:RP" version="1"/>
-									<ResponsiblePartRef ref="IT:ITC1:JourneyAccounting:busATS:1B" version="1"/>
-								</ResponsibilityRoleAssignment>
+									<ResponsiblePartRef ref="IT:ITC1:JourneyAccounting:busATS:1B"/>
+								</ResponsibilityRoleAssignment>-->
 								<ResponsibilityRoleAssignment id="IT:ITC1:ResponsibilityRoleAssignment:busATS:JourneyAccounting:1B:Esercente:01" version="1">
 									<StakeholderRoleType>Operation</StakeholderRoleType>
 									<!--									<TypeOfResponsibilityRoleRef ref="IT:ITC1:busATS:typeOfResponsibilityRole:ESERCENTE"/>-->
 									<ResponsibleOrganisationRef ref="IT:ITC1:Operator:busATS:11" version="1"/>
-									<ResponsiblePartRef ref="IT:ITC1:JourneyAccounting:busATS:1B" version="1"/>
+									<ResponsiblePartRef ref="IT:ITC1:JourneyAccounting:busATS:1B"/>
 								</ResponsibilityRoleAssignment>
 								<ResponsibilityRoleAssignment id="IT:ITC1:ResponsibilityRoleAssignment:busATS:JourneyAccounting:1B:Esercente:02" version="1">
 									<StakeholderRoleType>Operation</StakeholderRoleType>
 									<!--									<TypeOfResponsibilityRoleRef ref="IT:ITC1:busATS:typeOfResponsibilityRole:ESERCENTE"/>-->
 									<ResponsibleOrganisationRef ref="IT:ITC1:Operator:busATS:11" version="1"/>
-									<ResponsiblePartRef ref="IT:ITC1:JourneyAccounting:busATS:1B" version="1"/>
+									<ResponsiblePartRef ref="IT:ITC1:JourneyAccounting:busATS:1B"/>
 								</ResponsibilityRoleAssignment>
 							</roles>
 						</ResponsibilitySet>
@@ -466,19 +449,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<StakeholderRoleType>Control</StakeholderRoleType>
 									<!--									<TypeOfResponsibilityRoleRef ref="IT:ITC1:trenoFS:typeOfResponsibilityRole:AFFIDANTE"/>-->
 									<ResponsibleOrganisationRef ref="IT:ITC1:Authority:trenoFS:AT" version="1"/>
-									<ResponsiblePartRef ref="IT:ITC1:JourneyAccounting:trenoFS:1" version="1"/>
+									<ResponsiblePartRef ref="IT:ITC1:JourneyAccounting:trenoFS:1"/>
 								</ResponsibilityRoleAssignment>
 								<ResponsibilityRoleAssignment id="IT:ITC1:ResponsibilityRoleAssignment:trenoFS:JourneyAccounting:1A:Affidatario" version="1">
 									<StakeholderRoleType>EntityLegalOwnership</StakeholderRoleType>
 									<!--									<TypeOfResponsibilityRoleRef ref="IT:ITC1:trenoFS:typeOfResponsibilityRole:AFFIDATARIO"/>-->
 									<ResponsibleOrganisationRef ref="IT:ITC1:Operator:trenoFS:TI" version="1"/>
-									<ResponsiblePartRef ref="IT:ITC1:JourneyAccounting:trenoFS:1" version="1"/>
+									<ResponsiblePartRef ref="IT:ITC1:JourneyAccounting:trenoFS:1"/>
 								</ResponsibilityRoleAssignment>
 								<ResponsibilityRoleAssignment id="IT:ITC1:ResponsibilityRoleAssignment:trenoFS:JourneyAccounting:1A:Esercente:01" version="1">
 									<StakeholderRoleType>Operation</StakeholderRoleType>
 									<!--<TypeOfResponsibilityRoleRef ref="IT:ITC1:trenoFS:typeOfResponsibilityRole:ESERCENTE"/>-->
 									<ResponsibleOrganisationRef ref="IT:ITC1:Operator:trenoFS:TI" version="1"/>
-									<ResponsiblePartRef ref="IT:ITC1:JourneyAccounting:trenoFS:1" version="1"/>
+									<ResponsiblePartRef ref="IT:ITC1:JourneyAccounting:trenoFS:1"/>
 								</ResponsibilityRoleAssignment>
 							</roles>
 						</ResponsibilitySet>
@@ -489,13 +472,13 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<StakeholderRoleType>Control</StakeholderRoleType>
 									<!--								<TypeOfResponsibilityRoleRef ref="IT:ITC1:busATV:typeOfResponsibilityRole:AFFIDANTE"/>-->
 									<ResponsibleOrganisationRef ref="IT:ITC1:Authority:busATV:EGV" version="1"/>
-									<ResponsiblePartRef ref="IT:ITC1:JourneyAccounting:busATV:1VR" version="1"/>
+									<ResponsiblePartRef ref="IT:ITC1:JourneyAccounting:busATV:1VR"/>
 								</ResponsibilityRoleAssignment>
 								<ResponsibilityRoleAssignment version="1" id="IT:ITC1:ResponsibilityRoleAssignment:busATV:JourneyAccounting:1VR:Esercente">
 									<StakeholderRoleType>Operation</StakeholderRoleType>
-									<!--								<TypeOfResponsibilityRoleRef ref="IT:ITC1:busATV:typeOfResponsibilityRole:ESERCENTE"/>-->
+									<!--							<TypeOfResponsibilityRoleRef ref="IT:ITC1:busATV:typeOfResponsibilityRole:ESERCENTE"/>-->
 									<ResponsibleOrganisationRef ref="IT:ITC1:Operator:busATV:ATV" version="1"/>
-									<ResponsiblePartRef ref="IT:ITC1:JourneyAccounting:busATV:1VR" version="1"/>
+									<ResponsiblePartRef ref="IT:ITC1:JourneyAccounting:busATV:1VR"/>
 								</ResponsibilityRoleAssignment>
 							</roles>
 						</ResponsibilitySet>
@@ -512,9 +495,9 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 										<ToDate>2021-03-30T00:00:00</ToDate>
 									</ValidBetween>
 									<StakeholderRoleType>Operation</StakeholderRoleType>
-									<!--									<TypeOfResponsibilityRoleRef ref="IT:ITC1:metroATMMILANO:RIC:ESER_4">ESER_4</TypeOfResponsibilityRoleRef>-->
+									<!--				<TypeOfResponsibilityRoleRef ref="IT:ITC1:metroATMMILANO:RIC:ESER_4">ESER_4</TypeOfResponsibilityRoleRef>-->
 									<ResponsibleOrganisationRef ref="IT:ITC1:Operator:metroATMMILANO:ATMMILANO" version="1">ATMMilano</ResponsibleOrganisationRef>
-									<ResponsiblePartRef ref="IT:ITC1:JourneyAccounting:metroATMMILANO:ATMMILANO" version="1">ATMMilano</ResponsiblePartRef>
+									<ResponsiblePartRef ref="IT:ITC1:JourneyAccounting:metroATMMILANO:ATMMILANO">ATMMilano</ResponsiblePartRef>
 								</ResponsibilityRoleAssignment>
 							</roles>
 						</ResponsibilitySet>
@@ -610,6 +593,22 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 						</Authority>
 						<!--- =======operatori 5T======== -->
 						<Operator id="IT:ITC1:Operator:busATS:11" version="1">
+							<Name>Autostradale S.r.l.</Name>
+							<ShortName>Autostradale</ShortName>
+							<ContactDetails>
+								<Email>mario.autostradale@autostradale.it</Email>
+								<Phone>+39-011-453502</Phone>
+								<Url>www.autostradale.it</Url>
+							</ContactDetails>
+							<OrganisationType>operator</OrganisationType>
+							<Address id="IT:ITC1:Address:busATS:1b">
+								<CountryName>Italia</CountryName>
+								<Street>piazza Castello 1</Street>
+								<Town>Milano</Town>
+								<PostCode>20121</PostCode>
+							</Address>
+						</Operator>
+						<Operator id="IT:ITC1:Operator:busATS:43" version="1">
 							<Name>Autostradale S.r.l.</Name>
 							<ShortName>Autostradale</ShortName>
 							<ContactDetails>
@@ -2339,7 +2338,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							<!-- ============LEVELS ===================- -->
 							<levels>
 								<LevelRef ref="IT:ITC1:Level:busATS:00023_Lvl_G0" version="1"/>
-								<LevelRef ref="IT:ITC1:Level:busATS:0001_Lvl_UG0" version="1"/>
+								<LevelRef ref="IT:ITC1:Level:busATS:001_Lvl_G0" version="1"/>
 							</levels>
 							<PublicCode>MI-Lampugnano</PublicCode>
 							<TransportMode>other</TransportMode>
@@ -2363,8 +2362,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							<AccessModes>foot</AccessModes>
 							<!-- ============LEVELS ===================- -->
 							<levels>
-								<LevelRef ref="IT:ITC1:Level:busATS:00023_Lvl_G0" version="1"/>
-								<LevelRef ref="IT:ITC1:Level:busATS:0001_Lvl_UG0" version="1"/>
+								<LevelRef ref="IT:ITC1:Level:busATS:001_Lvl_G0" version="1"/>
+								<LevelRef ref="IT:ITC1:Level:busATS:001_Lvl_G0" version="1"/>
 							</levels>
 							<PublicCode>MI-Centrale</PublicCode>
 							<TransportMode>other</TransportMode>
@@ -2447,7 +2446,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							<ParentSiteRef ref="IT:ITC1:StopPlace:busATS:000MI" version="1"/>
 							<!-- ============LEVELS ===================- -->
 							<levels>
-								<Level id="IT:ITC1:Level:busATS:0001_Lvl_UG0" version="1">
+								<Level id="IT:ITC1:Level:busATS:0001_Lvl_U1" version="1">
 									<Name>UnderGround</Name>
 									<PublicCode>UG</PublicCode>
 								</Level>
@@ -2465,7 +2464,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 											<gml:pos srsName="ITA">7.657829 45.070304</gml:pos>
 										</Location>
 									</Centroid>
-									<LevelRef ref="IT:ITC1:Level:busATS:00023_Lvl_U1" version="1"/>
+									<LevelRef ref="IT:ITC1:Level:busATS:001_Lvl_G0" version="1"/>
 									<Label>LAMPUGNANO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2482,7 +2481,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 											<gml:pos srsName="ITA">7.657829 45.070304</gml:pos>
 										</Location>
 									</Centroid>
-									<LevelRef ref="IT:ITC1:Level:busATS:00023_Lvl_U1" version="1"/>
+									<LevelRef ref="IT:ITC1:Level:busATS:001_Lvl_G0" version="1"/>
 									<Label>LAMPUGNANO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -12951,7 +12950,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							</Location>
 							<TimingPointStatus>notTimingPoint</TimingPointStatus>
 							<tariffZones>
-								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015011_74" version="1">015011_74</TariffZoneRef>
+								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015146_64" version="1">015011_74</TariffZoneRef>
 							</tariffZones>
 							<ShortName/>
 							<Description>ASSAGO MILANOFIORI FORUM</Description>
@@ -12971,7 +12970,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							</Location>
 							<TimingPointStatus>notTimingPoint</TimingPointStatus>
 							<tariffZones>
-								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015011_74" version="1">015011_74</TariffZoneRef>
+								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015146_64" version="1">015011_74</TariffZoneRef>
 							</tariffZones>
 							<ShortName/>
 							<Description>ASSAGO MILANOFIORI NORD</Description>
@@ -13071,7 +13070,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							</Location>
 							<TimingPointStatus>notTimingPoint</TimingPointStatus>
 							<tariffZones>
-								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015040_75" version="1">015040_75</TariffZoneRef>
+								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015146_64" version="1">015040_75</TariffZoneRef>
 							</tariffZones>
 							<ShortName/>
 							<Description>BUSSERO</Description>
@@ -13191,7 +13190,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							</Location>
 							<TimingPointStatus>notTimingPoint</TimingPointStatus>
 							<tariffZones>
-								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015242_66" version="1">015242_66</TariffZoneRef>
+								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015146_64" version="1">015242_66</TariffZoneRef>
 							</tariffZones>
 							<ShortName/>
 							<Description>CASCINA BURRONA</Description>
@@ -13231,7 +13230,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							</Location>
 							<TimingPointStatus>notTimingPoint</TimingPointStatus>
 							<tariffZones>
-								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015060_67" version="1">015060_67</TariffZoneRef>
+								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015146_64" version="1">015060_67</TariffZoneRef>
 							</tariffZones>
 							<ShortName/>
 							<Description>CASSINA DE PECCHI</Description>
@@ -13271,7 +13270,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							</Location>
 							<TimingPointStatus>notTimingPoint</TimingPointStatus>
 							<tariffZones>
-								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015070_68" version="1">015070_68</TariffZoneRef>
+								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015146_64" version="1">015070_68</TariffZoneRef>
 							</tariffZones>
 							<ShortName/>
 							<Description>CERNUSCO SUL NAVIGLIO</Description>
@@ -13311,7 +13310,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							</Location>
 							<TimingPointStatus>notTimingPoint</TimingPointStatus>
 							<tariffZones>
-								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015081_69" version="1">015081_69</TariffZoneRef>
+								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015146_64" version="1">015081_69</TariffZoneRef>
 							</tariffZones>
 							<ShortName/>
 							<Description>COLOGNO CENTRO</Description>
@@ -13331,7 +13330,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							</Location>
 							<TimingPointStatus>notTimingPoint</TimingPointStatus>
 							<tariffZones>
-								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015081_69" version="1">015081_69</TariffZoneRef>
+								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015146_64" version="1">015081_69</TariffZoneRef>
 							</tariffZones>
 							<ShortName/>
 							<Description>COLOGNO NORD</Description>
@@ -13351,7 +13350,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							</Location>
 							<TimingPointStatus>notTimingPoint</TimingPointStatus>
 							<tariffZones>
-								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015081_69" version="1">015081_69</TariffZoneRef>
+								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015146_64" version="1">015081_69</TariffZoneRef>
 							</tariffZones>
 							<ShortName/>
 							<Description>COLOGNO SUD</Description>
@@ -13531,7 +13530,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							</Location>
 							<TimingPointStatus>notTimingPoint</TimingPointStatus>
 							<tariffZones>
-								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015106_70" version="1">015106_70</TariffZoneRef>
+								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015146_64" version="1">015106_70</TariffZoneRef>
 							</tariffZones>
 							<ShortName/>
 							<Description>GESSATE</Description>
@@ -13571,7 +13570,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							</Location>
 							<TimingPointStatus>notTimingPoint</TimingPointStatus>
 							<tariffZones>
-								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015108_65" version="1">015108_65</TariffZoneRef>
+								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015146_64" version="1">015108_65</TariffZoneRef>
 							</tariffZones>
 							<ShortName/>
 							<Description>GORGONZOLA</Description>
@@ -13911,7 +13910,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							</Location>
 							<TimingPointStatus>notTimingPoint</TimingPointStatus>
 							<tariffZones>
-								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015170_71" version="1">015170_71</TariffZoneRef>
+								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015146_64" version="1">015170_71</TariffZoneRef>
 							</tariffZones>
 							<ShortName/>
 							<Description>PERO</Description>
@@ -14011,7 +14010,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							</Location>
 							<TimingPointStatus>notTimingPoint</TimingPointStatus>
 							<tariffZones>
-								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015182_72" version="1">015182_72</TariffZoneRef>
+								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015146_64" version="1">015182_72</TariffZoneRef>
 							</tariffZones>
 							<ShortName/>
 							<Description>RHO FIERAMILANO</Description>
@@ -14151,7 +14150,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							</Location>
 							<TimingPointStatus>notTimingPoint</TimingPointStatus>
 							<tariffZones>
-								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015209_73" version="1">015209_73</TariffZoneRef>
+								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015146_64" version="1">015209_73</TariffZoneRef>
 							</tariffZones>
 							<ShortName/>
 							<Description>SESTO 1 MAGGIO FS</Description>
@@ -14171,7 +14170,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							</Location>
 							<TimingPointStatus>notTimingPoint</TimingPointStatus>
 							<tariffZones>
-								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015209_73" version="1">015209_73</TariffZoneRef>
+								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015146_64" version="1">015209_73</TariffZoneRef>
 							</tariffZones>
 							<ShortName/>
 							<Description>SESTO MARELLI</Description>
@@ -14191,7 +14190,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							</Location>
 							<TimingPointStatus>notTimingPoint</TimingPointStatus>
 							<tariffZones>
-								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015209_73" version="1">015209_73</TariffZoneRef>
+								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015146_64" version="1">015209_73</TariffZoneRef>
 							</tariffZones>
 							<ShortName/>
 							<Description>SESTO RONDO</Description>
@@ -14271,7 +14270,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							</Location>
 							<TimingPointStatus>notTimingPoint</TimingPointStatus>
 							<tariffZones>
-								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015070_68" version="1">015070_68</TariffZoneRef>
+								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015146_64" version="1">015070_68</TariffZoneRef>
 							</tariffZones>
 							<ShortName/>
 							<Description>VILLA FIORITA</Description>
@@ -14291,7 +14290,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							</Location>
 							<TimingPointStatus>notTimingPoint</TimingPointStatus>
 							<tariffZones>
-								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015108_65" version="1">015108_65</TariffZoneRef>
+								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015146_64" version="1">015108_65</TariffZoneRef>
 							</tariffZones>
 							<ShortName/>
 							<Description>VILLA POMPEA</Description>
@@ -14331,7 +14330,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							</Location>
 							<TimingPointStatus>notTimingPoint</TimingPointStatus>
 							<tariffZones>
-								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015242_66" version="1">015242_66</TariffZoneRef>
+								<TariffZoneRef ref="IT:ITC1:TariffZone:metroATMMILANO:015146_64" version="1">015242_66</TariffZoneRef>
 							</tariffZones>
 							<ShortName/>
 							<Description>VIMODRONE</Description>
@@ -14723,10 +14722,14 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 						</ServiceLink>
 						<ServiceLink id="IT:ITC1:ServiceLink:trenoFS:torinops_chivasso" version="1">
 							<FromPointRef ref="IT:ITC1:ScheduledStopPoint:trenoFS:torinops" version="1"/>
-							<ToPointRef ref="IT:ITC1:ScheduledStopPoint:trenoFS:chiavasso" version="1"/>
+							<ToPointRef ref="IT:ITC1:ScheduledStopPoint:trenoFS:chivasso" version="1"/>
 						</ServiceLink>
-						<ServiceLink id="IT:ITC1:ServiceLink:trenoFS:chivasso_vercelli" version="1">
+						<ServiceLink id="IT:ITC1:ServiceLink:trenoFS:chivasso_santhia" version="1">
 							<FromPointRef ref="IT:ITC1:ScheduledStopPoint:trenoFS:chivasso" version="1"/>
+							<ToPointRef ref="IT:ITC1:ScheduledStopPoint:trenoFS:santhia" version="1"/>
+						</ServiceLink>
+						<ServiceLink id="IT:ITC1:ServiceLink:trenoFS:santhia_vercelli" version="1">
+							<FromPointRef ref="IT:ITC1:ScheduledStopPoint:trenoFS:santhia" version="1"/>
 							<ToPointRef ref="IT:ITC1:ScheduledStopPoint:trenoFS:vercelli" version="1"/>
 						</ServiceLink>
 						<ServiceLink id="IT:ITC1:ServiceLink:trenoFS:vercelli_novara" version="1">
@@ -18977,58 +18980,40 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							<pointsInSequence>
 								<StopPointInJourneyPattern version="1" order="1" id="IT:ITC1:StopPointInJourneyPattern:trenoFS:1_01">
 									<ScheduledStopPointRef version="1" ref="IT:ITC1:ScheduledStopPoint:trenoFS:torinopn"/>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:trenoFS:torinopn_torinops" version="1"/>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern version="1" order="2" id="IT:ITC1:StopPointInJourneyPattern:trenoFS:1_02">
 									<ScheduledStopPointRef version="1" ref="IT:ITC1:ScheduledStopPoint:trenoFS:torinops"/>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:trenoFS:torinops_chivasso" version="1"/>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern version="1" order="3" id="IT:ITC1:StopPointInJourneyPattern:trenoFS:1_03">
 									<ScheduledStopPointRef version="1" ref="IT:ITC1:ScheduledStopPoint:trenoFS:chivasso"/>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:trenoFS:chivasso_santhia" version="1"/>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern version="1" order="4" id="IT:ITC1:StopPointInJourneyPattern:trenoFS:1_04">
 									<ScheduledStopPointRef version="1" ref="IT:ITC1:ScheduledStopPoint:trenoFS:santhia"/>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:trenoFS:santhia_vercelli" version="1"/>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern version="1" order="5" id="IT:ITC1:StopPointInJourneyPattern:trenoFS:1_05">
 									<ScheduledStopPointRef version="1" ref="IT:ITC1:ScheduledStopPoint:trenoFS:vercelli"/>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:trenoFS:vercelli_novara" version="1"/>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern version="1" order="6" id="IT:ITC1:StopPointInJourneyPattern:trenoFS:1_06">
 									<ScheduledStopPointRef version="1" ref="IT:ITC1:ScheduledStopPoint:trenoFS:novara"/>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:trenoFS:novara_magenta" version="1"/>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern version="1" order="7" id="IT:ITC1:StopPointInJourneyPattern:trenoFS:1_07">
 									<ScheduledStopPointRef version="1" ref="IT:ITC1:ScheduledStopPoint:trenoFS:magenta"/>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:trenoFS:magenta_rhofiera" version="1"/>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern version="1" order="8" id="IT:ITC1:StopPointInJourneyPattern:trenoFS:1_08">
 									<ScheduledStopPointRef version="1" ref="IT:ITC1:ScheduledStopPoint:trenoFS:rhofiera"/>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:trenoFS:rhofiera_milanocentrale" version="1"/>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern version="1" order="9" id="IT:ITC1:StopPointInJourneyPattern:trenoFS:1_09">
 									<ScheduledStopPointRef version="1" ref="IT:ITC1:ScheduledStopPoint:trenoFS:milanocentrale"/>
 								</StopPointInJourneyPattern>
 							</pointsInSequence>
-							<linksInSequence>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:trenoFS:1_01" version="1" order="1">
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:trenoFS:torinopn_torinops" version="1"/>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:trenoFS:1_02" version="1" order="2">
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:trenoFS:torinops_chivasso" version="1"/>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:trenoFS:1_03" version="1" order="3">
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:trenoFS:chivasso_santhia" version="1"/>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:trenoFS:1_04" version="1" order="4">
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:trenoFS:santhia_vercelli" version="1"/>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:trenoFS:1_05" version="1" order="5">
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:trenoFS:vercelli_novara" version="1"/>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:trenoFS:1_06" version="1" order="6">
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:trenoFS:novara_magenta" version="1"/>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:trenoFS:1_07" version="1" order="7">
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:trenoFS:magenta_rhofiera" version="1"/>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:trenoFS:1_08" version="1" order="8">
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:trenoFS:rhofiera_milanocentrale" version="1"/>
-								</ServiceLinkInJourneyPattern>
-							</linksInSequence>
 						</ServiceJourneyPattern>
 						<ServiceJourneyPattern version="1" id="IT:ITC1:ServiceJourneyPattern:trenoFS:2">
 							<Name>Servizio Milano - Verona</Name>
@@ -19042,70 +19027,48 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							<pointsInSequence>
 								<StopPointInJourneyPattern version="1" order="1" id="IT:ITC1:StopPointInJourneyPattern:trenoFS:2_01">
 									<ScheduledStopPointRef version="1" ref="IT:ITC1:ScheduledStopPoint:trenoFS:milanocentrale"/>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:trenoFS:milanocentrale_milanolambrate" version="1"/>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern version="1" order="2" id="IT:ITC1:StopPointInJourneyPattern:trenoFS:2_02">
 									<ScheduledStopPointRef version="1" ref="IT:ITC1:ScheduledStopPoint:trenoFS:milanolambrate"/>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:trenoFS:milanolambrate_pioltello" version="1"/>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern version="1" order="3" id="IT:ITC1:StopPointInJourneyPattern:trenoFS:2_03">
 									<ScheduledStopPointRef version="1" ref="IT:ITC1:ScheduledStopPoint:trenoFS:pioltello"/>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:trenoFS:pioltello_treviglio" version="1"/>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern version="1" order="4" id="IT:ITC1:StopPointInJourneyPattern:trenoFS:2_04">
 									<ScheduledStopPointRef version="1" ref="IT:ITC1:ScheduledStopPoint:trenoFS:treviglio"/>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:trenoFS:treviglio_romano" version="1"/>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern version="1" order="5" id="IT:ITC1:StopPointInJourneyPattern:trenoFS:2_05">
 									<ScheduledStopPointRef version="1" ref="IT:ITC1:ScheduledStopPoint:trenoFS:romano"/>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:trenoFS:romano_calcio" version="1"/>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern version="1" order="6" id="IT:ITC1:StopPointInJourneyPattern:trenoFS:2_06">
 									<ScheduledStopPointRef version="1" ref="IT:ITC1:ScheduledStopPoint:trenoFS:calcio"/>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:trenoFS:calcio_rovato" version="1"/>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern version="1" order="7" id="IT:ITC1:StopPointInJourneyPattern:trenoFS:2_07">
 									<ScheduledStopPointRef version="1" ref="IT:ITC1:ScheduledStopPoint:trenoFS:rovato"/>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:trenoFS:rovato_brescia" version="1"/>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern version="1" order="8" id="IT:ITC1:StopPointInJourneyPattern:trenoFS:2_08">
 									<ScheduledStopPointRef version="1" ref="IT:ITC1:ScheduledStopPoint:trenoFS:brescia"/>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:trenoFS:brescia_desenzano" version="1"/>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern version="1" order="9" id="IT:ITC1:StopPointInJourneyPattern:trenoFS:2_09">
 									<ScheduledStopPointRef version="1" ref="IT:ITC1:ScheduledStopPoint:trenoFS:desenzano"/>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:trenoFS:desenzano_peschiera" version="1"/>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern version="1" order="10" id="IT:ITC1:StopPointInJourneyPattern:trenoFS:2_10">
 									<ScheduledStopPointRef version="1" ref="IT:ITC1:ScheduledStopPoint:trenoFS:peschiera"/>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:trenoFS:peschiera_verona" version="1"/>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern version="1" order="11" id="IT:ITC1:StopPointInJourneyPattern:trenoFS:2_11">
 									<ScheduledStopPointRef version="1" ref="IT:ITC1:ScheduledStopPoint:trenoFS:verona"/>
 								</StopPointInJourneyPattern>
 							</pointsInSequence>
-							<linksInSequence>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:trenoFS:2_01" version="1" order="1">
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:trenoFS:milanocentrale_milanolambrate" version="1"/>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:trenoFS:2_02" version="1" order="2">
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:trenoFS:milanolambrate_pioltello" version="1"/>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:trenoFS:2_03" version="1" order="3">
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:trenoFS:pioltello_treviglio" version="1"/>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:trenoFS:2_04" version="1" order="4">
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:trenoFS:treviglio_romano" version="1"/>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:trenoFS:2_05" version="1" order="5">
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:trenoFS:romano_calcio" version="1"/>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:trenoFS:2_06" version="1" order="6">
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:trenoFS:calcio_rovato" version="1"/>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:trenoFS:2_07" version="1" order="7">
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:trenoFS:rovato_brescia" version="1"/>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:trenoFS:2_08" version="1" order="8">
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:trenoFS:brescia_desenzano" version="1"/>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:trenoFS:2_09" version="1" order="9">
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:trenoFS:desenzano_peschiera" version="1"/>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:trenoFS:2_10" version="1" order="10">
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:trenoFS:peschiera_verona" version="1"/>
-								</ServiceLinkInJourneyPattern>
-							</linksInSequence>
 						</ServiceJourneyPattern>
 						<!--- =============Movalia=============-->
 						<ServiceJourneyPattern version="1" id="IT:ITC1:ServiceJourneyPattern:busATV:00ATV164_01A">
@@ -19846,240 +19809,122 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 										<FromDate>2021-01-01T00:00:00</FromDate>
 										<ToDate>2022-12-31T00:00:00</ToDate>
 									</ValidBetween>
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:ABBIATEGRASSO-FAMAGOSTA_3091" version="1">ABBIATEGRASSO-FAMAGOSTA_3091</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:ABBIATEGRASSO_3653" version="1">ABBIATEGRASSO_3653</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:ABBIATEGRASSO-FAMAGOSTA_3091" version="1">ABBIATEGRASSO-FAMAGOSTA_3091</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:10784" version="1" order="2">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:FAMAGOSTA-ROMOLO_3092" version="1">FAMAGOSTA-ROMOLO_3092</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:FAMAGOSTA_3694" version="1">FAMAGOSTA_3694</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:FAMAGOSTA-ROMOLO_3092" version="1">FAMAGOSTA-ROMOLO_3092</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:10785" version="1" order="3">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:ROMOLO-P.TA GENOVA F.S._3093" version="1">ROMOLO-P.TA GENOVA F.S._3093</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:ROMOLO_3738" version="1">ROMOLO_3738</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:ROMOLO-P.TA GENOVA F.S._3093" version="1">ROMOLO-P.TA GENOVA F.S._3093</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:10786" version="1" order="4">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:P.TA GENOVA F.S.-S.AGOSTINO_3094" version="1">P.TA GENOVA F.S.-S.AGOSTINO_3094</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:P.TA GENOVA F.S._3721" version="1">P.TA GENOVA F.S._3721</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:P.TA GENOVA F.S.-S.AGOSTINO_3094" version="1">P.TA GENOVA F.S.-S.AGOSTINO_3094</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:10787" version="1" order="5">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:S.AGOSTINO-S.AMBROGIO_3095" version="1">S.AGOSTINO-S.AMBROGIO_3095</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:S.AGOSTINO_3740" version="1">S.AGOSTINO_3740</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:S.AGOSTINO-S.AMBROGIO_3095" version="1">S.AGOSTINO-S.AMBROGIO_3095</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:10788" version="1" order="6">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:S.AMBROGIO-CADORNA FN M2_3096" version="1">S.AMBROGIO-CADORNA FN M2_3096</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:S.AMBROGIO_3741" version="1">S.AMBROGIO_3741</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:S.AMBROGIO-CADORNA FN M2_3096" version="1">S.AMBROGIO-CADORNA FN M2_3096</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:10789" version="1" order="7">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CADORNA FN M2-LANZA_3097" version="1">CADORNA FN M2-LANZA_3097</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:CADORNA FN M2_3669" version="1">CADORNA FN M2_3669</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CADORNA FN M2-LANZA_3097" version="1">CADORNA FN M2-LANZA_3097</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:10790" version="1" order="8">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LANZA-MOSCOVA_3098">LANZA-MOSCOVA_3098</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:LANZA_3707">LANZA_3707</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LANZA-MOSCOVA_3098">LANZA-MOSCOVA_3098</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:10791" version="1" order="9">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:MOSCOVA-GARIBALDI FS_3099" version="1">MOSCOVA-GARIBALDI FS_3099</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:MOSCOVA_3720" version="1">MOSCOVA_3720</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:MOSCOVA-GARIBALDI FS_3099" version="1">MOSCOVA-GARIBALDI FS_3099</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:10792" version="1" order="10">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:GARIBALDI FS-GIOIA_3100" version="1">GARIBALDI FS-GIOIA_3100</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:GARIBALDI FS_3696" version="1">GARIBALDI FS_3696</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:GARIBALDI FS-GIOIA_3100" version="1">GARIBALDI FS-GIOIA_3100</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:10793" version="1" order="11">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:GIOIA-CENTRALE FS_3101" version="1">GIOIA-CENTRALE FS_3101</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:GIOIA_3699" version="1">GIOIA_3699</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:GIOIA-CENTRALE FS_3101" version="1">GIOIA-CENTRALE FS_3101</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:10794" version="1" order="12">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CENTRALE FS-CAIAZZO_3102" version="1">CENTRALE FS-CAIAZZO_3102</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:CENTRALE FS_3677" version="1">CENTRALE FS_3677</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CENTRALE FS-CAIAZZO_3102" version="1">CENTRALE FS-CAIAZZO_3102</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:10795" version="1" order="13">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CAIAZZO-LORETO M2_3103" version="1">CAIAZZO-LORETO M2_3103</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:CAIAZZO_3670" version="1">CAIAZZO_3670</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CAIAZZO-LORETO M2_3103" version="1">CAIAZZO-LORETO M2_3103</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:10796" version="1" order="14">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LORETO M2-PIOLA_3104" version="1">LORETO M2-PIOLA_3104</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:LORETO M2_3711" version="1">LORETO M2_3711</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LORETO M2-PIOLA_3104" version="1">LORETO M2-PIOLA_3104</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:10797" version="1" order="15">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:PIOLA-LAMBRATE FS_3105" version="1">PIOLA-LAMBRATE FS_3105</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:PIOLA_3727" version="1">PIOLA_3727</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:PIOLA-LAMBRATE FS_3105" version="1">PIOLA-LAMBRATE FS_3105</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:10798" version="1" order="16">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LAMBRATE FS-UDINE_3106" version="1">LAMBRATE FS-UDINE_3106</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:LAMBRATE FS_3705" version="1">LAMBRATE FS_3705</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LAMBRATE FS-UDINE_3106" version="1">LAMBRATE FS-UDINE_3106</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:10799" version="1" order="17">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:UDINE-CIMIANO_3107" version="1">UDINE-CIMIANO_3107</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:UDINE_3755" version="1">UDINE_3755</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:UDINE-CIMIANO_3107" version="1">UDINE-CIMIANO_3107</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:10800" version="1" order="18">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CIMIANO-CRESCENZAGO_3108" version="1">CIMIANO-CRESCENZAGO_3108</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:CIMIANO_3679" version="1">CIMIANO_3679</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CIMIANO-CRESCENZAGO_3108" version="1">CIMIANO-CRESCENZAGO_3108</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:10801" version="1" order="19">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CRESCENZAGO-CASCINA GOBBA_3109" version="1">CRESCENZAGO-CASCINA GOBBA_3109</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:CRESCENZAGO_3687" version="1">CRESCENZAGO_3687</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CRESCENZAGO-CASCINA GOBBA_3109" version="1">CRESCENZAGO-CASCINA GOBBA_3109</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:10802" version="1" order="20">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CASCINA GOBBA-VIMODRONE_3113" version="1">CASCINA GOBBA-VIMODRONE_3113</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:CASCINA GOBBA_3674" version="1">CASCINA GOBBA_3674</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CASCINA GOBBA-VIMODRONE_3113" version="1">CASCINA GOBBA-VIMODRONE_3113</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:10803" version="1" order="21">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:VIMODRONE-CASCINA BURRONA_3114" version="1">VIMODRONE-CASCINA BURRONA_3114</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:VIMODRONE_3760" version="1">VIMODRONE_3760</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:VIMODRONE-CASCINA BURRONA_3114" version="1">VIMODRONE-CASCINA BURRONA_3114</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:10804" version="1" order="22">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CASCINA BURRONA-CERNUSCO SUL NAVIGLIO_3115">CASCINA BURRONA-CERNUSCO SUL NAVIGLIO_3115</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:CASCINA BURRONA_3673">CASCINA BURRONA_3673</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CASCINA BURRONA-CERNUSCO SUL NAVIGLIO_3115">CASCINA BURRONA-CERNUSCO SUL NAVIGLIO_3115</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:10805" version="1" order="23">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CERNUSCO SUL NAVIGLIO-VILLA FIORITA_3116" version="1">CERNUSCO SUL NAVIGLIO-VILLA FIORITA_3116</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:CERNUSCO SUL NAVIGLIO_3678" version="1">CERNUSCO SUL NAVIGLIO_3678</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CERNUSCO SUL NAVIGLIO-VILLA FIORITA_3116" version="1">CERNUSCO SUL NAVIGLIO-VILLA FIORITA_3116</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:10806" version="1" order="24">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:VILLA FIORITA-CASSINA DE PECCHI_3117">VILLA FIORITA-CASSINA DE PECCHI_3117</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:VILLA FIORITA_3757">VILLA FIORITA_3757</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:VILLA FIORITA-CASSINA DE PECCHI_3117">VILLA FIORITA-CASSINA DE PECCHI_3117</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:10807" version="1" order="25">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CASSINA DE PECCHI-BUSSERO_3118" version="1">CASSINA DE PECCHI-BUSSERO_3118</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:CASSINA DE PECCHI_3675" version="1">CASSINA DE PECCHI_3675</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CASSINA DE PECCHI-BUSSERO_3118" version="1">CASSINA DE PECCHI-BUSSERO_3118</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:10808" version="1" order="26">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:BUSSERO-VILLA POMPEA_3119" version="1">BUSSERO-VILLA POMPEA_3119</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:BUSSERO_3666" version="1">BUSSERO_3666</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:BUSSERO-VILLA POMPEA_3119" version="1">BUSSERO-VILLA POMPEA_3119</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:10809" version="1" order="27">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:VILLA POMPEA-GORGONZOLA_3120">VILLA POMPEA-GORGONZOLA_3120</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:VILLA POMPEA_3758">VILLA POMPEA_3758</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:VILLA POMPEA-GORGONZOLA_3120">VILLA POMPEA-GORGONZOLA_3120</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:10810" version="1" order="28">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:GORGONZOLA-CASCINA ANTONIETTA_3121" version="1">GORGONZOLA-CASCINA ANTONIETTA_3121</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:GORGONZOLA_3700" version="1">GORGONZOLA_3700</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:GORGONZOLA-CASCINA ANTONIETTA_3121" version="1">GORGONZOLA-CASCINA ANTONIETTA_3121</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:10811" version="1" order="29">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CASCINA ANTONIETTA-GESSATE_3122" version="1">CASCINA ANTONIETTA-GESSATE_3122</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:CASCINA ANTONIETTA_3672" version="1">CASCINA ANTONIETTA_3672</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CASCINA ANTONIETTA-GESSATE_3122" version="1">CASCINA ANTONIETTA-GESSATE_3122</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 							</pointsInSequence>
-							<linksInSequence>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:ABBIATEGRASSO-FAMAGOSTA_3091_M2_3" version="1" order="1">
-									<Description>ABBIATEGRASSO-FAMAGOSTA</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:ABBIATEGRASSO-FAMAGOSTA_3091_M2_3" version="1">ABBIATEGRASSO-FAMAGOSTA_3091_M2_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:FAMAGOSTA-ROMOLO_3092_M2_3" version="1" order="2">
-									<Description>FAMAGOSTA-ROMOLO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:FAMAGOSTA-ROMOLO_3092_M2_3" version="1">FAMAGOSTA-ROMOLO_3092_M2_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:ROMOLO-P.TA GENOVA F.S._3093_M2_3" version="1" order="3">
-									<Description>ROMOLO-P.TA GENOVA F.S.</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:ROMOLO-P.TA GENOVA F.S._3093_M2_3" version="1">ROMOLO-P.TA GENOVA F.S._3093_M2_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:P.TA GENOVA F.S.-S.AGOSTINO_3094_M2_3" version="1" order="4">
-									<Description>P.TA GENOVA F.S.-S.AGOSTINO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:P.TA GENOVA F.S.-S.AGOSTINO_3094_M2_3" version="1">P.TA GENOVA F.S.-S.AGOSTINO_3094_M2_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:S.AGOSTINO-S.AMBROGIO_3095_M2_3" version="1" order="5">
-									<Description>S.AGOSTINO-S.AMBROGIO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:S.AGOSTINO-S.AMBROGIO_3095_M2_3" version="1">S.AGOSTINO-S.AMBROGIO_3095_M2_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:S.AMBROGIO-CADORNA FN M2_3096_M2_3" version="1" order="6">
-									<Description>S.AMBROGIO-CADORNA FN M2</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:S.AMBROGIO-CADORNA FN M2_3096_M2_3" version="1">S.AMBROGIO-CADORNA FN M2_3096_M2_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:CADORNA FN M2-LANZA_3097_M2_3" version="1" order="7">
-									<Description>CADORNA FN M2-LANZA</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CADORNA FN M2-LANZA_3097_M2_3" version="1">CADORNA FN M2-LANZA_3097_M2_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:LANZA-MOSCOVA_3098_M2_3" version="1" order="8">
-									<Description>LANZA-MOSCOVA</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LANZA-MOSCOVA_3098_M2_3" version="1">LANZA-MOSCOVA_3098_M2_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:MOSCOVA-GARIBALDI FS_3099_M2_3" version="1" order="9">
-									<Description>MOSCOVA-GARIBALDI FS</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:MOSCOVA-GARIBALDI FS_3099_M2_3" version="1">MOSCOVA-GARIBALDI FS_3099_M2_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:GARIBALDI FS-GIOIA_3100_M2_3" version="1" order="10">
-									<Description>GARIBALDI FS-GIOIA</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:GARIBALDI FS-GIOIA_3100_M2_3" version="1">GARIBALDI FS-GIOIA_3100_M2_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:GIOIA-CENTRALE FS_3101_M2_3" version="1" order="11">
-									<Description>GIOIA-CENTRALE FS</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:GIOIA-CENTRALE FS_3101_M2_3" version="1">GIOIA-CENTRALE FS_3101_M2_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:CENTRALE FS-CAIAZZO_3102_M2_3" version="1" order="12">
-									<Description>CENTRALE FS-CAIAZZO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CENTRALE FS-CAIAZZO_3102_M2_3" version="1">CENTRALE FS-CAIAZZO_3102_M2_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:CAIAZZO-LORETO M2_3103_M2_3" version="1" order="13">
-									<Description>CAIAZZO-LORETO M2</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CAIAZZO-LORETO M2_3103_M2_3" version="1">CAIAZZO-LORETO M2_3103_M2_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:LORETO M2-PIOLA_3104_M2_3" version="1" order="14">
-									<Description>LORETO M2-PIOLA</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LORETO M2-PIOLA_3104_M2_3" version="1">LORETO M2-PIOLA_3104_M2_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:PIOLA-LAMBRATE FS_3105_M2_3" version="1" order="15">
-									<Description>PIOLA-LAMBRATE FS</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:PIOLA-LAMBRATE FS_3105_M2_3" version="1">PIOLA-LAMBRATE FS_3105_M2_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:LAMBRATE FS-UDINE_3106_M2_3" version="1" order="16">
-									<Description>LAMBRATE FS-UDINE</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LAMBRATE FS-UDINE_3106_M2_3" version="1">LAMBRATE FS-UDINE_3106_M2_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:UDINE-CIMIANO_3107_M2_3" version="1" order="17">
-									<Description>UDINE-CIMIANO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:UDINE-CIMIANO_3107_M2_3" version="1">UDINE-CIMIANO_3107_M2_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:CIMIANO-CRESCENZAGO_3108_M2_3" version="1" order="18">
-									<Description>CIMIANO-CRESCENZAGO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CIMIANO-CRESCENZAGO_3108_M2_3" version="1">CIMIANO-CRESCENZAGO_3108_M2_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:CRESCENZAGO-CASCINA GOBBA_3109_M2_3" version="1" order="19">
-									<Description>CRESCENZAGO-CASCINA GOBBA</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CRESCENZAGO-CASCINA GOBBA_3109_M2_3" version="1">CRESCENZAGO-CASCINA GOBBA_3109_M2_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:CASCINA GOBBA-VIMODRONE_3113_M2_3" version="1" order="20">
-									<Description>CASCINA GOBBA-VIMODRONE</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CASCINA GOBBA-VIMODRONE_3113_M2_3" version="1">CASCINA GOBBA-VIMODRONE_3113_M2_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:VIMODRONE-CASCINA BURRONA_3114_M2_3" version="1" order="21">
-									<Description>VIMODRONE-CASCINA BURRONA</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:VIMODRONE-CASCINA BURRONA_3114_M2_3" version="1">VIMODRONE-CASCINA BURRONA_3114_M2_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:CASCINA BURRONA-CERNUSCO SUL NAVIGLIO_3115_M2_3" version="1" order="22">
-									<Description>CASCINA BURRONA-CERNUSCO SUL NAVIGLIO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CASCINA BURRONA-CERNUSCO SUL NAVIGLIO_3115_M2_3" version="1">CASCINA BURRONA-CERNUSCO SUL NAVIGLIO_3115_M2_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:CERNUSCO SUL NAVIGLIO-VILLA FIORITA_3116_M2_3" version="1" order="23">
-									<Description>CERNUSCO SUL NAVIGLIO-VILLA FIORITA</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CERNUSCO SUL NAVIGLIO-VILLA FIORITA_3116_M2_3" version="1">CERNUSCO SUL NAVIGLIO-VILLA FIORITA_3116_M2_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:VILLA FIORITA-CASSINA DE PECCHI_3117_M2_3" version="1" order="24">
-									<Description>VILLA FIORITA-CASSINA DE PECCHI</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:VILLA FIORITA-CASSINA DE PECCHI_3117_M2_3" version="1">VILLA FIORITA-CASSINA DE PECCHI_3117_M2_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:CASSINA DE PECCHI-BUSSERO_3118_M2_3" version="1" order="25">
-									<Description>CASSINA DE PECCHI-BUSSERO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CASSINA DE PECCHI-BUSSERO_3118_M2_3" version="1">CASSINA DE PECCHI-BUSSERO_3118_M2_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:BUSSERO-VILLA POMPEA_3119_M2_3" version="1" order="26">
-									<Description>BUSSERO-VILLA POMPEA</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:BUSSERO-VILLA POMPEA_3119_M2_3" version="1">BUSSERO-VILLA POMPEA_3119_M2_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:VILLA POMPEA-GORGONZOLA_3120_M2_3" version="1" order="27">
-									<Description>VILLA POMPEA-GORGONZOLA</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:VILLA POMPEA-GORGONZOLA_3120_M2_3" version="1">VILLA POMPEA-GORGONZOLA_3120_M2_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:GORGONZOLA-CASCINA ANTONIETTA_3121_M2_3" version="1" order="28">
-									<Description>GORGONZOLA-CASCINA ANTONIETTA</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:GORGONZOLA-CASCINA ANTONIETTA_3121_M2_3" version="1">GORGONZOLA-CASCINA ANTONIETTA_3121_M2_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:CASCINA ANTONIETTA-GESSATE_3122_M2_3" version="1" order="29">
-									<Description>CASCINA ANTONIETTA-GESSATE</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CASCINA ANTONIETTA-GESSATE_3122_M2_3" version="1">CASCINA ANTONIETTA-GESSATE_3122_M2_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-							</linksInSequence>
 						</ServiceJourneyPattern>
 						<ServiceJourneyPattern id="IT:ITC1:ServiceJourneyPattern:metroATMMILANO:M2_18_335" version="1">
 							<!-- da epip
@@ -20104,240 +19949,122 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 										<FromDate>2021-01-01T00:00:00</FromDate>
 										<ToDate>2022-12-31T00:00:00</ToDate>
 									</ValidBetween>
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:GESSATE-CASCINA ANTONIETTA_3218">GESSATE-CASCINA ANTONIETTA_3218</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:GESSATE_3698" version="1">GESSATE_3698</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:GESSATE-CASCINA ANTONIETTA_3218">GESSATE-CASCINA ANTONIETTA_3218</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11124" version="1" order="2">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CASCINA ANTONIETTA-GORGONZOLA_3219" version="1">CASCINA ANTONIETTA-GORGONZOLA_3219</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:CASCINA ANTONIETTA_3672" version="1">CASCINA ANTONIETTA_3672</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CASCINA ANTONIETTA-GORGONZOLA_3219" version="1">CASCINA ANTONIETTA-GORGONZOLA_3219</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11125" version="1" order="3">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:GORGONZOLA-VILLA POMPEA_3220" version="1">GORGONZOLA-VILLA POMPEA_3220</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:GORGONZOLA_3700" version="1">GORGONZOLA_3700</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:GORGONZOLA-VILLA POMPEA_3220" version="1">GORGONZOLA-VILLA POMPEA_3220</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11126" version="1" order="4">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:VILLA POMPEA-BUSSERO_3221" version="1">VILLA POMPEA-BUSSERO_3221</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:VILLA POMPEA_3758" version="1">VILLA POMPEA_3758</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:VILLA POMPEA-BUSSERO_3221" version="1">VILLA POMPEA-BUSSERO_3221</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11127" version="1" order="5">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:BUSSERO-CASSINA DE PECCHI_3222" version="1">BUSSERO-CASSINA DE PECCHI_3222</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:BUSSERO_3666" version="1">BUSSERO_3666</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:BUSSERO-CASSINA DE PECCHI_3222" version="1">BUSSERO-CASSINA DE PECCHI_3222</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11128" version="1" order="6">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CASSINA DE PECCHI-VILLA FIORITA_3190" version="1">CASSINA DE PECCHI-VILLA FIORITA_3190</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:CASSINA DE PECCHI_3675" version="1">CASSINA DE PECCHI_3675</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CASSINA DE PECCHI-VILLA FIORITA_3190" version="1">CASSINA DE PECCHI-VILLA FIORITA_3190</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11129" version="1" order="7">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:VILLA FIORITA-CERNUSCO SUL NAVIGLIO_3191">VILLA FIORITA-CERNUSCO SUL NAVIGLIO_3191</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:VILLA FIORITA_3757">VILLA FIORITA_3757</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:VILLA FIORITA-CERNUSCO SUL NAVIGLIO_3191">VILLA FIORITA-CERNUSCO SUL NAVIGLIO_3191</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11130" version="1" order="8">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CERNUSCO SUL NAVIGLIO-CASCINA BURRONA_3192" version="1">CERNUSCO SUL NAVIGLIO-CASCINA BURRONA_3192</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:CERNUSCO SUL NAVIGLIO_3678" version="1">CERNUSCO SUL NAVIGLIO_3678</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CERNUSCO SUL NAVIGLIO-CASCINA BURRONA_3192" version="1">CERNUSCO SUL NAVIGLIO-CASCINA BURRONA_3192</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11131" version="1" order="9">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CASCINA BURRONA-VIMODRONE_3193" version="1">CASCINA BURRONA-VIMODRONE_3193</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:CASCINA BURRONA_3673" version="1">CASCINA BURRONA_3673</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CASCINA BURRONA-VIMODRONE_3193" version="1">CASCINA BURRONA-VIMODRONE_3193</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11132" version="1" order="10">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:VIMODRONE-CASCINA GOBBA_3194" version="1">VIMODRONE-CASCINA GOBBA_3194</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:VIMODRONE_3760" version="1">VIMODRONE_3760</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:VIMODRONE-CASCINA GOBBA_3194" version="1">VIMODRONE-CASCINA GOBBA_3194</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11133" version="1" order="11">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CASCINA GOBBA-CRESCENZAGO_3169" version="1">CASCINA GOBBA-CRESCENZAGO_3169</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:CASCINA GOBBA_3674" version="1">CASCINA GOBBA_3674</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CASCINA GOBBA-CRESCENZAGO_3169" version="1">CASCINA GOBBA-CRESCENZAGO_3169</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11134" version="1" order="12">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CRESCENZAGO-CIMIANO_3170" version="1">CRESCENZAGO-CIMIANO_3170</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:CRESCENZAGO_3687" version="1">CRESCENZAGO_3687</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CRESCENZAGO-CIMIANO_3170" version="1">CRESCENZAGO-CIMIANO_3170</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11135" version="1" order="13">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CIMIANO-UDINE_3171" version="1">CIMIANO-UDINE_3171</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:CIMIANO_3679" version="1">CIMIANO_3679</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CIMIANO-UDINE_3171" version="1">CIMIANO-UDINE_3171</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11136" version="1" order="14">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:UDINE-LAMBRATE FS_3172" version="1">UDINE-LAMBRATE FS_3172</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:UDINE_3755" version="1">UDINE_3755</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:UDINE-LAMBRATE FS_3172" version="1">UDINE-LAMBRATE FS_3172</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11137" version="1" order="15">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LAMBRATE FS-PIOLA_3173" version="1">LAMBRATE FS-PIOLA_3173</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:LAMBRATE FS_3705" version="1">LAMBRATE FS_3705</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LAMBRATE FS-PIOLA_3173" version="1">LAMBRATE FS-PIOLA_3173</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11138" version="1" order="16">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:PIOLA-LORETO M2_3174" version="1">PIOLA-LORETO M2_3174</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:PIOLA_3727" version="1">PIOLA_3727</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:PIOLA-LORETO M2_3174" version="1">PIOLA-LORETO M2_3174</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11139" version="1" order="17">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LORETO M2-CAIAZZO_3175" version="1">LORETO M2-CAIAZZO_3175</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:LORETO M2_3711" version="1">LORETO M2_3711</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LORETO M2-CAIAZZO_3175" version="1">LORETO M2-CAIAZZO_3175</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11140" version="1" order="18">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CAIAZZO-CENTRALE FS_3176" version="1">CAIAZZO-CENTRALE FS_3176</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:CAIAZZO_3670" version="1">CAIAZZO_3670</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CAIAZZO-CENTRALE FS_3176" version="1">CAIAZZO-CENTRALE FS_3176</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11141" version="1" order="19">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CENTRALE FS-GIOIA_3177" version="1">CENTRALE FS-GIOIA_3177</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:CENTRALE FS_3677" version="1">CENTRALE FS_3677</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CENTRALE FS-GIOIA_3177" version="1">CENTRALE FS-GIOIA_3177</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11142" version="1" order="20">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:GIOIA-GARIBALDI FS_3178" version="1">GIOIA-GARIBALDI FS_3178</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:GIOIA_3699" version="1">GIOIA_3699</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:GIOIA-GARIBALDI FS_3178" version="1">GIOIA-GARIBALDI FS_3178</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11143" version="1" order="21">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:GARIBALDI FS-MOSCOVA_3179" version="1">GARIBALDI FS-MOSCOVA_3179</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:GARIBALDI FS_3696" version="1">GARIBALDI FS_3696</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:GARIBALDI FS-MOSCOVA_3179" version="1">GARIBALDI FS-MOSCOVA_3179</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11144" version="1" order="22">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:MOSCOVA-LANZA_3180" version="1">MOSCOVA-LANZA_3180</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:MOSCOVA_3720" version="1">MOSCOVA_3720</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:MOSCOVA-LANZA_3180" version="1">MOSCOVA-LANZA_3180</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11145" version="1" order="23">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LANZA-CADORNA FN M2_3181" version="1">LANZA-CADORNA FN M2_3181</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:LANZA_3707" version="1">LANZA_3707</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LANZA-CADORNA FN M2_3181" version="1">LANZA-CADORNA FN M2_3181</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11146" version="1" order="24">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CADORNA FN M2-S.AMBROGIO_3182" version="1">CADORNA FN M2-S.AMBROGIO_3182</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:CADORNA FN M2_3669" version="1">CADORNA FN M2_3669</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CADORNA FN M2-S.AMBROGIO_3182" version="1">CADORNA FN M2-S.AMBROGIO_3182</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11147" version="1" order="25">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:S.AMBROGIO-S.AGOSTINO_3183" version="1">S.AMBROGIO-S.AGOSTINO_3183</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:S.AMBROGIO_3741" version="1">S.AMBROGIO_3741</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:S.AMBROGIO-S.AGOSTINO_3183" version="1">S.AMBROGIO-S.AGOSTINO_3183</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11148" version="1" order="26">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:S.AGOSTINO-P.TA GENOVA F.S._3184" version="1">S.AGOSTINO-P.TA GENOVA F.S._3184</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:S.AGOSTINO_3740" version="1">S.AGOSTINO_3740</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:S.AGOSTINO-P.TA GENOVA F.S._3184" version="1">S.AGOSTINO-P.TA GENOVA F.S._3184</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11149" version="1" order="27">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:P.TA GENOVA F.S.-ROMOLO_3185" version="1">P.TA GENOVA F.S.-ROMOLO_3185</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:P.TA GENOVA F.S._3721" version="1">P.TA GENOVA F.S._3721</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:P.TA GENOVA F.S.-ROMOLO_3185" version="1">P.TA GENOVA F.S.-ROMOLO_3185</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11150" version="1" order="28">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:ROMOLO-FAMAGOSTA_3186" version="1">ROMOLO-FAMAGOSTA_3186</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:ROMOLO_3738" version="1">ROMOLO_3738</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:ROMOLO-FAMAGOSTA_3186" version="1">ROMOLO-FAMAGOSTA_3186</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11151" version="1" order="29">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:FAMAGOSTA-ABBIATEGRASSO_3187" version="1">FAMAGOSTA-ABBIATEGRASSO_3187</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:FAMAGOSTA_3694" version="1">FAMAGOSTA_3694</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:FAMAGOSTA-ABBIATEGRASSO_3187" version="1">FAMAGOSTA-ABBIATEGRASSO_3187</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 							</pointsInSequence>
-							<linksInSequence>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:CASCINA GOBBA-CRESCENZAGO_3169_M2_18" version="1" order="11">
-									<Description>CASCINA GOBBA-CRESCENZAGO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CASCINA GOBBA-CRESCENZAGO_3169_M2_18" version="1">CASCINA GOBBA-CRESCENZAGO_3169_M2_18</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:CRESCENZAGO-CIMIANO_3170_M2_18" version="1" order="12">
-									<Description>CRESCENZAGO-CIMIANO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CRESCENZAGO-CIMIANO_3170_M2_18" version="1">CRESCENZAGO-CIMIANO_3170_M2_18</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:CIMIANO-UDINE_3171_M2_18" version="1" order="13">
-									<Description>CIMIANO-UDINE</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CIMIANO-UDINE_3171_M2_18" version="1">CIMIANO-UDINE_3171_M2_18</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:UDINE-LAMBRATE FS_3172_M2_18" version="1" order="14">
-									<Description>UDINE-LAMBRATE FS</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:UDINE-LAMBRATE FS_3172_M2_18" version="1">UDINE-LAMBRATE FS_3172_M2_18</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:LAMBRATE FS-PIOLA_3173_M2_18" version="1" order="15">
-									<Description>LAMBRATE FS-PIOLA</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LAMBRATE FS-PIOLA_3173_M2_18" version="1">LAMBRATE FS-PIOLA_3173_M2_18</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:PIOLA-LORETO M2_3174_M2_18" version="1" order="16">
-									<Description>PIOLA-LORETO M2</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:PIOLA-LORETO M2_3174_M2_18" version="1">PIOLA-LORETO M2_3174_M2_18</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:LORETO M2-CAIAZZO_3175_M2_18" version="1" order="17">
-									<Description>LORETO M2-CAIAZZO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LORETO M2-CAIAZZO_3175_M2_18" version="1">LORETO M2-CAIAZZO_3175_M2_18</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:CAIAZZO-CENTRALE FS_3176_M2_18" version="1" order="18">
-									<Description>CAIAZZO-CENTRALE FS</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CAIAZZO-CENTRALE FS_3176_M2_18" version="1">CAIAZZO-CENTRALE FS_3176_M2_18</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:CENTRALE FS-GIOIA_3177_M2_18" version="1" order="19">
-									<Description>CENTRALE FS-GIOIA</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CENTRALE FS-GIOIA_3177_M2_18" version="1">CENTRALE FS-GIOIA_3177_M2_18</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:GIOIA-GARIBALDI FS_3178_M2_18" version="1" order="20">
-									<Description>GIOIA-GARIBALDI FS</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:GIOIA-GARIBALDI FS_3178_M2_18" version="1">GIOIA-GARIBALDI FS_3178_M2_18</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:GARIBALDI FS-MOSCOVA_3179_M2_18" version="1" order="21">
-									<Description>GARIBALDI FS-MOSCOVA</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:GARIBALDI FS-MOSCOVA_3179_M2_18" version="1">GARIBALDI FS-MOSCOVA_3179_M2_18</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:MOSCOVA-LANZA_3180_M2_18" version="1" order="22">
-									<Description>MOSCOVA-LANZA</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:MOSCOVA-LANZA_3180_M2_18" version="1">MOSCOVA-LANZA_3180_M2_18</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:LANZA-CADORNA FN M2_3181_M2_18" version="1" order="23">
-									<Description>LANZA-CADORNA FN M2</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LANZA-CADORNA FN M2_3181_M2_18" version="1">LANZA-CADORNA FN M2_3181_M2_18</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:CADORNA FN M2-S.AMBROGIO_3182_M2_18" version="1" order="24">
-									<Description>CADORNA FN M2-S.AMBROGIO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CADORNA FN M2-S.AMBROGIO_3182_M2_18" version="1">CADORNA FN M2-S.AMBROGIO_3182_M2_18</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:S.AMBROGIO-S.AGOSTINO_3183_M2_18" version="1" order="25">
-									<Description>S.AMBROGIO-S.AGOSTINO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:S.AMBROGIO-S.AGOSTINO_3183_M2_18" version="1">S.AMBROGIO-S.AGOSTINO_3183_M2_18</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:S.AGOSTINO-P.TA GENOVA F.S._3184_M2_18" version="1" order="26">
-									<Description>S.AGOSTINO-P.TA GENOVA F.S.</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:S.AGOSTINO-P.TA GENOVA F.S._3184_M2_18" version="1">S.AGOSTINO-P.TA GENOVA F.S._3184_M2_18</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:P.TA GENOVA F.S.-ROMOLO_3185_M2_18" version="1" order="27">
-									<Description>P.TA GENOVA F.S.-ROMOLO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:P.TA GENOVA F.S.-ROMOLO_3185_M2_18" version="1">P.TA GENOVA F.S.-ROMOLO_3185_M2_18</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:ROMOLO-FAMAGOSTA_3186_M2_18" version="1" order="28">
-									<Description>ROMOLO-FAMAGOSTA</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:ROMOLO-FAMAGOSTA_3186_M2_18" version="1">ROMOLO-FAMAGOSTA_3186_M2_18</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:FAMAGOSTA-ABBIATEGRASSO_3187_M2_18" version="1" order="29">
-									<Description>FAMAGOSTA-ABBIATEGRASSO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:FAMAGOSTA-ABBIATEGRASSO_3187_M2_18" version="1">FAMAGOSTA-ABBIATEGRASSO_3187_M2_18</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:CASSINA DE PECCHI-VILLA FIORITA_3190_M2_18" version="1" order="6">
-									<Description>CASSINA DE PECCHI-VILLA FIORITA</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CASSINA DE PECCHI-VILLA FIORITA_3190_M2_18" version="1">CASSINA DE PECCHI-VILLA FIORITA_3190_M2_18</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:VILLA FIORITA-CERNUSCO SUL NAVIGLIO_3191_M2_18" version="1" order="7">
-									<Description>VILLA FIORITA-CERNUSCO SUL NAVIGLIO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:VILLA FIORITA-CERNUSCO SUL NAVIGLIO_3191_M2_18" version="1">VILLA FIORITA-CERNUSCO SUL NAVIGLIO_3191_M2_18</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:CERNUSCO SUL NAVIGLIO-CASCINA BURRONA_3192_M2_18" version="1" order="8">
-									<Description>CERNUSCO SUL NAVIGLIO-CASCINA BURRONA</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CERNUSCO SUL NAVIGLIO-CASCINA BURRONA_3192_M2_18" version="1">CERNUSCO SUL NAVIGLIO-CASCINA BURRONA_3192_M2_18</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:CASCINA BURRONA-VIMODRONE_3193_M2_18" version="1" order="9">
-									<Description>CASCINA BURRONA-VIMODRONE</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CASCINA BURRONA-VIMODRONE_3193_M2_18" version="1">CASCINA BURRONA-VIMODRONE_3193_M2_18</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:VIMODRONE-CASCINA GOBBA_3194_M2_18" version="1" order="10">
-									<Description>VIMODRONE-CASCINA GOBBA</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:VIMODRONE-CASCINA GOBBA_3194_M2_18" version="1">VIMODRONE-CASCINA GOBBA_3194_M2_18</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:GESSATE-CASCINA ANTONIETTA_3218_M2_18" version="1" order="1">
-									<Description>GESSATE-CASCINA ANTONIETTA</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:GESSATE-CASCINA ANTONIETTA_3218_M2_18" version="1">GESSATE-CASCINA ANTONIETTA_3218_M2_18</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:CASCINA ANTONIETTA-GORGONZOLA_3219_M2_18" version="1" order="2">
-									<Description>CASCINA ANTONIETTA-GORGONZOLA</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CASCINA ANTONIETTA-GORGONZOLA_3219_M2_18" version="1">CASCINA ANTONIETTA-GORGONZOLA_3219_M2_18</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:GORGONZOLA-VILLA POMPEA_3220_M2_18" version="1" order="3">
-									<Description>GORGONZOLA-VILLA POMPEA</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:GORGONZOLA-VILLA POMPEA_3220_M2_18" version="1">GORGONZOLA-VILLA POMPEA_3220_M2_18</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:VILLA POMPEA-BUSSERO_3221_M2_18" version="1" order="4">
-									<Description>VILLA POMPEA-BUSSERO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:VILLA POMPEA-BUSSERO_3221_M2_18" version="1">VILLA POMPEA-BUSSERO_3221_M2_18</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:BUSSERO-CASSINA DE PECCHI_3222_M2_18" version="1" order="5">
-									<Description>BUSSERO-CASSINA DE PECCHI</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:BUSSERO-CASSINA DE PECCHI_3222_M2_18" version="1">BUSSERO-CASSINA DE PECCHI_3222_M2_18</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-							</linksInSequence>
 						</ServiceJourneyPattern>
 						<ServiceJourneyPattern id="IT:ITC1:ServiceJourneyPattern:metroATMMILANO:M1_3_343" version="1">
 							<!-- da epip
@@ -20362,248 +20089,126 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 										<FromDate>2021-01-01T00:00:00</FromDate>
 										<ToDate>2022-12-31T00:00:00</ToDate>
 									</ValidBetween>
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:RHO FIERAMILANO-PERO_3232" version="1">RHO FIERAMILANO-PERO_3232</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:RHO FIERAMILANO_3736" version="1">RHO FIERAMILANO_3736</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:RHO FIERAMILANO-PERO_3232" version="1">RHO FIERAMILANO-PERO_3232</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11309" version="1" order="2">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:PERO-MOLINO DORINO_3233" version="1">PERO-MOLINO DORINO_3233</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:PERO_3726" version="1">PERO_3726</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:PERO-MOLINO DORINO_3233" version="1">PERO-MOLINO DORINO_3233</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11310" version="1" order="3">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:MOLINO DORINO-S.LEONARDO_3223" version="1">MOLINO DORINO-S.LEONARDO_3223</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:MOLINO DORINO_3717" version="1">MOLINO DORINO_3717</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:MOLINO DORINO-S.LEONARDO_3223" version="1">MOLINO DORINO-S.LEONARDO_3223</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11311" version="1" order="4">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:S.LEONARDO-BONOLA_3224" version="1">S.LEONARDO-BONOLA_3224</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:S.LEONARDO_3742" version="1">S.LEONARDO_3742</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:S.LEONARDO-BONOLA_3224" version="1">S.LEONARDO-BONOLA_3224</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11312" version="1" order="5">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:BONOLA-URUGUAY_3225" version="1">BONOLA-URUGUAY_3225</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:BONOLA_3663" version="1">BONOLA_3663</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:BONOLA-URUGUAY_3225" version="1">BONOLA-URUGUAY_3225</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11313" version="1" order="6">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:URUGUAY-LAMPUGNANO_3226" version="1">URUGUAY-LAMPUGNANO_3226</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:URUGUAY_3756" version="1">URUGUAY_3756</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:URUGUAY-LAMPUGNANO_3226" version="1">URUGUAY-LAMPUGNANO_3226</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11314" version="1" order="7">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LAMPUGNANO-QT8_3227" version="1">LAMPUGNANO-QT8_3227</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:LAMPUGNANO_3706" version="1">LAMPUGNANO_3706</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LAMPUGNANO-QT8_3227" version="1">LAMPUGNANO-QT8_3227</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11315" version="1" order="8">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:QT8-LOTTO FIERAMILANOCITY_3228" version="1">QT8-LOTTO FIERAMILANOCITY_3228</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:QT8_3734" version="1">QT8_3734</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:QT8-LOTTO FIERAMILANOCITY_3228" version="1">QT8-LOTTO FIERAMILANOCITY_3228</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11316" version="1" order="9">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LOTTO FIERAMILANOCITY-AMENDOLA_3229" version="1">LOTTO FIERAMILANOCITY-AMENDOLA_3229</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:LOTTO FIERAMILANOCITY_3712" version="1">LOTTO FIERAMILANOCITY_3712</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LOTTO FIERAMILANOCITY-AMENDOLA_3229" version="1">LOTTO FIERAMILANOCITY-AMENDOLA_3229</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11317" version="1" order="10">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:AMENDOLA-BUONARROTI_3230" version="1">AMENDOLA-BUONARROTI_3230</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:AMENDOLA_3656" version="1">AMENDOLA_3656</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:AMENDOLA-BUONARROTI_3230" version="1">AMENDOLA-BUONARROTI_3230</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11318" version="1" order="11">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:BUONARROTI-PAGANO_3231" version="1">BUONARROTI-PAGANO_3231</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:BUONARROTI_3665" version="1">BUONARROTI_3665</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:BUONARROTI-PAGANO_3231" version="1">BUONARROTI-PAGANO_3231</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11319" version="1" order="12">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:PAGANO-CONCILIAZIONE_3150" version="1">PAGANO-CONCILIAZIONE_3150</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:PAGANO_3723" version="1">PAGANO_3723</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:PAGANO-CONCILIAZIONE_3150" version="1">PAGANO-CONCILIAZIONE_3150</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11320" version="1" order="13">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CONCILIAZIONE-CADORNA FN M1_3151" version="1">CONCILIAZIONE-CADORNA FN M1_3151</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:CONCILIAZIONE_3684" version="1">CONCILIAZIONE_3684</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CONCILIAZIONE-CADORNA FN M1_3151" version="1">CONCILIAZIONE-CADORNA FN M1_3151</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11321" version="1" order="14">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CADORNA FN M1-CAIROLI_3152" version="1">CADORNA FN M1-CAIROLI_3152</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:CADORNA FN M1_3668" version="1">CADORNA FN M1_3668</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CADORNA FN M1-CAIROLI_3152" version="1">CADORNA FN M1-CAIROLI_3152</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11322" version="1" order="15">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CAIROLI-CORDUSIO_3153" version="1">CAIROLI-CORDUSIO_3153</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:CAIROLI_3671" version="1">CAIROLI_3671</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CAIROLI-CORDUSIO_3153" version="1">CAIROLI-CORDUSIO_3153</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11323" version="1" order="16">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CORDUSIO-DUOMO M1_3154" version="1">CORDUSIO-DUOMO M1_3154</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:CORDUSIO_3685" version="1">CORDUSIO_3685</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CORDUSIO-DUOMO M1_3154" version="1">CORDUSIO-DUOMO M1_3154</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11324" version="1" order="17">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:DUOMO M1-SAN BABILA_3155" version="1">DUOMO M1-SAN BABILA_3155</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:DUOMO M1_3692" version="1">DUOMO M1_3692</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:DUOMO M1-SAN BABILA_3155" version="1">DUOMO M1-SAN BABILA_3155</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11325" version="1" order="18">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:SAN BABILA-PALESTRO_3156" version="1">SAN BABILA-PALESTRO_3156</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:SAN BABILA_3743" version="1">SAN BABILA_3743</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:SAN BABILA-PALESTRO_3156" version="1">SAN BABILA-PALESTRO_3156</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11326" version="1" order="19">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:PALESTRO-P.TA VENEZIA_3157" version="1">PALESTRO-P.TA VENEZIA_3157</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:PALESTRO_3724" version="1">PALESTRO_3724</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:PALESTRO-P.TA VENEZIA_3157" version="1">PALESTRO-P.TA VENEZIA_3157</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11327" version="1" order="20">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:P.TA VENEZIA-LIMA_3158" version="1">P.TA VENEZIA-LIMA_3158</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:P.TA VENEZIA_3722" version="1">P.TA VENEZIA_3722</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:P.TA VENEZIA-LIMA_3158" version="1">P.TA VENEZIA-LIMA_3158</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11328" version="1" order="21">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LIMA-LORETO M1_3159" version="1">LIMA-LORETO M1_3159</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:LIMA_3708" version="1">LIMA_3708</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LIMA-LORETO M1_3159" version="1">LIMA-LORETO M1_3159</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11329" version="1" order="22">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LORETO M1-PASTEUR_3160" version="1">LORETO M1-PASTEUR_3160</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:LORETO M1_3710" version="1">LORETO M1_3710</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LORETO M1-PASTEUR_3160" version="1">LORETO M1-PASTEUR_3160</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11330" version="1" order="23">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:PASTEUR-ROVERETO_3161" version="1">PASTEUR-ROVERETO_3161</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:PASTEUR_3725" version="1">PASTEUR_3725</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:PASTEUR-ROVERETO_3161" version="1">PASTEUR-ROVERETO_3161</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11331" version="1" order="24">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:ROVERETO-TURRO_3162" version="1">ROVERETO-TURRO_3162</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:ROVERETO_3739" version="1">ROVERETO_3739</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:ROVERETO-TURRO_3162" version="1">ROVERETO-TURRO_3162</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11332" version="1" order="25">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:TURRO-GORLA_3163" version="1">TURRO-GORLA_3163</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:TURRO_3754" version="1">TURRO_3754</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:TURRO-GORLA_3163" version="1">TURRO-GORLA_3163</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11333" version="1" order="26">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:GORLA-PRECOTTO_3164" version="1">GORLA-PRECOTTO_3164</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:GORLA_3701" version="1">GORLA_3701</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:GORLA-PRECOTTO_3164" version="1">GORLA-PRECOTTO_3164</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11334" version="1" order="27">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:PRECOTTO-VILLA S.G._3165" version="1">PRECOTTO-VILLA S.G._3165</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:PRECOTTO_3732" version="1">PRECOTTO_3732</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:PRECOTTO-VILLA S.G._3165" version="1">PRECOTTO-VILLA S.G._3165</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11335" version="1" order="28">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:VILLA S.G.-SESTO MARELLI_3166" version="1">VILLA S.G.-SESTO MARELLI_3166</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:VILLA S.G._3759" version="1">VILLA S.G._3759</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:VILLA S.G.-SESTO MARELLI_3166" version="1">VILLA S.G.-SESTO MARELLI_3166</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11336" version="1" order="29">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:SESTO MARELLI-SESTO RONDO_3167" version="1">SESTO MARELLI-SESTO RONDO_3167</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:SESTO MARELLI_3749" version="1">SESTO MARELLI_3749</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:SESTO MARELLI-SESTO RONDO_3167" version="1">SESTO MARELLI-SESTO RONDO_3167</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11337" version="1" order="30">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:SESTO RONDO-SESTO 1 MAGGIO FS_3168" version="1">SESTO RONDO-SESTO 1 MAGGIO FS_3168</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:SESTO RONDO_3750" version="1">SESTO RONDO_3750</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:SESTO RONDO-SESTO 1 MAGGIO FS_3168" version="1">SESTO RONDO-SESTO 1 MAGGIO FS_3168</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 							</pointsInSequence>
-							<linksInSequence>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:PAGANO-CONCILIAZIONE_3150_M1_3" version="1" order="12">
-									<Description>PAGANO-CONCILIAZIONE</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:PAGANO-CONCILIAZIONE_3150_M1_3" version="1">PAGANO-CONCILIAZIONE_3150_M1_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:CONCILIAZIONE-CADORNA FN M1_3151_M1_3" version="1" order="13">
-									<Description>CONCILIAZIONE-CADORNA FN M1</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CONCILIAZIONE-CADORNA FN M1_3151_M1_3" version="1">CONCILIAZIONE-CADORNA FN M1_3151_M1_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:CADORNA FN M1-CAIROLI_3152_M1_3" version="1" order="14">
-									<Description>CADORNA FN M1-CAIROLI</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CADORNA FN M1-CAIROLI_3152_M1_3" version="1">CADORNA FN M1-CAIROLI_3152_M1_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:CAIROLI-CORDUSIO_3153_M1_3" version="1" order="15">
-									<Description>CAIROLI-CORDUSIO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CAIROLI-CORDUSIO_3153_M1_3" version="1">CAIROLI-CORDUSIO_3153_M1_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:CORDUSIO-DUOMO M1_3154_M1_3" version="1" order="16">
-									<Description>CORDUSIO-DUOMO M1</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CORDUSIO-DUOMO M1_3154_M1_3" version="1">CORDUSIO-DUOMO M1_3154_M1_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:DUOMO M1-SAN BABILA_3155_M1_3" version="1" order="17">
-									<Description>DUOMO M1-SAN BABILA</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:DUOMO M1-SAN BABILA_3155_M1_3" version="1">DUOMO M1-SAN BABILA_3155_M1_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:SAN BABILA-PALESTRO_3156_M1_3" version="1" order="18">
-									<Description>SAN BABILA-PALESTRO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:SAN BABILA-PALESTRO_3156_M1_3" version="1">SAN BABILA-PALESTRO_3156_M1_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:PALESTRO-P.TA VENEZIA_3157_M1_3" version="1" order="19">
-									<Description>PALESTRO-P.TA VENEZIA</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:PALESTRO-P.TA VENEZIA_3157_M1_3" version="1">PALESTRO-P.TA VENEZIA_3157_M1_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:P.TA VENEZIA-LIMA_3158_M1_3" version="1" order="20">
-									<Description>P.TA VENEZIA-LIMA</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:P.TA VENEZIA-LIMA_3158_M1_3" version="1">P.TA VENEZIA-LIMA_3158_M1_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:LIMA-LORETO M1_3159_M1_3" version="1" order="21">
-									<Description>LIMA-LORETO M1</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LIMA-LORETO M1_3159_M1_3" version="1">LIMA-LORETO M1_3159_M1_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:LORETO M1-PASTEUR_3160_M1_3" version="1" order="22">
-									<Description>LORETO M1-PASTEUR</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LORETO M1-PASTEUR_3160_M1_3" version="1">LORETO M1-PASTEUR_3160_M1_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:PASTEUR-ROVERETO_3161_M1_3" version="1" order="23">
-									<Description>PASTEUR-ROVERETO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:PASTEUR-ROVERETO_3161_M1_3" version="1">PASTEUR-ROVERETO_3161_M1_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:ROVERETO-TURRO_3162_M1_3" version="1" order="24">
-									<Description>ROVERETO-TURRO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:ROVERETO-TURRO_3162_M1_3" version="1">ROVERETO-TURRO_3162_M1_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:TURRO-GORLA_3163_M1_3" version="1" order="25">
-									<Description>TURRO-GORLA</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:TURRO-GORLA_3163_M1_3" version="1">TURRO-GORLA_3163_M1_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:GORLA-PRECOTTO_3164_M1_3" version="1" order="26">
-									<Description>GORLA-PRECOTTO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:GORLA-PRECOTTO_3164_M1_3" version="1">GORLA-PRECOTTO_3164_M1_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:PRECOTTO-VILLA S.G._3165_M1_3" version="1" order="27">
-									<Description>PRECOTTO-VILLA S.G.</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:PRECOTTO-VILLA S.G._3165_M1_3" version="1">PRECOTTO-VILLA S.G._3165_M1_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:VILLA S.G.-SESTO MARELLI_3166_M1_3" version="1" order="28">
-									<Description>VILLA S.G.-SESTO MARELLI</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:VILLA S.G.-SESTO MARELLI_3166_M1_3" version="1">VILLA S.G.-SESTO MARELLI_3166_M1_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:SESTO MARELLI-SESTO RONDO_3167_M1_3" version="1" order="29">
-									<Description>SESTO MARELLI-SESTO RONDO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:SESTO MARELLI-SESTO RONDO_3167_M1_3" version="1">SESTO MARELLI-SESTO RONDO_3167_M1_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:SESTO RONDO-SESTO 1 MAGGIO FS_3168_M1_3" version="1" order="30">
-									<Description>SESTO RONDO-SESTO 1 MAGGIO FS</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:SESTO RONDO-SESTO 1 MAGGIO FS_3168_M1_3" version="1">SESTO RONDO-SESTO 1 MAGGIO FS_3168_M1_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:MOLINO DORINO-S.LEONARDO_3223_M1_3" version="1" order="3">
-									<Description>MOLINO DORINO-S.LEONARDO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:MOLINO DORINO-S.LEONARDO_3223_M1_3" version="1">MOLINO DORINO-S.LEONARDO_3223_M1_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:S.LEONARDO-BONOLA_3224_M1_3" version="1" order="4">
-									<Description>S.LEONARDO-BONOLA</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:S.LEONARDO-BONOLA_3224_M1_3" version="1">S.LEONARDO-BONOLA_3224_M1_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:BONOLA-URUGUAY_3225_M1_3" version="1" order="5">
-									<Description>BONOLA-URUGUAY</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:BONOLA-URUGUAY_3225_M1_3" version="1">BONOLA-URUGUAY_3225_M1_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:URUGUAY-LAMPUGNANO_3226_M1_3" version="1" order="6">
-									<Description>URUGUAY-LAMPUGNANO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:URUGUAY-LAMPUGNANO_3226_M1_3" version="1">URUGUAY-LAMPUGNANO_3226_M1_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:LAMPUGNANO-QT8_3227_M1_3" version="1" order="7">
-									<Description>LAMPUGNANO-QT8</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LAMPUGNANO-QT8_3227_M1_3" version="1">LAMPUGNANO-QT8_3227_M1_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:QT8-LOTTO FIERAMILANOCITY_3228_M1_3" version="1" order="8">
-									<Description>QT8-LOTTO FIERAMILANOCITY</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:QT8-LOTTO FIERAMILANOCITY_3228_M1_3" version="1">QT8-LOTTO FIERAMILANOCITY_3228_M1_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:LOTTO FIERAMILANOCITY-AMENDOLA_3229_M1_3" version="1" order="9">
-									<Description>LOTTO FIERAMILANOCITY-AMENDOLA</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LOTTO FIERAMILANOCITY-AMENDOLA_3229_M1_3" version="1">LOTTO FIERAMILANOCITY-AMENDOLA_3229_M1_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:AMENDOLA-BUONARROTI_3230_M1_3" version="1" order="10">
-									<Description>AMENDOLA-BUONARROTI</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:AMENDOLA-BUONARROTI_3230_M1_3" version="1">AMENDOLA-BUONARROTI_3230_M1_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:BUONARROTI-PAGANO_3231_M1_3" version="1" order="11">
-									<Description>BUONARROTI-PAGANO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:BUONARROTI-PAGANO_3231_M1_3" version="1">BUONARROTI-PAGANO_3231_M1_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:RHO FIERAMILANO-PERO_3232_M1_3" version="1" order="1">
-									<Description>RHO FIERAMILANO-PERO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:RHO FIERAMILANO-PERO_3232_M1_3" version="1">RHO FIERAMILANO-PERO_3232_M1_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:PERO-MOLINO DORINO_3233_M1_3" version="1" order="2">
-									<Description>PERO-MOLINO DORINO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:PERO-MOLINO DORINO_3233_M1_3" version="1">PERO-MOLINO DORINO_3233_M1_3</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-							</linksInSequence>
 						</ServiceJourneyPattern>
 						<ServiceJourneyPattern id="IT:ITC1:ServiceJourneyPattern:metroATMMILANO:M1_6_348" version="1">
 							<!-- da epip
@@ -20628,248 +20233,126 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 										<FromDate>2021-01-01T00:00:00</FromDate>
 										<ToDate>2022-12-31T00:00:00</ToDate>
 									</ValidBetween>
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:SESTO 1 MAGGIO FS-SESTO RONDO_3272" version="1">SESTO 1 MAGGIO FS-SESTO RONDO_3272</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:SESTO 1 MAGGIO FS_3748" version="1">SESTO 1 MAGGIO FS_3748</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:SESTO 1 MAGGIO FS-SESTO RONDO_3272" version="1">SESTO 1 MAGGIO FS-SESTO RONDO_3272</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11436" version="1" order="2">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:SESTO RONDO-SESTO MARELLI_3273" version="1">SESTO RONDO-SESTO MARELLI_3273</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:SESTO RONDO_3750" version="1">SESTO RONDO_3750</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:SESTO RONDO-SESTO MARELLI_3273" version="1">SESTO RONDO-SESTO MARELLI_3273</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11437" version="1" order="3">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:SESTO MARELLI-VILLA S.G._3274" version="1">SESTO MARELLI-VILLA S.G._3274</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:SESTO MARELLI_3749" version="1">SESTO MARELLI_3749</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:SESTO MARELLI-VILLA S.G._3274" version="1">SESTO MARELLI-VILLA S.G._3274</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11438" version="1" order="4">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:VILLA S.G.-PRECOTTO_3275" version="1">VILLA S.G.-PRECOTTO_3275</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:VILLA S.G._3759" version="1">VILLA S.G._3759</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:VILLA S.G.-PRECOTTO_3275" version="1">VILLA S.G.-PRECOTTO_3275</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11439" version="1" order="5">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:PRECOTTO-GORLA_3276" version="1">PRECOTTO-GORLA_3276</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:PRECOTTO_3732" version="1">PRECOTTO_3732</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:PRECOTTO-GORLA_3276" version="1">PRECOTTO-GORLA_3276</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11440" version="1" order="6">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:GORLA-TURRO_3277" version="1">GORLA-TURRO_3277</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:GORLA_3701" version="1">GORLA_3701</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:GORLA-TURRO_3277" version="1">GORLA-TURRO_3277</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11441" version="1" order="7">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:TURRO-ROVERETO_3278" version="1">TURRO-ROVERETO_3278</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:TURRO_3754" version="1">TURRO_3754</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:TURRO-ROVERETO_3278" version="1">TURRO-ROVERETO_3278</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11442" version="1" order="8">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:ROVERETO-PASTEUR_3279" version="1">ROVERETO-PASTEUR_3279</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:ROVERETO_3739" version="1">ROVERETO_3739</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:ROVERETO-PASTEUR_3279" version="1">ROVERETO-PASTEUR_3279</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11443" version="1" order="9">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:PASTEUR-LORETO M1_3280" version="1">PASTEUR-LORETO M1_3280</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:PASTEUR_3725" version="1">PASTEUR_3725</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:PASTEUR-LORETO M1_3280" version="1">PASTEUR-LORETO M1_3280</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11444" version="1" order="10">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LORETO M1-LIMA_3281" version="1">LORETO M1-LIMA_3281</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:LORETO M1_3710" version="1">LORETO M1_3710</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LORETO M1-LIMA_3281" version="1">LORETO M1-LIMA_3281</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11445" version="1" order="11">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LIMA-P.TA VENEZIA_3282" version="1">LIMA-P.TA VENEZIA_3282</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:LIMA_3708" version="1">LIMA_3708</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LIMA-P.TA VENEZIA_3282" version="1">LIMA-P.TA VENEZIA_3282</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11446" version="1" order="12">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:P.TA VENEZIA-PALESTRO_3283" version="1">P.TA VENEZIA-PALESTRO_3283</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:P.TA VENEZIA_3722" version="1">P.TA VENEZIA_3722</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:P.TA VENEZIA-PALESTRO_3283" version="1">P.TA VENEZIA-PALESTRO_3283</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11447" version="1" order="13">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:PALESTRO-SAN BABILA_3284" version="1">PALESTRO-SAN BABILA_3284</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:PALESTRO_3724" version="1">PALESTRO_3724</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:PALESTRO-SAN BABILA_3284" version="1">PALESTRO-SAN BABILA_3284</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11448" version="1" order="14">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:SAN BABILA-DUOMO M1_3285" version="1">SAN BABILA-DUOMO M1_3285</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:SAN BABILA_3743" version="1">SAN BABILA_3743</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:SAN BABILA-DUOMO M1_3285" version="1">SAN BABILA-DUOMO M1_3285</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11449" version="1" order="15">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:DUOMO M1-CORDUSIO_3286" version="1">DUOMO M1-CORDUSIO_3286</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:DUOMO M1_3692" version="1">DUOMO M1_3692</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:DUOMO M1-CORDUSIO_3286" version="1">DUOMO M1-CORDUSIO_3286</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11450" version="1" order="16">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CORDUSIO-CAIROLI_3287" version="1">CORDUSIO-CAIROLI_3287</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:CORDUSIO_3685" version="1">CORDUSIO_3685</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CORDUSIO-CAIROLI_3287" version="1">CORDUSIO-CAIROLI_3287</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11451" version="1" order="17">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CAIROLI-CADORNA FN M1_3288" version="1">CAIROLI-CADORNA FN M1_3288</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:CAIROLI_3671" version="1">CAIROLI_3671</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CAIROLI-CADORNA FN M1_3288" version="1">CAIROLI-CADORNA FN M1_3288</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11452" version="1" order="18">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CADORNA FN M1-CONCILIAZIONE_3289" version="1">CADORNA FN M1-CONCILIAZIONE_3289</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:CADORNA FN M1_3668" version="1">CADORNA FN M1_3668</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CADORNA FN M1-CONCILIAZIONE_3289" version="1">CADORNA FN M1-CONCILIAZIONE_3289</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11453" version="1" order="19">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CONCILIAZIONE-PAGANO_3290" version="1">CONCILIAZIONE-PAGANO_3290</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:CONCILIAZIONE_3684" version="1">CONCILIAZIONE_3684</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CONCILIAZIONE-PAGANO_3290" version="1">CONCILIAZIONE-PAGANO_3290</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11454" version="1" order="20">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:PAGANO-BUONARROTI_3298" version="1">PAGANO-BUONARROTI_3298</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:PAGANO_3723" version="1">PAGANO_3723</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:PAGANO-BUONARROTI_3298" version="1">PAGANO-BUONARROTI_3298</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11455" version="1" order="21">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:BUONARROTI-AMENDOLA_3299" version="1">BUONARROTI-AMENDOLA_3299</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:BUONARROTI_3665" version="1">BUONARROTI_3665</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:BUONARROTI-AMENDOLA_3299" version="1">BUONARROTI-AMENDOLA_3299</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11456" version="1" order="22">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:AMENDOLA-LOTTO FIERAMILANOCITY_3300" version="1">AMENDOLA-LOTTO FIERAMILANOCITY_3300</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:AMENDOLA_3656" version="1">AMENDOLA_3656</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:AMENDOLA-LOTTO FIERAMILANOCITY_3300" version="1">AMENDOLA-LOTTO FIERAMILANOCITY_3300</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11457" version="1" order="23">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LOTTO FIERAMILANOCITY-QT8_3301" version="1">LOTTO FIERAMILANOCITY-QT8_3301</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:LOTTO FIERAMILANOCITY_3712" version="1">LOTTO FIERAMILANOCITY_3712</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LOTTO FIERAMILANOCITY-QT8_3301" version="1">LOTTO FIERAMILANOCITY-QT8_3301</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11458" version="1" order="24">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:QT8-LAMPUGNANO_3302" version="1">QT8-LAMPUGNANO_3302</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:QT8_3734" version="1">QT8_3734</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:QT8-LAMPUGNANO_3302" version="1">QT8-LAMPUGNANO_3302</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11459" version="1" order="25">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LAMPUGNANO-URUGUAY_3303" version="1">LAMPUGNANO-URUGUAY_3303</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:LAMPUGNANO_3706" version="1">LAMPUGNANO_3706</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LAMPUGNANO-URUGUAY_3303" version="1">LAMPUGNANO-URUGUAY_3303</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11460" version="1" order="26">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:URUGUAY-BONOLA_3304" version="1">URUGUAY-BONOLA_3304</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:URUGUAY_3756" version="1">URUGUAY_3756</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:URUGUAY-BONOLA_3304" version="1">URUGUAY-BONOLA_3304</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11461" version="1" order="27">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:BONOLA-S.LEONARDO_3305" version="1">BONOLA-S.LEONARDO_3305</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:BONOLA_3663" version="1">BONOLA_3663</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:BONOLA-S.LEONARDO_3305" version="1">BONOLA-S.LEONARDO_3305</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11462" version="1" order="28">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:S.LEONARDO-MOLINO DORINO_3306" version="1">S.LEONARDO-MOLINO DORINO_3306</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:S.LEONARDO_3742" version="1">S.LEONARDO_3742</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:S.LEONARDO-MOLINO DORINO_3306" version="1">S.LEONARDO-MOLINO DORINO_3306</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11463" version="1" order="29">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:MOLINO DORINO-PERO_3307" version="1">MOLINO DORINO-PERO_3307</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:MOLINO DORINO_3717" version="1">MOLINO DORINO_3717</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:MOLINO DORINO-PERO_3307" version="1">MOLINO DORINO-PERO_3307</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:metroATMMILANO:11464" version="1" order="30">
-									<LinkSequenceRef ref="IT:ITC1:ServiceLink:metroATMMILANO:PERO-RHO FIERAMILANO_3308" version="1">PERO-RHO FIERAMILANO_3308</LinkSequenceRef>
 									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:metroATMMILANO:PERO_3726" version="1">PERO_3726</ScheduledStopPointRef>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:PERO-RHO FIERAMILANO_3308" version="1">PERO-RHO FIERAMILANO_3308</OnwardServiceLinkRef>
 								</StopPointInJourneyPattern>
 							</pointsInSequence>
-							<linksInSequence>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:SESTO 1 MAGGIO FS-SESTO RONDO_3272_M1_6" version="1" order="1">
-									<Description>SESTO 1 MAGGIO FS-SESTO RONDO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:SESTO 1 MAGGIO FS-SESTO RONDO_3272_M1_6" version="1">SESTO 1 MAGGIO FS-SESTO RONDO_3272_M1_6</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:SESTO RONDO-SESTO MARELLI_3273_M1_6" version="1" order="2">
-									<Description>SESTO RONDO-SESTO MARELLI</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:SESTO RONDO-SESTO MARELLI_3273_M1_6" version="1">SESTO RONDO-SESTO MARELLI_3273_M1_6</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:SESTO MARELLI-VILLA S.G._3274_M1_6" version="1" order="3">
-									<Description>SESTO MARELLI-VILLA S.G.</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:SESTO MARELLI-VILLA S.G._3274_M1_6" version="1">SESTO MARELLI-VILLA S.G._3274_M1_6</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:VILLA S.G.-PRECOTTO_3275_M1_6" version="1" order="4">
-									<Description>VILLA S.G.-PRECOTTO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:VILLA S.G.-PRECOTTO_3275_M1_6" version="1">VILLA S.G.-PRECOTTO_3275_M1_6</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:PRECOTTO-GORLA_3276_M1_6" version="1" order="5">
-									<Description>PRECOTTO-GORLA</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:PRECOTTO-GORLA_3276_M1_6" version="1">PRECOTTO-GORLA_3276_M1_6</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:GORLA-TURRO_3277_M1_6" version="1" order="6">
-									<Description>GORLA-TURRO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:GORLA-TURRO_3277_M1_6" version="1">GORLA-TURRO_3277_M1_6</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:TURRO-ROVERETO_3278_M1_6" version="1" order="7">
-									<Description>TURRO-ROVERETO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:TURRO-ROVERETO_3278_M1_6" version="1">TURRO-ROVERETO_3278_M1_6</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:ROVERETO-PASTEUR_3279_M1_6" version="1" order="8">
-									<Description>ROVERETO-PASTEUR</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:ROVERETO-PASTEUR_3279_M1_6" version="1">ROVERETO-PASTEUR_3279_M1_6</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:PASTEUR-LORETO M1_3280_M1_6" version="1" order="9">
-									<Description>PASTEUR-LORETO M1</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:PASTEUR-LORETO M1_3280_M1_6" version="1">PASTEUR-LORETO M1_3280_M1_6</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:LORETO M1-LIMA_3281_M1_6" version="1" order="10">
-									<Description>LORETO M1-LIMA</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LORETO M1-LIMA_3281_M1_6" version="1">LORETO M1-LIMA_3281_M1_6</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:LIMA-P.TA VENEZIA_3282_M1_6" version="1" order="11">
-									<Description>LIMA-P.TA VENEZIA</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LIMA-P.TA VENEZIA_3282_M1_6" version="1">LIMA-P.TA VENEZIA_3282_M1_6</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:P.TA VENEZIA-PALESTRO_3283_M1_6" version="1" order="12">
-									<Description>P.TA VENEZIA-PALESTRO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:P.TA VENEZIA-PALESTRO_3283_M1_6" version="1">P.TA VENEZIA-PALESTRO_3283_M1_6</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:PALESTRO-SAN BABILA_3284_M1_6" version="1" order="13">
-									<Description>PALESTRO-SAN BABILA</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:PALESTRO-SAN BABILA_3284_M1_6" version="1">PALESTRO-SAN BABILA_3284_M1_6</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:SAN BABILA-DUOMO M1_3285_M1_6" version="1" order="14">
-									<Description>SAN BABILA-DUOMO M1</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:SAN BABILA-DUOMO M1_3285_M1_6" version="1">SAN BABILA-DUOMO M1_3285_M1_6</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:DUOMO M1-CORDUSIO_3286_M1_6" version="1" order="15">
-									<Description>DUOMO M1-CORDUSIO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:DUOMO M1-CORDUSIO_3286_M1_6" version="1">DUOMO M1-CORDUSIO_3286_M1_6</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:CORDUSIO-CAIROLI_3287_M1_6" version="1" order="16">
-									<Description>CORDUSIO-CAIROLI</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CORDUSIO-CAIROLI_3287_M1_6" version="1">CORDUSIO-CAIROLI_3287_M1_6</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:CAIROLI-CADORNA FN M1_3288_M1_6" version="1" order="17">
-									<Description>CAIROLI-CADORNA FN M1</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CAIROLI-CADORNA FN M1_3288_M1_6" version="1">CAIROLI-CADORNA FN M1_3288_M1_6</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:CADORNA FN M1-CONCILIAZIONE_3289_M1_6" version="1" order="18">
-									<Description>CADORNA FN M1-CONCILIAZIONE</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CADORNA FN M1-CONCILIAZIONE_3289_M1_6" version="1">CADORNA FN M1-CONCILIAZIONE_3289_M1_6</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:CONCILIAZIONE-PAGANO_3290_M1_6" version="1" order="19">
-									<Description>CONCILIAZIONE-PAGANO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:CONCILIAZIONE-PAGANO_3290_M1_6" version="1">CONCILIAZIONE-PAGANO_3290_M1_6</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:PAGANO-BUONARROTI_3298_M1_6" version="1" order="20">
-									<Description>PAGANO-BUONARROTI</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:PAGANO-BUONARROTI_3298_M1_6" version="1">PAGANO-BUONARROTI_3298_M1_6</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:BUONARROTI-AMENDOLA_3299_M1_6" version="1" order="21">
-									<Description>BUONARROTI-AMENDOLA</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:BUONARROTI-AMENDOLA_3299_M1_6" version="1">BUONARROTI-AMENDOLA_3299_M1_6</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:AMENDOLA-LOTTO FIERAMILANOCITY_3300_M1_6" version="1" order="22">
-									<Description>AMENDOLA-LOTTO FIERAMILANOCITY</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:AMENDOLA-LOTTO FIERAMILANOCITY_3300_M1_6" version="1">AMENDOLA-LOTTO FIERAMILANOCITY_3300_M1_6</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:LOTTO FIERAMILANOCITY-QT8_3301_M1_6" version="1" order="23">
-									<Description>LOTTO FIERAMILANOCITY-QT8</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LOTTO FIERAMILANOCITY-QT8_3301_M1_6" version="1">LOTTO FIERAMILANOCITY-QT8_3301_M1_6</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:QT8-LAMPUGNANO_3302_M1_6" version="1" order="24">
-									<Description>QT8-LAMPUGNANO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:QT8-LAMPUGNANO_3302_M1_6" version="1">QT8-LAMPUGNANO_3302_M1_6</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:LAMPUGNANO-URUGUAY_3303_M1_6" version="1" order="25">
-									<Description>LAMPUGNANO-URUGUAY</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:LAMPUGNANO-URUGUAY_3303_M1_6" version="1">LAMPUGNANO-URUGUAY_3303_M1_6</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:URUGUAY-BONOLA_3304_M1_6" version="1" order="26">
-									<Description>URUGUAY-BONOLA</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:URUGUAY-BONOLA_3304_M1_6" version="1">URUGUAY-BONOLA_3304_M1_6</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:BONOLA-S.LEONARDO_3305_M1_6" version="1" order="27">
-									<Description>BONOLA-S.LEONARDO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:BONOLA-S.LEONARDO_3305_M1_6" version="1">BONOLA-S.LEONARDO_3305_M1_6</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:S.LEONARDO-MOLINO DORINO_3306_M1_6" version="1" order="28">
-									<Description>S.LEONARDO-MOLINO DORINO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:S.LEONARDO-MOLINO DORINO_3306_M1_6" version="1">S.LEONARDO-MOLINO DORINO_3306_M1_6</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:MOLINO DORINO-PERO_3307_M1_6" version="1" order="29">
-									<Description>MOLINO DORINO-PERO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:MOLINO DORINO-PERO_3307_M1_6" version="1">MOLINO DORINO-PERO_3307_M1_6</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern id="IT:ITC1:ServiceLinkInJourneyPattern:metroATMMILANO:PERO-RHO FIERAMILANO_3308_M1_6" version="1" order="30">
-									<Description>PERO-RHO FIERAMILANO</Description>
-									<ServiceLinkRef ref="IT:ITC1:ServiceLink:metroATMMILANO:PERO-RHO FIERAMILANO_3308_M1_6" version="1">PERO-RHO FIERAMILANO_3308_M1_6</ServiceLinkRef>
-								</ServiceLinkInJourneyPattern>
-							</linksInSequence>
 						</ServiceJourneyPattern>
 					</journeyPatterns>
 				</ServiceFrame>
@@ -21187,7 +20670,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							<TrainRef ref="IT:ITC1:Train:trenoFS:1" version="1"/>
 							<OperatorRef ref="IT:ITC1:Operator:trenoFS:TI" version="1"/>
 							<FlexibleLineView>
-								<LineRef ref="IT:ITC1:Line:TOMI" version="1"/>
+								<LineRef ref="IT:ITC1:Line:trenoFS:tovr" version="1"/>
 							</FlexibleLineView>
 							<passingTimes>
 								<TimetabledPassingTime id="IT:ITC1:TimetabledPassingTime:trenoFS:1:passingTimes:01" version="1">
