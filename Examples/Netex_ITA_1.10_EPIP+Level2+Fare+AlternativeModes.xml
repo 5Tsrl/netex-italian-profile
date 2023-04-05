@@ -390,14 +390,12 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<ResponsibleOrganisationRef ref="IT:ITC1:Authority:busATS:AMP" version="1"/>
 									<ResponsiblePartRef ref="IT:ITC1:JourneyAccounting:busATS:1A"/>
 								</ResponsibilityRoleAssignment>
-								<!--								<ResponsibilityRoleAssignment id="IT:ITC1:ResponsibilityRoleAssignment:busATS:JourneyAccounting:1A:Affidatario" version="1">
+								<ResponsibilityRoleAssignment id="IT:ITC1:ResponsibilityRoleAssignment:busATS:JourneyAccounting:1A:Affidatario" version="1">
 									<StakeholderRoleType>EntityLegalOwnership</StakeholderRoleType>
-									-->
-								<!--									<TypeOfResponsibilityRoleRef ref="IT:ITC1:busATS:typeOfResponsibilityRole:AFFIDATARIO"/>-->
-								<!--
+									<!--									<TypeOfResponsibilityRoleRef ref="IT:ITC1:busATS:typeOfResponsibilityRole:AFFIDATARIO"/>-->
 									<ResponsibleOrganisationRef ref="IT:ITC1:GroupOfOperators:busATS:Consortium:RP"/>
-									<ResponsiblePartRef ref="IT:ITC1:JourneyAccounting:busATS:1A" version="1"/>
-								</ResponsibilityRoleAssignment>-->
+									<ResponsiblePartRef ref="IT:ITC1:JourneyAccounting:busATS:1A"/>
+								</ResponsibilityRoleAssignment>
 								<ResponsibilityRoleAssignment id="IT:ITC1:ResponsibilityRoleAssignment:busATS:JourneyAccounting:1A:Esercente:01" version="1">
 									<StakeholderRoleType>Operation</StakeholderRoleType>
 									<!--									<TypeOfResponsibilityRoleRef ref="IT:ITC1:busATS:typeOfResponsibilityRole:ESERCENTE"/>-->
@@ -422,9 +420,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 								</ResponsibilityRoleAssignment>
 								<!--<ResponsibilityRoleAssignment id="IT:ITC1:ResponsibilityRoleAssignment:busATS:JourneyAccounting:1B:Affidatario" version="1">
 									<StakeholderRoleType>EntityLegalOwnership</StakeholderRoleType>
-									-->
-								<!--									<TypeOfResponsibilityRoleRef ref="IT:ITC1:busATS:typeOfResponsibilityRole:AFFIDATARIO"/>-->
-								<!--
+									--><!--									<TypeOfResponsibilityRoleRef ref="IT:ITC1:busATS:typeOfResponsibilityRole:AFFIDATARIO"/>--><!--
 									<ResponsibleOrganisationRef ref="IT:ITC1:GroupOfOperators:busATS:Consortium:RP" version="1"/>
 									<ResponsiblePartRef ref="IT:ITC1:JourneyAccounting:busATS:1B"/>
 								</ResponsibilityRoleAssignment>-->
