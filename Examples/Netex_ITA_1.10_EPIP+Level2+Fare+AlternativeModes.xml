@@ -2,7 +2,7 @@
 <!-- edited with XMLSpy v2017 rel. 3 sp1 (x64) (http://www.altova.com) by Rossella Panero (5T S.r.l.) -->
 <!--
 NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
-<PublicationDelivery xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:siri="http://www.siri.org.uk/siri" version="1.0" xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../NeTEx-master_2022-08-29/xsd/NeTEx_publication.xsd">
+<PublicationDelivery xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:siri="http://www.siri.org.uk/siri" version="1.0" xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../NeTEx-master_2023-04-12/xsd/NeTEx_publication.xsd">
 	<PublicationTimestamp>2021-01-01T12:00:00.000+02:00</PublicationTimestamp>
 	<ParticipantRef>RAP</ParticipantRef>
 	<Description>Esempio di profilo italiano del NeTEx EPIP + Livello 2 + Fare + Alternative Modes</Description>
@@ -420,7 +420,9 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 								</ResponsibilityRoleAssignment>
 								<!--<ResponsibilityRoleAssignment id="IT:ITC1:ResponsibilityRoleAssignment:busATS:JourneyAccounting:1B:Affidatario" version="1">
 									<StakeholderRoleType>EntityLegalOwnership</StakeholderRoleType>
-									--><!--									<TypeOfResponsibilityRoleRef ref="IT:ITC1:busATS:typeOfResponsibilityRole:AFFIDATARIO"/>--><!--
+									-->
+								<!--									<TypeOfResponsibilityRoleRef ref="IT:ITC1:busATS:typeOfResponsibilityRole:AFFIDATARIO"/>-->
+								<!--
 									<ResponsibleOrganisationRef ref="IT:ITC1:GroupOfOperators:busATS:Consortium:RP" version="1"/>
 									<ResponsiblePartRef ref="IT:ITC1:JourneyAccounting:busATS:1B"/>
 								</ResponsibilityRoleAssignment>-->
@@ -23497,8 +23499,18 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 						</TravelAgent>
 					</organisations>
 					<!--- =======Tipi veicolo 5T======== -->
+					<vehicleTypes>
+						<VehicleType id="IT:ITC1:CarSharingTorino:vehicleType:Car01" version="1">
+							<Name>Auto normale</Name>
+							<TypeOfFuel>diesel</TypeOfFuel>
+						</VehicleType>
+						<VehicleType id="IT:ITC1:CarSharingTorino:vehicleType:Car02" version="1">
+							<Name>Auto normale</Name>
+							<TypeOfFuel>electricity</TypeOfFuel>
+						</VehicleType>
+					</vehicleTypes>
 					<vehicleModelProfiles>
-						<CarModelProfile id="IT:ITC1:CarSharingTorino:vehicleType:Car01" version="1">
+						<CarModelProfile id="IT:ITC1:CarSharingTorino:vehicleModel:Car01" version="1">
 							<ChildSeat>baby</ChildSeat>
 							<Seats>4</Seats>
 							<Doors>5</Doors>
@@ -23515,7 +23527,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							<CycleRack>false</CycleRack>
 							<SkiRack>false</SkiRack>
 						</CarModelProfile>
-						<CarModelProfile id="IT:ITC1:CarSharingTorino:vehicleType:Car02" version="1">
+						<CarModelProfile id="IT:ITC1:CarSharingTorino:vehicleModel:Car02" version="1">
 							<ChildSeat>baby</ChildSeat>
 							<Seats>4</Seats>
 							<Doors>5</Doors>
@@ -23547,7 +23559,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							<OperationalNumber>ABC000000000000AA</OperationalNumber>
 							<PrivateCode>01</PrivateCode>
 							<OperatorRef ref="IT:ITC1:Operator:CarSharing:CarSharing" version="1"/>
-							<CarModelProfileRef ref="IT:ITC1:CarSharingTorino:vehicleType:Car01" version="1"/>
+							<VehicleTypeRef ref="IT:ITC1:CarSharingTorino:vehicleType:Car01" version="1"/>
+							<CarModelProfileRef ref="IT:ITC1:CarSharingTorino:vehicleModel:Car01" version="1"/>
 						</Vehicle>
 						<Vehicle id="IT:ITC1:CarSharingTorino:VE:02" version="1">
 							<ValidBetween>
@@ -23560,7 +23573,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							<OperationalNumber>ABC000000000000AB</OperationalNumber>
 							<PrivateCode>02</PrivateCode>
 							<OperatorRef ref="IT:ITC1:Operator:CarSharing:CarSharing" version="1"/>
-							<CarModelProfileRef ref="IT:ITC1:CarSharingTorino:vehicleType:Car02" version="1"/>
+							<VehicleTypeRef ref="IT:ITC1:CarSharingTorino:vehicleType:Car02" version="1"/>
+							<CarModelProfileRef ref="IT:ITC1:CarSharingTorino:vehicleModel:Car02" version="1"/>
 						</Vehicle>
 					</vehicles>
 				</ResourceFrame>
