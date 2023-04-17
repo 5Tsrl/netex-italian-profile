@@ -22469,8 +22469,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									</limitations>
 									<validityParameters>
 										<OperatorRef ref="IT:ITC1:Operator:busATS:11" version="1"/>
-										<TrainRef ref="IT:ITC1:Train:metroATMMILANO:LEONARDO" version="1"/>
 										<TariffZoneRef ref="IT:ITC1:busATS:TZ:1" version="1"/>
+										<TrainRef ref="IT:ITC1:Train:metroATMMILANO:LEONARDO" version="1"/>
 									</validityParameters>
 								</GenericParameterAssignment>
 								<!-- Corse in 90 minuti bus -->
@@ -22481,9 +22481,9 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 										<UserProfileRef ref="IT:ITC1:busATS:up:1" version="1"/>
 									</limitations>
 									<validityParameters>
+										<OperatorRef ref="IT:ITC1:Operator:busATS:11" version="1"/>
 										<TariffZoneRef ref="IT:ITC1:busATS:TZ:2" version="1"/>
 										<TariffZoneRef ref="IT:ITC1:busATS:TZ:3" version="1"/>
-										<OperatorRef ref="IT:ITC1:Operator:busATS:11" version="1"/>
 										<VehicleTypeRef ref="IT:ITC1:VehicleType:busATS:001" version="1"/>
 									</validityParameters>
 									<TimeIntervalRef ref="IT:ITC1:busATS:ti:1" version="1"/>
@@ -22497,8 +22497,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 										<UserProfileRef ref="IT:ITC1:busATS:up:1" version="1"/>
 									</limitations>
 									<validityParameters>
-										<TariffZoneRef ref="IT:ITC1:busATS:TZ:3" version="1"/>
 										<OperatorRef ref="IT:ITC1:Operator:busATS:11" version="1"/>
+										<TariffZoneRef ref="IT:ITC1:busATS:TZ:3" version="1"/>
 										<TrainRef ref="IT:ITC1:Train:trenoFS:1" version="1"/>
 									</validityParameters>
 								</GenericParameterAssignment>
@@ -22530,8 +22530,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									</limitations>
 									<validityParameters>
 										<OperatorRef ref="IT:ITC1:Operator:busATS:11" version="1"/>
-										<TrainRef ref="IT:ITC1:Train:metroATMMILANO:LEONARDO" version="1"/>
 										<TariffZoneRef ref="IT:ITC1:busATS:TZ:1" version="1"/>
+										<TrainRef ref="IT:ITC1:Train:metroATMMILANO:LEONARDO" version="1"/>
 									</validityParameters>
 								</GenericParameterAssignment>
 								<!-- Corse in 90 minuti bus -->
@@ -22542,9 +22542,9 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 										<UserProfileRef ref="IT:ITC1:busATS:up:1" version="1"/>
 									</limitations>
 									<validityParameters>
+										<OperatorRef ref="IT:ITC1:Operator:busATS:11" version="1"/>
 										<TariffZoneRef ref="IT:ITC1:busATS:TZ:2" version="1"/>
 										<TariffZoneRef ref="IT:ITC1:busATS:TZ:3" version="1"/>
-										<OperatorRef ref="IT:ITC1:Operator:busATS:11" version="1"/>
 										<VehicleTypeRef ref="IT:ITC1:VehicleType:busATS:001" version="1"/>
 									</validityParameters>
 									<TimeIntervalRef ref="IT:ITC1:busATS:ti:1" version="1"/>
@@ -22558,8 +22558,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 										<UserProfileRef ref="IT:ITC1:busATS:up:1" version="1"/>
 									</limitations>
 									<validityParameters>
-										<TariffZoneRef ref="IT:ITC1:busATS:TZ:3" version="1"/>
 										<OperatorRef ref="IT:ITC1:Operator:busATS:11" version="1"/>
+										<TariffZoneRef ref="IT:ITC1:busATS:TZ:3" version="1"/>
 										<TrainRef ref="IT:ITC1:Train:trenoFS:1" version="1"/>
 									</validityParameters>
 								</GenericParameterAssignment>
