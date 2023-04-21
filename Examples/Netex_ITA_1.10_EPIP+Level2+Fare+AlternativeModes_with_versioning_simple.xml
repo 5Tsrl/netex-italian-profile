@@ -22339,6 +22339,21 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 										</FareStructureElementInSequence>
 									</fareStructureElementsInSequence>
 								</FareStructureElement>
+								<FareStructureElement id="IT:ITC1:busATS:distanceMatrix1_1" version="1">
+									<DistanceMatrixElementRef ref="IT:ITC1:busATS:dm:1" version="1"/>
+								</FareStructureElement>
+								<FareStructureElement id="IT:ITC1:busATS:distanceMatrix1_2" version="1">
+									<DistanceMatrixElementRef ref="IT:ITC1:busATS:dm:2" version="1"/>
+								</FareStructureElement>
+								<FareStructureElement id="IT:ITC1:busATS:distanceMatrix1_3" version="1">
+									<DistanceMatrixElementRef ref="IT:ITC1:busATS:dm:3" version="1"/>
+								</FareStructureElement>
+								<FareStructureElement id="IT:ITC1:busATS:geographicalInterval0-5" version="1">
+									<GeographicalIntervalRef ref="IT:ITC1:busATS:gi:0-5" version="1"/>
+								</FareStructureElement>
+								<FareStructureElement id="IT:ITC1:busATS:geographicalInterval5-10" version="1">
+									<GeographicalIntervalRef ref="IT:ITC1:busATS:gi:5-10" version="1"/>
+								</FareStructureElement>
 							</fareStructureElements>
 							<distanceMatrixElements>
 								<DistanceMatrixElement id="IT:ITC1:busATS:dm:1" version="1">
@@ -22359,45 +22374,45 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 					<validableElements>
 						<ValidableElement id="IT:ITC1:busATS:ve:8" version="1">
 							<Name>Biglietto urbano</Name>
-							<fareElementsInSequence>
-								<FareStructureElementInSequenceRef ref="IT:ITC1:busATS:fseis:8" version="1"/>
-							</fareElementsInSequence>
+							<fareStructureElements>
+								<FareStructureElementRef ref="IT:ITC1:busATS:fse:8" version="1"/>
+							</fareStructureElements>
 						</ValidableElement>
 						<ValidableElement id="IT:ITC1:busATS:ve:1" version="1">
 							<Name>Parcheggio</Name>
-							<fareElementsInSequence>
-								<FareStructureElementInSequenceRef ref="IT:ITC1:busATS:fseis:1" version="1"/>
-							</fareElementsInSequence>
+							<fareStructureElements>
+								<FareStructureElementRef ref="IT:ITC1:busATS:fse:1" version="1"/>
+							</fareStructureElements>
 						</ValidableElement>
 						<ValidableElement id="IT:ITC1:busATS::ve:1_1" version="1">
 							<Name>TariffaOD1</Name>
-							<fareElementsInSequence>
-								<FareStructureElementInSequenceRef ref="IT:ITC1:busATS:fseis:dm1" version="1"/>
-							</fareElementsInSequence>
+							<fareStructureElements>
+								<FareStructureElementRef ref="IT:ITC1:busATS:distanceMatrix1_1" version="1"/>
+							</fareStructureElements>
 						</ValidableElement>
 						<ValidableElement id="IT:ITC1:busATS::ve:1_2" version="1">
 							<Name>TariffaOD2</Name>
-							<fareElementsInSequence>
-								<FareStructureElementInSequenceRef ref="IT:ITC1:busATS:fseis:dm2" version="1"/>
-							</fareElementsInSequence>
+							<fareStructureElements>
+								<FareStructureElementRef ref="IT:ITC1:busATS:distanceMatrix1_2" version="1"/>
+							</fareStructureElements>
 						</ValidableElement>
 						<ValidableElement id="IT:ITC1:busATS::ve:1_3" version="1">
 							<Name>TariffaOD3</Name>
-							<fareElementsInSequence>
-								<FareStructureElementInSequenceRef ref="IT:ITC1:busATS:fseis:dm3" version="1"/>
-							</fareElementsInSequence>
+							<fareStructureElements>
+								<FareStructureElementRef ref="IT:ITC1:busATS:distanceMatrix1_3" version="1"/>
+							</fareStructureElements>
 						</ValidableElement>
 						<ValidableElement id="IT:ITC1:busATS::ve:0-5" version="1">
 							<Name>Tariffa pentachilometrica da 0 a 5KM</Name>
-							<fareElementsInSequence>
-								<FareStructureElementInSequenceRef ref="IT:ITC1:busATS:fseis:gm1" version="1"/>
-							</fareElementsInSequence>
+							<fareStructureElements>
+								<FareStructureElementRef ref="IT:ITC1:busATS:geographicalInterval0-5" version="1"/>
+							</fareStructureElements>
 						</ValidableElement>
 						<ValidableElement id="IT:ITC1:busATS::ve:5-10" version="1">
 							<Name>Tariffa pentachilometrica da 0 a 5KM</Name>
-							<fareElementsInSequence>
-								<FareStructureElementInSequenceRef ref="IT:ITC1:busATS:fseis:gm2" version="1"/>
-							</fareElementsInSequence>
+							<fareStructureElements>
+								<FareStructureElementRef ref="IT:ITC1:busATS:geographicalInterval5-10" version="1"/>
+							</fareStructureElements>
 						</ValidableElement>
 					</validableElements>
 					<usageParameters>
