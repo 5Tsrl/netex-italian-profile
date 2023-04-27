@@ -1,0 +1,1349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Note that this simplified XSD does not in any way replace the full NeTEx XSD. It is not guaranteed that the XSD is free from errors.-->
+<xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:netex="http://www.netex.org.uk/netex" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" version="1.1.1" id="content_NeTEx_Lev3_ext">
+	<xsd:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="gml_combo_v3_2_1_simplified.xsd"/>
+	<xsd:include schemaLocation="_content_NeTEx_Lev2_ext.xsd"/>
+	<xsd:annotation>
+		<xsd:documentation>The intention of this XSD is to provide a simplified schema that represents a subset of the full NeTEx-schema covering the European Passenger Information Profile.
+		This file should not be interpreted as being normative. Neither does this XSD replace the offical NeTEx XSD schemas. It should be used in addition to the offical NeTEx XSD schemas and not instead of.
+		
+		The official NeTEx XSD schema and basic examples are available at Github https://github.com/NeTEx-CEN/NeTEx  (note that this is the only source for NeTEx latest official schema) 
+		Note that parts of the content in this file consists of extracts from files in the official NeTEx XSD schema and therefore are covered by Copyright CEN, Crown Copyright 2009-2020.
+		Any such copyrights still apply.
+		</xsd:documentation>
+	</xsd:annotation>
+	<!-- versioni di Resource con TravelAgent (inizio) -->
+	<xsd:complexType name="ResourceFrameL3_VersionStructure">
+        <xsd:sequence>
+            <xsd:group ref="VersionFrameGroup" minOccurs="0"/>
+            <xsd:element ref="dataSources" minOccurs="0"/>
+            <xsd:element name="responsibilitySets" type="responsibilitySetsL2_RelStructure" minOccurs="0"/>
+            <xsd:element ref="typesOfValue" minOccurs="0"/>
+            <xsd:element name="organisations" type="organisationsL3Structure" minOccurs="0"/>
+			<xsd:element name="groupsOfOperators" type="groupsOfOperatorsStructure" minOccurs="0"/>
+            <xsd:element ref="equipments" minOccurs="0"/>
+            <xsd:element name="vehicleTypes" type="vehicleTypesL2Structure" minOccurs="0"/>
+			<xsd:element name="vehicleModels" type="vehicleModelsStructure" minOccurs="0"/>
+			<xsd:element name="vehicles" type="vehiclesStructure" minOccurs="0"/>
+        </xsd:sequence>
+        <xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+    </xsd:complexType>
+	<!-- versioni aggiornate per organisations (inizio) -->
+	<xsd:complexType name="organisationsL3Structure">
+        <xsd:choice maxOccurs="unbounded">
+            <xsd:element ref="Authority" maxOccurs="unbounded"/>
+			<xsd:element name="TravelAgent" type="TravelAgent_VersionStructure" maxOccurs="unbounded"/>
+            <xsd:element name="Operator" type="OperatorL2_VersionStructure" maxOccurs="unbounded"/>
+        </xsd:choice>
+    </xsd:complexType>
+	<xsd:element name="TravelAgentRef" type="TravelAgentRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Reference to a TRAVEL AGENT.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:complexType name="TravelAgentRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Type for a reference to a TRAVEL AGENT.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="TravelAgent_VersionStructure">
+        <xsd:sequence>
+            <xsd:group ref="DataManagedObjectElement_Group"/>
+            <xsd:group ref="OrganisationContentGroupL2"/>
+            <xsd:element ref="CountryRef" minOccurs="0"/>
+            <xsd:element name="Address" type="RestrictedPostalAddress_VersionStructure" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>Address of OPERATOR.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="PrimaryMode" type="VehicleModeEnumeration" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>Primary MODE of OPERATOR.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+			<xsd:element name="departments" type="departments_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Departments of OPERATOR.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+        </xsd:sequence>
+        <xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+    </xsd:complexType>
+	<!-- versioni aggiornate per organisations (fine) -->
+	<!-- definizione FareFrame (inizio) -->
+	<xsd:complexType name="FareFrame_VersionStructure">
+		<xsd:sequence>
+			<xsd:group ref="VersionFrameGroup" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="geographicalUnits" type="geographicalUnits_RelStructure" minOccurs="0"/>
+			<xsd:element name="timeUnits" type="timeUnits_RelStructure" minOccurs="0"/>
+			<xsd:element name="tariffs" type="tariffs_RelStructure" minOccurs="0"/>
+			<xsd:element name="validableElements" type="validableElements_RelStructure" minOccurs="0"/>
+			<xsd:element name="usageParameters" type="usageParameters_RelStructure" minOccurs="0"/>
+			<xsd:element name="fareProducts" type="fareProducts_RelStructure" minOccurs="0"/>
+			<xsd:element name="fareTables" type="fareTables_RelStructure" minOccurs="0"/>
+			<xsd:element name="distributionChannels" type="distributionChannels_RelStructure" minOccurs="0"/>
+			<xsd:element name="typesOfTravelDocuments" type="typesOfTravelDocuments_RelStructure" minOccurs="0"/>
+			<xsd:element name="salesOfferPackages" type="salesOfferPackages_RelStructure" minOccurs="0"/>
+			<xsd:element name="parkingTariffs" type="parkingTariffs_RelStructure" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<!-- definizione di geographicalUnits (inizio) -->
+	<xsd:complexType name="geographicalUnits_RelStructure">
+		<xsd:sequence>
+			<xsd:choice maxOccurs="unbounded">
+				<xsd:element name="GeographicalUnitRef" type="GeographicalUnitRefStructure"/>
+				<xsd:element name="GeographicalUnit" type="GeographicalUnit_VersionStructure"/>
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:complexType name="GeographicalUnitRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Type for a reference to a GEOGRAPHICAL UNIT.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+	<xsd:complexType name="GeographicalUnit_VersionStructure">
+		<xsd:sequence>
+			<xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:element ref="Name" minOccurs="0"/>
+			<xsd:element ref="Distance" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<!-- definizione di geographicalUnits (fine) -->
+	<!-- definizione di timeUnits (inizio) -->
+	<xsd:complexType name="timeUnits_RelStructure">
+		<xsd:sequence>
+			<xsd:choice maxOccurs="unbounded">
+				<xsd:element name="TimeUnitRef" type="TimeUnitRefStructure"/>
+				<xsd:element name="TimeUnit" type="TimeUnit_VersionStructure"/>
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:complexType name="TimeUnitRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Type for a reference to a GEOGRAPHICAL UNIT.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+	<xsd:complexType name="TimeUnit_VersionStructure">
+		<xsd:sequence>
+			<xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:element ref="Name" minOccurs="0"/>
+			<xsd:element name="Duration" type="xsd:duration" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<!-- definizione di timeUnits (fine) -->
+	<!-- definizione di tariffs (inizio) -->
+	<xsd:complexType name="tariffs_RelStructure">
+		<xsd:sequence>
+			<xsd:element name="Tariff" type="Tariff_VersionStructure" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:complexType name="Tariff_VersionStructure">
+		<xsd:sequence>
+			<xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:element name="geographicalIntervals" type="geographicalIntervals_RelStructure" minOccurs="0"/>
+			<xsd:element name="timeIntervals" type="timeIntervals_RelStructure" minOccurs="0"/>
+			<xsd:element name="fareStructureElements" type="fareStructureElements_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>FARE STRUCTURE ELEMENTs making up TARIFF.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="distanceMatrixElements" type="distanceMatrixElements_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>DISTANCE MATRIX ELEMENTs making up TARIFF.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<!-- definizione di geographicalIntervals (inizio) -->
+	<xsd:complexType name="geographicalIntervals_RelStructure">
+		<xsd:sequence>
+			<xsd:choice maxOccurs="unbounded">
+				<xsd:element ref="GeographicalIntervalRef"/>
+				<xsd:element name="GeographicalInterval" type="GeographicalInterval_VersionStructure"/>
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:element name="GeographicalIntervalRef" type="GeographicalIntervalRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Reference to a GEOGRAPHICAL INTERVAL.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:complexType name="GeographicalIntervalRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Type for a reference to a GEOGRAPHICAL INTERVAL.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+	<xsd:complexType name="GeographicalInterval_VersionStructure">
+		<xsd:sequence>
+			<xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:element ref="Description" minOccurs="0"/>
+			<xsd:element name="StartGeographicalValue" type="xsd:decimal" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Start value for Geographic Interval.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="EndGeographicalValue" type="xsd:decimal" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>End value for Geographic Interval.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="NumberOfUnits" type="xsd:integer" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Number of units in Interval.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="IntervalType" type="IntervalTypeEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>nature of Interval.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="GeographicalUnitRef" type="GeographicalUnitRefStructure" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:simpleType name="IntervalTypeEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for INTERVAL TYPE.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="stop"/>
+			<xsd:enumeration value="tariffZone"/>
+			<xsd:enumeration value="distance"/>
+			<xsd:enumeration value="section"/>
+			<xsd:enumeration value="coupon"/>
+			<xsd:enumeration value="other"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- definizione di geographicalIntervals (fine) -->
+	<!-- definizione di timeIntervals (inizio) -->
+	<xsd:complexType name="timeIntervals_RelStructure">
+		<xsd:sequence>
+			<xsd:choice maxOccurs="unbounded">
+				<xsd:element ref="TimeIntervalRef"/>
+				<xsd:element name="TimeInterval" type="TimeInterval_VersionStructure"/>
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:element name="TimeIntervalRef" type="TimeIntervalRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Reference to a TIME INTERVAL.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:complexType name="TimeIntervalRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Type for a reference to a TIME INTERVAL.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+	<xsd:complexType name="TimeInterval_VersionStructure">
+		<xsd:sequence>
+			<xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:element ref="Description" minOccurs="0"/>
+			<xsd:element name="StartTime" type="xsd:time" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Start time for TIME INTERVAL if restricted to a specific time.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="EndTime" type="xsd:time" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>End value for TIME INTERVAL.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DayOffset" type="DayOffsetType" default="0" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Day Offset for end time from start time. 0= same day.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Duration" type="xsd:duration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>MaximumDuration for TIME INTERVAL.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MinimumDuration" type="xsd:duration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Minimum Duration for TIME INTERVAL. +v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<!-- definizione di timeIntervals (fine) -->
+	<!-- definizione di fareStructureElements (inizio) -->
+	<xsd:complexType name="fareStructureElements_RelStructure">
+		<xsd:sequence>
+			<xsd:choice maxOccurs="unbounded">
+				<xsd:element ref="FareStructureElementRef"/>
+				<xsd:element name="FareStructureElement" type="FareStructureElement_VersionStructure"/>
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:element name="FareStructureElementRef" type="FareStructureElementRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Reference to a FARE STRUCTURE ELEMENT.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:complexType name="FareStructureElementRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Type for a reference to a TIME INTERVAL.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+	<xsd:complexType name="FareStructureElement_VersionStructure">
+		<xsd:sequence>
+			<!--
+			<xsd:group ref="DataManagedObjectElement_Group"/>
+			-->
+			<xsd:element name="TariffBasis" type="TariffBasisEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Basis for tariff using element.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="GeographicalIntervalRef" minOccurs="0"/>
+			<xsd:element ref="TimeIntervalRef" minOccurs="0"/>
+			<xsd:element ref="DistanceMatrixElementRef" minOccurs="0"/>
+			<xsd:element name="fareStructureElementsInSequence" type="fareStructureElementsInSequence_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Use of FARESTRUCTURE ELEMENTs in a particular sequence.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:simpleType name="TariffBasisEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for TariffBasis.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="flat">
+				<xsd:annotation>
+					<xsd:documentation>Tariff is flat, i.e. not based on spatial elements.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="distance">
+				<xsd:annotation>
+					<xsd:documentation>Tariff is based on spatial distance.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="unitSection"/>
+			<xsd:enumeration value="zone">
+				<xsd:annotation>
+					<xsd:documentation>Tariff is based on use of specified zones.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="zoneToZone">
+				<xsd:annotation>
+					<xsd:documentation>Tariff is based on specified zone to zone transitions.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="pointToPoint">
+				<xsd:annotation>
+					<xsd:documentation>Tariff is based on specified point to point transitions.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="route">
+				<xsd:annotation>
+					<xsd:documentation>Tariff is based on specific routes, eg. for SERIES CONSTRAINTs.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="tour">
+				<xsd:annotation>
+					<xsd:documentation>Tariff is based on a specific tour.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="group">
+				<xsd:annotation>
+					<xsd:documentation>Tariff is based on size of group.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="discount">
+				<xsd:annotation>
+					<xsd:documentation>Tariff is for discount rates.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="period">
+				<xsd:annotation>
+					<xsd:documentation>Tariff is based on temporal durtaions, e.g minutes or days of travel.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="free">
+				<xsd:annotation>
+					<xsd:documentation>Tariff is free to user.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="other">
+				<xsd:annotation>
+					<xsd:documentation>Other Tariff Basis.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="fareStructureElementsInSequence_RelStructure">
+		<xsd:sequence>
+			<xsd:element name="FareStructureElementInSequence" type="FareStructureElementInSequenceStructure"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:complexType name="FareStructureElementInSequenceStructure">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="GenericParameterAssignment" type="GenericParameterAssignmentStructure">
+				<xsd:annotation>
+					<xsd:documentation>Optimisation: A single instance of a A VALIDITY PARAMETER ASSIGNMENT specifying practical parameters during a TRAVEL GenericATION, within a given fare structure (e.g. the origin or destination zone in a zone-counting system).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="EntityAttributeGroup"/>
+		<xsd:attribute name="order" type="xsd:integer" use="optional"/>
+	</xsd:complexType>
+	<xsd:complexType name="GenericParameterAssignmentStructure">
+		<xsd:sequence>
+			<xsd:element name="limitations" type="usageParameters_RelStructure" minOccurs="0"/>
+			<xsd:element name="validityParameters" type="validityParameters_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Validity parameters for the assignment.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="TimeIntervalRef" minOccurs="0"/>
+			<xsd:element ref="GeographicalIntervalRef" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="EntityAttributeGroup"/>
+		<xsd:attribute name="order" type="xsd:integer" use="optional"/>
+	</xsd:complexType>
+	<!-- variazione di usageParameters_RelStructure 
+	<xsd:complexType name="limitations_RelStructure">
+		<xsd:sequence>
+			<xsd:choice maxOccurs="unbounded">
+				<xsd:element ref="UsageValidityPeriodRef"/>
+				<xsd:element name="UsageValidityPeriod" type="UsageValidityPeriod_VersionStructure"/>
+			</xsd:choice>
+			<xsd:choice maxOccurs="unbounded">
+				<xsd:element ref="UserProfileRef"/>
+				<xsd:element name="UserProfile" type="UserProfile_VersionStructure"/>
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	-->
+	<xsd:complexType name="validityParameters_RelStructure">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element ref="OperatorRef" minOccurs="0"/>
+			<xsd:element ref="TariffZoneRef" minOccurs="0"/>
+			<xsd:choice minOccurs="0">
+				<xsd:element ref="VehicleTypeRef"/>
+				<xsd:element ref="TrainRef"/>
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<!-- definizione di fareStructureElements (fine) -->
+	<!-- definizione di distanceMatrixElements (inizio) -->
+	<xsd:complexType name="distanceMatrixElements_RelStructure">
+		<xsd:sequence>
+			<xsd:choice maxOccurs="unbounded">
+				<xsd:element ref="DistanceMatrixElementRef"/>
+				<xsd:element name="DistanceMatrixElement" type="DistanceMatrixElement_VersionStructure"/>
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:element name="DistanceMatrixElementRef" type="DistanceMatrixElementRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Reference to a DISTANCE MATRIX ELEMENT.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:complexType name="DistanceMatrixElementRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Type for a reference to a DISTANCE MATRIX ELEMENT.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+	<xsd:complexType name="DistanceMatrixElement_VersionStructure">
+		<xsd:sequence>
+			<xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:element name="StartTariffZoneRef" type="TariffZoneRefStructure">
+				<xsd:annotation>
+					<xsd:documentation>Start TARIFF ZONE for Cell of DISTANCE MATRIX.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="EndTariffZoneRef" type="TariffZoneRefStructure">
+				<xsd:annotation>
+					<xsd:documentation>End TARIFF ZONE for Cell of DISTANCE MATRIX.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<!-- definizione di distanceMatrixElements (fine) -->
+	<!-- definizione di tariffs (fine) -->
+	<!-- definizione di validableElements (inizio) -->
+	<xsd:complexType name="validableElements_RelStructure">
+		<xsd:sequence>
+			<xsd:choice maxOccurs="unbounded">
+				<xsd:element ref="ValidableElementRef"/>
+				<xsd:element name="ValidableElement" type="ValidableElement_VersionStructure"/>
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:element name="ValidableElementRef" type="ValidableElementRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Reference to a VALIDABLE ELEMENT.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:complexType name="ValidableElementRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Type for a reference to a Validable Element.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+	<xsd:complexType name="ValidableElement_VersionStructure">
+		<xsd:sequence>
+			<xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:element ref="Name" minOccurs="0"/>
+			<xsd:element name="fareStructureElements" type="fareStructureElements_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>FARE STRUCTURE ELEMENts associated with VALIDABLE ELEMENT.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<!-- definizione di validableElements (fine) -->
+	<!-- definizione di usageParameters (inizio) -->
+	<xsd:complexType name="usageParameters_RelStructure">
+		<xsd:sequence>
+			<!--
+			<xsd:element name="UsageValidityPeriod" type="UsageValidityPeriod_VersionStructure" minOccurs="0"/>
+			<xsd:element name="UserProfile" type="UserProfile_VersionStructure" minOccurs="0"/>
+			-->
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element ref="UsageValidityPeriodRef"/>
+				<xsd:element name="UsageValidityPeriod" type="UsageValidityPeriod_VersionStructure"/>
+			</xsd:choice>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element ref="UserProfileRef"/>
+				<xsd:element name="UserProfile" type="UserProfile_VersionStructure"/>
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:element name="UsageValidityPeriodRef" type="UsageValidityPeriodRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Reference to a USAGE VALIDITY PERIOD usage parameter.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:complexType name="UsageValidityPeriodRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Reference to a USAGE VALIDITY PERIOD usage parameter</xsd:documentation>
+		</xsd:annotation>
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+	<xsd:complexType name="UsageValidityPeriod_VersionStructure">
+		<xsd:sequence>
+			<xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:element name="ValidityPeriodType" type="UsageValidityTypeEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Nature of USAGE VALIDITY PERIOD.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="StandardDuration" type="xsd:duration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Duration of  USAGE VALIDITY PERIOD.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:simpleType name="UsageValidityTypeEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for Usage Validity Period Type.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="singleRide"/>
+			<xsd:enumeration value="singleTrip"/>
+			<xsd:enumeration value="returnTrip"/>
+			<xsd:enumeration value="carnet"/>
+			<xsd:enumeration value="dayPass"/>
+			<xsd:enumeration value="weeklyPass"/>
+			<xsd:enumeration value="weekendPass"/>
+			<xsd:enumeration value="monthlyPass"/>
+			<xsd:enumeration value="annualPass"/>
+			<xsd:enumeration value="seasonTicket"/>
+			<xsd:enumeration value="profileMembership"/>
+			<xsd:enumeration value="subscription"/>
+			<xsd:enumeration value="openEnded"/>
+			<xsd:enumeration value="cap"/>
+			<xsd:enumeration value="other"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:element name="UserProfileRef" type="UserProfileRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Reference to a USER PROFILE usage parameter.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:complexType name="UserProfileRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Reference to a USER PROFILE usage parameter</xsd:documentation>
+		</xsd:annotation>
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+	<xsd:complexType name="UserProfile_VersionStructure">
+		<xsd:sequence>
+			<xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:element name="UserType" type="UserTypeEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Classification of user profile.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="UserProfileQualificationGroup"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:simpleType name="UserTypeEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for USER TYPE.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="adult"/>
+			<xsd:enumeration value="child"/>
+			<xsd:enumeration value="infant"/>
+			<xsd:enumeration value="senior"/>
+			<xsd:enumeration value="student"/>
+			<xsd:enumeration value="youngPerson"/>
+			<xsd:enumeration value="schoolPupil"/>
+			<xsd:enumeration value="military"/>
+			<xsd:enumeration value="disabled"/>
+			<xsd:enumeration value="disabledCompanion"/>
+			<xsd:enumeration value="jobSeeker"/>
+			<xsd:enumeration value="employee"/>
+			<xsd:enumeration value="animal"/>
+			<xsd:enumeration value="guideDog"/>
+			<xsd:enumeration value="member"/>
+			<xsd:enumeration value="other"/>
+			<xsd:enumeration value="anyone"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:group name="UserProfileQualificationGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for USER PROFILE Group.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="MinimumAge" type="xsd:integer" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Minimum age to be eligible for profile.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MaximumAge" type="xsd:integer" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Maximum age to be eligible for profile.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MonthDayOnWhichAgeApplies" type="xsd:gMonthDay" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Date on which Age Applies, if fixed annually.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MinimumHeight" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Minimum height to be eligible for profile.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MaximumHeight" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Maximum height to be eligible for profile.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="LocalResident" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether user must be Local Resident.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- definizione di usageParameters (fine) -->
+	<!-- definizione di fareProducts (inizio) -->
+	<xsd:complexType name="fareProducts_RelStructure">
+		<xsd:sequence>
+			<xsd:element name="PreassignedFareProduct" type="PreassignedFareProduct_VersionStructure" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:element name="FareProductRef" type="PreassignedFareProductRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Reference to a PREASSIGNED FARE PRODUCT.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:complexType name="PreassignedFareProductRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Type for a reference to a PREASSIGNED FARE PRODUCT.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+	<xsd:complexType name="PreassignedFareProduct_VersionStructure">
+		<xsd:sequence>
+			<xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:element ref="Name" minOccurs="0"/>
+			<xsd:element ref="Description" minOccurs="0"/>
+			<xsd:element name="ChargingMomentType" type="ChargingMomentEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Enumeration of standardised Charging moment values _v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="validityParameterAssignments" type="validityParameterAssignments_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>VALIDITY PARAMETR ASSIGNMENTss for an element.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="validableElements" type="validableElements_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>VALIDABLE ELEMENTs making up FARE SERVICE ACCESS RIGHT.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="tariffs" type="tariffRefs_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>TARIFFs  used by FARE PRODUCT. These may be derived from lower level references.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:simpleType name="ChargingMomentEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for  ChargingMomentType. +v1.1</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="beforeTravel"/>
+			<xsd:enumeration value="onStartOfTravel"/>
+			<xsd:enumeration value="beforeEndOfTravel"/>
+			<xsd:enumeration value="beforeTravelThenAdjustAtEndOfTravel"/>
+			<xsd:enumeration value="onStartThenAdjustAtEndOfTravel"/>
+			<xsd:enumeration value="onStarThenAdjustAtEndOfFareDay">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED TYPO</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="onStartThenAdjustAtEndOfFareDay"/>
+			<xsd:enumeration value="onStartThenAdjustAtEndOfChargePeriod"/>
+			<xsd:enumeration value="atEndOfTravel"/>
+			<xsd:enumeration value="atEndOfFareDay"/>
+			<xsd:enumeration value="atEndOfChargePeriod"/>
+			<xsd:enumeration value="free"/>
+			<xsd:enumeration value="anyTime"/>
+			<xsd:enumeration value="other"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="validityParameterAssignments_RelStructure">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="GenericParameterAssignment" type="GenericParameterAssignmentStructure">
+				<xsd:annotation>
+					<xsd:documentation>Optimisation: A single instance of a A VALIDITY PARAMETER ASSIGNMENT specifying practical parameters during a TRAVEL GenericATION, within a given fare structure (e.g. the origin or destination zone in a zone-counting system).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:complexType name="tariffRefs_RelStructure">
+		<xsd:sequence>
+			<xsd:element ref="ParkingTariffRef"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:element name="ParkingTariffRef" type="ParkingTariffRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Reference to a PARKING TARIFF.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:complexType name="ParkingTariffRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Type for a reference to a PARKING TARIFF.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+	<!-- definizione di fareProducts (fine) -->
+	<!-- definizione di fareTables (inizio) -->
+	<xsd:complexType name="fareTables_RelStructure">
+		<xsd:sequence>
+			<xsd:element name="FareTable" type="FareTable_VersionStructure" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:element name="FareTableRef" type="FareTableRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Reference to a FARE TABLE.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:complexType name="FareTableRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Type for a reference to a FARE TABLE.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+	<xsd:complexType name="FareTable_VersionStructure">
+		<xsd:annotation>
+			<xsd:documentation>A grouping of prices that may be associated with a DISTANCE MATRIX ELEMENT, FARE STRUCTURE ELEMENT or  other PRICEABLE OBJECT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:element name="prices" type="fareStructureElementPrices_RelStructure" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:complexType name="fareStructureElementPrices_RelStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for a list of FARE STRUCTURE ELEMENT PRICEs.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:choice maxOccurs="unbounded">
+				<xsd:element ref="FareStructureElementPriceRef"/>
+				<xsd:element name="FareStructureElementPrice" type="FareStructureElementPrice_VersionStructure"/>
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:element name="FareStructureElementPriceRef" type="FareStructureElementPriceRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Reference to a FARE STRUCTURE ELEMENT PRICE.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:complexType name="FareStructureElementPriceRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Type for a reference to a FARE STRUCTURE ELEMENT PRICE.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+	<xsd:complexType name="FareStructureElementPrice_VersionStructure">
+		<xsd:sequence>
+			<xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:element ref="Name" minOccurs="0"/>
+			<xsd:element ref="Description" minOccurs="0"/>
+			<xsd:element name="Amount" type="xsd:decimal" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>PRICE amount. in specified currency.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Currency" type="CurrencyType" minOccurs="0"/>
+			<xsd:element name="CanBeCumulative" type="xsd:boolean" default="true" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether this discount can be used cumulatively with other discounts.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="FareStructureElementRef" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<!-- definizione di fareTables (fine) -->
+	<!-- definizione di distributionChannels (inizio) -->
+	<xsd:complexType name="distributionChannels_RelStructure">
+		<xsd:sequence>
+			<xsd:element name="DistributionChannel" type="DistributionChannel_VersionStructure" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:element name="DistributionChannelRef" type="DistributionChannelRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Reference to a DISTRIBUTION CHANNEL.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:complexType name="DistributionChannelRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Type for a reference to a DISTRIBUTION CHANNEL.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+	<xsd:complexType name="DistributionChannel_VersionStructure">
+		<xsd:sequence>
+			<xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:element ref="Name" minOccurs="0"/>
+			<xsd:element ref="Description" minOccurs="0"/>
+			<xsd:element name="DistributionChannelType" type="DistributionChannelTypeEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Classification of  DISTRIBUTION CHANNEL.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element ref="TravelAgentRef"/>
+				<xsd:element ref="OperatorRef"/>
+			</xsd:choice>
+			<xsd:element name="PaymentMethods" type="PaymentMethodListOfEnumerations" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Payment methods allowed.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:simpleType name="DistributionChannelTypeEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for DISTRIBUTION CHANNEL TYPE Type.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="atStop"/>
+			<xsd:enumeration value="onBoard"/>
+			<xsd:enumeration value="online"/>
+			<xsd:enumeration value="onlineAccount"/>
+			<xsd:enumeration value="telephone"/>
+			<xsd:enumeration value="electronicPass"/>
+			<xsd:enumeration value="postal"/>
+			<xsd:enumeration value="mobileDevice"/>
+			<xsd:enumeration value="agency"/>
+			<xsd:enumeration value="tourOperator"/>
+			<xsd:enumeration value="other"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- definizione di distributionChannels (fine) -->
+	<!-- definizione di typesOfTravelDocuments (inizio) -->
+	<xsd:complexType name="typesOfTravelDocuments_RelStructure">
+		<xsd:sequence>
+			<xsd:element name="TypeOfTravelDocument" type="TypeOfTravelDocument_VersionStructure" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:element name="TypeOfTravelDocumentRef" type="TypeOfTravelDocumentRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Reference to a TYPE OF TRAVEL DOCUMENT.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:complexType name="TypeOfTravelDocumentRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Type for a reference to a TYPE OF TRAVEL DOCUMENT.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+	<xsd:complexType name="TypeOfTravelDocument_VersionStructure">
+		<xsd:sequence>
+			<xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:element name="IsCard" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether  the  TRAVEL DOCUMENT is a card.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="IsSmartCard" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether  the  TRAVEL DOCUMENT can contain applications and or stored value.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="HasPhoto" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether the  TRAVEL DOCUMENT has a photo.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MediaType" type="MediaTypeEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Classification of the TRAVEL DOCUMENT by Media Type.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MachineReadable" type="MachineReadableListOfEnumerations" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Classification of the TRAVEL DOCUMENT by Machine Readable mechanism.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:simpleType name="MediaTypeEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for ResellType.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="none"/>
+			<xsd:enumeration value="paperTicket"/>
+			<xsd:enumeration value="paperTicketWithCoupons"/>
+			<xsd:enumeration value="coupon"/>
+			<xsd:enumeration value="selfPrintPaperTicket"/>
+			<xsd:enumeration value="smartCard"/>
+			<xsd:enumeration value="mobileApp"/>
+			<xsd:enumeration value="licencePlate"/>
+			<xsd:enumeration value="card"/>
+			<xsd:enumeration value="mms"/>
+			<xsd:enumeration value="sms"/>
+			<xsd:enumeration value="other"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="MachineReadableListOfEnumerations">
+		<xsd:annotation>
+			<xsd:documentation>List of Machine readable Types.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:list itemType="MachineReadableEnumeration"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="MachineReadableEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for ResellType.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="none"/>
+			<xsd:enumeration value="magneticStrip"/>
+			<xsd:enumeration value="chip"/>
+			<xsd:enumeration value="ocr"/>
+			<xsd:enumeration value="apnr"/>
+			<xsd:enumeration value="barCode"/>
+			<xsd:enumeration value="shotCode"/>
+			<xsd:enumeration value="nfc"/>
+			<xsd:enumeration value="other"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- definizione di typesOfTravelDocuments (fine) -->
+	<!-- definizione di salesOfferPackages (inizio) -->
+	<xsd:complexType name="salesOfferPackages_RelStructure">
+		<xsd:sequence>
+			<xsd:element name="SalesOfferPackage" type="SalesOfferPackage_VersionStructure" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:element name="SalesOfferPackageRef" type="SalesOfferPackageRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Reference to a SALES OFFER PACKAGE.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:complexType name="SalesOfferPackageRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Type for a reference to a SALES OFFER PACKAGE.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+	<xsd:complexType name="SalesOfferPackage_VersionStructure">
+		<xsd:sequence>
+			<xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:element name="distributionAssignments" type="distributionAssignments_RelStructure" minOccurs="0"/>
+			<xsd:element name="salesOfferPackageElements" type="salesOfferPackageElements_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>SALES OFFER PACKAGE ELEMENTs in SALES OFFER PACKAGE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:complexType name="distributionAssignments_RelStructure">
+		<xsd:sequence>
+			<xsd:choice maxOccurs="unbounded">
+				<xsd:element ref="DistributionAssignmentRef"/>
+				<xsd:element name="DistributionAssignment" type="DistributionAssignment_VersionStructure"/>
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:element name="DistributionAssignmentRef" type="DistributionAssignmentRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Reference to a DISTRIBUTION ASSIGNMENT.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:complexType name="DistributionAssignmentRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Type for a reference to a DISTRIBUTION ASSIGNMENT.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+	<xsd:complexType name="DistributionAssignment_VersionStructure">
+		<xsd:sequence>
+			<xsd:element ref="DistributionChannelRef"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="EntityAttributeGroup"/>
+		<xsd:attribute name="order" type="xsd:integer" use="optional"/>
+	</xsd:complexType>
+	<xsd:complexType name="salesOfferPackageElements_RelStructure">
+		<xsd:sequence>
+			<xsd:choice maxOccurs="unbounded">
+				<xsd:element ref="SalesOfferPackageElementRef"/>
+				<xsd:element name="SalesOfferPackageElement" type="SalesOfferPackageElement_VersionStructure"/>
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:element name="SalesOfferPackageElementRef" type="SalesOfferPackageElementRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Reference to a SALES OFFER PACKAGE ELEMENT.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:complexType name="SalesOfferPackageElementRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Type for a reference to a SALES OFFER PACKAGE ELEMENT.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+	<xsd:complexType name="SalesOfferPackageElement_VersionStructure">
+		<xsd:sequence>
+			<xsd:element name="fareTables" type="fareTables2_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Other FARE TABLESs for DISTANCE MATRIX ELEMENT.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="TypeOfTravelDocumentRef" minOccurs="0"/>
+			<xsd:element ref="FareProductRef" minOccurs="0"/>
+			<xsd:element name="prices" type="salesOfferPackagePrices_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>PRICEs of SALES OFFER PACKAGE ELEMENT.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="EntityAttributeGroup"/>
+		<xsd:attribute name="order" type="xsd:integer" use="optional"/>
+	</xsd:complexType>
+	<xsd:complexType name="fareTables2_RelStructure">
+		<xsd:sequence>
+			<xsd:choice maxOccurs="unbounded">
+				<xsd:element ref="FareTableRef"/>
+				<xsd:element name="FareTable" type="FareTable_VersionStructure"/>
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:complexType name="salesOfferPackagePrices_RelStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for a list of SALES OFFER PACKAGE PRICEs.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:choice maxOccurs="unbounded">
+				<xsd:element ref="SalesOfferPackagePriceRef"/>
+				<xsd:element name="SalesOfferPackagePrice" type="SalesOfferPackagePrice_VersionStructure"/>
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:element name="SalesOfferPackagePriceRef" type="SalesOfferPackagePriceRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Reference to a SALES OFFER PACKAGE PRICE.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:complexType name="SalesOfferPackagePriceRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Type for a reference to a SALES OFFER PACKAGE PRICE.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+	<xsd:complexType name="SalesOfferPackagePrice_VersionStructure">
+		<xsd:sequence>
+			<xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:choice minOccurs="0">
+				<xsd:element ref="PricingRuleRef"/>
+				<xsd:element name="PricingRule" type="PricingRule_VersionStructure"/>
+				<xsd:element ref="DiscountingRuleRef"/>
+				<xsd:element name="DiscountingRule" type="DiscountingRule_VersionStructure"/>
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:element name="PricingRuleRef" type="PricingRuleRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Reference to a PRICING RULE.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:complexType name="PricingRuleRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Type for a reference to a PRICING RULE.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+	<xsd:complexType name="PricingRule_VersionStructure">
+		<xsd:sequence>
+			<xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:element ref="Name" minOccurs="0"/>
+			<xsd:element ref="Description" minOccurs="0"/>
+			<xsd:element name="Factor" type="xsd:decimal" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Pricing factor to use.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:element name="DiscountingRuleRef" type="DiscountingRuleRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Reference to a PRICING RULE.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:complexType name="DiscountingRuleRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Type for a reference to a PRICING RULE.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+	<xsd:complexType name="DiscountingRule_VersionStructure">
+		<xsd:sequence>
+			<xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:element ref="Name" minOccurs="0"/>
+			<xsd:element ref="Description" minOccurs="0"/>
+			<xsd:element name="Factor" type="xsd:decimal" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Pricing factor to use.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DiscountAsPercentage" type="xsd:decimal" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Discount as a percentage of the full price.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DiscountAsValue" type="xsd:decimal" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Discount amount. i.e. DIfference between full and discounted price.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="CanBeCumulative" type="xsd:boolean" default="true" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether this discount can be used cumulatively with other discounts.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<!-- definizione di salesOfferPackages (fine) -->
+	<!-- definizione di parkingTariffs (inizio) -->
+	<xsd:complexType name="parkingTariffs_RelStructure">
+		<xsd:sequence>
+			<xsd:element name="ParkingTariff" type="ParkingTariff_VersionStructure" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:complexType name="ParkingTariff_VersionStructure">
+		<xsd:sequence>
+			<xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:element ref="OperatorRef" minOccurs="0"/>
+			<xsd:element name="timeIntervals" type="timeIntervals_RelStructure" minOccurs="0"/>
+			<xsd:element name="ParkingUserType" type="ParkingUserEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Type of users: disabled, all etc.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ParkingStayType" type="ParkingStayEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Nature of stay allowed in PARKING.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ParkingVehicleTypes" type="ParkingVehicleListOfEnumerations" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Type of Vehicle for which PARKING TARIFF applies.  Fixed values.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="appliesTo" type="parkingRefs_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>PaARKIMNGs to which this tariff applies</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:complexType name="parkingRefs_RelStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for a collection of one or more references to a PARKING.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="ParkingRef" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="ParkingRef" type="ParkingRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Reference to a PARKING.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:complexType name="ParkingRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Type for a reference to a PARKING.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+	<!-- definizione di parkingTariffs (fine) -->
+	<!-- definizione FareFrame (fine) -->
+</xsd:schema>
