@@ -10644,6 +10644,113 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 								</ParkingProperties>
 							</parkingProperties>
 						</Parking>
+						<Parking id="IT:ITC1:Parking:StazioniRicaricaTorino:p:Porta_Nuova" version="1">
+							<Name>Parcheggio Porta Nuova - Stazioni Ricarica</Name>
+							<ShortName>Porta Nuova</ShortName>
+							<Centroid>
+								<Location>
+									<Longitude>7.67798</Longitude>
+									<Latitude>45.06234</Latitude>
+									<Precision>1</Precision>
+								</Location>
+							</Centroid>
+							<gml:Polygon gml:id="stazioniRicaricaTorinoGeom">
+								<gml:exterior>
+									<gml:LinearRing>
+										<gml:pos>7.67798 45.06234</gml:pos>
+										<gml:pos>7.67798 45.06234</gml:pos>
+										<gml:pos>7.67798 45.06234</gml:pos>
+										<gml:pos>7.67798 45.06234</gml:pos>
+									</gml:LinearRing>
+								</gml:exterior>
+							</gml:Polygon>
+							<OperatorRef ref="IT:ITC1:Operator:parcheggiTorino:parcheggiTorino" version="1"/>
+							<entrances>
+								<ParkingPassengerEntrance id="IT:ITC1:ParkingPassengerEntrancestazioniRicaricaTorino:ppe:Porta_Nuova_AccessoPedonale1" version="1">
+									<Centroid>
+										<Location>
+											<Longitude>7.67798</Longitude>
+											<Latitude>45.06234</Latitude>
+											<Precision>1</Precision>
+										</Location>
+									</Centroid>
+									<PostalAddress id="IT:ITC1:PostalAddress:stazioniRicaricaTorino:ppe:Porta_Nuova_AccessoPedonale1_Indirizzo" version="1">
+										<CountryName>Italia</CountryName>
+										<Street>via Sacchi 1</Street>
+										<Town>Torino</Town>
+										<PostCode>10121</PostCode>
+									</PostalAddress>
+								</ParkingPassengerEntrance>
+								<ParkingPassengerEntrance id="IT:ITC1:ParkingPassengerEntrance:stazioniRicaricaTorino:ppe:Porta_Nuova_AccessoPedonale2" version="1">
+									<Centroid>
+										<Location>
+											<Longitude>7.67798</Longitude>
+											<Latitude>45.06234</Latitude>
+											<Precision>1</Precision>
+										</Location>
+									</Centroid>
+									<PostalAddress id="IT:ITC1:PostalAddress:stazioniRicaricaTorino:ppe:Porta_Nuova_AccessoPedonale1_Indirizzo2" version="1">
+										<CountryName>Italia</CountryName>
+										<Street>corso Vittorio Emanuele II, 58</Street>
+										<Town>Torino</Town>
+										<PostCode>10121</PostCode>
+									</PostalAddress>
+								</ParkingPassengerEntrance>
+								<ParkingEntranceForVehicles id="IT:ITC1:ParkingEntranceForVehicles:stazioniRicaricaTorino:pefv:Porta_Nuova_EntrataVeicoli1" version="1">
+									<Centroid>
+										<Location>
+											<Longitude>7.67798</Longitude>
+											<Latitude>45.06234</Latitude>
+											<Precision>1</Precision>
+										</Location>
+									</Centroid>
+									<PostalAddress id="IT:ITC1:PostalAddress:stazioniRicaricaTorino:pefv:Porta_Nuova_EntrataVeicoli1_Indirizzo" version="1">
+										<CountryName>Italia</CountryName>
+										<Street>via Sacchi 1</Street>
+										<Town>Torino</Town>
+										<PostCode>10121</PostCode>
+									</PostalAddress>
+									<IsEntry>true</IsEntry>
+									<IsExit>false</IsExit>
+								</ParkingEntranceForVehicles>
+								<ParkingEntranceForVehicles id="IT:ITC1:ParkingEntranceForVehicles:stazioniRicaricaTorino:pefv:Porta_Nuova_UscitaVeicoli1" version="1">
+									<Centroid>
+										<Location>
+											<Longitude>7.67798</Longitude>
+											<Latitude>45.06234</Latitude>
+											<Precision>1</Precision>
+										</Location>
+									</Centroid>
+									<PostalAddress id="IT:ITC1:PostalAddress:stazioniRicaricaTorino:pefv:Porta_Nuova_UscitaVeicoli1_Indirizzo" version="1">
+										<CountryName>Italia</CountryName>
+										<Street>via Sacchi 1</Street>
+										<Town>Torino</Town>
+										<PostCode>10121</PostCode>
+									</PostalAddress>
+									<IsEntry>false</IsEntry>
+									<IsExit>true</IsExit>
+								</ParkingEntranceForVehicles>
+							</entrances>
+							<ParkingType>parkingZone</ParkingType>
+							<ParkingVehicleTypes>car</ParkingVehicleTypes>
+							<ParkingLayout>roadside</ParkingLayout>
+							<PrincipalCapacity>20</PrincipalCapacity>
+							<TotalCapacity>20</TotalCapacity>
+							<ProhibitedForHazardousMaterials>true</ProhibitedForHazardousMaterials>
+							<RechargingAvailable>true</RechargingAvailable>
+							<Secure>true</Secure>
+							<ParkingReservation>reservationAllowed</ParkingReservation>
+							<parkingProperties>
+								<ParkingProperties id="IT:ITC1:ParkingProperties:stazioniRicaricaTorino:pc1" version="1">
+									<spaces>
+										<ParkingCapacity id="IT:ITC1:ParkingCapacity:stazioniRicaricaTorino:pc" version="1">
+											<NumberOfSpaces>0</NumberOfSpaces>
+											<NumberOfSpacesWithRechargePoint>20</NumberOfSpacesWithRechargePoint>
+										</ParkingCapacity>
+									</spaces>
+								</ParkingProperties>
+							</parkingProperties>
+						</Parking>
 					</parkings>
 				</SiteFrame>
 				<ServiceFrame id="epd:IT:ITC1:ServiceFrame_EU_PI_NETWORK:ita" version="1">
