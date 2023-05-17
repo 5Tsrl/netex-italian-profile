@@ -640,7 +640,7 @@ more focused on translations).</xsd:documentation>
 	<xsd:complexType name="serviceFacilitiesL2_RelStructure">
 		<xsd:choice maxOccurs="unbounded">
 			<xsd:element name="ServiceFacilitySetRef" type="ServiceFacilitySetRefStructure"/>
-			<xsd:element name="ServiceFacilitySet" type="ServiceFacilitySet_VersionStructure" maxOccurs="unbounded">
+			<xsd:element name="ServiceFacilitySet" type="ServiceFacilitySetL2_VersionStructure" maxOccurs="unbounded">
 				<xsd:annotation>
 					<xsd:documentation>Service FACILITY. Set of enumerated FACILITY values (Where available names are based on TPEG classifications, augmented with UIC etc.).</xsd:documentation>
 				</xsd:annotation>
@@ -655,6 +655,95 @@ more focused on translations).</xsd:documentation>
             </xsd:extension>
         </xsd:simpleContent>
     </xsd:complexType>
+	<xsd:complexType name="ServiceFacilitySetL2_VersionStructure">
+		<xsd:annotation>
+			<xsd:documentation>SERVICE FACILITies associated with entity.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:group ref="CommonFacilityL2Group"/>
+			<xsd:group ref="ServiceFacilityGroup"/>
+			<xsd:element name="accommodations" type="accommodations_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Accommodation available on service.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:group name="CommonFacilityL2Group">
+		<xsd:annotation>
+			<xsd:documentation>Facilities that apply to services and sites.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="AccessibilityInfoFacilityList" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>List of ACCESSIBILITY INFORMATION FACILITies.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="AssistanceFacilityList" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>List of Couchette FACILITies.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="AccessibilityToolList" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>List of TYPEs of ACCESSIBILITY TOOLs.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="CarServiceFacilityList" minOccurs="0"/>
+			<xsd:element ref="CateringFacilityList" minOccurs="0"/>
+			<xsd:element ref="FamilyFacilityList" minOccurs="0"/>
+			<xsd:element ref="FareClasses" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>List of Fare Classes.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="GenderLimitation" minOccurs="0"/>
+			<xsd:element ref="MealFacilityList" minOccurs="0"/>
+			<xsd:element ref="MedicalFacilityList" minOccurs="0"/>
+			<xsd:element ref="MobilityFacilityList" minOccurs="0"/>
+			<xsd:element ref="NuisanceFacilityList" minOccurs="0"/>
+			<xsd:element ref="PassengerCommsFacilityList" minOccurs="0"/>
+			<xsd:element name="PassengerInformationEquipmentList" type="PassengerInformationEquipmentEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>List of PASSENGER INFORMATION Equipments.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="PassengerInformationFacilityList" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>List of PASSENGER INFORMATION FACILITies.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="RetailFacilityList" minOccurs="0"/>
+			<xsd:element ref="SafetyFacilityList" minOccurs="0"/>
+			<xsd:element name="SanitaryFacilityList" type="SanitaryFacilityL2ListOfEnumerations" minOccurs="0"/>
+			<xsd:element ref="TicketingFacilityList" minOccurs="0"/>
+			<xsd:element ref="TicketingServiceFacilityList" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:simpleType name="SanitaryFacilityL2ListOfEnumerations">
+		<xsd:annotation>
+			<xsd:documentation>List of Sanitary Facilities.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:list itemType="SanitaryFacilityL2Enumeration"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="SanitaryFacilityL2Enumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for Sanitary Facility Type.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="none"/>
+			<xsd:enumeration value="toilet"/>
+			<xsd:enumeration value="wheelchairAccessToilet"/>
+			<xsd:enumeration value="shower"/>
+			<xsd:enumeration value="washingAndChangeFacilities"/>
+			<xsd:enumeration value="babyChange"/>
+			<xsd:enumeration value="wheelchairBabyChange"/>
+			<xsd:enumeration value="shoeShiner"/>
+			<xsd:enumeration value="other"/>
+		</xsd:restriction>
+	</xsd:simpleType>
 	<!-- versioni aggiornate per vehicleTypes (fine) -->
 	<!-- versioni aggiornate per vehicleModels (inizio) -->
     <xsd:complexType name="vehicleModelsStructure">

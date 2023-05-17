@@ -9034,7 +9034,7 @@
 			<xsd:documentation>A coherent set of reference values for TYPE OF VALUEs , ORGANISATIONs, VEHICLE TYPEs etc that have a common validity, as specified by a set of frame VALIDITY CONDITIONs. Used to define common resources that will be referenced by other types of FRAME.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
-	<!-- aggiunta in level 2 (inizio) -->
+	<!-- aggiunta in level 2 (fine) -->
 	<!-- versione con ResponsiblePartRef e organisations modificata in level 2 di ResourceFrame -->
 	<!-- versione con TravelAgent tra organisations in level 3 di ResourceFrame -->
 	<xsd:element name="ResourceFrame" type="ResourceFrameL3_VersionStructure">
@@ -9065,11 +9065,13 @@
 			<xsd:documentation>A coherent set of timetable data (VEHICLE JOURNEYs and BLOCKs) to which the same VALIDITY CONDITIONs have been assigned.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
+	<!-- aggiunta in level 3 (inizio) -->
 	<xsd:element name="FareFrame" type="FareFrame_VersionStructure">
 		<xsd:annotation>
 			<xsd:documentation>A coherent set of fare data (VEHICLE JOURNEYs and BLOCKs) to which the same VALIDITY CONDITIONs have been assigned.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
+	<!-- aggiunta in level 3 (fine) -->
 	<!-- ======================================================================= -->
 	<xsd:element name="CompositeFrame" type="CompositeFrame_VersionStructure">
 		<xsd:annotation>
