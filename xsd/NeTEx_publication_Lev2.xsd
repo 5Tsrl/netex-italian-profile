@@ -9034,7 +9034,7 @@
 			<xsd:documentation>A coherent set of reference values for TYPE OF VALUEs , ORGANISATIONs, VEHICLE TYPEs etc that have a common validity, as specified by a set of frame VALIDITY CONDITIONs. Used to define common resources that will be referenced by other types of FRAME.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
-	<!-- aggiunta in level 2 (inizio) -->
+	<!-- aggiunta in level 2 (fine) -->
 	<!-- versione con ResponsiblePartRef e organisations modificata in level 2 di ResourceFrame -->
 	<xsd:element name="ResourceFrame" type="ResourceFrameL2_VersionStructure">
 		<xsd:annotation>
