@@ -16614,7 +16614,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 							<Description>Terminal torino corso Bolzano</Description>
 							<PrivateCode>x0001</PrivateCode>
 							<members>
-								<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:busATS:059642"/>
+								<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:busATS:059642" version="1"/>
 							</members>
 							<gml:Polygon gml:id="L001">
 								<gml:interior>
@@ -16634,7 +16634,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 							<Description>Terminal Milano - Lampugnano</Description>
 							<PrivateCode>x00023</PrivateCode>
 							<members>
-								<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:busATS:031109"/>
+								<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:busATS:031109" version="1"/>
 							</members>
 							<gml:Polygon gml:id="L00023">
 								<gml:interior>
@@ -16655,7 +16655,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 							<Description>Stazione degli Autobus Garda</Description>
 							<PrivateCode>x0001_GARDA</PrivateCode>
 							<members>
-								<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:busATV:164073"/>
+								<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:busATV:164073" version="1"/>
 							</members>
 							<gml:Polygon gml:id="L0001_GARDA">
 								<gml:interior>
