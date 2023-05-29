@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Note that this simplified XSD does not in any way replace the full NeTEx XSD. It is not guaranteed that the XSD is free from errors.-->
+<xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:netex="http://www.netex.org.uk/netex" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" version="1.1.1" id="content_NeTEx_Lev4_ext">
+	<xsd:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="gml_combo_v3_2_1_simplified.xsd"/>
+	<xsd:include schemaLocation="_content_NeTEx_Lev3_ext.xsd"/>
+	<xsd:annotation>
+		<xsd:documentation>The intention of this XSD is to provide a simplified schema that represents a subset of the full NeTEx-schema covering the European Passenger Information Profile.
+		This file should not be interpreted as being normative. Neither does this XSD replace the offical NeTEx XSD schemas. It should be used in addition to the offical NeTEx XSD schemas and not instead of.
+		
+		The official NeTEx XSD schema and basic examples are available at Github https://github.com/NeTEx-CEN/NeTEx  (note that this is the only source for NeTEx latest official schema) 
+		Note that parts of the content in this file consists of extracts from files in the official NeTEx XSD schema and therefore are covered by Copyright CEN, Crown Copyright 2009-2020.
+		Any such copyrights still apply.
+		</xsd:documentation>
+	</xsd:annotation>
+	<!-- versione di ResourceFrame con vehicleModelProfiles e una versione aggiornata di vehicle (inizio) -->
+	<xsd:complexType name="ResourceFrameL4_VersionStructure">
+        <xsd:sequence>
+            <xsd:group ref="VersionFrameGroup" minOccurs="0"/>
+            <xsd:element ref="dataSources" minOccurs="0"/>
+            <xsd:element name="responsibilitySets" type="responsibilitySetsL2_RelStructure" minOccurs="0"/>
+            <xsd:element ref="typesOfValue" minOccurs="0"/>
+            <xsd:element name="organisations" type="organisationsL3Structure" minOccurs="0"/>
+			<xsd:element name="groupsOfOperators" type="groupsOfOperatorsStructure" minOccurs="0"/>
+            <xsd:element ref="equipments" minOccurs="0"/>
+            <xsd:element name="vehicleTypes" type="vehicleTypesL2Structure" minOccurs="0"/>
+			<xsd:element name="vehicleModels" type="vehicleModelsStructure" minOccurs="0"/>
+			<!--
+			<xsd:element name="vehicleEquipmentProfiles" type="vehicleEquipmenProfilesInFrame_RelStructure" minOccurs="0"/>
+			-->
+			<xsd:element name="vehicleModelProfiles" type="vehicleModelProfilesStructure" minOccurs="0"/>
+			<xsd:element name="vehicles" type="vehiclesL4Structure" minOccurs="0"/>
+        </xsd:sequence>
+        <xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+    </xsd:complexType>
+	<!-- definizione di vehicleModelProfiles (inizio) -->
+	<xsd:complexType name="vehicleModelProfilesStructure">
+		<xsd:sequence>
+			<xsd:choice maxOccurs="unbounded">
+				<xsd:element name="CarModelProfile" type="CarModelProfile_VersionStructure"/>
+				<xsd:element name="CycleModelProfile" type="CycleModelProfile_VersionStructure"/>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+    <xsd:complexType name="CarModelProfile_VersionStructure">
+        <xsd:sequence>
+            <xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:element name="NumberOfGears" type="xsd:nonNegativeInteger" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Number of gears.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ChildSeat" type="ChildSeatEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Type of Child seat.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Seats" type="xsd:nonNegativeInteger" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Number of seats.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Doors" type="xsd:nonNegativeInteger" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Number of doors on VEHICLE of VEHICLE MODEL.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Transmission" type="TransmissionEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Type of gear transmission</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="CruiseControl" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether there is cruise-control</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="SatNav" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether VEHICLE has satellite navigation.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AirConditioning" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether VEHICLE has removable chains.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Convertible" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether vehicle is convertible</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="UsbPowerSockets" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether VEHICLE has UsbPowerSockets.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="WinterTyres" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether VEHICLE has winter tyres.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Chains" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether vehicel has remopvable chains.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TrailerHitch" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether VEHICLE has a trailer hitch.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="RoofRack" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>WHether VEHICLE has a roof rack.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="CycleRack" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether VEHICLE has a cycle  rack.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="SkiRack" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether VEHICLE has a ski rack.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+        </xsd:sequence>
+        <xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+    </xsd:complexType>
+	<xsd:simpleType name="ChildSeatEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for ChildSeat. +v1.2.2</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="baby"/>
+			<xsd:enumeration value="smallChild"/>
+			<xsd:enumeration value="olderChild"/>
+			<xsd:enumeration value="none"/>
+			<xsd:enumeration value="other"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="TransmissionEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for Vehicle Transmission. +v1.2.2</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="automatic"/>
+			<xsd:enumeration value="automatic4WheelDrive"/>
+			<xsd:enumeration value="manual"/>
+			<xsd:enumeration value="manual4WheelDrive"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:element name="CarModelProfileRef" type="CarModelProfileRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Reference to a CAR MODEL PROFILE. +V1.2.2</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:complexType name="CarModelProfileRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Type for a reference to a CAR MODEL PROFILE.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+	<xsd:complexType name="CycleModelProfile_VersionStructure">
+        <xsd:sequence>
+            <xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:element name="NumberOfGears" type="xsd:nonNegativeInteger" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Number of gears.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ChildSeat" type="ChildSeatEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Type of Child seat.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="IsPortable" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether vehicle can be carried easily, e.g., scooter, skateboard, collapsible bicycle.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Battery" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether there is a Battery</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Lamps" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether there are lights.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Helmet" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether there is a helmet. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Pump" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether there is a pump. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Basket" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether there is a basket.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Lock" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether there is a lock,</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+        </xsd:sequence>
+        <xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+    </xsd:complexType>
+	<xsd:element name="CycleModelProfileRef" type="CycleModelProfileRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Reference to a CYCLE MODEL PROFILE. +V1.2.2</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:complexType name="CycleModelProfileRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Type for a reference to a CYCLE MODEL PROFILE.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+	<!-- definizione di vehicleModelProfiles (fine) -->
+	<!-- versione aggiornata con CarModelProfileRef o CycleModelProfileRef per vehicles (inizio) -->
+    <xsd:complexType name="vehiclesL4Structure">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element ref="TrainElement"/>
+			<xsd:element name="Vehicle" type="VehicleL4_VersionStructure"/>
+		</xsd:choice>
+    </xsd:complexType>
+    <xsd:complexType name="VehicleL4_VersionStructure">
+        <xsd:sequence>
+            <xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:element ref="Name" minOccurs="0"/>
+            <xsd:element ref="ShortName" minOccurs="0"/>
+			<xsd:element name="RegistrationNumber" type="xsd:normalizedString" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Licence plate of VEHICLE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="OperationalNumber" type="xsd:normalizedString" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Operational Number of VEHICLE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="PrivateCode" minOccurs="0"/>
+			<xsd:element ref="OperatorRef" minOccurs="0"/>
+			<xsd:choice>
+				<xsd:element ref="VehicleTypeRef" minOccurs="0"/>
+				<xsd:element ref="TrainRef" minOccurs="0"/>
+			</xsd:choice>
+			<xsd:choice>
+				<xsd:element ref="CarModelProfileRef" minOccurs="0"/>
+				<xsd:element ref="CycleModelProfileRef" minOccurs="0"/>
+			</xsd:choice>
+        </xsd:sequence>
+        <xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+    </xsd:complexType>
+	<!-- versione aggiornata con CarModelProfileRef o CycleModelProfileRef per vehicles (fine) -->
+	<!-- versione di ResourceFrame con vehicleModelProfiles e una versione aggiornata di vehicle (fine) -->
+	<!-- versione di FareFrame con una versione aggiornata di fareProducts (inizio) -->
+	<xsd:complexType name="FareFrameL4_VersionStructure">
+		<xsd:sequence>
+			<xsd:group ref="VersionFrameGroup" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="geographicalUnits" type="geographicalUnits_RelStructure" minOccurs="0"/>
+			<xsd:element name="timeUnits" type="timeUnits_RelStructure" minOccurs="0"/>
+			<xsd:element name="tariffs" type="tariffs_RelStructure" minOccurs="0"/>
+			<xsd:element name="validableElements" type="validableElements_RelStructure" minOccurs="0"/>
+			<xsd:element name="usageParameters" type="usageParameters_RelStructure" minOccurs="0"/>
+			<xsd:element name="fareProducts" type="fareProductsL4_RelStructure" minOccurs="0"/>
+			<xsd:element name="fareTables" type="fareTables_RelStructure" minOccurs="0"/>
+			<xsd:element name="distributionChannels" type="distributionChannels_RelStructure" minOccurs="0"/>
+			<xsd:element name="typesOfTravelDocuments" type="typesOfTravelDocuments_RelStructure" minOccurs="0"/>
+			<xsd:element name="salesOfferPackages" type="salesOfferPackages_RelStructure" minOccurs="0"/>
+			<xsd:element name="parkingTariffs" type="parkingTariffs_RelStructure" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<!-- versione aggiornata con MobilityServiceConstraintZoneRef di fareProducts (inizio) -->
+	<xsd:complexType name="fareProductsL4_RelStructure">
+		<xsd:sequence>
+			<xsd:element name="PreassignedFareProduct" type="PreassignedFareProductL4_VersionStructure" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:complexType name="PreassignedFareProductL4_VersionStructure">
+		<xsd:sequence>
+			<xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:element ref="Name" minOccurs="0"/>
+			<xsd:element ref="Description" minOccurs="0"/>
+			<xsd:element name="ChargingMomentType" type="ChargingMomentEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Enumeration of standardised Charging moment values _v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="validityParameterAssignments" type="validityParameterAssignmentsL4_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>VALIDITY PARAMETR ASSIGNMENTss for an element.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="validableElements" type="validableElements_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>VALIDABLE ELEMENTs making up FARE SERVICE ACCESS RIGHT.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="tariffs" type="tariffRefs_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>TARIFFs  used by FARE PRODUCT. These may be derived from lower level references.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:complexType name="validityParameterAssignmentsL4_RelStructure">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="GenericParameterAssignment" type="GenericParameterAssignmentL4Structure">
+				<xsd:annotation>
+					<xsd:documentation>Optimisation: A single instance of a A VALIDITY PARAMETER ASSIGNMENT specifying practical parameters during a TRAVEL GenericATION, within a given fare structure (e.g. the origin or destination zone in a zone-counting system).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:complexType name="GenericParameterAssignmentL4Structure">
+		<xsd:sequence>
+			<xsd:element name="limitations" type="usageParameters_RelStructure" minOccurs="0"/>
+			<xsd:element name="validityParameters" type="validityParametersL4_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Validity parameters for the assignment.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="TimeIntervalRef" minOccurs="0"/>
+			<xsd:element ref="GeographicalIntervalRef" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="EntityAttributeGroup"/>
+		<xsd:attribute name="order" type="xsd:integer" use="optional"/>
+	</xsd:complexType>
+	<xsd:complexType name="validityParametersL4_RelStructure">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element ref="OperatorRef" minOccurs="0"/>
+			<xsd:element ref="TariffZoneRef" minOccurs="0"/>
+			<xsd:choice minOccurs="0">
+				<xsd:element ref="VehicleTypeRef"/>
+				<xsd:element ref="TrainRef"/>
+			</xsd:choice>
+			<xsd:element ref="MobilityServiceConstraintZoneRef" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<!-- versione aggiornata con MobilityServiceConstraintZoneRef di fareProducts (fine) -->
+	<!-- versione di FareFrame con una versione aggiornata di fareProducts (fine) -->
+	<!-- definizione MobilityServiceFrame (inizio) -->
+	<xsd:complexType name="MobilityServiceFrame_VersionStructure">
+		<xsd:sequence>
+			<xsd:group ref="VersionFrameGroup" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="fleets" type="fleets_RelStructure" minOccurs="0"/>
+			<xsd:element name="modesOfOperation" type="modesOfOperation_RelStructure" minOccurs="0"/>
+			<xsd:element name="mobilityServices" type="mobilityServices_RelStructure" minOccurs="0"/>
+			<xsd:element name="mobilityServiceConstraintZones" type="mobilityServiceConstraintZones_RelStructure" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<!-- definizione di fleets (inizio) -->
+	<xsd:complexType name="fleets_RelStructure">
+		<xsd:sequence>
+			<xsd:element name="Fleet" type="Fleet_VersionStructure" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:element name="FleetRef" type="FleetRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Reference to a FLEET. +v1.2.2</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:complexType name="FleetRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Type for a reference to a FLEET.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+	<xsd:complexType name="Fleet_VersionStructure">
+		<xsd:sequence>
+			<xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:element name="members" type="vehicles_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>VEHICLEs in FLEET,</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="OperatorRef" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:complexType name="vehicles_RelStructure">
+		<xsd:sequence>
+			<xsd:element ref="VehicleRef" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:element name="VehicleRef" type="VehicleRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Reference to a VEHICLE.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:complexType name="VehicleRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Type for a reference to a VEHICLE.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+	<!-- definizione di fleets (fine) -->
+	<!-- definizione di modesOfOperation (inizio) -->
+	<xsd:complexType name="modesOfOperation_RelStructure">
+		<xsd:sequence>
+			<xsd:element name="VehicleSharing" type="VehicleSharing_VersionStructure" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:element name="VehicleSharingRef" type="VehicleSharingRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Reference to a VEHICLE SHARING MODE OF OPERATION. +V1.2.2</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:complexType name="VehicleSharingRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Type for a reference to a VEHICLE SHARING MODE OF OPERATION.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+	<xsd:complexType name="VehicleSharing_VersionStructure">
+		<xsd:sequence>
+			<xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:element name="submodes" type="submodes_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>SUBMODEs associated with MODE OF OPERATION.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:complexType name="submodes_RelStructure">
+		<xsd:sequence>
+			<xsd:element name="Submode" type="Submode_VersionStructure" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:complexType name="Submode_VersionStructure">
+		<xsd:sequence>
+			<xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:element name="TransportMode" type="AllModesL4Enumeration"/>
+			<xsd:element name="SelfDriveSubmode" type="SelfDriveSubmodeL4Enumeration"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<!-- rispetto alla versione definita nell'EPIP ci sono alcune entry in più -->
+	<xsd:simpleType name="AllModesL4Enumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for r MODES: TPEG pti_table 01.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="all"/>
+			<xsd:enumeration value="anyMode"/>
+			<xsd:enumeration value="unknown"/>
+			<xsd:enumeration value="air"/>
+			<xsd:enumeration value="bus"/>
+			<xsd:enumeration value="trolleyBus"/>
+			<xsd:enumeration value="tram"/>
+			<xsd:enumeration value="coach"/>
+			<xsd:enumeration value="rail"/>
+			<xsd:enumeration value="intercityRail"/>
+			<xsd:enumeration value="urbanRail"/>
+			<xsd:enumeration value="metro"/>
+			<xsd:enumeration value="water"/>
+			<xsd:enumeration value="ferry"/>
+			<xsd:enumeration value="cableway"/>
+			<xsd:enumeration value="funicular"/>
+			<xsd:enumeration value="lift"/>
+			<xsd:enumeration value="snowAndIce"/>
+			<xsd:enumeration value="taxi"/>
+			<xsd:enumeration value="selfDrive">
+				<xsd:annotation>
+					<xsd:documentation>See pti12_x.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="foot"/>
+			<xsd:enumeration value="bicycle"/>
+			<xsd:enumeration value="motorcycle"/>
+			<xsd:enumeration value="scooter"/>
+			<xsd:enumeration value="car"/>
+			<xsd:enumeration value="shuttle"/>
+			<!-- NOT IN tpeg -->
+			<!-- NOT IN tpeg -->
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="SelfDriveSubmodeL4Enumeration">
+		<xsd:annotation>
+			<xsd:documentation>Values for SelfDrive MODEs of TRANSPORT: TPEG pti_table_12.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="unknown"/>
+			<xsd:enumeration value="undefined"/>
+			<xsd:enumeration value="hireScooter">
+				<xsd:annotation>
+					<xsd:documentation>	Rental scooter (Small wheeled  low platform  vehicles, - includes push scooters, electric scooters, skateboards,  Sedgeways, etc). +v1.2.2</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="hireCycle">
+				<xsd:annotation>
+					<xsd:documentation>Rental cycle  (Bicycle, tandem, tricycle, pedal or electric ; use SimpleVehicleType / VehicleCategory  to specify exact model. Includes pedal cycles, electric bikes, hybrids, etc). +v1.2.2</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="hireMotorbike">
+				<xsd:annotation>
+					<xsd:documentation>Rental motorcycle (moped, velo, motorbike, quadbike, etc  ; use SimpleVehicleType / VehicleCategory  to specify exact model.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="hireCar">
+				<xsd:annotation>
+					<xsd:documentation>Rental car - Includes all sizes (Small, mini, medium, large, etc)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="hireVan">
+				<xsd:annotation>
+					<xsd:documentation>Rental van - Includes all categories of small to large minivan, minibus and transporter.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ownScooter">
+				<xsd:annotation>
+					<xsd:documentation>Own scooter (Small wheeled  low platform  vehicles, - includes push scooters, electric scooters, skateboards,  Sedgeways, etc). +v1.2.2</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ownCycle">
+				<xsd:annotation>
+					<xsd:documentation>Own cycle (Bicycle, tandem, tricile, pedal or electric ; use SimpleVehicleType / VehicleCategory to specify exact model. Includes push scooters, electric scooters, skateboards,  Sedgeways, etc). +v1.2.2</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ownMotorbike">
+				<xsd:annotation>
+					<xsd:documentation>Own motorcycle (moped, velo, motorbike, quadbike, etc  ; use SimpleVehicleType / VehicleCategory  to specify exact model.  +v1.2.2</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ownCar">
+				<xsd:annotation>
+					<xsd:documentation>OWn car. Includes all sizes (Small, mini, medium, large, etc) +v1.2.2</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ownVan">
+				<xsd:annotation>
+					<xsd:documentation>Own van - Includes all categories of small to large minivan, minibus and transporter.+v1.2.2</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="allHireVehicles"/>
+			<xsd:enumeration value="allVehicles"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- definizione di modesOfOperation (fine) -->
+	<!-- definizione di mobilityServices (inizio) -->
+	<xsd:complexType name="mobilityServices_RelStructure">
+		<xsd:sequence>
+			<xsd:element name="VehicleSharingService" type="VehicleSharingService_VersionStructure" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:element name="VehicleSharingServiceRef" type="VehicleSharingServiceRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Reference to an VEHICLE SHARING SERVICE. +v1.2.2</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:complexType name="VehicleSharingServiceRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Type for a reference to an VEHICLE SHARING SERVICE.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+	<xsd:complexType name="VehicleSharingService_VersionStructure">
+		<xsd:sequence>
+			<xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:element ref="VehicleSharingRef"/>
+			<xsd:element name="FloatingVehicles" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether vehicles are floating of issued from fixed stations.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="fleets" type="fleetRefs_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>FLEETs used by service</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:complexType name="fleetRefs_RelStructure">
+		<xsd:sequence>
+			<xsd:element ref="FleetRef" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<!-- definizione di mobilityServices (fine) -->
+	<!-- definizione di mobilityServiceConstraintZones (inizio) -->
+	<xsd:complexType name="mobilityServiceConstraintZones_RelStructure">
+		<xsd:sequence>
+			<xsd:element name="MobilityServiceConstraintZone" type="MobilityServiceConstraintZone_VersionStructure" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:complexType name="MobilityServiceConstraintZone_VersionStructure">
+		<xsd:sequence>
+			<xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:element ref="Centroid" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Centre Coordinates of ZONE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="gml:Polygon" minOccurs="0"/>
+			<xsd:element ref="VehicleSharingServiceRef" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:element name="MobilityServiceConstraintZoneRef" type="MobilityServiceConstraintZoneRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Reference to an MOBILITY SERVICE CONSTRAINT ZONE. +v1.2.2</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:complexType name="MobilityServiceConstraintZoneRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Type for a list of MOBILITY SERVICE CONSTRAINT ZONEs.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+	<!-- definizione di mobilityServiceConstraintZones (fine) -->
+	<!-- definizione MobilityServiceFrame (fine) -->
+</xsd:schema>

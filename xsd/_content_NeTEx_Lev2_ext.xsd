@@ -1017,7 +1017,8 @@ POIs will be provided in NeTEx datasets; they will in most cases be defined in e
 			<xsd:element ref="RechargingAvailable" minOccurs="0"/>
 			<!-- aggiunto Secure da ParkingDetailsGroup in ParkingGroup -->
 			<xsd:element name="Secure" type="xsd:boolean" minOccurs="0"/>
-			<xsd:element ref="ParkingPaymentProcess" minOccurs="0"/>
+			<!-- aggiunto ParkingPaymentProcess da ParkingChargeGroup in ParkingGroup -->
+			<xsd:element name="ParkingPaymentProcess" type="ParkingPaymentProcessListOfEnumerations" minOccurs="0"/>
 			<!-- aggiunto ParkingReservation da ParkingChargeGroup in ParkingGroup -->
 			<xsd:element name="ParkingReservation" type="ParkingReservationEnumeration" minOccurs="0"/>
 			<!-- aggiunto parkingProperties da ParkingPassengerGroup in ParkingGroup -->
@@ -1151,6 +1152,30 @@ POIs will be provided in NeTEx datasets; they will in most cases be defined in e
 					<xsd:documentation>DEPRECATED 1.2.2 Use onPavement instead</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="ParkingPaymentProcessListOfEnumerations">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for list of PARKING Payment process types.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:list itemType="ParkingPaymentProcessEnumeration"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="ParkingPaymentProcessEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for PARKING payment process types.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="free"/>
+			<xsd:enumeration value="payAtBay"/>
+			<xsd:enumeration value="payAndDisplay"/>
+			<xsd:enumeration value="payAtExitBoothManualCollection"/>
+			<xsd:enumeration value="payAtMachineOnFootPriorToExit"/>
+			<xsd:enumeration value="payByPrepaidToken"/>
+			<xsd:enumeration value="payByMobileDevice"/>
+			<xsd:enumeration value="payByPlate"/>
+			<xsd:enumeration value="prepayForPermit"/>
+			<xsd:enumeration value="undefined"/>
+			<xsd:enumeration value="other"/>
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:simpleType name="ParkingReservationEnumeration">
