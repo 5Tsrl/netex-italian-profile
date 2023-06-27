@@ -7,3 +7,6 @@
 
 The xsd folder provide the [original Netex EPIP xsd](https://github.com/5Tsrl/netex-italian-profile/blob/main/xsd/NeTEx_publication_EPIP.xsd), available also through DATA4PT website, and the [Netex level 2 extension xsd](https://github.com/5Tsrl/netex-italian-profile/blob/main/xsd/NeTEx_publication_Lev2.xsd) needed for validation and generation of NeTEx Italian Profile xml.
 
+# SIRI
+
+The real-time data are not customized with an Italian Profile, so the standard version is used: the xsd folder is available in [the original repository](https://github.com/SIRI-CEN/SIRI/tree/master/xsd).
