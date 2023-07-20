@@ -793,11 +793,13 @@
 			<xsd:enumeration value="beforeEndOfTravel"/>
 			<xsd:enumeration value="beforeTravelThenAdjustAtEndOfTravel"/>
 			<xsd:enumeration value="onStartThenAdjustAtEndOfTravel"/>
+			<!--
 			<xsd:enumeration value="onStarThenAdjustAtEndOfFareDay">
 				<xsd:annotation>
 					<xsd:documentation>DEPRECATED TYPO</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
+			-->
 			<xsd:enumeration value="onStartThenAdjustAtEndOfFareDay"/>
 			<xsd:enumeration value="onStartThenAdjustAtEndOfChargePeriod"/>
 			<xsd:enumeration value="atEndOfTravel"/>
