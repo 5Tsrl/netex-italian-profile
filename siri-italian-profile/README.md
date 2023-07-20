@@ -1,9 +1,8 @@
 
-# XML examples of NeTEx Italian Profiles
+# XML examples of SIRI Italian Profile
 
-[Netex_ITA_1.10_EPIP](https://github.com/5Tsrl/netex-italian-profile/blob/main/Examples/Netex_ITA_1.10_EPIP.xml) is fully EPIP compliant and [Netex_ITA_1.10_EPIP+Level2](https://github.com/5Tsrl/netex-italian-profile/blob/main/Examples/Netex_ITA_1.10_EPIP%2BLevel2.xml) is an expanded version with entities and structures specific for Italian RAP-NAP dialogue.
+[The Examples directory](https://github.com/5Tsrl/netex-italian-profile/tree/main/siri-italian-profile/Examples) contains all available XML examples of SIRI for the Italian Profile.
 
 # XSD
 
-The xsd folder provide the [original Netex EPIP xsd](https://github.com/5Tsrl/netex-italian-profile/blob/main/xsd/NeTEx_publication_EPIP.xsd), available also through DATA4PT website, and the [Netex level 2 extension xsd](https://github.com/5Tsrl/netex-italian-profile/blob/main/xsd/NeTEx_publication_Lev2.xsd) needed for validation and generation of NeTEx Italian Profile xml.
-
+The real-time data are not customized with an Italian Profile XSD, so the standard version is used: the xsd folder is available in [the original repository](https://github.com/SIRI-CEN/SIRI/tree/master/xsd).
