@@ -22,11 +22,11 @@
 					<Progress>open</Progress>
 					<ValidityPeriod>
 						<StartTime>2023-02-15T10:00:00+01:00</StartTime>
-						<EndTime>2023-02-15T10:00:00+01:00</EndTime>
+						<EndTime>2023-02-16T10:00:00+01:00</EndTime>
 					</ValidityPeriod>
 					<MiscellaneousReason>maintenance</MiscellaneousReason>
 					<ReasonName>maintenance</ReasonName>
-					<Summary>Linea 2014 scolastico Valle San Martino -Cisterna-Alba limitata</Summary>
+					<Summary>Linea 4 limitata</Summary>
 					<Description>Il 15 Febbraio 2023 dalle 10.00 fino al 16 febbraio alle 10:00 la linea 4 sarà soggetta manutenzione</Description>
 					<Affects>
 						<Operators>
@@ -54,17 +54,21 @@
 						</StopPoints>
 						<VehicleJourneys>
 							<AffectedVehicleJourney>
-								<VehicleJourneyRef>IT:ITC1:DatedVehicleJourney:busATS:4-4</VehicleJourneyRef>							
+								<VehicleJourneyRef>IT:ITC1:DatedVehicleJourney:busATS:4-4</VehicleJourneyRef>	
+								<Route>
+									<RouteRef>IT:ITC1:Route:busATS:4</RouteRef>
+								</Route>						
 							</AffectedVehicleJourney>
 							<AffectedVehicleJourney>
-								
 								<FramedVehicleJourneyRef>
 									<DataFrameRef>Feriale</DataFrameRef>
 									<DatedVehicleJourneyRef>IT:ITC1:ServiceJourney:busATS:20230215_4-30</DatedVehicleJourneyRef>
 								</FramedVehicleJourneyRef>
+								<Route>
+									<RouteRef>IT:ITC1:Route:busATS:4</RouteRef>
+								</Route>
 							</AffectedVehicleJourney>
-						</VehicleJourneys>
-						
+						</VehicleJourneys>	
 					</Affects>
 					<Consequences>
 						<Consequence>
@@ -74,8 +78,8 @@
 							</Period>
 							<Severity>normal</Severity>
 							<Boarding>
-								<ArrivalBoardingActivity>alighting</ArrivalBoardingActivity>
-								<DepartureBoardingActivity>boarding</DepartureBoardingActivity>
+								<ArrivalBoardingActivity>noAlighting</ArrivalBoardingActivity>
+								<DepartureBoardingActivity>noBoarding</DepartureBoardingActivity>
 							</Boarding>
 							<Delays>
 								<DelayType>delays</DelayType>
