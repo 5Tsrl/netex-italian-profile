@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Siri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.siri.org.uk/siri ../xsd/siri.xsd" xmlns="http://www.siri.org.uk/siri" version="2.0">
+	<ServiceDelivery>
+		<ResponseTimestamp>2023-02-15T10:26:03</ResponseTimestamp>
+		<ProducerRef>RAP_Piemonte</ProducerRef>
+		<ResponseMessageIdentifier>1</ResponseMessageIdentifier>
+		<EstimatedTimetableDelivery>
+			<ResponseTimestamp>2023-02-15T10:29:59</ResponseTimestamp>
+			<SubscriberRef>NAP</SubscriberRef>
+			<SubscriptionRef>0001</SubscriptionRef>
+			<EstimatedJourneyVersionFrame>
+				<RecordedAtTime>2023-02-15T10:29:59</RecordedAtTime>
+				<!-- Prima fermata registrazione -->
+				<EstimatedVehicleJourney>
+					<LineRef>IT:ITC1:Line:busATS:4</LineRef>
+					<DirectionRef>INBOUND</DirectionRef>
+					<FramedVehicleJourneyRef>
+						<DataFrameRef>Feriale</DataFrameRef>
+						<DatedVehicleJourneyRef>IT:ITC1:ServiceJourney:busATS:20230317_4-30</DatedVehicleJourneyRef>
+					</FramedVehicleJourneyRef>
+					<JourneyPatternRef>IT:ITC1:ServiceJourneyPattern:busATS:4_01A</JourneyPatternRef>
+					<PublishedLineName>4</PublishedLineName>
+					<OperatorRef>IT:ITC1:Operator:busATS:11</OperatorRef>
+					<RecordedCalls>		
+						<RecordedCall>
+							<StopPointRef>IT:ITC1:ScheduledStopPoint:busATS:059642</StopPointRef>
+							<VisitNumber>1</VisitNumber>
+							<Order>1</Order>
+							<StopPointName>Drosso Cap.</StopPointName>
+							<AimedArrivalTime>2023-02-15T10:38:58.000Z</AimedArrivalTime>
+							<ActualArrivalTime>2023-02-15T10:32:47.000Z</ActualArrivalTime>
+							<AimedDepartureTime>2023-02-15T10:38:58.000Z</AimedDepartureTime>
+							<ActualDepartureTime>2023-02-15T10:32:47.000Z</ActualDepartureTime>
+							<RecordedDepartureOccupancy>
+								<OccupancyPercentage>50</OccupancyPercentage>
+								<AlightingCount>5</AlightingCount>
+								<BoardingCount>3</BoardingCount>
+								<OnboardCount>20</OnboardCount>
+								<PushchairsOnboardCount>1</PushchairsOnboardCount>
+								<WheelchairsOnboardCount>2</WheelchairsOnboardCount>
+								<TotalNumberOfReservedSeats>1</TotalNumberOfReservedSeats>
+							</RecordedDepartureOccupancy>
+						</RecordedCall>
+					</RecordedCalls>
+				</EstimatedVehicleJourney>
+				<!-- Seconda fermata registrazione -->
+				<EstimatedVehicleJourney>
+					<LineRef>IT:ITC1:Line:busATS:4</LineRef>
+					<DirectionRef>INBOUND</DirectionRef>
+					<FramedVehicleJourneyRef>
+						<DataFrameRef>Feriale</DataFrameRef>
+						<DatedVehicleJourneyRef>IT:ITC1:ServiceJourney:busATS:20230317_4-4</DatedVehicleJourneyRef>
+					</FramedVehicleJourneyRef>
+					<JourneyPatternRef>IT:ITC1:ServiceJourneyPattern:busATS:4_02A</JourneyPatternRef>
+					<PublishedLineName>4</PublishedLineName>
+					<OperatorRef>IT:ITC1:Operator:busATS:11</OperatorRef>
+					<RecordedCalls>		
+						<RecordedCall>
+							<StopPointRef>IT:ITC1:ScheduledStopPoint:busATS:059643</StopPointRef>
+							<VisitNumber>1</VisitNumber>
+							<Order>2</Order>
+							<StopPointName>Castello di Mirafiori</StopPointName>
+							<AimedArrivalTime>2023-02-15T10:40:58.000Z</AimedArrivalTime>
+							<ActualArrivalTime>2023-02-15T10:41:47.000Z</ActualArrivalTime>
+							<AimedDepartureTime>2023-02-15T10:40:58.000Z</AimedDepartureTime>
+							<ActualDepartureTime>2023-02-15T10:41:47.000Z</ActualDepartureTime>
+							<RecordedDepartureOccupancy>
+								<OccupancyPercentage>70</OccupancyPercentage>
+								<AlightingCount>7</AlightingCount>
+								<BoardingCount>4</BoardingCount>
+								<OnboardCount>40</OnboardCount>
+								<PushchairsOnboardCount>0</PushchairsOnboardCount>
+								<WheelchairsOnboardCount>2</WheelchairsOnboardCount>
+								<TotalNumberOfReservedSeats>0</TotalNumberOfReservedSeats>
+							</RecordedDepartureOccupancy>
+						</RecordedCall>
+					</RecordedCalls>
+				</EstimatedVehicleJourney>
+				
+			</EstimatedJourneyVersionFrame>
+		</EstimatedTimetableDelivery>
+	</ServiceDelivery>
+</Siri>
