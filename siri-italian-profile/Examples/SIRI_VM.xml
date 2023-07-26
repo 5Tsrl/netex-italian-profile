@@ -18,7 +18,7 @@
 					<LineRef>IT:ITC1:Line:busATS:4</LineRef>
 					<DirectionRef>INBOUND</DirectionRef>
 					<FramedVehicleJourneyRef>
-						<DataFrameRef>Feriale</DataFrameRef>
+						<DataFrameRef>2023-03-17</DataFrameRef>
 						<DatedVehicleJourneyRef>IT:ITC1:ServiceJourney:busATS:20230317_4-30</DatedVehicleJourneyRef>
 					</FramedVehicleJourneyRef>
 					<JourneyPatternRef>IT:ITC1:ServiceJourneyPattern:busATS:4_01A</JourneyPatternRef>

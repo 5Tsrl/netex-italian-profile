@@ -16,13 +16,13 @@
 					<LineRef>IT:ITC1:Line:busATS:4</LineRef>
 					<DirectionRef>INBOUND</DirectionRef>
 					<FramedVehicleJourneyRef>
-						<DataFrameRef>Feriale</DataFrameRef>
-						<DatedVehicleJourneyRef>IT:ITC1:ServiceJourney:busATS:20230317_4-30</DatedVehicleJourneyRef>
+						<DataFrameRef>2023-02-15</DataFrameRef>
+						<DatedVehicleJourneyRef>IT:ITC1:DatedVehicleJourney:busATS:20230317_4-30</DatedVehicleJourneyRef>
 					</FramedVehicleJourneyRef>
 					<JourneyPatternRef>IT:ITC1:ServiceJourneyPattern:busATS:4_01A</JourneyPatternRef>
 					<PublishedLineName>4</PublishedLineName>
 					<OperatorRef>IT:ITC1:Operator:busATS:11</OperatorRef>
-					<VehicleJourneyRef>IT:ITC1:DatedVehicleJourney:busATS:4-3</VehicleJourneyRef>
+					<VehicleJourneyRef>IT:ITC1:ServiceJourney:busATS:4-3</VehicleJourneyRef>
 					<VehicleRef>IT:ITC1:Vehicle:busATS:ZZ998ZZ</VehicleRef>
 					<RecordedCalls>
 						<RecordedCall>
@@ -63,13 +63,13 @@
 					<LineRef>IT:ITC1:Line:busATS:4</LineRef>
 					<DirectionRef>INBOUND</DirectionRef>
 					<FramedVehicleJourneyRef>
-						<DataFrameRef>Feriale</DataFrameRef>
-						<DatedVehicleJourneyRef>IT:ITC1:ServiceJourney:busATS:20230317_4-4</DatedVehicleJourneyRef>
+						<DataFrameRef>2023-02-15</DataFrameRef>
+						<DatedVehicleJourneyRef>IT:ITC1:DatedVehicleJourney:busATS:20230317_4-4</DatedVehicleJourneyRef>
 					</FramedVehicleJourneyRef>
 					<JourneyPatternRef>IT:ITC1:ServiceJourneyPattern:busATS:4_02A</JourneyPatternRef>
 					<PublishedLineName>4</PublishedLineName>
 					<OperatorRef>IT:ITC1:Operator:busATS:11</OperatorRef>
-					<VehicleJourneyRef>IT:ITC1:DatedVehicleJourney:busATS:4-4</VehicleJourneyRef>
+					<VehicleJourneyRef>IT:ITC1:ServiceJourney:busATS:4-4</VehicleJourneyRef>
 					<VehicleRef>IT:ITC1:Vehicle:busATS:ZZ999ZZ</VehicleRef>
 					<RecordedCalls>
 						<RecordedCall>
