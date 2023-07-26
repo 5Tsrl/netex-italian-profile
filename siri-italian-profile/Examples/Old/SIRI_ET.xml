@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- edited with XMLSpy v2017 rel. 3 sp1 (x64) (http://www.altova.com) by Rossella Panero (5T S.r.l.) -->
 <Siri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.siri.org.uk/siri ../xsd/siri.xsd" xmlns="http://www.siri.org.uk/siri" version="2.0">
 	<ServiceDelivery>
 		<ResponseTimestamp>2023-02-15T10:26:03+01:00</ResponseTimestamp>
@@ -24,7 +23,7 @@
 					<OperatorRef>IT:ITC1:Operator:busATS:11</OperatorRef>
 					<VehicleJourneyRef>IT:ITC1:DatedVehicleJourney:busATS:4-3</VehicleJourneyRef>
 					<VehicleRef>IT:ITC1:Vehicle:busATS:ZZ998ZZ</VehicleRef>
-					<RecordedCalls>
+					<RecordedCalls>		
 						<RecordedCall>
 							<StopPointRef>IT:ITC1:ScheduledStopPoint:busATS:059642</StopPointRef>
 							<VisitNumber>1</VisitNumber>
@@ -45,18 +44,6 @@
 							</RecordedDepartureOccupancy>
 						</RecordedCall>
 					</RecordedCalls>
-					<EstimatedCalls>
-						<EstimatedCall>
-							<StopPointRef>IT:ITC1:ScheduledStopPoint:busATS:059643</StopPointRef>
-							<VisitNumber>1</VisitNumber>
-							<Order>3</Order>
-							<StopPointName>Plava</StopPointName>
-							<AimedArrivalTime>2023-02-15T10:42:47+01:00</AimedArrivalTime>
-							<ExpectedArrivalTime>2023-02-15T10:40:47+01:00</ExpectedArrivalTime>
-							<AimedDepartureTime>2023-02-15T10:43:47+01:00</AimedDepartureTime>
-							<ExpectedDepartureTime>2023-02-15T10:41:47+01:00</ExpectedDepartureTime>
-						</EstimatedCall>
-					</EstimatedCalls>
 				</EstimatedVehicleJourney>
 				<!-- Seconda fermata registrazione -->
 				<EstimatedVehicleJourney>
@@ -71,7 +58,7 @@
 					<OperatorRef>IT:ITC1:Operator:busATS:11</OperatorRef>
 					<VehicleJourneyRef>IT:ITC1:DatedVehicleJourney:busATS:4-4</VehicleJourneyRef>
 					<VehicleRef>IT:ITC1:Vehicle:busATS:ZZ999ZZ</VehicleRef>
-					<RecordedCalls>
+					<RecordedCalls>		
 						<RecordedCall>
 							<StopPointRef>IT:ITC1:ScheduledStopPoint:busATS:059643</StopPointRef>
 							<VisitNumber>1</VisitNumber>
@@ -92,19 +79,8 @@
 							</RecordedDepartureOccupancy>
 						</RecordedCall>
 					</RecordedCalls>
-					<EstimatedCalls>
-						<EstimatedCall>
-							<StopPointRef>IT:ITC1:ScheduledStopPoint:busATS:059644</StopPointRef>
-							<VisitNumber>1</VisitNumber>
-							<Order>3</Order>
-							<StopPointName>Plava</StopPointName>
-							<AimedArrivalTime>2023-02-15T10:42:47+01:00</AimedArrivalTime>
-							<ExpectedArrivalTime>2023-02-15T10:40:47+01:00</ExpectedArrivalTime>
-							<AimedDepartureTime>2023-02-15T10:43:47+01:00</AimedDepartureTime>
-							<ExpectedDepartureTime>2023-02-15T10:41:47+01:00</ExpectedDepartureTime>
-						</EstimatedCall>
-					</EstimatedCalls>
 				</EstimatedVehicleJourney>
+				
 			</EstimatedJourneyVersionFrame>
 		</EstimatedTimetableDelivery>
 	</ServiceDelivery>

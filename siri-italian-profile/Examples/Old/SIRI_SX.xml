@@ -54,12 +54,15 @@
 						</StopPoints>
 						<VehicleJourneys>
 							<AffectedVehicleJourney>
-								<VehicleJourneyRef>IT:ITC1:ServiceJourney:busATS:4-4</VehicleJourneyRef>						
+								<VehicleJourneyRef>IT:ITC1:DatedVehicleJourney:busATS:4-4</VehicleJourneyRef>	
+								<Route>
+									<RouteRef>IT:ITC1:Route:busATS:4</RouteRef>
+								</Route>						
 							</AffectedVehicleJourney>
 							<AffectedVehicleJourney>
 								<FramedVehicleJourneyRef>
 									<DataFrameRef>Feriale</DataFrameRef>
-									<DatedVehicleJourneyRef>IT:ITC1:DatedVehicleJourney:busATS:20230215_4-30</DatedVehicleJourneyRef>
+									<DatedVehicleJourneyRef>IT:ITC1:ServiceJourney:busATS:20230215_4-30</DatedVehicleJourneyRef>
 								</FramedVehicleJourneyRef>
 								<Route>
 									<RouteRef>IT:ITC1:Route:busATS:4</RouteRef>
