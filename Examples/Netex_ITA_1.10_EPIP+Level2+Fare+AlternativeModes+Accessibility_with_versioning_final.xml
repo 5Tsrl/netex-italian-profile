@@ -1334,6 +1334,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">7.68542 45.07945</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:002A" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1350,6 +1363,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">7.68542 45.07945</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:002B" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1383,6 +1409,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">7.69561 45.09498</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:003" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1432,6 +1471,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">7.70758 45.11316</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:004" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1448,6 +1500,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">7.70734 45.11328</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:004B" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1481,6 +1546,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">7.75681 45.14581</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:005A" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1497,6 +1575,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">7.75650 45.14595</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:005B" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1530,6 +1621,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">7.82797 45.18118</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:006A" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1546,6 +1650,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">7.82772 45.18134</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:006B" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1579,6 +1696,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">7.88887 45.20856</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:007A" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1595,6 +1725,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">7.88942 45.20991</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:007B" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1628,6 +1771,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">7.96274 45.23842</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:008A" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1644,6 +1800,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">7.96231 45.23842</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:008B" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1677,6 +1846,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.07241 45.32120</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:009A" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1693,6 +1875,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.07460 45.32287</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:009B" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1726,6 +1921,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.13826 45.38158</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:010A" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1742,6 +1950,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.13802 45.38171</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:010B" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1775,6 +1996,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.22829 45.43718</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:011A" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1791,6 +2025,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.22812 45.43735</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:011B" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1824,6 +2071,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.22829 45.43718</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:012A" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1840,6 +2100,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.29751 45.44898</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:012B" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1873,6 +2146,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.38062 45.46133</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:013A" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1889,6 +2175,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.38054 45.46154</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:013B" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1922,6 +2221,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.47564 45.46723</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:014A" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1938,6 +2250,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.47561 45.46742</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:014B" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1971,6 +2296,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.56361 45.47372</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:015A" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1987,6 +2325,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.56494 45.47410</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:015B" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2020,6 +2371,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.62223 45.46989</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:016A" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2036,6 +2400,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.62250 45.47008</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:016B" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2069,6 +2446,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.70612 45.46786</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:017A" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2085,6 +2475,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.70515 45.46807</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:017B" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2118,6 +2521,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.86283 45.48901</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:018A" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2134,6 +2550,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.86277 45.48925</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:018B" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2167,6 +2596,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.93171 45.49991</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:019A" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2183,6 +2625,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.93293 45.50023</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:019B" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2216,6 +2671,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">9.03011 45.50884</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:020A" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2232,6 +2700,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">9.03003 45.50901</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:020B" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2265,6 +2746,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">9.06222 45.51235</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:021A" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2281,6 +2775,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">9.06190 45.51262</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:021B" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2314,6 +2821,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">9.13015 45.50073</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:022A" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2330,6 +2850,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">9.13067 45.50063</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:022B" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2393,6 +2926,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">7.657829 45.070304</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:022B" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<LevelRef ref="IT:ITC1:Level:busATS:00023_Lvl_G0" version="1"/>
 									<Label>TO-MI</Label>
 									<destinations>
@@ -2437,6 +2983,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">7.657829 45.070304</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:022B" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<LevelRef ref="IT:ITC1:Level:busATS:00023_Lvl_G0" version="1"/>
 									<Label>TO-MI</Label>
 									<destinations>
@@ -2479,6 +3038,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">7.657829 45.070304</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:000M1" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<LevelRef ref="IT:ITC1:Level:busATS:001_Lvl_G0" version="1"/>
 									<Label>LAMPUGNANO</Label>
 									<destinations>
@@ -2496,6 +3068,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">7.657829 45.070304</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:000M1b" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<LevelRef ref="IT:ITC1:Level:busATS:001_Lvl_G0" version="1"/>
 									<Label>LAMPUGNANO</Label>
 									<destinations>
@@ -2517,14 +3102,6 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<Latitude>45.486307</Latitude>
 								</Location>
 							</Centroid>
-							<AccessibilityAssessment id="IT:ITC1:AccessibilityAssessment:0151469005" version="1">
-								<MobilityImpairedAccess>true</MobilityImpairedAccess>
-								<limitations>
-									<AccessibilityLimitation>
-										<WheelchairAccess>true</WheelchairAccess>
-									</AccessibilityLimitation>
-								</limitations>
-							</AccessibilityAssessment>
 							<TopographicPlaceView>
 								<TopographicPlaceRef ref="IT:ITC1:TopographicPlace:trenoFS:milanocentrale" version="1"/>
 							</TopographicPlaceView>
@@ -2569,14 +3146,6 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<Latitude>45.521097</Latitude>
 								</Location>
 							</Centroid>
-							<AccessibilityAssessment id="IT:ITC1:AccessibilityAssessment:0151829002" version="1">
-								<MobilityImpairedAccess>true</MobilityImpairedAccess>
-								<limitations>
-									<AccessibilityLimitation>
-										<WheelchairAccess>true</WheelchairAccess>
-									</AccessibilityLimitation>
-								</limitations>
-							</AccessibilityAssessment>
 							<TransportMode>rail</TransportMode>
 							<StopPlaceType>railStation</StopPlaceType>
 							<quays>
@@ -2617,14 +3186,6 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<Latitude>45.468195</Latitude>
 								</Location>
 							</Centroid>
-							<AccessibilityAssessment id="IT:ITC1:AccessibilityAssessment:0151309001" version="1">
-								<MobilityImpairedAccess>true</MobilityImpairedAccess>
-								<limitations>
-									<AccessibilityLimitation>
-										<WheelchairAccess>true</WheelchairAccess>
-									</AccessibilityLimitation>
-								</limitations>
-							</AccessibilityAssessment>
 							<TransportMode>rail</TransportMode>
 							<StopPlaceType>railStation</StopPlaceType>
 							<quays>
@@ -2665,14 +3226,6 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<Latitude>45.451179</Latitude>
 								</Location>
 							</Centroid>
-							<AccessibilityAssessment id="IT:ITC1:AccessibilityAssessment:0031069001" version="1">
-								<MobilityImpairedAccess>true</MobilityImpairedAccess>
-								<limitations>
-									<AccessibilityLimitation>
-										<WheelchairAccess>true</WheelchairAccess>
-									</AccessibilityLimitation>
-								</limitations>
-							</AccessibilityAssessment>
 							<TransportMode>rail</TransportMode>
 							<StopPlaceType>railStation</StopPlaceType>
 							<quays>
@@ -2713,14 +3266,6 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<Latitude>45.329838</Latitude>
 								</Location>
 							</Centroid>
-							<AccessibilityAssessment id="IT:ITC1:AccessibilityAssessment:0021589002" version="1">
-								<MobilityImpairedAccess>true</MobilityImpairedAccess>
-								<limitations>
-									<AccessibilityLimitation>
-										<WheelchairAccess>true</WheelchairAccess>
-									</AccessibilityLimitation>
-								</limitations>
-							</AccessibilityAssessment>
 							<TransportMode>rail</TransportMode>
 							<StopPlaceType>railStation</StopPlaceType>
 							<quays>
@@ -2761,14 +3306,6 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<Latitude>45.363718</Latitude>
 								</Location>
 							</Centroid>
-							<AccessibilityAssessment id="IT:ITC1:AccessibilityAssessment:0021339001" version="1">
-								<MobilityImpairedAccess>true</MobilityImpairedAccess>
-								<limitations>
-									<AccessibilityLimitation>
-										<WheelchairAccess>true</WheelchairAccess>
-									</AccessibilityLimitation>
-								</limitations>
-							</AccessibilityAssessment>
 							<TransportMode>rail</TransportMode>
 							<StopPlaceType>railStation</StopPlaceType>
 							<quays>
@@ -2809,14 +3346,6 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<Latitude>45.19355</Latitude>
 								</Location>
 							</Centroid>
-							<AccessibilityAssessment id="IT:ITC1:AccessibilityAssessment:0010829003" version="1">
-								<MobilityImpairedAccess>true</MobilityImpairedAccess>
-								<limitations>
-									<AccessibilityLimitation>
-										<WheelchairAccess>true</WheelchairAccess>
-									</AccessibilityLimitation>
-								</limitations>
-							</AccessibilityAssessment>
 							<TransportMode>rail</TransportMode>
 							<StopPlaceType>railStation</StopPlaceType>
 							<quays>
@@ -2857,14 +3386,6 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<Latitude>45.071747</Latitude>
 								</Location>
 							</Centroid>
-							<AccessibilityAssessment id="IT:ITC1:AccessibilityAssessment:0012729029" version="1">
-								<MobilityImpairedAccess>true</MobilityImpairedAccess>
-								<limitations>
-									<AccessibilityLimitation>
-										<WheelchairAccess>true</WheelchairAccess>
-									</AccessibilityLimitation>
-								</limitations>
-							</AccessibilityAssessment>
 							<TransportMode>rail</TransportMode>
 							<StopPlaceType>railStation</StopPlaceType>
 							<quays>
@@ -2905,14 +3426,6 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<Latitude>45.061113</Latitude>
 								</Location>
 							</Centroid>
-							<AccessibilityAssessment id="IT:ITC1:AccessibilityAssessment:0012729010" version="1">
-								<MobilityImpairedAccess>true</MobilityImpairedAccess>
-								<limitations>
-									<AccessibilityLimitation>
-										<WheelchairAccess>true</WheelchairAccess>
-									</AccessibilityLimitation>
-								</limitations>
-							</AccessibilityAssessment>
 							<TransportMode>rail</TransportMode>
 							<StopPlaceType>railStation</StopPlaceType>
 							<quays>
@@ -2953,14 +3466,6 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<Latitude>45.483802</Latitude>
 								</Location>
 							</Centroid>
-							<AccessibilityAssessment id="IT:ITC1:AccessibilityAssessment:0151469002" version="1">
-								<MobilityImpairedAccess>true</MobilityImpairedAccess>
-								<limitations>
-									<AccessibilityLimitation>
-										<WheelchairAccess>true</WheelchairAccess>
-									</AccessibilityLimitation>
-								</limitations>
-							</AccessibilityAssessment>
 							<TransportMode>rail</TransportMode>
 							<StopPlaceType>railStation</StopPlaceType>
 							<quays>
@@ -3001,14 +3506,6 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<Latitude>45.486121</Latitude>
 								</Location>
 							</Centroid>
-							<AccessibilityAssessment id="IT:ITC1:AccessibilityAssessment:0152000002" version="1">
-								<MobilityImpairedAccess>true</MobilityImpairedAccess>
-								<limitations>
-									<AccessibilityLimitation>
-										<WheelchairAccess>true</WheelchairAccess>
-									</AccessibilityLimitation>
-								</limitations>
-							</AccessibilityAssessment>
 							<TransportMode>rail</TransportMode>
 							<StopPlaceType>railStation</StopPlaceType>
 							<quays>
@@ -3049,14 +3546,6 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<Latitude>45.515371</Latitude>
 								</Location>
 							</Centroid>
-							<AccessibilityAssessment id="IT:ITC1:AccessibilityAssessment:0152000008" version="1">
-								<MobilityImpairedAccess>true</MobilityImpairedAccess>
-								<limitations>
-									<AccessibilityLimitation>
-										<WheelchairAccess>true</WheelchairAccess>
-									</AccessibilityLimitation>
-								</limitations>
-							</AccessibilityAssessment>
 							<TransportMode>rail</TransportMode>
 							<StopPlaceType>railStation</StopPlaceType>
 							<quays>
@@ -3097,14 +3586,6 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<Latitude>45.523716</Latitude>
 								</Location>
 							</Centroid>
-							<AccessibilityAssessment id="IT:ITC1:AccessibilityAssessment:0152000011" version="1">
-								<MobilityImpairedAccess>true</MobilityImpairedAccess>
-								<limitations>
-									<AccessibilityLimitation>
-										<WheelchairAccess>true</WheelchairAccess>
-									</AccessibilityLimitation>
-								</limitations>
-							</AccessibilityAssessment>
 							<TransportMode>rail</TransportMode>
 							<StopPlaceType>railStation</StopPlaceType>
 							<quays>
@@ -3145,14 +3626,6 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<Latitude>45.532835</Latitude>
 								</Location>
 							</Centroid>
-							<AccessibilityAssessment id="IT:ITC1:AccessibilityAssessment:0152000012" version="1">
-								<MobilityImpairedAccess>true</MobilityImpairedAccess>
-								<limitations>
-									<AccessibilityLimitation>
-										<WheelchairAccess>true</WheelchairAccess>
-									</AccessibilityLimitation>
-								</limitations>
-							</AccessibilityAssessment>
 							<TransportMode>rail</TransportMode>
 							<StopPlaceType>railStation</StopPlaceType>
 							<quays>
@@ -3193,14 +3666,6 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<Latitude>45.552431</Latitude>
 								</Location>
 							</Centroid>
-							<AccessibilityAssessment id="IT:ITC1:AccessibilityAssessment:0152000014" version="1">
-								<MobilityImpairedAccess>true</MobilityImpairedAccess>
-								<limitations>
-									<AccessibilityLimitation>
-										<WheelchairAccess>true</WheelchairAccess>
-									</AccessibilityLimitation>
-								</limitations>
-							</AccessibilityAssessment>
 							<TransportMode>rail</TransportMode>
 							<StopPlaceType>railStation</StopPlaceType>
 							<quays>
@@ -3241,14 +3706,6 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<Latitude>45.532031</Latitude>
 								</Location>
 							</Centroid>
-							<AccessibilityAssessment id="IT:ITC1:AccessibilityAssessment:0152000016" version="1">
-								<MobilityImpairedAccess>true</MobilityImpairedAccess>
-								<limitations>
-									<AccessibilityLimitation>
-										<WheelchairAccess>true</WheelchairAccess>
-									</AccessibilityLimitation>
-								</limitations>
-							</AccessibilityAssessment>
 							<TransportMode>rail</TransportMode>
 							<StopPlaceType>railStation</StopPlaceType>
 							<quays>
@@ -3289,14 +3746,6 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<Latitude>45.462767</Latitude>
 								</Location>
 							</Centroid>
-							<AccessibilityAssessment id="IT:ITC1:AccessibilityAssessment:0152000019" version="1">
-								<MobilityImpairedAccess>true</MobilityImpairedAccess>
-								<limitations>
-									<AccessibilityLimitation>
-										<WheelchairAccess>true</WheelchairAccess>
-									</AccessibilityLimitation>
-								</limitations>
-							</AccessibilityAssessment>
 							<TransportMode>rail</TransportMode>
 							<StopPlaceType>railStation</StopPlaceType>
 							<quays>
@@ -3337,14 +3786,6 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<Latitude>45.438653</Latitude>
 								</Location>
 							</Centroid>
-							<AccessibilityAssessment id="IT:ITC1:AccessibilityAssessment:0152000020" version="1">
-								<MobilityImpairedAccess>true</MobilityImpairedAccess>
-								<limitations>
-									<AccessibilityLimitation>
-										<WheelchairAccess>true</WheelchairAccess>
-									</AccessibilityLimitation>
-								</limitations>
-							</AccessibilityAssessment>
 							<TransportMode>rail</TransportMode>
 							<StopPlaceType>railStation</StopPlaceType>
 							<quays>
@@ -3385,14 +3826,6 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<Latitude>45.429021</Latitude>
 								</Location>
 							</Centroid>
-							<AccessibilityAssessment id="IT:ITC1:AccessibilityAssessment:0152000022" version="1">
-								<MobilityImpairedAccess>true</MobilityImpairedAccess>
-								<limitations>
-									<AccessibilityLimitation>
-										<WheelchairAccess>true</WheelchairAccess>
-									</AccessibilityLimitation>
-								</limitations>
-							</AccessibilityAssessment>
 							<TransportMode>rail</TransportMode>
 							<StopPlaceType>railStation</StopPlaceType>
 							<quays>
@@ -10836,6 +11269,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 							<Name>LN_amsterdam-cz_prague</Name>
 							<ShortName>Line 24</ShortName>
 							<TransportMode>rail</TransportMode>
+							<AccessibilityAssessment id="IT:ITC1:LineAccessibilityAssignment:trenoFS:tovr" version="1">
+								<MobilityImpairedAccess>true</MobilityImpairedAccess>
+								<limitations>
+									<AccessibilityLimitation>
+										<WheelchairAccess>true</WheelchairAccess>
+										<StepFreeAccess>partial</StepFreeAccess>
+										<EscalatorFreeAccess>false</EscalatorFreeAccess>
+										<LiftFreeAccess>true</LiftFreeAccess>
+										<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+										<VisualSignsAvailable>false</VisualSignsAvailable>
+									</AccessibilityLimitation>
+								</limitations>
+							</AccessibilityAssessment>
 						</Line>
 						<!--- =======Lines MOVALIA======== -->
 						<Line version="1" id="IT:ITC1:Line:busATV:484">
@@ -10848,6 +11294,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 							<PrivateCode>484</PrivateCode>
 							<OperatorRef ref="IT:ITC1:Operator:busATV:ATV" version="1"/>
 							<Monitored>true</Monitored>
+							<AccessibilityAssessment id="IT:ITC1:LineAccessibilityAssignment:busATV:484" version="1">
+								<MobilityImpairedAccess>true</MobilityImpairedAccess>
+								<limitations>
+									<AccessibilityLimitation>
+										<WheelchairAccess>true</WheelchairAccess>
+										<StepFreeAccess>partial</StepFreeAccess>
+										<EscalatorFreeAccess>false</EscalatorFreeAccess>
+										<LiftFreeAccess>true</LiftFreeAccess>
+										<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+										<VisualSignsAvailable>false</VisualSignsAvailable>
+									</AccessibilityLimitation>
+								</limitations>
+							</AccessibilityAssessment>
 						</Line>
 						<Line version="1" id="IT:ITC1:Line:busATV:164">
 							<Name>VERONA - PESCHIERA - GARDA</Name>
@@ -10859,6 +11318,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 							<PrivateCode>164</PrivateCode>
 							<OperatorRef ref="IT:ITC1:Operator:busATV:ATV" version="1"/>
 							<Monitored>true</Monitored>
+							<AccessibilityAssessment id="IT:ITC1:LineAccessibilityAssignment:busATV:164" version="1">
+								<MobilityImpairedAccess>true</MobilityImpairedAccess>
+								<limitations>
+									<AccessibilityLimitation>
+										<WheelchairAccess>true</WheelchairAccess>
+										<StepFreeAccess>partial</StepFreeAccess>
+										<EscalatorFreeAccess>false</EscalatorFreeAccess>
+										<LiftFreeAccess>true</LiftFreeAccess>
+										<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+										<VisualSignsAvailable>false</VisualSignsAvailable>
+									</AccessibilityLimitation>
+								</limitations>
+							</AccessibilityAssessment>
 						</Line>
 						<!--- =======Lines PluService======== -->
 						<Line id="IT:ITC1:Line:metroATMMILANO:1" version="1">
@@ -10874,6 +11346,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 							<PrivateCode>1</PrivateCode>
 							<OperatorRef ref="IT:ITC1:Operator:metroATMMILANO:ATMMILANO" version="1">ATMMilano</OperatorRef>
 							<RepresentedByGroupRef ref="IT:ITC1:GroupOfLines:metroATMMILANO:EXTRAURBANO" version="1">Extraurbano</RepresentedByGroupRef>
+							<AccessibilityAssessment id="IT:ITC1:LineAccessibilityAssignment:metroATMMILANO:1" version="1">
+								<MobilityImpairedAccess>true</MobilityImpairedAccess>
+								<limitations>
+									<AccessibilityLimitation>
+										<WheelchairAccess>true</WheelchairAccess>
+										<StepFreeAccess>partial</StepFreeAccess>
+										<EscalatorFreeAccess>false</EscalatorFreeAccess>
+										<LiftFreeAccess>true</LiftFreeAccess>
+										<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+										<VisualSignsAvailable>false</VisualSignsAvailable>
+									</AccessibilityLimitation>
+								</limitations>
+							</AccessibilityAssessment>
 						</Line>
 						<Line id="IT:ITC1:Line:metroATMMILANO:2" version="1">
 							<ValidBetween>
@@ -10888,6 +11373,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 							<PrivateCode>2</PrivateCode>
 							<OperatorRef ref="IT:ITC1:Operator:metroATMMILANO:ATMMILANO" version="1">ATMMilano</OperatorRef>
 							<RepresentedByGroupRef ref="IT:ITC1:GroupOfLines:metroATMMILANO:EXTRAURBANO" version="1">Extraurbano</RepresentedByGroupRef>
+							<AccessibilityAssessment id="IT:ITC1:LineAccessibilityAssignment:metroATMMILANO:1" version="1">
+								<MobilityImpairedAccess>true</MobilityImpairedAccess>
+								<limitations>
+									<AccessibilityLimitation>
+										<WheelchairAccess>true</WheelchairAccess>
+										<StepFreeAccess>partial</StepFreeAccess>
+										<EscalatorFreeAccess>false</EscalatorFreeAccess>
+										<LiftFreeAccess>true</LiftFreeAccess>
+										<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+										<VisualSignsAvailable>false</VisualSignsAvailable>
+									</AccessibilityLimitation>
+								</limitations>
+							</AccessibilityAssessment>
 						</Line>
 					</lines>
 					<!--- =======Group of Lines======== -->
@@ -20736,6 +21234,18 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 							<Distance>60000</Distance>
 							<PrivateCode>01_01R</PrivateCode>
 							<TransportMode>bus</TransportMode>
+							<AccessibilityAssessment id="IT:ITC1:ServiceJourneyAccessibilityAssignment:busATS:001_01_01R" version="1">
+								<MobilityImpairedAccess>true</MobilityImpairedAccess>
+								<limitations>
+									<AccessibilityLimitation>
+										<WheelchairAccess>true</WheelchairAccess>
+										<StepFreeAccess>partial</StepFreeAccess>
+										<LiftFreeAccess>true</LiftFreeAccess>
+										<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+										<VisualSignsAvailable>false</VisualSignsAvailable>
+									</AccessibilityLimitation>
+								</limitations>
+							</AccessibilityAssessment>
 							<journeyAccountings>
 								<JourneyAccounting id="IT:ITC1:JourneyAccounting:busATS:001_01_01R_1B" version="1">
 									<Name>Contratto Lombardia</Name>
@@ -20881,6 +21391,18 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 							<Distance>125</Distance>
 							<PrivateCode>456</PrivateCode>
 							<TransportMode>rail</TransportMode>
+							<AccessibilityAssessment id="IT:ITC1:ServiceJourneyAccessibilityAssignment:trenoFS:1" version="1">
+								<MobilityImpairedAccess>true</MobilityImpairedAccess>
+								<limitations>
+									<AccessibilityLimitation>
+										<WheelchairAccess>true</WheelchairAccess>
+										<StepFreeAccess>partial</StepFreeAccess>
+										<LiftFreeAccess>true</LiftFreeAccess>
+										<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+										<VisualSignsAvailable>false</VisualSignsAvailable>
+									</AccessibilityLimitation>
+								</limitations>
+							</AccessibilityAssessment>
 							<journeyAccountings>
 								<JourneyAccountingRef ref="IT:ITC1:JourneyAccounting:trenoFS:1_1" version="1"/>
 								<JourneyAccountingRef ref="IT:ITC1:JourneyAccounting:trenoFS:1_2" version="1"/>
@@ -20962,6 +21484,18 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 						</ServiceJourney>
 						<ServiceJourney version="1" id="IT:ITC1:ServiceJourney:trenoFS:2">
 							<Description>Milano-Verona</Description>
+							<AccessibilityAssessment id="IT:ITC1:ServiceJourneyAccessibilityAssignment:trenoFS:2" version="1">
+								<MobilityImpairedAccess>true</MobilityImpairedAccess>
+								<limitations>
+									<AccessibilityLimitation>
+										<WheelchairAccess>true</WheelchairAccess>
+										<StepFreeAccess>partial</StepFreeAccess>
+										<LiftFreeAccess>true</LiftFreeAccess>
+										<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+										<VisualSignsAvailable>false</VisualSignsAvailable>
+									</AccessibilityLimitation>
+								</limitations>
+							</AccessibilityAssessment>
 							<DepartureTime>09:00:00Z</DepartureTime>
 							<dayTypes>
 								<DayTypeRef ref="IT:ITC1:DayType:trenoFS:LV" version="1"/>
@@ -21062,6 +21596,18 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 							<Description>Corsa 458_1598738 VERONA STAZIONE FS - B3 - GARDA</Description>
 							<PrivateCode>458_1598738</PrivateCode>
 							<TransportMode>bus</TransportMode>
+							<AccessibilityAssessment id="IT:ITC1:ServiceJourneyAccessibilityAssignment:busATV:458_1598738_A" version="1">
+								<MobilityImpairedAccess>true</MobilityImpairedAccess>
+								<limitations>
+									<AccessibilityLimitation>
+										<WheelchairAccess>true</WheelchairAccess>
+										<StepFreeAccess>partial</StepFreeAccess>
+										<LiftFreeAccess>true</LiftFreeAccess>
+										<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+										<VisualSignsAvailable>false</VisualSignsAvailable>
+									</AccessibilityLimitation>
+								</limitations>
+							</AccessibilityAssessment>
 							<journeyAccountings>
 								<JourneyAccounting version="1" id="IT:ITC1:JourneyAccounting:busATV:458_1598738_A_1VR">
 									<Name>Contratto Verona</Name>
@@ -21263,6 +21809,18 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 							<Description>Corsa 459_1598735 VERONA STAZIONE FS - B3 - GARDA</Description>
 							<PrivateCode>459_1598735</PrivateCode>
 							<TransportMode>bus</TransportMode>
+							<AccessibilityAssessment id="IT:ITC1:ServiceJourneyAccessibilityAssignment:busATV:459_1598735_A" version="1">
+								<MobilityImpairedAccess>true</MobilityImpairedAccess>
+								<limitations>
+									<AccessibilityLimitation>
+										<WheelchairAccess>true</WheelchairAccess>
+										<StepFreeAccess>partial</StepFreeAccess>
+										<LiftFreeAccess>true</LiftFreeAccess>
+										<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+										<VisualSignsAvailable>false</VisualSignsAvailable>
+									</AccessibilityLimitation>
+								</limitations>
+							</AccessibilityAssessment>
 							<journeyAccountings>
 								<JourneyAccounting version="1" id="IT:ITC1:JourneyAccounting:busATV:459_1598735_A_1VR">
 									<Name>Contratto Verona</Name>
@@ -21474,6 +22032,18 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 							<Description>Corsa 458_1599943 GARDA - TORBOLE BIVIO</Description>
 							<PrivateCode>458_1599943</PrivateCode>
 							<TransportMode>bus</TransportMode>
+							<AccessibilityAssessment id="IT:ITC1:ServiceJourneyAccessibilityAssignment:busATV:458_1599943_A" version="1">
+								<MobilityImpairedAccess>true</MobilityImpairedAccess>
+								<limitations>
+									<AccessibilityLimitation>
+										<WheelchairAccess>true</WheelchairAccess>
+										<StepFreeAccess>partial</StepFreeAccess>
+										<LiftFreeAccess>true</LiftFreeAccess>
+										<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+										<VisualSignsAvailable>false</VisualSignsAvailable>
+									</AccessibilityLimitation>
+								</limitations>
+							</AccessibilityAssessment>
 							<journeyAccountings>
 								<JourneyAccounting version="1" id="IT:ITC1:JourneyAccounting:busATV:458_1599943_A_1VR">
 									<Name>Contratto Verona</Name>
@@ -21696,6 +22266,18 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 							<PrivateCode>M2_3_7423</PrivateCode>
 							<TransportMode>metro</TransportMode>
 							<TypeOfServiceRef ref="IT:ITC1:TypeOfService:metroATMMILANO:LIN_20">LIN_20</TypeOfServiceRef>
+							<AccessibilityAssessment id="IT:ITC1:ServiceJourneyAccessibilityAssignment:metroATMMILANO:M2_3_7423" version="1">
+								<MobilityImpairedAccess>true</MobilityImpairedAccess>
+								<limitations>
+									<AccessibilityLimitation>
+										<WheelchairAccess>true</WheelchairAccess>
+										<StepFreeAccess>partial</StepFreeAccess>
+										<LiftFreeAccess>true</LiftFreeAccess>
+										<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+										<VisualSignsAvailable>false</VisualSignsAvailable>
+									</AccessibilityLimitation>
+								</limitations>
+							</AccessibilityAssessment>
 							<journeyAccountings>
 								<JourneyAccounting id="IT:ITC1:JourneyAccounting:metroATMMILANO:ATMMILANO_7423_0" version="1">
 									<ValidBetween>
@@ -21871,6 +22453,18 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 							<PrivateCode>M2_18_8310</PrivateCode>
 							<TransportMode>metro</TransportMode>
 							<TypeOfServiceRef ref="IT:ITC1:TypeOfService:metroATMMILANO:LIN_20" version="1">LIN_20</TypeOfServiceRef>
+							<AccessibilityAssessment id="IT:ITC1:ServiceJourneyAccessibilityAssignment:metroATMMILANO:M2_18_8310" version="1">
+								<MobilityImpairedAccess>true</MobilityImpairedAccess>
+								<limitations>
+									<AccessibilityLimitation>
+										<WheelchairAccess>true</WheelchairAccess>
+										<StepFreeAccess>partial</StepFreeAccess>
+										<LiftFreeAccess>true</LiftFreeAccess>
+										<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+										<VisualSignsAvailable>false</VisualSignsAvailable>
+									</AccessibilityLimitation>
+								</limitations>
+							</AccessibilityAssessment>
 							<journeyAccountings>
 								<JourneyAccounting id="IT:ITC1:JourneyAccounting:metroATMMILANO:ATMMILANO_8310_0" version="1">
 									<ValidBetween>
@@ -22046,6 +22640,18 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 							<PrivateCode>M1_3_5722</PrivateCode>
 							<TransportMode>metro</TransportMode>
 							<TypeOfServiceRef ref="IT:ITC1:TypeOfService:metroATMMILANO:LIN_20" version="1">LIN_20</TypeOfServiceRef>
+							<AccessibilityAssessment id="IT:ITC1:ServiceJourneyAccessibilityAssignment:metroATMMILANO:M1_3_5722" version="1">
+								<MobilityImpairedAccess>true</MobilityImpairedAccess>
+								<limitations>
+									<AccessibilityLimitation>
+										<WheelchairAccess>true</WheelchairAccess>
+										<StepFreeAccess>partial</StepFreeAccess>
+										<LiftFreeAccess>true</LiftFreeAccess>
+										<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+										<VisualSignsAvailable>false</VisualSignsAvailable>
+									</AccessibilityLimitation>
+								</limitations>
+							</AccessibilityAssessment>
 							<journeyAccountings>
 								<JourneyAccounting id="IT:ITC1:JourneyAccounting:metroATMMILANO:ATMMILANO_5722_0" version="1">
 									<ValidBetween>
@@ -22226,6 +22832,18 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 							<PrivateCode>M1_6_6697</PrivateCode>
 							<TransportMode>metro</TransportMode>
 							<TypeOfServiceRef ref="IT:ITC1:TypeOfService:metroATMMILANO:LIN_20" version="1">LIN_20</TypeOfServiceRef>
+							<AccessibilityAssessment id="IT:ITC1:ServiceJourneyAccessibilityAssignment:metroATMMILANO:M1_6_6697" version="1">
+								<MobilityImpairedAccess>true</MobilityImpairedAccess>
+								<limitations>
+									<AccessibilityLimitation>
+										<WheelchairAccess>true</WheelchairAccess>
+										<StepFreeAccess>partial</StepFreeAccess>
+										<LiftFreeAccess>true</LiftFreeAccess>
+										<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+										<VisualSignsAvailable>false</VisualSignsAvailable>
+									</AccessibilityLimitation>
+								</limitations>
+							</AccessibilityAssessment>
 							<journeyAccountings>
 								<JourneyAccounting id="IT:ITC1:JourneyAccounting:metroATMMILANO:ATMMILANO_6697_0" version="1">
 									<ValidBetween>
