@@ -2,7 +2,7 @@
 <!-- edited with XMLSpy v2017 rel. 3 sp1 (x64) (http://www.altova.com) by Rossella Panero (5T S.r.l.) -->
 <!--
 NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-04-28-->
-<PublicationDelivery xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:siri="http://www.siri.org.uk/siri" version="1.0" xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.netex.org.uk/netex ../xsd/NeTEx_publication_lev4.xsd">
+<PublicationDelivery xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:siri="http://www.siri.org.uk/siri" version="1.0" xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.netex.org.uk/netex ../xsd/NeTEx_publication_Lev5.xsd">
 	<PublicationTimestamp>2021-01-01T12:00:00.000+02:00</PublicationTimestamp>
 	<ParticipantRef>RAP</ParticipantRef>
 	<Description>Esempio di profilo italiano del NeTEx EPIP + Livello 2 + Fare + Alternative Modes</Description>
@@ -2926,7 +2926,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">7.657829 45.070304</gml:pos>
 										</Location>
 									</Centroid>
-									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:022B" version="1">
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:001MIB" version="1">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
 											<AccessibilityLimitation>
@@ -2983,7 +2983,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">7.657829 45.070304</gml:pos>
 										</Location>
 									</Centroid>
-									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:022B" version="1">
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:001MIA" version="1">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
 											<AccessibilityLimitation>
@@ -11373,7 +11373,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 							<PrivateCode>2</PrivateCode>
 							<OperatorRef ref="IT:ITC1:Operator:metroATMMILANO:ATMMILANO" version="1">ATMMilano</OperatorRef>
 							<RepresentedByGroupRef ref="IT:ITC1:GroupOfLines:metroATMMILANO:EXTRAURBANO" version="1">Extraurbano</RepresentedByGroupRef>
-							<AccessibilityAssessment id="IT:ITC1:LineAccessibilityAssignment:metroATMMILANO:1" version="1">
+							<AccessibilityAssessment id="IT:ITC1:LineAccessibilityAssignment:metroATMMILANO:1B" version="1">
 								<MobilityImpairedAccess>true</MobilityImpairedAccess>
 								<limitations>
 									<AccessibilityLimitation>
