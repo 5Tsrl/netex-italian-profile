@@ -9043,14 +9043,14 @@
 			<xsd:documentation>A SERVICE CALENDAR. A coherent set of OPERATING DAYS and DAY TYPES comprising a Calendar.  that may be used to state the temporal VALIDITY of other NeTEx entities such as Timetables, STOP PLACEs, etc. Covers a PERIOD with a collection of assignments of OPERATING DAYS to DAY TYPES.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
-	<!-- versione con route modificato in level 2 di ServiceFrame -->
-	<xsd:element name="ServiceFrame" type="ServiceFrameL2_VersionStructure">
+	<!-- versione con line modificate per accessibility in level 5 di ServiceFrame -->
+	<xsd:element name="ServiceFrame" type="ServiceFrameL5_VersionStructure">
 		<xsd:annotation>
 			<xsd:documentation>A coherent set of Service data to which the same frame VALIDITY CONDITIONs have been assigned.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
-	<!-- versione con quay modificate in level 2 di SiteFrame -->
-	<xsd:element name="SiteFrame" type="SiteFrameL2_VersionStructure">
+	<!-- versione con quay modificate per accessibility in level 5 di SiteFrame -->
+	<xsd:element name="SiteFrame" type="SiteFrameL5_VersionStructure">
 		<xsd:annotation>
 			<xsd:documentation>A coherent set of SITE data to which the same frame VALIDITY CONDITIONs have been assigned.</xsd:documentation>
 		</xsd:annotation>

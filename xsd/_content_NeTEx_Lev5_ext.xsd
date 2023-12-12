@@ -12,31 +12,369 @@
 		Any such copyrights still apply.
 		</xsd:documentation>
 	</xsd:annotation>
-
-
-
-
-
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	<!-- versioni estesa con le parti prese dal branch epiap delle definizioni dei gruppi originali dell'epip (presi da L1) (inizio) -->
+	<xsd:complexType name="AccessibilityAssessmentL5Structure">
+		<xsd:annotation>
+			<xsd:documentation>Elements for an ACCESSIBILITY ASSESSMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="VersionedChildElementGroup"/>
+			<xsd:element name="MobilityImpairedAccess" type="LimitationStatusEnumeration">
+				<xsd:annotation>
+					<xsd:documentation>Summary indication as to whether the component is considered to be accessible or not.
+Note that in the context of EPIP, whenever a "partial" LimitationStatus is used, then a "ValidityCondition Description" shall be provided accordingly to explain why the accessibility is only partial. The contained textual information shall be suitable for presentation to the public without further editing.					
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="limitations" type="accessibilityLimitationsL5_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The ACCESSIBILITY LIMITATIONs that apply to component.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="EntityAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:complexType name="accessibilityLimitationsL5_RelStructure">
+		<xsd:sequence>
+			<xsd:element name="AccessibilityLimitation" type="AccessibilityLimitationL5Structure" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:Name"/>
+	</xsd:complexType>
+	<xsd:complexType name="AccessibilityLimitationL5Structure">
+		<xsd:sequence>
+			<xsd:group ref="MobilityLimitationGroupL5"/>
+			<xsd:group ref="SensoryLimitationGroupL5"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="EntityAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:group name="MobilityLimitationGroupL5">
+		<xsd:annotation>
+			<xsd:documentation>Mobility limitations.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="WheelchairAccess"/>
+			<xsd:element ref="StepFreeAccess" minOccurs="0"/>
+			<xsd:element ref="StairFreeAccess" minOccurs="0"/>
+			<xsd:element ref="EscalatorFreeAccess" minOccurs="0"/>
+			<xsd:element ref="LiftFreeAccess" minOccurs="0"/>
+			<xsd:element ref="RampFreeAccess" minOccurs="0"/>
+			<xsd:element ref="LevelAccessIntoVehicle" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:element name="StairFreeAccess" type="LimitationStatusEnumeration" default="unknown">
+		<xsd:annotation>
+			<xsd:documentation>Whether a PLACE has stair free access, in comparison with step free access one single step in the route is allowed.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="RampFreeAccess" type="LimitationStatusEnumeration" default="unknown">
+		<xsd:annotation>
+			<xsd:documentation>Whether a PLACE has ramp free access. Ramp free isn't necessary absolute. If a ramp is not steep, then a PLACE 
+			can still be considered ramp free.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="LevelAccessIntoVehicle" type="LimitationStatusEnumeration" default="unknown">
+		<xsd:annotation>
+			<xsd:documentation>Whether the platform is high enough and gap is small enough for level access into vehicle. 
+	At least at a designated wheelchair door position the gap between platform and vehicle floor (of level access vehicle) does not exceed 75 mm measured horizontally and 50 mm measured vertically including sliding step (according to PRM TSI).</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:group name="SensoryLimitationGroupL5">
+		<xsd:annotation>
+			<xsd:documentation>Group of sensory limitations.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="AudibleSignalsAvailable" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether a PLACE has audible signals for the visually impaired.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="VisualSignsAvailable" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether a PLACE has visual signals for the hearing impaired.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="TactileGuidanceAvailable" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether a PLACE has tactile guidance.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="GuideDogAccess" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether a PLACE allows guide dog access.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:element name="TactileGuidanceAvailable" type="LimitationStatusEnumeration" default="unknown">
+		<xsd:annotation>
+			<xsd:documentation>Whether the Place has tactile guidance.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!-- versioni estesa con le parti prese dal branch epiap delle definizioni dei gruppi originali dell'epip (presi da L1) (inizio) -->
+	<!-- versioni di Site e figli con quay modificate (presi da L2) (inizio) -->
+	<xsd:complexType name="SiteFrameL5_VersionStructure">
+		<xsd:choice>
+			<xsd:sequence>
+				<xsd:group ref="VersionFrameGroup" minOccurs="0" maxOccurs="1"/>
+				<xsd:element ref="topographicPlaces" minOccurs="0"/>
+				<xsd:element ref="groupsOfStopPlaces" minOccurs="0"/>
+				<xsd:element name="stopPlaces" type="stopPlacesL5_RelStructure" minOccurs="0"/>
+				<xsd:element ref="pointsOfInterest" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>POINTs OF INTEREST are required by the EC Priority action A of the ITS Directive. It is not expected that
+POIs will be provided in NeTEx datasets; they will in most cases be defined in external databases
+(INSPIRE, OSM, SPOI, or commercial datasets) and be referenced by SITE CONNECTIONs.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="parkings" type="parkingsL2_RelStructure" minOccurs="0"/>
+				<xsd:element ref="tariffZones" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:choice>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:complexType name="stopPlacesL5_RelStructure">
+		<xsd:sequence>
+			<xsd:element name="StopPlace" type="StopPlaceL5_VersionStructure" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:complexType name="StopPlaceL5_VersionStructure">
+		<xsd:sequence>
+			<xsd:group ref="SiteObjectElementGroupL2"/>
+			<xsd:element ref="PublicCode" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Short public code for passengers to use when uniquely identifying the stop by SMS and other self-service channels.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TransportMode" type="VehicleModeEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Primary public transport MODEs that may be accessed through this STOP PLACE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="PtSubmodeChoiceGroup" minOccurs="0"/>
+			<xsd:element ref="OtherTransportModes" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Other public transport MODES which may be accessed through this STOP PLACE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="tariffZones" type="tariffZoneRefs_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>TARIFF ZONEs into which component falls.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="StopPlaceType" minOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Mandatory in EPIP</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="BorderCrossing" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether STOP PLACE is a border crossing, that is a point, at which an international boundary between two countries may be crossed.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="Weighting" minOccurs="0"/>
+			<xsd:element ref="StopPlaceWeight" minOccurs="0"/>
+			<xsd:element name="quays" type="quaysL5_RelStructure" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:complexType name="quaysL5_RelStructure">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element ref="QuayRef"/>
+			<xsd:element name="Quay" type="QuayL5_VersionStructure"/>
+		</xsd:choice>
+        <xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+    </xsd:complexType>
+    <xsd:complexType name="QuayL5_VersionStructure">
+        <xsd:sequence>
+            <xsd:group ref="StopPlaceSpaceGroupL5"/>
+            <xsd:element ref="PublicCode" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>Pubic identifier code of QUAY.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element ref="PlateCode" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>Plate number for QUAY. An arbitrary asset number that may be placed on stop to identify it.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="destinations" type="destinationDisplayViews_RelStructure" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>Default Destination headings for QUAY.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element ref="CompassBearing" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>Heading of QUAY relative to street.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element ref="QuayType" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>Type of QUAY.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element ref="ParentQuayRef" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>if QUAY is a subzone of another QUAY, identifies parent.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+        <xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+    </xsd:complexType>
+	<xsd:group name="StopPlaceSpaceGroupL5">
+		<xsd:sequence>
+			<xsd:group ref="SiteComponentGroupL5"/>
+			<xsd:element ref="Label" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Label of STOP PLACE SPACE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="SiteComponentGroupL5">
+		<xsd:sequence>
+			<xsd:group ref="SiteElementObjectElementGroupL5"/>
+			<xsd:element ref="LevelRef" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to level of SITE COMPONENT within SITE</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="SiteElementObjectElementGroupL5">
+		<xsd:annotation>
+			<xsd:documentation>Elements for a SITE ELEMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="AddressablePlaceObjectElementGroup"/>
+			<xsd:group ref="SiteElementInternalGroupL5"/>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="SiteElementInternalGroupL5">
+		<xsd:sequence>
+			<xsd:element name="AccessibilityAssessment" type="AccessibilityAssessmentL5Structure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Note: Covers only EPIP.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="AccessModes" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Copied from full schema where only single instance is allowed. This is not in line with EPIP documentation that implies one to many.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="alternativeNames" minOccurs="0"/>
+			<xsd:group ref="RelativeLocationGroup"/>
+			<xsd:group ref="SiteElementPropertiesGroup"/>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- versioni di Site e figli con quay modificate (presi da L2) (fine) -->
+	<!-- versioni di Service e figli con line modificate (presi da L2) (inizio) -->
+	<xsd:complexType name="ServiceFrameL5_VersionStructure">
+		<xsd:sequence>
+			<xsd:group ref="VersionFrameGroup" minOccurs="0"/>
+			<xsd:element ref="Network" minOccurs="0"/>
+			<xsd:element ref="additionalNetworks" minOccurs="0"/>
+			<xsd:element ref="directions" minOccurs="0"/>
+			<xsd:element ref="routePoints" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Not necessarily required in EPIP, compare what is annotated for routes.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="routeLinks" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Not necessarily required in EPIP, compare what is annotated for routes.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="routes" type="routesL2_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Not required in EPIP as data may not be available. However note that it is possible to align with SERVICE PATTERN, thus using the SCHEDULED STOP POINTs as a base for creating ROUTE POINTs, the POINTs IN JOURNEY
+PATTERN for POINTs ON ROUTE, and the SERVICE LINKs for ROUTE LINKs </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="lines" type="linesL5_RelStructure" minOccurs="0"/>
+			<xsd:element ref="groupsOfLines" minOccurs="0"/>
+			<xsd:element name="destinationDisplays" type="destinationDisplaysL2_RelStructure" minOccurs="0"/>
+			<xsd:element name="scheduledStopPoints" type="scheduledStopPointsL2_RelStructure" minOccurs="0"/>
+			<xsd:element name="serviceLinks" type="serviceLinksL2_RelStructure" minOccurs="0"/>
+			<!-- aggiunto stopAreas per level 2 -->
+			<xsd:element name="stopAreas" type="stopAreas_RelStructure" minOccurs="0"/>
+			<xsd:element name="connections" type="connectionsL2Structure" minOccurs="0"/>
+			<xsd:element ref="tariffZones" minOccurs="0"/>
+			<xsd:element name="stopAssignments" type="stopAssignmentsL2Structure" minOccurs="0"/>
+			<xsd:element name="journeyPatterns" type="journeyPatternsL2Structure" minOccurs="0"/>
+			<xsd:element ref="notices" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:complexType name="linesL5_RelStructure">
+		<xsd:choice>
+			<xsd:element name="Line" type="LineL5Structure" maxOccurs="unbounded"/>
+			<xsd:element ref="FlexibleLine" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A group of FLEXIBLE ROUTEs of which is generally known to the public by a similar name or number and which have common booking arrangements.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:choice>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:complexType name="LineL5Structure">
+		<xsd:sequence>
+			<xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:group ref="LineGroupL5"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:group name="LineGroupL5">
+		<xsd:sequence>
+			<xsd:element ref="Name"/>
+			<xsd:element ref="ShortName" minOccurs="0"/>
+			<xsd:element ref="Description" minOccurs="0"/>
+			<xsd:element name="TransportMode" type="AllVehicleModesOfTransportEnumeration" minOccurs="0"/>
+			<xsd:element ref="TransportSubmode" minOccurs="0"/>
+			<xsd:element ref="Url" minOccurs="0"/>
+			<xsd:element ref="PublicCode" minOccurs="0"/>
+			<xsd:element ref="PrivateCode" minOccurs="0"/>
+			<xsd:choice minOccurs="0">
+				<xsd:element ref="OperatorRef"/>
+				<xsd:element ref="AuthorityRef"/>
+			</xsd:choice>
+			<xsd:element ref="additionalOperators" minOccurs="0"/>
+			<xsd:element name="otherModes" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Additional transport MODEs for LINE.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="ModeRef" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element ref="TypeOfLineRef" minOccurs="0"/>
+			<xsd:element name="Monitored" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether real-time data is normally available for LINE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="routes" type="routeRefs_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Not required in EPIP as data may not be available. However note that it is possible to align with SERVICE PATTERN, thus using the SCHEDULED STOP POINTs as a base for creating ROUTE POINTs, the POINTs IN JOURNEY
+PATTERN for POINTs ON ROUTE, and the SERVICE LINKs for ROUTE LINKs </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- aggiunto RepresentedByGroupRef per level 2 -->
+			<xsd:element ref="RepresentedByGroupRef" minOccurs="0"/>
+			<xsd:element ref="Presentation" minOccurs="0"/>
+			<xsd:element name="AccessibilityAssessment" type="AccessibilityAssessmentL5Structure" minOccurs="0"/>
+			<xsd:element ref="allowedDirections" minOccurs="0"/>
+			<xsd:element name="noticeAssignments" type="noticeAssignments_RelStructure" minOccurs="0"/>
+			<xsd:element name="documentLinks" type="infoLinks_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Timetable documents associated with the LINE, e.g pdf files</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- versioni di Service e figli con line modificate (presi da L2) (fine) -->
 	<!-- versioni di Timetable e figli con ServiceJourney modificate (presi da L2) (inizio) -->
 	<xsd:complexType name="TimetableFrameL5_VersionStructure">
 		<xsd:sequence>
@@ -80,7 +418,7 @@
 			<xsd:element ref="TransportSubmode" minOccurs="0"/>
 			<xsd:element name="TypeOfServiceRef" type="TypeOfServiceRefStructure" minOccurs="0"/>
 			<!-- aggiunto AccessibilityAssessment per level 5 -->
-			<xsd:element ref="AccessibilityAssessment" minOccurs="0"/>
+			<xsd:element name="AccessibilityAssessment" type="AccessibilityAssessmentL5Structure" minOccurs="0"/>
 			<xsd:element name="journeyAccountings" type="journeyAccountings_RelStructure" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>JOURNEY ACCOUNTING to be used to attribute JOURNEY costs.</xsd:documentation>
