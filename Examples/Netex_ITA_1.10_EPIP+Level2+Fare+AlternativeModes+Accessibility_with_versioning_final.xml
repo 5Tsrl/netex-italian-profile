@@ -1292,10 +1292,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -1340,10 +1345,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -1369,10 +1379,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -1415,10 +1430,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -1438,6 +1458,24 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">7.68568 45.07995</gml:pos>
 										</Location>
 									</Centroid>
+									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:003B" version="1">
+										<MobilityImpairedAccess>true</MobilityImpairedAccess>
+										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
+											</AccessibilityLimitation>
+										</limitations>
+									</AccessibilityAssessment>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1477,10 +1515,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -1506,10 +1549,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -1552,10 +1600,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -1581,10 +1634,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -1627,10 +1685,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -1656,10 +1719,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -1702,10 +1770,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -1731,10 +1804,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -1777,10 +1855,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -1803,6 +1886,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<AccessibilityAssessment id="IT:ITC1:QuayAccessibilityAssignment:busATS:008B" version="1">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
+											<AccessibilityLimitation>
+												<WheelchairAccess>true</WheelchairAccess>
+												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
+												<EscalatorFreeAccess>false</EscalatorFreeAccess>
+												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
+												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
+											</AccessibilityLimitation>
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
@@ -1852,10 +1948,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -1881,10 +1982,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -1927,10 +2033,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -1956,10 +2067,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -2002,10 +2118,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -2031,10 +2152,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -2077,10 +2203,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -2106,10 +2237,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -2152,10 +2288,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -2181,10 +2322,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -2227,10 +2373,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -2256,10 +2407,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -2302,10 +2458,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -2331,10 +2492,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -2377,10 +2543,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -2406,10 +2577,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -2452,10 +2628,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -2481,10 +2662,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -2527,10 +2713,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -2556,10 +2747,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -2602,10 +2798,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -2631,10 +2832,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -2677,10 +2883,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -2706,10 +2917,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -2752,10 +2968,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -2781,10 +3002,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -2827,10 +3053,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -2856,10 +3087,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -2932,10 +3168,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -2989,10 +3230,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -3044,10 +3290,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -3074,10 +3325,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<AccessibilityLimitation>
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>partial</StepFreeAccess>
+												<StairFreeAccess>true</StairFreeAccess>
 												<EscalatorFreeAccess>false</EscalatorFreeAccess>
 												<LiftFreeAccess>true</LiftFreeAccess>
+												<RampFreeAccess>true</RampFreeAccess>
+												<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 												<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 												<VisualSignsAvailable>false</VisualSignsAvailable>
+												<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+												<GuideDogAccess>false</GuideDogAccess>
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
@@ -11256,10 +11512,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<AccessibilityLimitation>
 										<WheelchairAccess>true</WheelchairAccess>
 										<StepFreeAccess>partial</StepFreeAccess>
+										<StairFreeAccess>true</StairFreeAccess>
 										<EscalatorFreeAccess>false</EscalatorFreeAccess>
 										<LiftFreeAccess>true</LiftFreeAccess>
+										<RampFreeAccess>true</RampFreeAccess>
+										<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 										<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 										<VisualSignsAvailable>false</VisualSignsAvailable>
+										<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+										<GuideDogAccess>false</GuideDogAccess>
 									</AccessibilityLimitation>
 								</limitations>
 							</AccessibilityAssessment>
@@ -11275,10 +11536,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<AccessibilityLimitation>
 										<WheelchairAccess>true</WheelchairAccess>
 										<StepFreeAccess>partial</StepFreeAccess>
+										<StairFreeAccess>true</StairFreeAccess>
 										<EscalatorFreeAccess>false</EscalatorFreeAccess>
 										<LiftFreeAccess>true</LiftFreeAccess>
+										<RampFreeAccess>true</RampFreeAccess>
+										<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 										<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 										<VisualSignsAvailable>false</VisualSignsAvailable>
+										<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+										<GuideDogAccess>false</GuideDogAccess>
 									</AccessibilityLimitation>
 								</limitations>
 							</AccessibilityAssessment>
@@ -11300,10 +11566,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<AccessibilityLimitation>
 										<WheelchairAccess>true</WheelchairAccess>
 										<StepFreeAccess>partial</StepFreeAccess>
+										<StairFreeAccess>true</StairFreeAccess>
 										<EscalatorFreeAccess>false</EscalatorFreeAccess>
 										<LiftFreeAccess>true</LiftFreeAccess>
+										<RampFreeAccess>true</RampFreeAccess>
+										<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 										<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 										<VisualSignsAvailable>false</VisualSignsAvailable>
+										<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+										<GuideDogAccess>false</GuideDogAccess>
 									</AccessibilityLimitation>
 								</limitations>
 							</AccessibilityAssessment>
@@ -11324,10 +11595,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<AccessibilityLimitation>
 										<WheelchairAccess>true</WheelchairAccess>
 										<StepFreeAccess>partial</StepFreeAccess>
+										<StairFreeAccess>true</StairFreeAccess>
 										<EscalatorFreeAccess>false</EscalatorFreeAccess>
 										<LiftFreeAccess>true</LiftFreeAccess>
+										<RampFreeAccess>true</RampFreeAccess>
+										<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 										<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 										<VisualSignsAvailable>false</VisualSignsAvailable>
+										<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+										<GuideDogAccess>false</GuideDogAccess>
 									</AccessibilityLimitation>
 								</limitations>
 							</AccessibilityAssessment>
@@ -11352,10 +11628,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<AccessibilityLimitation>
 										<WheelchairAccess>true</WheelchairAccess>
 										<StepFreeAccess>partial</StepFreeAccess>
+										<StairFreeAccess>true</StairFreeAccess>
 										<EscalatorFreeAccess>false</EscalatorFreeAccess>
 										<LiftFreeAccess>true</LiftFreeAccess>
+										<RampFreeAccess>true</RampFreeAccess>
+										<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 										<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 										<VisualSignsAvailable>false</VisualSignsAvailable>
+										<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+										<GuideDogAccess>false</GuideDogAccess>
 									</AccessibilityLimitation>
 								</limitations>
 							</AccessibilityAssessment>
@@ -11379,10 +11660,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<AccessibilityLimitation>
 										<WheelchairAccess>true</WheelchairAccess>
 										<StepFreeAccess>partial</StepFreeAccess>
+										<StairFreeAccess>true</StairFreeAccess>
 										<EscalatorFreeAccess>false</EscalatorFreeAccess>
 										<LiftFreeAccess>true</LiftFreeAccess>
+										<RampFreeAccess>true</RampFreeAccess>
+										<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 										<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 										<VisualSignsAvailable>false</VisualSignsAvailable>
+										<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+										<GuideDogAccess>false</GuideDogAccess>
 									</AccessibilityLimitation>
 								</limitations>
 							</AccessibilityAssessment>
@@ -21084,9 +21370,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<AccessibilityLimitation>
 										<WheelchairAccess>true</WheelchairAccess>
 										<StepFreeAccess>partial</StepFreeAccess>
+										<StairFreeAccess>true</StairFreeAccess>
+										<EscalatorFreeAccess>false</EscalatorFreeAccess>
 										<LiftFreeAccess>true</LiftFreeAccess>
+										<RampFreeAccess>true</RampFreeAccess>
+										<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 										<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 										<VisualSignsAvailable>false</VisualSignsAvailable>
+										<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+										<GuideDogAccess>false</GuideDogAccess>
 									</AccessibilityLimitation>
 								</limitations>
 							</AccessibilityAssessment>
@@ -21240,9 +21532,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<AccessibilityLimitation>
 										<WheelchairAccess>true</WheelchairAccess>
 										<StepFreeAccess>partial</StepFreeAccess>
+										<StairFreeAccess>true</StairFreeAccess>
+										<EscalatorFreeAccess>false</EscalatorFreeAccess>
 										<LiftFreeAccess>true</LiftFreeAccess>
+										<RampFreeAccess>true</RampFreeAccess>
+										<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 										<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 										<VisualSignsAvailable>false</VisualSignsAvailable>
+										<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+										<GuideDogAccess>false</GuideDogAccess>
 									</AccessibilityLimitation>
 								</limitations>
 							</AccessibilityAssessment>
@@ -21397,9 +21695,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<AccessibilityLimitation>
 										<WheelchairAccess>true</WheelchairAccess>
 										<StepFreeAccess>partial</StepFreeAccess>
+										<StairFreeAccess>true</StairFreeAccess>
+										<EscalatorFreeAccess>false</EscalatorFreeAccess>
 										<LiftFreeAccess>true</LiftFreeAccess>
+										<RampFreeAccess>true</RampFreeAccess>
+										<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 										<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 										<VisualSignsAvailable>false</VisualSignsAvailable>
+										<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+										<GuideDogAccess>false</GuideDogAccess>
 									</AccessibilityLimitation>
 								</limitations>
 							</AccessibilityAssessment>
@@ -21490,9 +21794,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<AccessibilityLimitation>
 										<WheelchairAccess>true</WheelchairAccess>
 										<StepFreeAccess>partial</StepFreeAccess>
+										<StairFreeAccess>true</StairFreeAccess>
+										<EscalatorFreeAccess>false</EscalatorFreeAccess>
 										<LiftFreeAccess>true</LiftFreeAccess>
+										<RampFreeAccess>true</RampFreeAccess>
+										<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 										<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 										<VisualSignsAvailable>false</VisualSignsAvailable>
+										<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+										<GuideDogAccess>false</GuideDogAccess>
 									</AccessibilityLimitation>
 								</limitations>
 							</AccessibilityAssessment>
@@ -21602,9 +21912,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<AccessibilityLimitation>
 										<WheelchairAccess>true</WheelchairAccess>
 										<StepFreeAccess>partial</StepFreeAccess>
+										<StairFreeAccess>true</StairFreeAccess>
+										<EscalatorFreeAccess>false</EscalatorFreeAccess>
 										<LiftFreeAccess>true</LiftFreeAccess>
+										<RampFreeAccess>true</RampFreeAccess>
+										<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 										<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 										<VisualSignsAvailable>false</VisualSignsAvailable>
+										<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+										<GuideDogAccess>false</GuideDogAccess>
 									</AccessibilityLimitation>
 								</limitations>
 							</AccessibilityAssessment>
@@ -21815,9 +22131,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<AccessibilityLimitation>
 										<WheelchairAccess>true</WheelchairAccess>
 										<StepFreeAccess>partial</StepFreeAccess>
+										<StairFreeAccess>true</StairFreeAccess>
+										<EscalatorFreeAccess>false</EscalatorFreeAccess>
 										<LiftFreeAccess>true</LiftFreeAccess>
+										<RampFreeAccess>true</RampFreeAccess>
+										<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 										<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 										<VisualSignsAvailable>false</VisualSignsAvailable>
+										<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+										<GuideDogAccess>false</GuideDogAccess>
 									</AccessibilityLimitation>
 								</limitations>
 							</AccessibilityAssessment>
@@ -22038,9 +22360,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<AccessibilityLimitation>
 										<WheelchairAccess>true</WheelchairAccess>
 										<StepFreeAccess>partial</StepFreeAccess>
+										<StairFreeAccess>true</StairFreeAccess>
+										<EscalatorFreeAccess>false</EscalatorFreeAccess>
 										<LiftFreeAccess>true</LiftFreeAccess>
+										<RampFreeAccess>true</RampFreeAccess>
+										<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 										<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 										<VisualSignsAvailable>false</VisualSignsAvailable>
+										<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+										<GuideDogAccess>false</GuideDogAccess>
 									</AccessibilityLimitation>
 								</limitations>
 							</AccessibilityAssessment>
@@ -22272,9 +22600,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<AccessibilityLimitation>
 										<WheelchairAccess>true</WheelchairAccess>
 										<StepFreeAccess>partial</StepFreeAccess>
+										<StairFreeAccess>true</StairFreeAccess>
+										<EscalatorFreeAccess>false</EscalatorFreeAccess>
 										<LiftFreeAccess>true</LiftFreeAccess>
+										<RampFreeAccess>true</RampFreeAccess>
+										<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 										<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 										<VisualSignsAvailable>false</VisualSignsAvailable>
+										<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+										<GuideDogAccess>false</GuideDogAccess>
 									</AccessibilityLimitation>
 								</limitations>
 							</AccessibilityAssessment>
@@ -22459,9 +22793,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<AccessibilityLimitation>
 										<WheelchairAccess>true</WheelchairAccess>
 										<StepFreeAccess>partial</StepFreeAccess>
+										<StairFreeAccess>true</StairFreeAccess>
+										<EscalatorFreeAccess>false</EscalatorFreeAccess>
 										<LiftFreeAccess>true</LiftFreeAccess>
+										<RampFreeAccess>true</RampFreeAccess>
+										<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 										<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 										<VisualSignsAvailable>false</VisualSignsAvailable>
+										<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+										<GuideDogAccess>false</GuideDogAccess>
 									</AccessibilityLimitation>
 								</limitations>
 							</AccessibilityAssessment>
@@ -22646,9 +22986,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<AccessibilityLimitation>
 										<WheelchairAccess>true</WheelchairAccess>
 										<StepFreeAccess>partial</StepFreeAccess>
+										<StairFreeAccess>true</StairFreeAccess>
+										<EscalatorFreeAccess>false</EscalatorFreeAccess>
 										<LiftFreeAccess>true</LiftFreeAccess>
+										<RampFreeAccess>true</RampFreeAccess>
+										<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 										<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 										<VisualSignsAvailable>false</VisualSignsAvailable>
+										<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+										<GuideDogAccess>false</GuideDogAccess>
 									</AccessibilityLimitation>
 								</limitations>
 							</AccessibilityAssessment>
@@ -22838,9 +23184,15 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<AccessibilityLimitation>
 										<WheelchairAccess>true</WheelchairAccess>
 										<StepFreeAccess>partial</StepFreeAccess>
+										<StairFreeAccess>true</StairFreeAccess>
+										<EscalatorFreeAccess>false</EscalatorFreeAccess>
 										<LiftFreeAccess>true</LiftFreeAccess>
+										<RampFreeAccess>true</RampFreeAccess>
+										<LevelAccessIntoVehicle>false</LevelAccessIntoVehicle>
 										<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
 										<VisualSignsAvailable>false</VisualSignsAvailable>
+										<TactileGuidanceAvailable>partial</TactileGuidanceAvailable>
+										<GuideDogAccess>false</GuideDogAccess>
 									</AccessibilityLimitation>
 								</limitations>
 							</AccessibilityAssessment>
