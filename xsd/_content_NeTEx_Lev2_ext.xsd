@@ -626,7 +626,7 @@ more focused on translations).</xsd:documentation>
             <xsd:element ref="Description" minOccurs="0"/>
 			<!-- aggiunte PrivateCode per level 2 -->
             <xsd:element ref="PrivateCode" minOccurs="0"/>
-            <xsd:group ref="VehicleTypePropertiesGroup"/>
+            <xsd:group ref="VehicleTypePropertiesGroupL2"/>
 			<!-- aggiunte facilities per level 2 -->
 			<xsd:element name="facilities" type="serviceFacilitiesL2_RelStructure" minOccurs="0">
                 <xsd:annotation>
@@ -637,6 +637,56 @@ more focused on translations).</xsd:documentation>
         </xsd:sequence>
         <xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
     </xsd:complexType>
+	<xsd:group name="VehicleTypePropertiesGroupL2">
+		<xsd:annotation>
+			<xsd:documentation>Prooprty Elements for a VEHICLE TYPE.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="SelfPropelled" type="xsd:boolean" default="true" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether vehicles of the type are self-propelled.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="FuelType" type="FuelTypeEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The type of fuel used by a vehicle of the type. +1.2.2</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="EuroClass" type="xsd:normalizedString" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Euroclass of the vehicle type.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="capacities" type="capacities_RelStructure" minOccurs="0"/>
+			<xsd:group ref="VehicleAccessibilityRequirementsGroup"/>
+			<xsd:group ref="VehicleDimensionsGroup"/>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:simpleType name="FuelTypeEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for type of fuel.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="battery"/>
+			<xsd:enumeration value="biodiesel"/>
+			<xsd:enumeration value="diesel"/>
+			<xsd:enumeration value="dieselBatteryHybrid"/>
+			<xsd:enumeration value="electricContact"/>
+			<xsd:enumeration value="electricity"/>
+			<xsd:enumeration value="ethanol"/>
+			<xsd:enumeration value="hydrogen"/>
+			<xsd:enumeration value="liquidGas"/>
+			<xsd:enumeration value="tpg"/>
+			<xsd:enumeration value="methane"/>
+			<xsd:enumeration value="naturalGas"/>
+			<xsd:enumeration value="petrol"/>
+			<xsd:enumeration value="petrolBatteryHybrid"/>
+			<xsd:enumeration value="petrolLeaded"/>
+			<xsd:enumeration value="petrolUnleaded"/>
+			<xsd:enumeration value="none"/>
+			<xsd:enumeration value="other"/>
+		</xsd:restriction>
+	</xsd:simpleType>
 	<xsd:complexType name="serviceFacilitiesL2_RelStructure">
 		<xsd:choice maxOccurs="unbounded">
 			<xsd:element name="ServiceFacilitySetRef" type="ServiceFacilitySetRefStructure"/>
