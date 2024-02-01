@@ -613,7 +613,7 @@ more focused on translations).</xsd:documentation>
             <xsd:element ref="Description" minOccurs="0"/>
 			<!-- aggiunte PrivateCode per level 2 -->
             <xsd:element ref="PrivateCode" minOccurs="0"/>
-            <xsd:group ref="VehicleTypePropertiesGroup"/>
+            <xsd:group ref="VehicleTypePropertiesGroupL2"/>
         </xsd:sequence>
         <xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
     </xsd:complexType>
