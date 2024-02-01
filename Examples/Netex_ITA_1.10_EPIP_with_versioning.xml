@@ -491,7 +491,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 						<Train id="IT:ITC1:Train:trenoFS:1" version="1">
 							<Name>Torino - Milano</Name>
 							<Description>E 2 2 2 2 2 2 R 1 1 X</Description>
-							<SelfPropelled> true</SelfPropelled>
+							<SelfPropelled>true</SelfPropelled>
 							<components>
 								<TrainComponent version="1" id="IT:ITC1:TrainComponent:trenoFS:1" order="1">
 									<Label>Carriage K</Label>
@@ -693,6 +693,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							</ValidBetween>
 							<Name>TEST1</Name>
 							<Description>TEST Leonardo 01</Description>
+							<SelfPropelled>true</SelfPropelled>
 							<capacities>
 								<PassengerCapacity id="IT:ITC1:PassengerCapacity:5">
 									<SeatingCapacity>34</SeatingCapacity>

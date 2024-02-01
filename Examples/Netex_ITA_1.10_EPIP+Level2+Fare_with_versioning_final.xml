@@ -2,7 +2,7 @@
 <!-- edited with XMLSpy v2017 rel. 3 sp1 (x64) (http://www.altova.com) by Rossella Panero (5T S.r.l.) -->
 <!--
 NeTEX italian Profile EPIP + Level 2 + Fare Revisione 2023-04-28-->
-<PublicationDelivery xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:siri="http://www.siri.org.uk/siri" version="1.0" xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../NeTEx-master_2023-04-12/xsd/NeTEx_publication.xsd">
+<PublicationDelivery xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:siri="http://www.siri.org.uk/siri" version="1.0" xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.netex.org.uk/netex ../xsd/NeTEx_publication_Lev3.xsd">
 	<PublicationTimestamp>2021-01-01T12:00:00.000+02:00</PublicationTimestamp>
 	<ParticipantRef>RAP</ParticipantRef>
 	<Description>Esempio di profilo italiano del NeTEx EPIP + Livello 2 + Fare</Description>
@@ -764,6 +764,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare Revisione 2023-04-28-->
 						<!--- =======Tipi veicolo 5T======== -->
 						<VehicleType id="IT:ITC1:VehicleType:busATS:001" version="1">
 							<PrivateCode>001</PrivateCode>
+							<FuelType>petrol</FuelType>
+							<EuroClass>Euro5</EuroClass>
 							<capacities>
 								<PassengerCapacity id="IT:ITC1:PassengerCapacity:1">
 									<TotalCapacity>60</TotalCapacity>
@@ -779,6 +781,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare Revisione 2023-04-28-->
 						</VehicleType>
 						<VehicleType id="IT:ITC1:VehicleType:busATS:002" version="1">
 							<PrivateCode>002</PrivateCode>
+							<FuelType>petrol</FuelType>
+							<EuroClass>Euro5</EuroClass>
 							<capacities>
 								<PassengerCapacity id="IT:ITC1:PassengerCapacity:2">
 									<TotalCapacity>59</TotalCapacity>
@@ -796,7 +800,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare Revisione 2023-04-28-->
 						<Train id="IT:ITC1:Train:trenoFS:1" version="1">
 							<Name>Torino - Milano</Name>
 							<Description>E 2 2 2 2 2 2 R 1 1 X</Description>
-							<SelfPropelled> true</SelfPropelled>
+							<SelfPropelled>true</SelfPropelled>
+							<FuelType>electricity</FuelType>
 							<facilities>
 								<ServiceFacilitySetRef version="1" ref="IT:ITC1:ServiceFacilitySet:trenoFS:1"/>
 							</facilities>
@@ -887,6 +892,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare Revisione 2023-04-28-->
 							<Name>Milano - Verona</Name>
 							<Description>E 2 2 2 2 2 2 R 1 1 X</Description>
 							<SelfPropelled>true</SelfPropelled>
+							<FuelType>electricity</FuelType>
 							<capacities>
 								<PassengerCapacity id="IT:ITC1:PassengerCapacity:3">
 									<SeatingCapacity>23</SeatingCapacity>
@@ -984,6 +990,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare Revisione 2023-04-28-->
 						<!--- =======Tipi veicolo MOVALIA======== -->
 						<VehicleType version="1" id="IT:ITC1:VehicleType:busATV:001ATV">
 							<PrivateCode>001ATV</PrivateCode>
+							<FuelType>diesel</FuelType>
+							<EuroClass>Euro4</EuroClass>
 							<capacities>
 								<PassengerCapacity id="IT:ITC1:PassengerCapacity:3">
 									<SeatingCapacity>23</SeatingCapacity>
@@ -1007,6 +1015,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare Revisione 2023-04-28-->
 							<ShortName>TEST1</ShortName>
 							<Description>TEST Leonardo 01</Description>
 							<PrivateCode>TEST1</PrivateCode>
+							<SelfPropelled>true</SelfPropelled>
+							<FuelType>electricity</FuelType>
 							<capacities>
 								<PassengerCapacity id="IT:ITC1:PassengerCapacity:5">
 									<SeatingCapacity>34</SeatingCapacity>

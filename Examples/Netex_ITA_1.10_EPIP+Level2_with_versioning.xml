@@ -748,6 +748,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 						<!--- =======Tipi veicolo 5T======== -->
 						<VehicleType id="IT:ITC1:VehicleType:busATS:001" version="1">
 							<PrivateCode>001</PrivateCode>
+							<FuelType>petrol</FuelType>
+							<EuroClass>Euro5</EuroClass>
 							<capacities>
 								<PassengerCapacity id="IT:ITC1:PassengerCapacity:1">
 									<TotalCapacity>60</TotalCapacity>
@@ -763,6 +765,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 						</VehicleType>
 						<VehicleType id="IT:ITC1:VehicleType:busATS:002" version="1">
 							<PrivateCode>002</PrivateCode>
+							<FuelType>petrol</FuelType>
+							<EuroClass>Euro5</EuroClass>
 							<capacities>
 								<PassengerCapacity id="IT:ITC1:PassengerCapacity:2">
 									<TotalCapacity>59</TotalCapacity>
@@ -780,7 +784,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 						<Train id="IT:ITC1:Train:trenoFS:1" version="1">
 							<Name>Torino - Milano</Name>
 							<Description>E 2 2 2 2 2 2 R 1 1 X</Description>
-							<SelfPropelled> true</SelfPropelled>
+							<SelfPropelled>true</SelfPropelled>
+							<FuelType>electricity</FuelType>
 							<facilities>
 								<ServiceFacilitySetRef version="1" ref="IT:ITC1:ServiceFacilitySet:trenoFS:1"/>
 							</facilities>
@@ -871,6 +876,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							<Name>Milano - Verona</Name>
 							<Description>E 2 2 2 2 2 2 R 1 1 X</Description>
 							<SelfPropelled>true</SelfPropelled>
+							<FuelType>electricity</FuelType>
 							<capacities>
 								<PassengerCapacity id="IT:ITC1:PassengerCapacity:3">
 									<SeatingCapacity>23</SeatingCapacity>
@@ -968,6 +974,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 						<!--- =======Tipi veicolo MOVALIA======== -->
 						<VehicleType version="1" id="IT:ITC1:VehicleType:busATV:001ATV">
 							<PrivateCode>001ATV</PrivateCode>
+							<FuelType>diesel</FuelType>
+							<EuroClass>Euro4</EuroClass>
 							<capacities>
 								<PassengerCapacity id="IT:ITC1:PassengerCapacity:3">
 									<SeatingCapacity>23</SeatingCapacity>
@@ -991,6 +999,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							<ShortName>TEST1</ShortName>
 							<Description>TEST Leonardo 01</Description>
 							<PrivateCode>TEST1</PrivateCode>
+							<SelfPropelled>true</SelfPropelled>
+							<FuelType>electricity</FuelType>
 							<capacities>
 								<PassengerCapacity id="IT:ITC1:PassengerCapacity:5">
 									<SeatingCapacity>34</SeatingCapacity>
