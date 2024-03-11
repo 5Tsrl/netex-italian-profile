@@ -1291,6 +1291,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">7.657829 45.070304</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<LevelRef ref="IT:ITC1:Level:busATS:001_Lvl_G0" version="1"/>
 									<Label>TO-MI</Label>
 									<destinations>
@@ -1326,6 +1328,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">7.68542 45.07945</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1342,6 +1346,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">7.68542 45.07945</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1375,6 +1381,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">7.69561 45.09498</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1391,6 +1399,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">7.68568 45.07995</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1424,6 +1434,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">7.70758 45.11316</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1440,6 +1452,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">7.70734 45.11328</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1473,6 +1487,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">7.75681 45.14581</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1489,6 +1505,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">7.75650 45.14595</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1522,6 +1540,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">7.82797 45.18118</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1538,6 +1558,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">7.82772 45.18134</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1571,6 +1593,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">7.88887 45.20856</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1587,6 +1611,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">7.88942 45.20991</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1620,6 +1646,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">7.96274 45.23842</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1636,6 +1664,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">7.96231 45.23842</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1669,6 +1699,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.07241 45.32120</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1685,6 +1717,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.07460 45.32287</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1718,6 +1752,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.13826 45.38158</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1734,6 +1770,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.13802 45.38171</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1767,6 +1805,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.22829 45.43718</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1783,6 +1823,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.22812 45.43735</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1816,6 +1858,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.22829 45.43718</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1832,6 +1876,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.29751 45.44898</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1865,6 +1911,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.38062 45.46133</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1881,6 +1929,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.38054 45.46154</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1914,6 +1964,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.47564 45.46723</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1930,6 +1982,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.47561 45.46742</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1963,6 +2017,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.56361 45.47372</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1979,6 +2035,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.56494 45.47410</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2012,6 +2070,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.62223 45.46989</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2028,6 +2088,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.62250 45.47008</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2061,6 +2123,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.70612 45.46786</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2077,6 +2141,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.70515 45.46807</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2110,6 +2176,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.86283 45.48901</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2126,6 +2194,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.86277 45.48925</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2159,6 +2229,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.93171 45.49991</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2175,6 +2247,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">8.93293 45.50023</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2208,6 +2282,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">9.03011 45.50884</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2224,6 +2300,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">9.03003 45.50901</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2257,6 +2335,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">9.06222 45.51235</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2273,6 +2353,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">9.06190 45.51262</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2306,6 +2388,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">9.13015 45.50073</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2322,6 +2406,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">9.13067 45.50063</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2385,6 +2471,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											<gml:pos srsName="ITA">7.657829 45.070304</gml:pos>
 										</Location>
 									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<LevelRef ref="IT:ITC1:Level:busATS:00023_Lvl_G0" version="1"/>
 									<Label>TO-MI</Label>
 									<destinations>

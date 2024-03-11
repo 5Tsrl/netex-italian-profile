@@ -1314,6 +1314,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<LevelRef ref="IT:ITC1:Level:busATS:001_Lvl_G0" version="1"/>
 									<Label>TO-MI</Label>
 									<destinations>
@@ -1367,6 +1369,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1401,6 +1405,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1452,6 +1458,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1486,6 +1494,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1537,6 +1547,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1571,6 +1583,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1622,6 +1636,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1656,6 +1672,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1707,6 +1725,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1741,6 +1761,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1792,6 +1814,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1826,6 +1850,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1877,6 +1903,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1919,6 +1947,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -1970,6 +2000,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2004,6 +2036,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2055,6 +2089,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2089,6 +2125,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2140,6 +2178,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2174,6 +2214,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2225,6 +2267,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2259,6 +2303,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2310,6 +2356,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2344,6 +2392,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2395,6 +2445,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2429,6 +2481,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2480,6 +2534,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2514,6 +2570,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2565,6 +2623,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2599,6 +2659,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2650,6 +2712,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2684,6 +2748,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2735,6 +2801,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2769,6 +2837,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2820,6 +2890,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2854,6 +2926,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2905,6 +2979,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2939,6 +3015,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -2990,6 +3068,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -3024,6 +3104,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -3075,6 +3157,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>TO-MI</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -3109,6 +3193,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<Label>MI-TO</Label>
 									<destinations>
 										<DestinationDisplayView>
@@ -3190,6 +3276,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<LevelRef ref="IT:ITC1:Level:busATS:00023_Lvl_G0" version="1"/>
 									<Label>TO-MI</Label>
 									<destinations>
@@ -3252,6 +3340,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 											</AccessibilityLimitation>
 										</limitations>
 									</AccessibilityAssessment>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
 									<LevelRef ref="IT:ITC1:Level:busATS:00023_Lvl_G0" version="1"/>
 									<Label>TO-MI</Label>
 									<destinations>
