@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2017 rel. 3 sp1 (x64) (http://www.altova.com) by Rossella Panero (5T S.r.l.) -->
+<!--
+NeTEX italian Profile EPIP + Level 2 + Fare Revisione 2023-04-28-->
+<PublicationDelivery xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:siri="http://www.siri.org.uk/siri" version="1.0" xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../NeTEx-master_2023-04-12/xsd/NeTEx_publication.xsd">
+	<PublicationTimestamp>2021-01-01T12:00:00.000+02:00</PublicationTimestamp>
+	<ParticipantRef>RAP</ParticipantRef>
+	<Description>Esempio di profilo italiano del NeTEx EPIP + Livello 2 + Fare</Description>
+	<dataObjects>
+		<CompositeFrame id="epd:IT:ITC1:CompositeFrame_EU_PI_STOP_OFFER:EPIP:ita" version="1">
+			<ValidBetween>
+				<FromDate>2021-01-01T00:00:00.000+02:00</FromDate>
+				<ToDate>2021-12-31T23:59:59.999+02:00</ToDate>
+			</ValidBetween>
+			<TypeOfFrameRef ref="epip:EU_PI_LINE_OFFER" versionRef="1"/>
+			<!--- ======= CODESPACEs======== -->
+			<codespaces>
+				<Codespace id="ita">
+					<Xmlns>ita</Xmlns>
+					<XmlnsUrl>http://www.ita.it</XmlnsUrl>
+					<Description>Italian Profile</Description>
+				</Codespace>
+			</codespaces>
+			<!--- =======FRAME DEFAULTS======== -->
+			<FrameDefaults>
+				<DefaultCodespaceRef ref="ita"/>
+			</FrameDefaults>
+			<frames>
+				<ResourceFrame id="epd:IT:ITC1:ResourceFrame_EU_PI_COMMON:ita" version="1">
+					<TypeOfFrameRef ref="epip:EU_PI_COMMON" versionRef="1"/>
+					<!--- =======Anagrafica Organisations======== -->
+					<organisations>
+						<!--- =======operatori 5T======== -->
+						<TravelAgent id="IT:ITC1:TravelAgent:ecomGtt:1" version="1">
+							<Name>Ecommerce GTT</Name>
+							<ContactDetails>
+								<Url>https://ecommerce.gtt.to.it/</Url>
+							</ContactDetails>
+							<OrganisationType>operator</OrganisationType>
+						</TravelAgent>
+					</organisations>
+				</ResourceFrame>
+				<FareFrame id="epd:IT:ITC1:FareFrame_EU_PI_FARE:TPL:ita" version="1">
+					<!--<TypeOfFrameRef ref="epip:EU_PI_FARE" versionRef="1">-->
+					<FrameDefaults>
+						<DefaultCurrency>EUR</DefaultCurrency>
+					</FrameDefaults>
+					<distributionChannels>
+						<DistributionChannel id="IT:ITC1:DistributionChannel:busATS:dc:1" version="1">
+							<Name>Ecommerce GTT</Name>
+							<Description>Dettagli rete di vendita ecommerc GTT</Description>
+							<DistributionChannelType>onlineAccount</DistributionChannelType>
+							<TravelAgentRef ref="IT:ITC1:TravelAgent:ecomGtt:1" version="1"/>
+							<PaymentMethods>cardsOnly</PaymentMethods>
+						</DistributionChannel>
+					</distributionChannels>
+				</FareFrame>
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>
