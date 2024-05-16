@@ -647,14 +647,14 @@ more focused on translations).</xsd:documentation>
 					<xsd:documentation>Whether vehicles of the type are self-propelled.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="FuelType" type="FuelTypeEnumeration" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>The type of fuel used by a vehicle of the type. +1.2.2</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
 			<xsd:element name="EuroClass" type="xsd:normalizedString" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>Euroclass of the vehicle type.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="FuelType" type="FuelTypeEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The type of fuel used by a vehicle of the type. +1.2.2</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="capacities" type="capacities_RelStructure" minOccurs="0"/>
