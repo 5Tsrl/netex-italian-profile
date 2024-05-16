@@ -764,8 +764,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 						<!--- =======Tipi veicolo 5T======== -->
 						<VehicleType id="IT:ITC1:VehicleType:busATS:001" version="1">
 							<PrivateCode>001</PrivateCode>
-							<FuelType>petrol</FuelType>
 							<EuroClass>Euro5</EuroClass>
+							<FuelType>petrol</FuelType>
 							<capacities>
 								<PassengerCapacity id="IT:ITC1:PassengerCapacity:1">
 									<TotalCapacity>60</TotalCapacity>
@@ -781,8 +781,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 						</VehicleType>
 						<VehicleType id="IT:ITC1:VehicleType:busATS:002" version="1">
 							<PrivateCode>002</PrivateCode>
-							<FuelType>petrol</FuelType>
 							<EuroClass>Euro5</EuroClass>
+							<FuelType>petrol</FuelType>
 							<capacities>
 								<PassengerCapacity id="IT:ITC1:PassengerCapacity:2">
 									<TotalCapacity>59</TotalCapacity>
@@ -990,8 +990,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 						<!--- =======Tipi veicolo MOVALIA======== -->
 						<VehicleType version="1" id="IT:ITC1:VehicleType:busATV:001ATV">
 							<PrivateCode>001ATV</PrivateCode>
-							<FuelType>diesel</FuelType>
 							<EuroClass>Euro4</EuroClass>
+							<FuelType>diesel</FuelType>
 							<capacities>
 								<PassengerCapacity id="IT:ITC1:PassengerCapacity:3">
 									<SeatingCapacity>23</SeatingCapacity>
@@ -23648,13 +23648,13 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 					<vehicleTypes>
 						<VehicleType id="IT:ITC1:VehicleType:CarSharingTorino:vehicleType:Car01" version="1">
 							<Name>Auto normale</Name>
-							<FuelType>diesel</FuelType>
 							<EuroClass>Euro5</EuroClass>
+							<FuelType>diesel</FuelType>
 						</VehicleType>
 						<VehicleType id="IT:ITC1:VehicleType:CarSharingTorino:vehicleType:Car02" version="1">
 							<Name>Auto normale</Name>
-							<FuelType>electricity</FuelType>
 							<EuroClass>Euro5</EuroClass>
+							<FuelType>electricity</FuelType>
 						</VehicleType>
 					</vehicleTypes>
 					<vehicleModelProfiles>
