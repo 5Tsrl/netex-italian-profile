@@ -194,6 +194,18 @@ NeTEX italian Profile EPIP + Level 2 + Fare Revisione 2023-04-28-->
 									</PropertyOfDay>
 								</properties>
 							</DayType>
+							<DayType id="IT:ITC1:DayType:parcheggiARaso:annuale" version="1">
+								<Name>Calendario annuale</Name>
+								<ShortName>Annuale</ShortName>
+								<Description>Annuale Lun Dom</Description>
+								<PrivateCode>Ann</PrivateCode>
+								<properties>
+									<PropertyOfDay>
+										<DaysOfWeek>Everyday</DaysOfWeek>
+										<HolidayTypes>AnyHoliday</HolidayTypes>
+									</PropertyOfDay>
+								</properties>
+							</DayType>
 							<!--- =======DayTypes IxI======= -->
 							<DayType version="1" id="IT:ITC1:DayType:trenoFS:LV">
 								<Name>Weekdays unless a holiday</Name>
@@ -23377,12 +23389,38 @@ NeTEX italian Profile EPIP + Level 2 + Fare Revisione 2023-04-28-->
 								</FareStructureElement>
 							</fareStructureElements>
 						</Tariff>
+						<Tariff id="IT:ITC1:Tariff:parcheggiRasoTorino:tf:mensile-7:30-20:00" version="1">
+							<timeIntervals>
+								<TimeInterval id="IT:ITC1:TimeInterval:parcheggiRasoTorino:ti:giornaliero_mensile-7:30-20:00" version="1">
+									<Description>Tariffa giornaliera sosta a raso</Description>
+									<StartTime>07:30:00</StartTime>
+									<EndTime>20:00:00</EndTime>
+								</TimeInterval>
+							</timeIntervals>
+							<fareStructureElements>
+								<FareStructureElement id="IT:ITC1:FareStructureElement:parcheggiRasoTorino:fse:annuale-7:30-20:00" version="1">
+									<fareStructureElementsInSequence>
+										<FareStructureElementInSequence id="IT:ITC1:FareStructureElementInSequence:parcheggiRasoTorino:fseis:annuale-7:30-20:00" version="1" order="1">
+											<GenericParameterAssignment id="IT:ITC1:GenericParameterAssignment:parcheggiRasoTorino:gpafs:annuale-7:30-20:00" version="1" order="1">
+												<TimeIntervalRef ref="IT:ITC1:TimeInterval:parcheggiRasoTorino:ti:giornaliero_mensile-7:30-20:00" version="1"/>
+											</GenericParameterAssignment>
+										</FareStructureElementInSequence>
+									</fareStructureElementsInSequence>
+								</FareStructureElement>
+							</fareStructureElements>
+						</Tariff>
 					</tariffs>
 					<validableElements>
 						<ValidableElement id="IT:ITC1:ValidableElement:parcheggiRasoTorino:ve:2" version="1">
 							<Name>Parcheggio 1 ore</Name>
 							<fareStructureElements>
 								<FareStructureElementRef ref="IT:ITC1:FareStructureElement:parcheggiRasoTorino:fse:1ora" version="1"/>
+							</fareStructureElements>
+						</ValidableElement>
+						<ValidableElement id="IT:ITC1:ValidableElement:parcheggiRasoTorino:ve:annuale-7:30-20:00" version="1">
+							<Name>Parcheggio annuale 7:30 - 20:00</Name>
+							<fareStructureElements>
+								<FareStructureElementRef ref="IT:ITC1:FareStructureElement:parcheggiRasoTorino:fse:annuale-7:30-20:00" version="1"/>
 							</fareStructureElements>
 						</ValidableElement>
 					</validableElements>
@@ -23393,10 +23431,19 @@ NeTEX italian Profile EPIP + Level 2 + Fare Revisione 2023-04-28-->
 								<DayTypeRef ref="IT:ITC1:DayType:parcheggiARaso:annuale123456" version="1"/>
 							</startOnlyOn>
 						</UsageValidityPeriod>
+						<UsageValidityPeriod id="IT:ITC1:UsageValidityPeriod:parcheggiARaso:uvp:mensile" version="1">
+							<ValidityPeriodType>monthlyPass</ValidityPeriodType>
+							<startOnlyOn>
+								<DayTypeRef ref="IT:ITC1:DayType:parcheggiARaso:annuale" version="1"/>
+							</startOnlyOn>
+						</UsageValidityPeriod>
 						<UserProfile id="IT:ITC1:UserProfile:parcheggiRasoTorino:up:1" version="1">
 							<UserType>anyone</UserType>
 							<MinimumAge>14</MinimumAge>
 							<MaximumAge>100</MaximumAge>
+						</UserProfile>
+						<UserProfile id="IT:ITC1:UserProfile:parcheggiRasoTorino:up:residente" version="1">
+							<UserType>member</UserType>
 						</UserProfile>
 					</usageParameters>
 					<fareProducts>
@@ -23423,6 +23470,29 @@ NeTEX italian Profile EPIP + Level 2 + Fare Revisione 2023-04-28-->
 								<ParkingTariffRef ref="IT:ITC1:ParkingTariff:parcheggiRasoTorino:pt:1" version="1"/>
 							</tariffs>
 						</PreassignedFareProduct>
+						<PreassignedFareProduct id="IT:ITC1:PreassignedFareProduct:parcheggiARaso:pfp:annuale-7:30-20:30" version="1">
+							<ValidBetween>
+								<FromDate>2022-01-01T00:00:00.000+02:00</FromDate>
+								<ToDate>2022-12-31T00:00:00.000+02:00</ToDate>
+							</ValidBetween>
+							<Name>Tariffa parcheggi a raso annaule 7:30 - 20:00</Name>
+							<Description>Tariffa parcheggi a raso annaule 7:30 - 20:00</Description>
+							<ChargingMomentType>other</ChargingMomentType>
+							<validityParameterAssignments>
+								<!--Parcheggio-->
+								<GenericParameterAssignment id="IT:ITC1:GenericParameterAssignment:parcheggiRasoTorino:gpa:annuale-7:30-20.00" order="1" version="1">
+									<limitations>
+										<UsageValidityPeriodRef ref="IT:ITC1:UsageValidityPeriod:parcheggiARaso:uvp:mensile" version="1"/>
+									</limitations>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+							<validableElements>
+								<ValidableElementRef ref="IT:ITC1:ValidableElement:parcheggiRasoTorino:ve:annuale-7:30-20:00" version="1"/>
+							</validableElements>
+							<tariffs>
+								<ParkingTariffRef ref="IT:ITC1:ParkingTariff:parcheggiRasoTorino:pt:annuale-7:30-20:00" version="1"/>
+							</tariffs>
+						</PreassignedFareProduct>
 					</fareProducts>
 					<fareTables>
 						<FareTable id="IT:ITC1:FareTable:parcheggiRasoTorino:ft:1ora" version="1">
@@ -23433,6 +23503,17 @@ NeTEX italian Profile EPIP + Level 2 + Fare Revisione 2023-04-28-->
 									<Amount>1</Amount>
 									<CanBeCumulative>true</CanBeCumulative>
 									<FareStructureElementRef ref="IT:ITC1:FareStructureElement:parcheggiRasoTorino:fse:1ora" version="1"/>
+								</FareStructureElementPrice>
+							</prices>
+						</FareTable>
+						<FareTable id="IT:ITC1:FareTable:parcheggiRasoTorino:ft:mensile-7:30-20:00" version="1">
+							<prices>
+								<FareStructureElementPrice id="IT:ITC1:FareStructureElementPrice:parcheggiRasoTorino:cep:mensile-7:30-20:00" version="1">
+									<Name>Tariffa parcheggi a raso mensile 7:30 - 20:00</Name>
+									<Description>Tariffa parcheggi a raso mensile 7:30 - 20:00</Description>
+									<Amount>65.00</Amount>
+									<CanBeCumulative>false</CanBeCumulative>
+									<FareStructureElementRef ref="IT:ITC1:FareStructureElement:parcheggiRasoTorino:fse:annuale-7:30-20:00" version="1"/>
 								</FareStructureElementPrice>
 							</prices>
 						</FareTable>
@@ -23456,6 +23537,11 @@ NeTEX italian Profile EPIP + Level 2 + Fare Revisione 2023-04-28-->
 					<typesOfTravelDocuments>
 						<TypeOfTravelDocument id="IT:ITC1:TypeOfTravelDocument:parking:parcheggiRasoTorinottd:1" version="1">
 							<HasPhoto>false</HasPhoto>
+							<MediaType>paperTicket</MediaType>
+							<MachineReadable>barCode</MachineReadable>
+						</TypeOfTravelDocument>
+						<TypeOfTravelDocument id="IT:ITC1:TypeOfTravelDocument:parking:parcheggiRasoTorinottd:mensile-7:30-20.00" version="1">
+							<HasPhoto>true</HasPhoto>
 							<MediaType>paperTicket</MediaType>
 							<MachineReadable>barCode</MachineReadable>
 						</TypeOfTravelDocument>
@@ -23486,6 +23572,31 @@ NeTEX italian Profile EPIP + Level 2 + Fare Revisione 2023-04-28-->
 								</SalesOfferPackageElement>
 							</salesOfferPackageElements>
 						</SalesOfferPackage>
+						<SalesOfferPackage id="IT:ITC1:SalesOfferPackage:parcheggiRasoTorino:sop:mensile-7:30-20:00" version="1">
+							<distributionAssignments>
+								<DistributionAssignment id="IT:ITC1:DistributionAssignment:parcheggiRasoTorino:da:mensile-7:30-20:00" version="1" order="1">
+									<DistributionChannelRef ref="IT:ITC1:DistributionChannel:parcheggiRasoTorino:dc:fisico" version="1"/>
+								</DistributionAssignment>
+							</distributionAssignments>
+							<salesOfferPackageElements>
+								<!-- Tariffa parcheggi con fattore per numero minuti-->
+								<SalesOfferPackageElement id="IT:ITC1:SalesOfferPackageElement:parcheggiRasoTorino:sope:mensile-7:30-20:00" version="1" order="1">
+									<fareTables>
+										<FareTableRef ref="IT:ITC1:FareTable:parcheggiRasoTorino:ft:mensile-7:30-20:00" version="1"/>
+									</fareTables>
+									<TypeOfTravelDocumentRef ref="IT:ITC1:TypeOfTravelDocument:parking:parcheggiRasoTorinottd:mensile-7:30-20.00" version="1"/>
+									<FareProductRef ref="IT:ITC1:PreassignedFareProduct:parcheggiARaso:pfp:annuale-7:30-20:30" version="1"/>
+									<prices>
+										<SalesOfferPackagePrice id="IT:ITC1:SalesOfferPackagePrice:parcheggiRasoTorino:sopp:mensile-7:30-20.00" version="1">
+											<DiscountingRule id="IT:ITC1:DiscountingRule:parcheggiRasoTorino:dr:mensile-7:30-20.00" version="1">
+												<Factor>1</Factor>
+												<DiscountAsPercentage>0</DiscountAsPercentage>
+											</DiscountingRule>
+										</SalesOfferPackagePrice>
+									</prices>
+								</SalesOfferPackageElement>
+							</salesOfferPackageElements>
+						</SalesOfferPackage>
 					</salesOfferPackages>
 					<parkingTariffs>
 						<ParkingTariff id="IT:ITC1:ParkingTariff:parcheggiRasoTorino:pt:1" version="1">
@@ -23504,6 +23615,26 @@ NeTEX italian Profile EPIP + Level 2 + Fare Revisione 2023-04-28-->
 							<parkingChargeBands>
 								<ParkingChargeBand id="IT:ITC1:ParkingChargeBand:parcheggiTorino:pcb:day" version="1">
 									<TimeIntervalRef ref="IT:ITC1:TimeInterval:parcheggiRasoTorino:ti:1ora" version="1"/>
+									<ParkingVehicleType>car</ParkingVehicleType>
+								</ParkingChargeBand>
+							</parkingChargeBands>
+						</ParkingTariff>
+						<ParkingTariff id="IT:ITC1:ParkingTariff:parcheggiRasoTorino:pt:annuale-7:30-20:00" version="1">
+							<ValidBetween>
+								<FromDate>2022-01-01T00:00:00.000+02:00</FromDate>
+								<ToDate>2022-12-31T00:00:00.000+02:00</ToDate>
+							</ValidBetween>
+							<OperatorRef ref="IT:ITC1:Operator:parcheggiRasoTorino:parcheggiRasoTorino" version="1"/>
+							<timeIntervals>
+								<TimeIntervalRef ref="IT:ITC1:TimeInterval:parcheggiRasoTorino:ti:giornaliero_mensile-7:30-20:00" version="1"/>
+							</timeIntervals>
+							<ParkingStayType>longTerm</ParkingStayType>
+							<appliesTo>
+								<ParkingRef ref="IT:ITC1:Parking:parcheggiRasoTorino:p:ParcheggioARaso" version="1"/>
+							</appliesTo>
+							<parkingChargeBands>
+								<ParkingChargeBand id="IT:ITC1:ParkingChargeBand:parcheggiTorino:pcb:mensile-7:30-20:00" version="1">
+									<TimeIntervalRef ref="IT:ITC1:TimeInterval:parcheggiRasoTorino:ti:giornaliero_mensile-7:30-20:00" version="1"/>
 									<ParkingVehicleType>car</ParkingVehicleType>
 								</ParkingChargeBand>
 							</parkingChargeBands>
