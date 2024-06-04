@@ -619,6 +619,16 @@
 					<xsd:documentation>Duration of  USAGE VALIDITY PERIOD.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
+			<xsd:element name="startOnlyOn" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>If UsageStartConstraintType is "fixed", then allowed days to start on can be indicated by a DAY TYPE, for example Monday, 1st of Month, Start of Quarter, etc. (Applies mainly  to Passes.)</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="DayTypeRef"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
 		</xsd:sequence>
 		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
 	</xsd:complexType>
