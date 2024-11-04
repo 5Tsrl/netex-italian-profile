@@ -24,6 +24,9 @@ NeTEX italian Profile EPIP + Level 2 + Fare Revisione 2023-04-28-->
 			<!--- =======FRAME DEFAULTS======== -->
 			<FrameDefaults>
 				<DefaultCodespaceRef ref="ita"/>
+				<DefaultLocale>
+					<TimeZone>Europe/Rome</TimeZone>
+				</DefaultLocale>
 			</FrameDefaults>
 			<frames>
 				<ResourceFrame id="epd:IT:ITC1:ResourceFrame_EU_PI_COMMON:ita" version="1">

@@ -25,6 +25,9 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 			<!--- =======FRAME DEFAULTS======== -->
 			<FrameDefaults>
 				<DefaultCodespaceRef ref="ita"/>
+				<DefaultLocale>
+					<TimeZone>Europe/Rome</TimeZone>
+				</DefaultLocale>
 			</FrameDefaults>
 			<frames>
 				<ServiceCalendarFrame id="epd:IT:ITC1:ServiceCalendarFrame_EU_PI_CALENDAR:ita" version="1">
