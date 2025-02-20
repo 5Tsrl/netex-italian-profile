@@ -10658,7 +10658,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									</gml:LinearRing>
 								</gml:exterior>
 							</gml:Polygon>
-							<OperatorRef ref="IT:ITC1:Operator:parcheggiTorino:parcheggiTorino" version="1"/>
+							<OperatorRef ref="IT:ITC1:Operator:BikeSharing:BikeSharing" version="1"/>
 							<entrances>
 								<ParkingPassengerEntrance id="IT:ITC1:ParkingPassengerEntrance:parcheggiBikeSharingTorino:ppe:Porta_Nuova_AccessoPedonale1" version="1">
 									<Centroid>
