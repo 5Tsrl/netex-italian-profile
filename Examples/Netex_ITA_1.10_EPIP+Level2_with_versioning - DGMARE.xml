@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2017 rel. 3 sp1 (x64) (http://www.altova.com) by Rossella Panero (5T S.r.l.) -->
+<!--
+NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
+<PublicationDelivery xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:siri="http://www.siri.org.uk/siri" version="1.0" xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.netex.org.uk/netex ../xsd/NeTEx_publication_Lev2.xsd">
+	<PublicationTimestamp>2021-01-01T12:00:00.000+02:00</PublicationTimestamp>
+	<ParticipantRef>RAP</ParticipantRef>
+	<Description>Esempio di profilo italiano del NeTEx EPIP + Livello 2 + Fare + Alternative Modes</Description>
+	<dataObjects>
+		<!--Composite Frame EPIP LV2 (EPIP - Livello 1 + Livello 2)-->
+		<CompositeFrame id="epd:IT:ITC1:CompositeFrame_EU_PI_STOP_OFFER:EPIP:ita" version="1">
+			<ValidBetween>
+				<FromDate>2021-01-01T00:00:00.000+02:00</FromDate>
+				<ToDate>2021-12-31T23:59:59.999+02:00</ToDate>
+			</ValidBetween>
+			<TypeOfFrameRef ref="epip:EU_PI_LINE_OFFER" versionRef="1"/>
+			<!--- ======= CODESPACEs======== -->
+			<codespaces>
+				<Codespace id="ita">
+					<Xmlns>ita</Xmlns>
+					<XmlnsUrl>http://www.ita.it</XmlnsUrl>
+					<Description>Italian Profile</Description>
+				</Codespace>
+			</codespaces>
+			<!--- =======FRAME DEFAULTS======== -->
+			<FrameDefaults>
+				<DefaultCodespaceRef ref="ita"/>
+				<DefaultLocale>
+					<TimeZone>Europe/Rome</TimeZone>
+				</DefaultLocale>
+			</FrameDefaults>
+			<frames>
+				<GeneralFrame id="epd:IT:ITC1:GeneralFrame_EU_CONTRACTS:ita" version="1">
+					<TypeOfFrameRef ref="netex:EU_CONTRACTS" versionRef="1"/>
+					<members>
+						<!-- =====contratto DGMARE ===== -->
+						<JourneyAccounting id="IT:ITC1:JourneyAccounting:DGMARE:1" version="1">
+							<ValidBetween>
+								<FromDate>2021-01-01T00:00:00Z</FromDate>
+								<ToDate>2021-12-31T00:00:00Z</ToDate>
+							</ValidBetween>
+							<Name>Contratto Mare</Name>
+							<Description>Contratto Mare</Description>
+							<OrganisationRef ref="IT:ITC1:Authority:DGMARE:DGMARE" version="1"/>
+							<AccountingCode>CDS0001</AccountingCode>
+							<AccountingType>contract</AccountingType>
+						</JourneyAccounting>
+					</members>
+				</GeneralFrame>
+				<ServiceCalendarFrame id="epd:IT:ITC1:ServiceCalendarFrame_EU_PI_CALENDAR:ita" version="1">
+					<TypeOfFrameRef ref="epip:EU_PI_CALENDAR" versionRef="1"/>
+					<ServiceCalendar id="IT:ITC1:ServiceCalendar:C01" version="1">
+						<Name>Calendario ordinario valido tutto l'anno</Name>
+						<ShortName>Annuale</ShortName>
+						<FromDate>2021-01-01</FromDate>
+						<ToDate>2021-12-31</ToDate>
+						<dayTypes>
+							<!--- =======DayTypes 5T======= -->
+							<DayType id="IT:ITC1:DayType:DGMARE:LMV" version="1">
+								<Name>Calendario annuale escluso agosto LMV</Name>
+								<ShortName>AnnualeLMV</ShortName>
+								<Description>Annuale Lun Mer Ven</Description>
+								<PrivateCode>LMV</PrivateCode>
+								<properties>
+									<PropertyOfDay>
+										<DaysOfWeek>Monday Wednesday Friday</DaysOfWeek>
+										<HolidayTypes>NotHoliday</HolidayTypes>
+									</PropertyOfDay>
+								</properties>
+							</DayType>
+							<DayType id="IT:ITC1:DayType:DGMARE:MGS" version="1">
+								<Name>Calendario annuale escluso agosto MGS</Name>
+								<ShortName>AnnualeMGS</ShortName>
+								<Description>Annuale Mar Giov Sab</Description>
+								<PrivateCode>MGS</PrivateCode>
+								<properties>
+									<PropertyOfDay>
+										<DaysOfWeek>Tuesday Thursday Saturday</DaysOfWeek>
+										<HolidayTypes>NotHoliday</HolidayTypes>
+									</PropertyOfDay>
+								</properties>
+							</DayType>
+						</dayTypes>
+						<!--- =======OperatingPeriods 5T======= -->
+						<operatingPeriods>
+							<UicOperatingPeriod id="IT:ITC1:UicOperatingPeriod:DGMARE:LMV" version="1">
+								<FromDate>2021-01-04T00:00:00</FromDate>
+								<ToDate>2021-01-10T23:59:59</ToDate>
+								<ValidDayBits>1010100</ValidDayBits>
+							</UicOperatingPeriod>
+							<UicOperatingPeriod id="IT:ITC1:UicOperatingPeriod:DGMARE:MGS" version="1">
+								<FromDate>2021-01-04T00:00:00</FromDate>
+								<ToDate>2021-01-10T23:59:59</ToDate>
+								<ValidDayBits>0101010</ValidDayBits>
+							</UicOperatingPeriod>
+						</operatingPeriods>
+						<!--- =======DayTypeAssignments======= -->
+						<dayTypeAssignments>
+							<!-- dayTypeAssignment Calendario -->
+							<DayTypeAssignment version="1" order="1" id="IT:ITC1:DayTypeAssignment:DGMARE:LMV">
+								<OperatingPeriodRef ref="IT:ITC1:UicOperatingPeriod:DGMARE:LMV" version="1"/>
+								<DayTypeRef version="1" ref="IT:ITC1:DayType:DGMARE:LMV"/>
+							</DayTypeAssignment>
+							<!-- dayTypeAssignment Calendario G -->
+							<DayTypeAssignment version="1" order="1" id="IT:ITC1:DayTypeAssignment:DGMARE:MGS">
+								<OperatingPeriodRef ref="IT:ITC1:UicOperatingPeriod:DGMARE:MGS" version="1"/>
+								<DayTypeRef version="1" ref="IT:ITC1:DayType:DGMARE:MGS"/>
+							</DayTypeAssignment>
+						</dayTypeAssignments>
+					</ServiceCalendar>
+				</ServiceCalendarFrame>
+				<ResourceFrame id="epd:IT:ITC1:ResourceFrame_EU_PI_COMMON:ita" version="1">
+					<TypeOfFrameRef ref="epip:EU_PI_COMMON" versionRef="1"/>
+					<!--- =======Ruoli contrattuali======== -->
+					<responsibilitySets id="IT:ITC1:ResponsibilitySets:DGMARE:1">
+						<!--- =======Ruoli contrattuali 5T======== -->
+						<ResponsibilitySet id="IT:ITC1:ResponsibilitySet:DGMARE:JourneyAccounting:1A" version="1">
+							<roles>
+								<ResponsibilityRoleAssignment id="IT:ITC1:ResponsibilityRoleAssignment:DGMARE:JourneyAccounting:DGMARE:Affidante" version="1">
+									<StakeholderRoleType>Control</StakeholderRoleType>
+									<ResponsibleOrganisationRef ref="IT:ITC1:Authority:DGMARE:DGMARE" version="1"/>
+									<ResponsiblePartRef ref="IT:ITC1:JourneyAccounting:DGMARE:1"/>
+								</ResponsibilityRoleAssignment>
+								<ResponsibilityRoleAssignment id="IT:ITC1:ResponsibilityRoleAssignment:DGMARE:JourneyAccounting:DGMARE:Affidatario" version="1">
+									<StakeholderRoleType>EntityLegalOwnership</StakeholderRoleType>
+									<ResponsibleOrganisationRef ref="IT:ITC1:Operator:DGMARE:Grimaldi" version="1"/>
+									<ResponsiblePartRef ref="IT:ITC1:JourneyAccounting:DGMARE:1"/>
+								</ResponsibilityRoleAssignment>
+								<ResponsibilityRoleAssignment id="IT:ITC1:ResponsibilityRoleAssignment:DGMARE:JourneyAccounting:DGMARE:Esercente:01" version="1">
+									<StakeholderRoleType>Operation</StakeholderRoleType>
+									<ResponsibleOrganisationRef ref="IT:ITC1:Operator:DGMARE:Grimaldi" version="1"/>
+									<ResponsiblePartRef ref="IT:ITC1:JourneyAccounting:DGMARE:1"/>
+								</ResponsibilityRoleAssignment>
+							</roles>
+						</ResponsibilitySet>
+					</responsibilitySets>
+					<!--- =======Anagrafica Organisations======== -->
+					<organisations>
+						<!--- =======Enti concedenti======== -->
+						<!--- =======authority======== -->
+						<Authority id="IT:ITC1:Authority:DGMARE:DGMARE" version="1">
+							<Name>DGMARE</Name>
+							<ShortName>DGMARE</ShortName>
+							<ContactDetails>
+								<Email>mario@DGMARE.it</Email>
+								<Phone>+39-000-453502</Phone>
+								<Url>www.DGMARE.it</Url>
+							</ContactDetails>
+							<OrganisationType>authority</OrganisationType>
+							<Address id="IT:ITC1:Address:DGMARE:1">
+								<CountryName>Italia</CountryName>
+								<Street>corso Marconi 10</Street>
+								<Town>Roma</Town>
+								<PostCode>10000</PostCode>
+							</Address>
+						</Authority>
+						<!--- =======operatori======== -->
+						<Operator id="IT:ITC1:Operator:DGMARE:Grimaldi" version="1">
+							<Name>Grimaldi</Name>
+							<ShortName>Grimaldi</ShortName>
+							<ContactDetails>
+								<Email>emanuelel.grimaldi@grimaldi.it</Email>
+								<Phone>+39-000-0000000</Phone>
+								<Url>www.grimaldi.it</Url>
+							</ContactDetails>
+							<OrganisationType>operator</OrganisationType>
+							<Address id="IT:ITC1:Address:DGMARE:1b">
+								<CountryName>Monaco</CountryName>
+								<Street>piazza Castello 1</Street>
+								<Town>Montecarlo</Town>
+								<PostCode>00000</PostCode>
+							</Address>
+						</Operator>
+					</organisations>
+					<!--- =======Tipi veicolo======== -->
+					<vehicleTypes>
+						<!--- =======Tipi veicolo 5T======== -->
+						<VehicleType id="IT:ITC1:VehicleType:DGMARE:B01" version="1">
+							<PrivateCode>001</PrivateCode>
+							<FuelType>diesel</FuelType>
+							<capacities>
+								<PassengerCapacity id="IT:ITC1:PassengerCapacity:1">
+									<TotalCapacity>2850</TotalCapacity>
+								</PassengerCapacity>
+							</capacities>
+							<Length>225</Length>
+						</VehicleType>
+						<VehicleType id="IT:ITC1:VehicleType:DGMARE:B02" version="1">
+							<PrivateCode>002</PrivateCode>
+							<FuelType>diesel</FuelType>
+							<capacities>
+								<PassengerCapacity id="IT:ITC1:PassengerCapacity:2">
+									<TotalCapacity>2850</TotalCapacity>
+								</PassengerCapacity>
+							</capacities>
+							<Length>225</Length>
+						</VehicleType>
+					</vehicleTypes>
+					<!--- =======Modelli veicolo======== -->
+					<vehicleModels>
+						<!--- ====== veicolo 5T======== -->
+						<VehicleModel id="IT:ITC1:VehicleModel:DGMARE:Traghetto1" version="1">
+							<Description>Traghetto</Description>
+							<Manufacturer>Grimaldi</Manufacturer>
+							<VehicleTypeRef ref="IT:ITC1:VehicleType:DGMARE:B01" version="1"/>
+						</VehicleModel>
+						<VehicleModel id="IT:ITC1:VehicleModel:DGMARE:Traghetto2" version="1">
+							<Description>Traghetto</Description>
+							<Manufacturer>Grimaldi</Manufacturer>
+							<VehicleTypeRef ref="IT:ITC1:VehicleType:DGMARE:B02" version="1"/>
+						</VehicleModel>
+					</vehicleModels>
+					<!--- =======Veicoli======== -->
+					<vehicles>
+						<!--- ====== veicolo 5T======== -->
+						<Vehicle id="IT:ITC1:Vehicle:DGMARE:B01" version="1">
+							<Name>B01</Name>
+							<ShortName>001</ShortName>
+							<RegistrationNumber>XXXXXXXX</RegistrationNumber>
+							<OperationalNumber>ZZZZZZZZZZZZZZZZ1</OperationalNumber>
+							<PrivateCode>001</PrivateCode>
+							<OperatorRef ref="IT:ITC1:Operator:DGMARE:Grimaldi" version="1"/>
+							<VehicleTypeRef ref="IT:ITC1:VehicleType:DGMARE:B01" version="1"/>
+						</Vehicle>
+						<Vehicle id="IT:ITC1:Vehicle:DGMARE:B02" version="1">
+							<Name>B02</Name>
+							<ShortName>002</ShortName>
+							<RegistrationNumber>XXXXXXXX</RegistrationNumber>
+							<OperationalNumber>ZZZZZZZZZZZZZZZZ1</OperationalNumber>
+							<PrivateCode>002</PrivateCode>
+							<OperatorRef ref="IT:ITC1:Operator:DGMARE:Grimaldi" version="1"/>
+							<VehicleTypeRef ref="IT:ITC1:VehicleType:DGMARE:B02" version="1"/>
+						</Vehicle>
+					</vehicles>
+				</ResourceFrame>
+				<SiteFrame id="epd:IT:ITC1:SiteFrame_EU_PI_STOP:ita" version="1">
+					<TypeOfFrameRef ref="epip:EU_PI_STOP" versionRef="1"/>
+					<stopPlaces>
+						<!-- ========== Terminal Traghetto========= -->
+						<StopPlace id="IT:ITC1:StopPlace:DGMARE:Civitavecchia" version="1">
+							<Name>Civitavecchia</Name>
+							<ShortName>Civitavecchia</ShortName>
+							<PrivateCode>001</PrivateCode>
+							<Centroid>
+								<Location>
+									<gml:pos srsName="ITA">11.776451767849466 42.1064214882215</gml:pos>
+								</Location>
+							</Centroid>
+							<AccessModes>foot</AccessModes>
+							<!-- ============LEVELS ===================- -->
+							<levels>
+								<Level id="IT:ITC1:Level:DGMARE:Civitavecchia" version="1">
+									<Name>Ground </Name>
+									<PublicCode>G</PublicCode>
+								</Level>
+							</levels>
+							<PublicCode>Civitavecchia</PublicCode>
+							<TransportMode>ferry</TransportMode>
+							<StopPlaceType>ferryPort</StopPlaceType>
+							<!-- ============QUAYS ===================- -->
+							<quays>
+								<Quay id="IT:ITC1:Quay:DGMARE:Civitavecchia" version="1">
+									<Name>Civitavecchia</Name>
+									<Description>Civitavecchia</Description>
+									<Centroid>
+										<Location>
+											<gml:pos srsName="ITA">7.657829 45.070304</gml:pos>
+										</Location>
+									</Centroid>
+									<Covered>outdoors</Covered>
+									<Lighting>wellLit</Lighting>
+									<LevelRef ref="IT:ITC1:Level:DGMARE:Civitavecchia" version="1"/>
+									<Label>Civitavecchia</Label>
+									<destinations>
+										<DestinationDisplayView>
+											<Name>Civitavecchia</Name>
+										</DestinationDisplayView>
+									</destinations>
+									<QuayType>ferryLanding</QuayType>
+								</Quay>
+							</quays>
+						</StopPlace>
+						<StopPlace id="IT:ITC1:StopPlace:DGMARE:Arbatax" version="1">
+							<Name>Arbatax</Name>
+							<ShortName>Arbatax</ShortName>
+							<PrivateCode>002</PrivateCode>
+							<Centroid>
+								<Location>
+									<gml:pos srsName="ITA">7.657829 45.070304</gml:pos>
+								</Location>
+							</Centroid>
+							<AccessModes>foot</AccessModes>
+							<!-- ============LEVELS ===================- -->
+							<levels>
+								<Level id="IT:ITC1:Level:DGMARE:Arbatax" version="1">
+									<Name>Ground </Name>
+									<PublicCode>G</PublicCode>
+								</Level>
+							</levels>
+							<PublicCode>Arbatax</PublicCode>
+							<TransportMode>ferry</TransportMode>
+							<StopPlaceType>ferryPort</StopPlaceType>
+							<!-- ============QUAYS ===================- -->
+							<quays>
+								<Quay id="IT:ITC1:Quay:DGMARE:Arbatax" version="1">
+									<Name>Arbatax</Name>
+									<Description>Arbatax</Description>
+									<Centroid>
+										<Location>
+											<gml:pos srsName="ITA">9.708213213196832 39.939646874555905</gml:pos>
+										</Location>
+									</Centroid>
+									<Covered>outdoors</Covered>
+									<Lighting>wellLit</Lighting>
+									<LevelRef ref="IT:ITC1:Level:DGMARE:Arbatax" version="1"/>
+									<Label>Arbatax</Label>
+									<destinations>
+										<DestinationDisplayView>
+											<Name>Arbatax</Name>
+										</DestinationDisplayView>
+									</destinations>
+									<QuayType>ferryLanding</QuayType>
+								</Quay>
+							</quays>
+						</StopPlace>
+						<StopPlace id="IT:ITC1:StopPlace:DGMARE:Cagliari" version="1">
+							<Name>Cagliari</Name>
+							<ShortName>Cagliari</ShortName>
+							<PrivateCode>003</PrivateCode>
+							<Centroid>
+								<Location>
+									<gml:pos srsName="ITA">7.657829 45.070304</gml:pos>
+								</Location>
+							</Centroid>
+							<AccessModes>foot</AccessModes>
+							<!-- ============LEVELS ===================- -->
+							<levels>
+								<Level id="IT:ITC1:Level:DGMARE:Cagliari" version="1">
+									<Name>Ground </Name>
+									<PublicCode>G</PublicCode>
+								</Level>
+							</levels>
+							<PublicCode>Cagliari</PublicCode>
+							<TransportMode>ferry</TransportMode>
+							<StopPlaceType>ferryPort</StopPlaceType>
+							<!-- ============QUAYS ===================- -->
+							<quays>
+								<Quay id="IT:ITC1:Quay:DGMARE:Cagliari" version="1">
+									<Name>Cagliari</Name>
+									<Description>Cagliari</Description>
+									<Centroid>
+										<Location>
+											<gml:pos srsName="ITA">9.106681195182217 39.21134413956852</gml:pos>
+										</Location>
+									</Centroid>
+									<Covered>outdoors</Covered>
+									<Lighting>wellLit</Lighting>
+									<LevelRef ref="IT:ITC1:Level:DGMARE:Cagliari" version="1"/>
+									<Label>Cagliari</Label>
+									<destinations>
+										<DestinationDisplayView>
+											<Name>Cagliari</Name>
+										</DestinationDisplayView>
+									</destinations>
+									<QuayType>ferryLanding</QuayType>
+								</Quay>
+							</quays>
+						</StopPlace>
+					</stopPlaces>
+				</SiteFrame>
+				<ServiceFrame id="epd:IT:ITC1:ServiceFrame_EU_PI_NETWORK:ita" version="1">
+					<TypeOfFrameRef ref="epip:EU_PI_NETWORK" versionRef="1"/>
+					<!--- =======Routes======== -->
+					<routes>
+						<Route version="1" id="IT:ITC1:Route:DGMARE:Civitavecchia-Cagliari">
+							<Name>Civitavecchia-Cagliari</Name>
+							<ShortName>Civitavecchia-Cagliari</ShortName>
+						</Route>
+					</routes>
+					<!--- =======Lines======== -->
+					<lines>
+						<!--- =======Lines 5T======== -->
+						<Line id="IT:ITC1:Line:DGMARE:Civitavecchia-Cagliari" version="1">
+							<Name>Civitavecchia-Cagliari</Name>
+							<ShortName>Civitavecchia-Cagliari</ShortName>
+							<Description>Civitavecchia-Cagliari</Description>
+							<TransportMode>water</TransportMode>
+							<Url>https://dgmare.com</Url>
+							<PublicCode>001</PublicCode>
+							<PrivateCode>001</PrivateCode>
+							<OperatorRef ref="IT:ITC1:Operator:DGMARE:Grimaldi" version="1"/>
+							<Monitored>true</Monitored>
+						</Line>
+					</lines>
+					<!--- =======destinationDisplays======== -->
+					<destinationDisplays>
+						<DestinationDisplay version="1" id="IT:ITC1:DestinationDisplay:DGMARE:Civitavecchia-Cagliari">
+							<Name>Cagliari.</Name>
+							<ShortName>Cagliari</ShortName>
+							<SideText>Cagliari</SideText>
+							<FrontText>Cagliari</FrontText>
+							<PublicCode>01</PublicCode>
+						</DestinationDisplay>
+						<DestinationDisplay version="1" id="IT:ITC1:DGMARE:Cagliari-Civitavecchia">
+							<Name>Civitavecchia</Name>
+							<ShortName>Civitavecchia</ShortName>
+							<SideText>Civitavecchia</SideText>
+							<FrontText>Civitavecchia</FrontText>
+							<PublicCode>01</PublicCode>
+						</DestinationDisplay>
+					</destinationDisplays>
+					<!--- ======ScheduledStopPoints======== -->
+					<scheduledStopPoints>
+						<ScheduledStopPoint id="IT:ITC1:ScheduledStopPoint:DGMARE:Civitavecchia" version="1">
+							<Name>Civitavecchia</Name>
+							<Location>
+								<Longitude>11.776451767849466</Longitude>
+								<Latitude>42.1064214882215</Latitude>
+								<Altitude>0</Altitude>
+								<gml:pos>11.776451767849466 42.1064214882215</gml:pos>
+								<Precision>5</Precision>
+							</Location>
+							<stopAreas>
+								<StopAreaRef ref="IT:ITC1:StopArea:DGMARE:Civitavecchia" version="1"/>
+							</stopAreas>
+							<ShortName>Civitavecchia</ShortName>
+							<Description>Civitavecchia</Description>
+							<PublicCode>00001</PublicCode>
+							<PrivateCode>00001</PrivateCode>
+							<StopType>ferryPort</StopType>
+							<VehicleModes>ferry</VehicleModes>
+						</ScheduledStopPoint>
+						<ScheduledStopPoint id="IT:ITC1:ScheduledStopPoint:DGMARE:Arbatax" version="1">
+							<Name>Arbatax</Name>
+							<Location>
+								<Longitude>9.708213213196832</Longitude>
+								<Latitude>39.939646874555905</Latitude>
+								<Altitude>0</Altitude>
+								<gml:pos>9.708213213196832 39.939646874555905</gml:pos>
+								<Precision>5</Precision>
+							</Location>
+							<stopAreas>
+								<StopAreaRef ref="IT:ITC1:StopArea:DGMARE:Arbatax" version="1"/>
+							</stopAreas>
+							<ShortName>Arbatax</ShortName>
+							<Description>Arbatax</Description>
+							<PublicCode>00002</PublicCode>
+							<PrivateCode>00002</PrivateCode>
+							<StopType>ferryPort</StopType>
+							<VehicleModes>ferry</VehicleModes>
+						</ScheduledStopPoint>
+						<ScheduledStopPoint id="IT:ITC1:ScheduledStopPoint:DGMARE:Cagliari" version="1">
+							<Name>Cagliari</Name>
+							<Location>
+								<Longitude>9.106681195182217</Longitude>
+								<Latitude>39.21134413956852</Latitude>
+								<Altitude>0</Altitude>
+								<gml:pos>9.106681195182217 39.21134413956852</gml:pos>
+								<Precision>5</Precision>
+							</Location>
+							<stopAreas>
+								<StopAreaRef ref="IT:ITC1:StopArea:DGMARE:Cagliari" version="1"/>
+							</stopAreas>
+							<ShortName>Cagliari</ShortName>
+							<Description>Cagliari</Description>
+							<PublicCode>00003</PublicCode>
+							<PrivateCode>00003</PrivateCode>
+							<StopType>ferryPort</StopType>
+							<VehicleModes>ferry</VehicleModes>
+						</ScheduledStopPoint>
+					</scheduledStopPoints>
+					<!--- =======ServiceLinks======== -->
+					<serviceLinks>
+						<!--- =============Bus 5T=============-->
+						<ServiceLink id="IT:ITC1:ServiceLink:DGMARE:Civitavecchia-Arbatax" version="1">
+							<Distance>1</Distance>
+							<gml:LineString gml:id="L1">
+								<gml:posList>7.666699362476096 45.071369265422796 7.670490214998856 45.077638752287363 7.67646809782321 45.079096772488427 7.685507823069793 45.079825782588955</gml:posList>
+							</gml:LineString>
+							<FromPointRef ref="IT:ITC1:ScheduledStopPoint:DGMARE:Civitavecchia" version="1"/>
+							<ToPointRef ref="IT:ITC1:ScheduledStopPoint:DGMARE:Arbatax" version="1"/>
+							<VehicleMode>water</VehicleMode>
+						</ServiceLink>
+						<ServiceLink id="IT:ITC1:ServiceLink:DGMARE:Arbatax-Cagliari" version="1">
+							<Distance>1</Distance>
+							<gml:LineString gml:id="L1">
+								<gml:posList>7.666699362476096 45.071369265422796 7.670490214998856 45.077638752287363 7.67646809782321 45.079096772488427 7.685507823069793 45.079825782588955</gml:posList>
+							</gml:LineString>
+							<FromPointRef ref="IT:ITC1:ScheduledStopPoint:DGMARE:Arbatax" version="1"/>
+							<ToPointRef ref="IT:ITC1:ScheduledStopPoint:DGMARE:Cagliari" version="1"/>
+							<VehicleMode>water</VehicleMode>
+						</ServiceLink>
+						<ServiceLink id="IT:ITC1:ServiceLink:DGMARE:Cagliari-Arbatax" version="1">
+							<Distance>1</Distance>
+							<gml:LineString gml:id="L1">
+								<gml:posList>7.666699362476096 45.071369265422796 7.670490214998856 45.077638752287363 7.67646809782321 45.079096772488427 7.685507823069793 45.079825782588955</gml:posList>
+							</gml:LineString>
+							<FromPointRef ref="IT:ITC1:ScheduledStopPoint:DGMARE:Cagliari" version="1"/>
+							<ToPointRef ref="IT:ITC1:ScheduledStopPoint:DGMARE:Arbatax" version="1"/>
+							<VehicleMode>water</VehicleMode>
+						</ServiceLink>
+						<ServiceLink id="IT:ITC1:ServiceLink:DGMARE:Arbatax-Civitavecchia" version="1">
+							<Distance>1</Distance>
+							<gml:LineString gml:id="L1">
+								<gml:posList>7.666699362476096 45.071369265422796 7.670490214998856 45.077638752287363 7.67646809782321 45.079096772488427 7.685507823069793 45.079825782588955</gml:posList>
+							</gml:LineString>
+							<FromPointRef ref="IT:ITC1:ScheduledStopPoint:DGMARE:Arbatax" version="1"/>
+							<ToPointRef ref="IT:ITC1:ScheduledStopPoint:DGMARE:Cagliari" version="1"/>
+							<VehicleMode>water</VehicleMode>
+						</ServiceLink>
+					</serviceLinks>
+					<!--- =======StopArea======== -->
+					<stopAreas>
+						<!--- =======StopArea 5T======== -->
+						<StopArea id="IT:ITC1:StopArea:DGMARE:Civitavecchia" version="1">
+							<Name>Civitvecchia</Name>
+							<ShortName>Civitvecchia</ShortName>
+							<Description>Civitvecchia</Description>
+							<PrivateCode>x0001</PrivateCode>
+							<members>
+								<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:DGMARE:Civitavecchia" version="1"/>
+							</members>
+							<gml:Polygon gml:id="L001">
+								<gml:interior>
+									<gml:LinearRing>
+										<gml:pos>11.77645 42.10642</gml:pos>
+										<gml:pos>11.77646 42.10642</gml:pos>
+										<gml:pos>11.77646 42.10643</gml:pos>
+										<gml:pos>11.77645 42.10643</gml:pos>
+									</gml:LinearRing>
+								</gml:interior>
+							</gml:Polygon>
+							<PublicCode>x0001</PublicCode>
+						</StopArea>
+						<StopArea id="IT:ITC1:StopArea:DGMARE:Arbatax" version="1">
+							<Name>Arbatax</Name>
+							<ShortName>Arbatax</ShortName>
+							<Description>Arbatax</Description>
+							<PrivateCode>x0002</PrivateCode>
+							<members>
+								<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:DGMARE:Arbatax" version="1"/>
+							</members>
+							<gml:Polygon gml:id="L002">
+								<gml:interior>
+									<gml:LinearRing>
+										<gml:pos>9.70821 39.9396</gml:pos>
+										<gml:pos>9.70822 39.9396</gml:pos>
+										<gml:pos>9.70822 39.9397</gml:pos>
+										<gml:pos>9.70821 39.9397</gml:pos>
+									</gml:LinearRing>
+								</gml:interior>
+							</gml:Polygon>
+							<PublicCode>x0002</PublicCode>
+						</StopArea>
+						<StopArea id="IT:ITC1:StopArea:DGMARE:Cagliari" version="1">
+							<Name>Cagliari</Name>
+							<ShortName>Cagliari</ShortName>
+							<Description>Cagliari</Description>
+							<PrivateCode>x00023</PrivateCode>
+							<members>
+								<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:DGMARE:Cagliari" version="1"/>
+							</members>
+							<gml:Polygon gml:id="L00023">
+								<gml:interior>
+									<gml:LinearRing>
+										<gml:pos>9.10668 39.2113</gml:pos>
+										<gml:pos>9.10669 39.2113</gml:pos>
+										<gml:pos>9.10669 39.2114</gml:pos>
+										<gml:pos>9.10668 39.2114</gml:pos>
+									</gml:LinearRing>
+								</gml:interior>
+							</gml:Polygon>
+							<PublicCode>x0003</PublicCode>
+						</StopArea>
+					</stopAreas>
+					<!--- =======StopAssignment======== -->
+					<stopAssignments>
+						<!--Fermate Torino Milano-->
+						<PassengerStopAssignment id="IT:ITC1:PassengerStopAssignment:DGMARE:Civitavecchia" order="1" version="1">
+							<Description>Civitavecchia</Description>
+							<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:DGMARE:Civitavecchia" version="1"/>
+							<StopPlaceRef ref="IT:ITC1:StopPlace:DGMARE:Civitavecchia" version="1"/>
+							<QuayRef ref="IT:ITC1:Quay:DGMARE:Civitavecchia" version="1"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="IT:ITC1:PassengerStopAssignment:DGMARE:Arbatax" order="2" version="1">
+							<Description>Arbatax</Description>
+							<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:DGMARE:Arbatax" version="1"/>
+							<StopPlaceRef ref="IT:ITC1:StopPlace:DGMARE:Arbatax" version="1"/>
+							<QuayRef ref="IT:ITC1:Quay:DGMARE:Arbatax" version="1"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="IT:ITC1:PassengerStopAssignment:DGMARE:Cagliari" order="2" version="1">
+							<Description>Cagliari</Description>
+							<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:DGMARE:Cagliari" version="1"/>
+							<StopPlaceRef ref="IT:ITC1:StopPlace:DGMARE:Cagliari" version="1"/>
+							<QuayRef ref="IT:ITC1:Quay:DGMARE:Cagliari" version="1"/>
+						</PassengerStopAssignment>
+					</stopAssignments>
+					<!--- =======JourneyPatterns======== -->
+					<journeyPatterns>
+						<!--- =============Bus 5T=============-->
+						<ServiceJourneyPattern id="IT:ITC1:ServiceJourneyPattern:DGMARE:Civitavecchia-Cagliari" version="1">
+							<Name>Civitavecchia-Cagliari</Name>
+							<ShortName>Civitavecchia-Cagliari</ShortName>
+							<Distance>200000</Distance>
+							<PrivateCode>Civitavecchia-Cagliari</PrivateCode>
+							<RouteView>
+								<VehicleMode>water</VehicleMode>
+								<LineRef ref="IT:ITC1:Line:DGMARE:Civitavecchia-Cagliari" version="1"/>
+							</RouteView>
+							<DirectionType>inbound</DirectionType>
+							<DirectionView>
+								<Name>Civitavecchia-Cagliari</Name>
+							</DirectionView>
+							<DestinationDisplayView>
+								<Name>Civitavecchia-Cagliari</Name>
+							</DestinationDisplayView>
+							<pointsInSequence>
+								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:DGMARE:Civitavecchia_A" order="1" version="1">
+									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:DGMARE:Civitavecchia" version="1"/>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:DGMARE:Civitavecchia-Arbatax" version="1"/>
+									<ForAlighting>false</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:DGMARE:Arbatax_A" order="2" version="1">
+									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:DGMARE:Arbatax" version="1"/>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:DGMARE:Arbatax-Cagliari" version="1"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:DGMARE:Cagliari_A" order="3" version="1">
+									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:DGMARE:Cagliari" version="1"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>false</ForBoarding>
+								</StopPointInJourneyPattern>
+							</pointsInSequence>
+							<ServiceJourneyPatternType>passenger</ServiceJourneyPatternType>
+						</ServiceJourneyPattern>
+						<ServiceJourneyPattern id="IT:ITC1:ServiceJourneyPattern:DGMARE:Cagliari-Civitavecchia" version="1">
+							<Name>Cagliari-Civitavecchia</Name>
+							<ShortName>Cagliari-Civitavecchia</ShortName>
+							<Distance>200000</Distance>
+							<PrivateCode>Cagliari-Civitavecchia</PrivateCode>
+							<RouteView>
+								<VehicleMode>water</VehicleMode>
+								<LineRef ref="IT:ITC1:Line:DGMARE:Civitavecchia-Cagliari" version="1"/>
+							</RouteView>
+							<DirectionType>outbound</DirectionType>
+							<DirectionView>
+								<Name>Cagliari-Civitavecchia</Name>
+							</DirectionView>
+							<DestinationDisplayView>
+								<Name>Cagliari-Civitavecchia</Name>
+							</DestinationDisplayView>
+							<pointsInSequence>
+								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:DGMARE:Cagliari_R" order="1" version="1">
+									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:DGMARE:Cagliari" version="1"/>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:DGMARE:Cagliari-Arbatax" version="1"/>
+									<ForAlighting>false</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:DGMARE:Arbatax_R" order="2" version="1">
+									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:DGMARE:Arbatax" version="1"/>
+									<OnwardServiceLinkRef ref="IT:ITC1:ServiceLink:DGMARE:Arbatax-Civitavecchia" version="1"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="IT:ITC1:StopPointInJourneyPattern:DGMARE:Civitavecchia_R" order="3" version="1">
+									<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:DGMARE:Civitavecchia" version="1"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>false</ForBoarding>
+								</StopPointInJourneyPattern>
+							</pointsInSequence>
+							<ServiceJourneyPatternType>passenger</ServiceJourneyPatternType>
+						</ServiceJourneyPattern>
+					</journeyPatterns>
+				</ServiceFrame>
+				<TimetableFrame id="epd:IT:ITC1:TimetableFrame_EU_PI_TIMETABLE:ita" version="1">
+					<TypeOfFrameRef ref="epip:EU_PI_TIMETABLE" versionRef="1"/>
+					<vehicleJourneys>
+						<!-- Corse 5T  -->
+						<ServiceJourney id="IT:ITC1:ServiceJourney:DGMARE:A" version="1">
+							<Name>Corsa 1 Civitavecchia - Cagliari</Name>
+							<ShortName>Civitavecchia - Cagliari</ShortName>
+							<Description>Civitavecchia - Cagliari</Description>
+							<Distance>200000</Distance>
+							<PrivateCode>01_01A</PrivateCode>
+							<TransportMode>bus</TransportMode>
+							<journeyAccountings>
+								<JourneyAccounting id="IT:ITC1:JourneyAccounting:DGMARE:1A" version="1">
+									<Name>Contratto Piemonte</Name>
+									<SupplyContractRef ref="IT:ITC1:JourneyAccounting:DGMARE:1" version="1"/>
+									<Partial>true</Partial>
+									<Distance>200000</Distance>
+								</JourneyAccounting>
+							</journeyAccountings>
+							<DepartureTime>20:00:00+02:00</DepartureTime>
+							<JourneyDuration>PT15H0M0S</JourneyDuration>
+							<dayTypes>
+								<DayTypeRef ref="IT:ITC1:DayType:DGMARE:MGS" version="1"/>
+							</dayTypes>
+							<ServiceJourneyPatternRef ref="IT:ITC1:ServiceJourneyPattern:DGMARE:Civitavecchia-Cagliari" version="1"/>
+							<VehicleTypeRef ref="IT:ITC1:VehicleType:DGMARE:B01" version="1"/>
+							<OperatorRef ref="IT:ITC1:Operator:DGMARE:Grimaldi" version="1"/>
+							<DirectionType>inbound</DirectionType>
+							<passingTimes>
+								<TimetabledPassingTime id="IT:ITC1:TimetabledPassingTime:DGMARE:001_01_01A:passingTimes:01" version="1">
+									<StopPointInJourneyPatternRef ref="IT:ITC1:StopPointInJourneyPattern:DGMARE:Civitavecchia" version="1"/>
+									<DepartureTime>20:00:00</DepartureTime>
+								</TimetabledPassingTime>
+								<TimetabledPassingTime id="IT:ITC1:TimetabledPassingTime:DGMARE:001_01_01A:passingTimes:02" version="1">
+									<StopPointInJourneyPatternRef ref="IT:ITC1:StopPointInJourneyPattern:DGMARE:Arbatax" version="1"/>
+									<ArrivalTime>05:00:00</ArrivalTime>
+									<DepartureTime>06:00:00</DepartureTime>
+								</TimetabledPassingTime>
+								<TimetabledPassingTime id="IT:ITC1:TimetabledPassingTime:DGMARE:001_01_01A:passingTimes:03" version="1">
+									<StopPointInJourneyPatternRef ref="IT:ITC1:StopPointInJourneyPattern:DGMARE:Cagliari" version="1"/>
+									<ArrivalTime>11:00:00</ArrivalTime>
+								</TimetabledPassingTime>
+							</passingTimes>
+						</ServiceJourney>
+						<ServiceJourney id="IT:ITC1:ServiceJourney:DGMARE:R" version="1">
+							<Name>Corsa 1 Milano - Torino</Name>
+							<ShortName>Corsa 1 MI-TO</ShortName>
+							<Description>Corsa 1 Milano - Torino</Description>
+							<Distance>60000</Distance>
+							<PrivateCode>01_01R</PrivateCode>
+							<TransportMode>bus</TransportMode>
+							<journeyAccountings>
+								<JourneyAccounting id="IT:ITC1:JourneyAccounting:DGMARE:1R" version="1">
+									<Name>Contratto Lombardia</Name>
+									<SupplyContractRef ref="IT:ITC1:JourneyAccounting:DGMARE:1" version="1"/>
+									<Partial>true</Partial>
+									<Distance>200000</Distance>
+								</JourneyAccounting>
+							</journeyAccountings>
+							<DepartureTime>20:00:00+02:00</DepartureTime>
+							<JourneyDuration>PT15H0M0S</JourneyDuration>
+							<dayTypes>
+								<DayTypeRef ref="IT:ITC1:DayType:DGMARE:LMV" version="1"/>
+							</dayTypes>
+							<ServiceJourneyPatternRef ref="IT:ITC1:ServiceJourneyPattern:DGMARE:Cagliari-Civitavecchia" version="1"/>
+							<VehicleTypeRef ref="IT:ITC1:VehicleType:DGMARE:B02" version="1"/>
+							<OperatorRef ref="IT:ITC1:Operator:DGMARE:Grimaldi" version="1"/>
+							<DirectionType>outbound</DirectionType>
+							<passingTimes>
+								<TimetabledPassingTime id="IT:ITC1:TimetabledPassingTime:DGMARE:001_01_01R:passingTimes:01" version="1">
+									<StopPointInJourneyPatternRef ref="IT:ITC1:StopPointInJourneyPattern:DGMARE:Cagliari" version="1"/>
+									<DepartureTime>20:00:00</DepartureTime>
+								</TimetabledPassingTime>
+								<TimetabledPassingTime id="IT:ITC1:TimetabledPassingTime:DGMARE:001_01_01R:passingTimes:02" version="1">
+									<StopPointInJourneyPatternRef ref="IT:ITC1:StopPointInJourneyPattern:DGMARE:Arbatax" version="1"/>
+									<ArrivalTime>05:00:00</ArrivalTime>
+									<DepartureTime>06:00:00</DepartureTime>
+								</TimetabledPassingTime>
+								<TimetabledPassingTime id="IT:ITC1:TimetabledPassingTime:DGMARE:001_01_01R:passingTimes:03" version="1">
+									<StopPointInJourneyPatternRef ref="IT:ITC1:StopPointInJourneyPattern:DGMARE:Civitavecchia" version="1"/>
+									<ArrivalTime>11:00:00</ArrivalTime>
+								</TimetabledPassingTime>
+							</passingTimes>
+						</ServiceJourney>
+					</vehicleJourneys>
+				</TimetableFrame>
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>
