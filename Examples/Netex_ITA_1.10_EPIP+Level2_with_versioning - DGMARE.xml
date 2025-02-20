@@ -243,7 +243,11 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							<PrivateCode>001</PrivateCode>
 							<Centroid>
 								<Location>
-									<gml:pos srsName="ITA">11.776451767849466 42.1064214882215</gml:pos>
+									<Longitude>11.776451767849466</Longitude>
+									<Latitude>42.1064214882215</Latitude>
+									<Altitude>0</Altitude>
+									<gml:pos>11.776451767849466 42.1064214882215</gml:pos>
+									<Precision>5</Precision>
 								</Location>
 							</Centroid>
 							<AccessModes>foot</AccessModes>
@@ -307,7 +311,11 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<Description>Arbatax</Description>
 									<Centroid>
 										<Location>
-											<gml:pos srsName="ITA">9.708213213196832 39.939646874555905</gml:pos>
+											<Longitude>9.708213213196832</Longitude>
+											<Latitude>39.939646874555905</Latitude>
+											<Altitude>0</Altitude>
+											<gml:pos>9.708213213196832 39.939646874555905</gml:pos>
+											<Precision>5</Precision>
 										</Location>
 									</Centroid>
 									<Covered>outdoors</Covered>
@@ -350,7 +358,11 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 									<Description>Cagliari</Description>
 									<Centroid>
 										<Location>
-											<gml:pos srsName="ITA">9.106681195182217 39.21134413956852</gml:pos>
+											<Longitude>9.106681195182217</Longitude>
+											<Latitude>39.21134413956852</Latitude>
+											<Altitude>0</Altitude>
+											<gml:pos>9.106681195182217 39.21134413956852</gml:pos>
+											<Precision>5</Precision>
 										</Location>
 									</Centroid>
 									<Covered>outdoors</Covered>
