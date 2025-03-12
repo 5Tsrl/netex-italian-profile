@@ -465,32 +465,81 @@
 		<xsd:attributeGroup ref="EntityAttributeGroup"/>
 		<xsd:attribute name="order" type="xsd:integer" use="optional"/>
 	</xsd:complexType>
-	<!-- variazione di usageParameters_RelStructure 
-	<xsd:complexType name="limitations_RelStructure">
-		<xsd:sequence>
-			<xsd:choice maxOccurs="unbounded">
-				<xsd:element ref="UsageValidityPeriodRef"/>
-				<xsd:element name="UsageValidityPeriod" type="UsageValidityPeriod_VersionStructure"/>
-			</xsd:choice>
-			<xsd:choice maxOccurs="unbounded">
-				<xsd:element ref="UserProfileRef"/>
-				<xsd:element name="UserProfile" type="UserProfile_VersionStructure"/>
-			</xsd:choice>
+	<xsd:complexType name="validityParameters_RelStructure">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:group ref="ScopingValidityParametersGroup"/>
 		</xsd:sequence>
 		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
 	</xsd:complexType>
-	-->
-	<xsd:complexType name="validityParameters_RelStructure">
-		<xsd:sequence maxOccurs="unbounded">
+	<xsd:group name="ScopingValidityParametersGroup">
+		<xsd:annotation>
+			<xsd:documentation>Scoping validity parameters for ACCESS RIGHT PARAMETER ASSIGNMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="OrganisationValidityParametersGroup"/>
+			<xsd:group ref="NetworkValidityParametersGroup">
+				<xsd:annotation>
+					<xsd:documentation>Network validity parameters for ACCESS RIGHT PARAMETER ASSIGNMENT.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:group ref="RouteValidityParametersGroup">
+				<xsd:annotation>
+					<xsd:documentation>Route validity parameters for ACCESS RIGHT PARAMETER ASSIGNMENT.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:group ref="ServiceValidityParametersGroup">
+				<xsd:annotation>
+					<xsd:documentation>Service validity parameters for ACCESS RIGHT PARAMETER ASSIGNMENT.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="OrganisationValidityParametersGroup">
+		<xsd:annotation>
+			<xsd:documentation>ORGANISATION validity parameters for ACCESS RIGHT PARAMETER ASSIGNMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
 			<xsd:element ref="OperatorRef" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="NetworkValidityParametersGroup">
+		<xsd:annotation>
+			<xsd:documentation>Network validity parameters for ACCESS RIGHT PARAMETER ASSIGNMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="LineRef" minOccurs="0"/>
 			<xsd:element ref="TariffZoneRef" minOccurs="0"/>
+			<xsd:element ref="ScheduledStopPointRef" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="RouteValidityParametersGroup">
+		<xsd:annotation>
+			<xsd:documentation>ROUTE validity parameters for ACCESS RIGHT PARAMETER ASSIGNMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="ServiceJourneyPatternRef" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="ServiceValidityParametersGroup">
+		<xsd:annotation>
+			<xsd:documentation>Service validity parameters for ACCESS RIGHT PARAMETER ASSIGNMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="ConventionalServiceValidityParametersGroup"/>
 			<xsd:choice minOccurs="0">
 				<xsd:element ref="VehicleTypeRef"/>
 				<xsd:element ref="TrainRef"/>
 			</xsd:choice>
 		</xsd:sequence>
-		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
-	</xsd:complexType>
+	</xsd:group>
+	<xsd:group name="ConventionalServiceValidityParametersGroup">
+		<xsd:annotation>
+			<xsd:documentation>Connventional Service validity parameters for ACCESS RIGHT PARAMETER ASSIGNMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="ServiceJourneyRef" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:group>
 	<!-- definizione di fareStructureElements (fine) -->
 	<!-- definizione di distanceMatrixElements (inizio) -->
 	<xsd:complexType name="distanceMatrixElements_RelStructure">
@@ -576,10 +625,6 @@
 	<!-- definizione di usageParameters (inizio) -->
 	<xsd:complexType name="usageParameters_RelStructure">
 		<xsd:sequence maxOccurs="unbounded">
-			<!--
-			<xsd:element name="UsageValidityPeriod" type="UsageValidityPeriod_VersionStructure" minOccurs="0"/>
-			<xsd:element name="UserProfile" type="UserProfile_VersionStructure" minOccurs="0"/>
-			-->
 			<xsd:choice minOccurs="0">
 				<xsd:element ref="UsageValidityPeriodRef"/>
 				<xsd:element name="UsageValidityPeriod" type="UsageValidityPeriod_VersionStructure"/>
@@ -617,6 +662,26 @@
 			<xsd:element name="StandardDuration" type="xsd:duration" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>Duration of  USAGE VALIDITY PERIOD.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="StartDate" type="xsd:date" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Start date of  USAGE VALIDITY PERIOD.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="StartTime" type="xsd:time" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Start time of  USAGE VALIDITY PERIOD.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="EndDate" type="xsd:date" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>End Date of  USAGE VALIDITY PERIOD.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="EndTime" type="xsd:time" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>End time of  USAGE VALIDITY PERIOD.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="startOnlyOn" minOccurs="0">

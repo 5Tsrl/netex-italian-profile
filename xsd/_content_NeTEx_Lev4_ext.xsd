@@ -287,7 +287,7 @@
 		</xsd:sequence>
 		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
 	</xsd:complexType>
-	<!-- versione aggiornata con MobilityServiceConstraintZoneRef di fareProducts (inizio) -->
+	<!-- versione aggiornata con MobilityServiceConstraintZoneRef e VehicleRef di fareProducts (inizio) -->
 	<xsd:complexType name="fareProductsL4_RelStructure">
 		<xsd:sequence>
 			<xsd:element name="PreassignedFareProduct" type="PreassignedFareProductL4_VersionStructure" maxOccurs="unbounded"/>
@@ -348,17 +348,70 @@
 	</xsd:complexType>
 	<xsd:complexType name="validityParametersL4_RelStructure">
 		<xsd:sequence maxOccurs="unbounded">
-			<xsd:element ref="OperatorRef" minOccurs="0"/>
+			<xsd:group ref="ScopingValidityParametersGroupL4"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:group name="ScopingValidityParametersGroupL4">
+		<xsd:annotation>
+			<xsd:documentation>Scoping validity parameters for ACCESS RIGHT PARAMETER ASSIGNMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="OrganisationValidityParametersGroup"/>
+			<xsd:group ref="NetworkValidityParametersGroupL4">
+				<xsd:annotation>
+					<xsd:documentation>Network validity parameters for ACCESS RIGHT PARAMETER ASSIGNMENT.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:group ref="RouteValidityParametersGroup">
+				<xsd:annotation>
+					<xsd:documentation>Route validity parameters for ACCESS RIGHT PARAMETER ASSIGNMENT.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:group ref="ServiceValidityParametersGroupL4">
+				<xsd:annotation>
+					<xsd:documentation>Service validity parameters for ACCESS RIGHT PARAMETER ASSIGNMENT.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="NetworkValidityParametersGroupL4">
+		<xsd:annotation>
+			<xsd:documentation>Network validity parameters for ACCESS RIGHT PARAMETER ASSIGNMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="LineRef" minOccurs="0"/>
 			<xsd:element ref="TariffZoneRef" minOccurs="0"/>
+			<xsd:element ref="ScheduledStopPointRef" minOccurs="0"/>
+			<xsd:element ref="MobilityServiceConstraintZoneRef" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="ServiceValidityParametersGroupL4">
+		<xsd:annotation>
+			<xsd:documentation>Service validity parameters for ACCESS RIGHT PARAMETER ASSIGNMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="ConventionalServiceValidityParametersGroup"/>
 			<xsd:choice minOccurs="0">
 				<xsd:element ref="VehicleTypeRef"/>
 				<xsd:element ref="TrainRef"/>
 			</xsd:choice>
-			<xsd:element ref="MobilityServiceConstraintZoneRef" minOccurs="0"/>
+			<xsd:group ref="SeatingValidityParametersGroup">
+				<xsd:annotation>
+					<xsd:documentation>Seating validity parameters for ACCESS RIGHT PARAMETER ASSIGNMENT. +v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
 		</xsd:sequence>
-		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
-	</xsd:complexType>
-	<!-- versione aggiornata con MobilityServiceConstraintZoneRef di fareProducts (fine) -->
+	</xsd:group>
+	<xsd:group name="SeatingValidityParametersGroup">
+		<xsd:annotation>
+			<xsd:documentation>Seating validity parameters for ACCESS RIGHT PARAMETER ASSIGNMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="VehicleRef" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- versione aggiornata con MobilityServiceConstraintZoneRef e VehicleRef di fareProducts (fine) -->
 	<!-- versione di FareFrame con una versione aggiornata di fareProducts (fine) -->
 	<!-- definizione MobilityServiceFrame (inizio) -->
 	<xsd:complexType name="MobilityServiceFrame_VersionStructure">
