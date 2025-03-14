@@ -5089,17 +5089,27 @@
 			<xsd:field xpath="@order"/>
 		</xsd:unique>
 		<!-- =====StopPointInJourneyPattern Key ========================== -->
-		<xsd:keyref name="StopPointInJourneyPattern_KeyRef" refer="netex:StopPointInJourneyPattern_AnyVersionedKey_ordered">
+		<!--
+		<xsd:keyref name="StopPointInJourneyPattern_KeyRef" refer="netex:StopPointInJourneyPattern_AnyVersionedKey_ordered"></xsd:keyref>
+		-->
+		<xsd:keyref name="StopPointInJourneyPattern_KeyRef" refer="netex:StopPointInJourneyPattern_AnyVersionedKey">
 			<xsd:selector xpath=".//netex:StopPointInJourneyPatternRef | .//netex:FarePointInPatternRef | .//netex:FromPointInPatternRef | .//netex:ToPointInPatternRef  | .//netex:StartPointInPatternRef  | .//netex:EndPointInPatternRef"/>
 			<xsd:field xpath="@ref"/>
 			<xsd:field xpath="@version"/>
+			<!--
 			<xsd:field xpath="@order"/>
+			-->
 		</xsd:keyref>
 		<xsd:key name="StopPointInJourneyPattern_AnyVersionedKey_ordered">
 			<xsd:selector xpath=".//netex:StopPointInJourneyPattern |  .//netex:FarePointInPattern"/>
 			<xsd:field xpath="@id"/>
 			<xsd:field xpath="@version"/>
 			<xsd:field xpath="@order"/>
+		</xsd:key>
+		<xsd:key name="StopPointInJourneyPattern_AnyVersionedKey">
+			<xsd:selector xpath=".//netex:StopPointInJourneyPattern |  .//netex:FarePointInPattern"/>
+			<xsd:field xpath="@id"/>
+			<xsd:field xpath="@version"/>
 		</xsd:key>
 		<!-- =====LinkInJourneyPattern  ========================== -->
 		<!-- =====LinkInJourneyPattern unique========================== -->
