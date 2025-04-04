@@ -918,9 +918,21 @@
     </xsd:complexType>
 	<!-- definizione di fareProducts (fine) -->
 	<!-- definizione di fareTables (inizio) -->
+	<!--
 	<xsd:complexType name="fareTables_RelStructure">
 		<xsd:sequence>
 			<xsd:element name="FareTable" type="FareTable_VersionStructure" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	sostituita con l'ex fareTables2_RelStructure
+	-->
+	<xsd:complexType name="fareTables_RelStructure">
+		<xsd:sequence>
+			<xsd:choice maxOccurs="unbounded">
+				<xsd:element ref="FareTableRef"/>
+				<xsd:element name="FareTable" type="FareTable_VersionStructure"/>
+			</xsd:choice>
 		</xsd:sequence>
 		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
 	</xsd:complexType>
@@ -973,6 +985,10 @@
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element ref="CappingRulePriceRef"/>
+				<xsd:element name="CappingRulePrice" type="FareStructureElementPrice_VersionStructure"/>
+			</xsd:choice>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
 				<xsd:element ref="FareStructureElementPriceRef"/>
 				<xsd:element name="FareStructureElementPrice" type="FareStructureElementPrice_VersionStructure"/>
 			</xsd:choice>
@@ -987,6 +1003,47 @@
 		</xsd:sequence>
 		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
 	</xsd:complexType>
+
+
+	<xsd:element name="CappingRulePriceRef" type="CappingRulePriceRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Reference to a CAPPING RULE PRICE.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:complexType name="CappingRulePriceRefStructure">
+        <xsd:annotation>
+            <xsd:documentation>Type for Reference to a CAPPING RULE PRICE.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+	<xsd:complexType name="CappingRulePrice_VersionStructure">
+		<xsd:sequence>
+			<xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:element ref="Name" minOccurs="0"/>
+			<xsd:element ref="Description" minOccurs="0"/>
+			<xsd:element name="Amount" type="xsd:decimal" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>PRICE amount. in specified currency.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Currency" type="CurrencyType" minOccurs="0"/>
+			<!--
+			<xsd:element name="CanBeCumulative" type="xsd:boolean" default="true" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether this discount can be used cumulatively with other discounts.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="CappingRuleRef" minOccurs="0"/>
+			-->
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+
+
 	<xsd:element name="FareStructureElementPriceRef" type="FareStructureElementPriceRefStructure">
         <xsd:annotation>
             <xsd:documentation>Reference to a FARE STRUCTURE ELEMENT PRICE.</xsd:documentation>
@@ -1342,7 +1399,14 @@
     </xsd:complexType>
 	<xsd:complexType name="SalesOfferPackageElement_VersionStructure">
 		<xsd:sequence>
+			<!--
 			<xsd:element name="fareTables" type="fareTables2_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Other FARE TABLESs for DISTANCE MATRIX ELEMENT.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			-->
+			<xsd:element name="fareTables" type="fareTables_RelStructure" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>Other FARE TABLESs for DISTANCE MATRIX ELEMENT.</xsd:documentation>
 				</xsd:annotation>
@@ -1358,6 +1422,7 @@
 		<xsd:attributeGroup ref="EntityAttributeGroup"/>
 		<xsd:attribute name="order" type="xsd:integer" use="optional"/>
 	</xsd:complexType>
+	<!--
 	<xsd:complexType name="fareTables2_RelStructure">
 		<xsd:sequence>
 			<xsd:choice maxOccurs="unbounded">
@@ -1367,6 +1432,7 @@
 		</xsd:sequence>
 		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
 	</xsd:complexType>
+	-->
 	<xsd:complexType name="salesOfferPackagePrices_RelStructure">
 		<xsd:annotation>
 			<xsd:documentation>Type for a list of SALES OFFER PACKAGE PRICEs.</xsd:documentation>
@@ -1397,6 +1463,7 @@
 	<xsd:complexType name="SalesOfferPackagePrice_VersionStructure">
 		<xsd:sequence>
 			<xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:element ref="CappingRulePriceRef" minOccurs="0"/>
 			<xsd:choice minOccurs="0">
 				<xsd:element ref="PricingRuleRef"/>
 				<xsd:element name="PricingRule" type="PricingRule_VersionStructure"/>
