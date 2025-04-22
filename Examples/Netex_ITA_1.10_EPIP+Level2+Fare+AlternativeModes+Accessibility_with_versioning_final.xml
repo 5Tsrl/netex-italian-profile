@@ -23566,6 +23566,33 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 										</FareStructureElementInSequence>
 									</fareStructureElementsInSequence>
 								</FareStructureElement>
+								<FareStructureElement id="IT:ITC1:FareStructureElement:busATS:fse:deviazione" version="1">
+									<geographicalIntervals>
+										<GeographicalIntervalRef ref="IT:ITC1:GeographicalInterval:busATS:gi:0-5" version="1"/>
+										<GeographicalIntervalRef ref="IT:ITC1:GeographicalInterval:busATS:gi:5-10" version="1"/>
+									</geographicalIntervals>
+									<distanceMatrixElements>
+										<DistanceMatrixElementRef ref="IT:ITC1:DistanceMatrixElement:busATS:dm:1" version="1"/>
+										<DistanceMatrixElementRef ref="IT:ITC1:DistanceMatrixElement:busATS:dm:2" version="1"/>
+										<DistanceMatrixElementRef ref="IT:ITC1:DistanceMatrixElement:busATS:dm:3" version="1"/>
+									</distanceMatrixElements>
+									<fareStructureElementsInSequence>
+										<FareStructureElementInSequence id="IT:ITC1:FareStructureElementInSequence:busATS:fseis:varianti" version="1" order="1">
+											<GenericParameterAssignment id="IT:ITC1:GenericParameterAssignment:busATS:gpafs:varianti" version="1" order="1">
+												<validityParameters>
+													<OperatorRef ref="IT:ITC1:Operator:busATS:11" version="1"/>
+													<LineRef ref="IT:ITC1:Line:busATS:TO-MI" version="1"/>
+													<TariffZoneRef ref="IT:ITC1:TariffZone:busATS:TZ:3" version="1"/>
+													<ScheduledStopPointRef ref="IT:ITC1:ScheduledStopPoint:busATS:031109" version="1"/>
+													<ServiceJourneyPatternRef ref="IT:ITC1:ServiceJourneyPattern:busATS:001_01A" version="1"/>
+													<ServiceJourneyRef ref="IT:ITC1:ServiceJourney:busATS:001_01_01A" version="1"/>
+													<VehicleTypeRef ref="IT:ITC1:VehicleType:busATS:001" version="1"/>
+													<TrainRef ref="IT:ITC1:Train:trenoFS:1" version="1"/>
+												</validityParameters>
+											</GenericParameterAssignment>
+										</FareStructureElementInSequence>
+									</fareStructureElementsInSequence>
+								</FareStructureElement>
 								<FareStructureElement id="IT:ITC1:FareStructureElement:busATS:distanceMatrix" version="1">
 									<distanceMatrixElements>
 										<DistanceMatrixElementRef ref="IT:ITC1:DistanceMatrixElement:busATS:dm:1" version="1"/>
@@ -23609,6 +23636,12 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 								<FareStructureElementRef ref="IT:ITC1:FareStructureElement:busATS:fse:1" version="1"/>
 							</fareStructureElements>
 						</ValidableElement>
+						<ValidableElement id="IT:ITC1:ValidableElement:busATS::ve:deviazione" version="1">
+							<Name>TariffaOD con deviazione</Name>
+							<fareStructureElements>
+								<FareStructureElementRef ref="IT:ITC1:FareStructureElement:busATS:fse:deviazione" version="1"/>
+							</fareStructureElements>
+						</ValidableElement>
 						<ValidableElement id="IT:ITC1:ValidableElement:busATS::ve:dm" version="1">
 							<Name>TariffaOD1</Name>
 							<fareStructureElements>
@@ -23650,6 +23683,20 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 							<Name>Tariffa parcheggio</Name>
 							<Description>Tariffa parcheggio</Description>
 							<ChargingMomentType>atEndOfChargePeriod</ChargingMomentType>
+							<validityParameterAssignments>
+								<!-- Corsa con deviazione-->
+								<GenericParameterAssignment id="IT:ITC1:GenericParameterAssignment:busATS:gpa:deviazione" order="1" version="1">
+									<limitations>
+										<UsageValidityPeriodRef ref="IT:ITC1:UsageValidityPeriod:busATS:uvp:1" version="1"/>
+										<UserProfileRef ref="IT:ITC1:UserProfile:busATS:up:1" version="1"/>
+									</limitations>
+									<validityParameters>
+										<OperatorRef ref="IT:ITC1:Operator:busATS:11" version="1"/>
+										<TariffZoneRef ref="IT:ITC1:TariffZone:busATS:TZ:1" version="1"/>
+										<TrainRef ref="IT:ITC1:Train:metroATMMILANO:LEONARDO" version="1"/>
+									</validityParameters>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
 							<validableElements>
 								<ValidableElementRef ref="IT:ITC1:ValidableElement:busATS:ve:1" version="1"/>
 							</validableElements>
@@ -23775,6 +23822,26 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 								<ValidableElementRef ref="IT:ITC1:ValidableElement:busATS:ve:8" version="1"/>
 							</validableElements>
 						</PreassignedFareProduct>
+						<PreassignedFareProduct id="IT:ITC1:PreassignedFareProduct:busATS:pfp:deviazione" version="1">
+							<ValidBetween>
+								<FromDate>2022-01-01T00:00:00.000+02:00</FromDate>
+								<ToDate>2022-12-31T00:00:00.000+02:00</ToDate>
+							</ValidBetween>
+							<Name>Annuale</Name>
+							<Description>Corsa OD deviazione</Description>
+							<ChargingMomentType>beforeTravel</ChargingMomentType>
+							<validityParameterAssignments>
+								<!-- Corse OD deviazione-->
+								<GenericParameterAssignment id="IT:ITC1:GenericParameterAssignment:busATS:gpa:2cDevizione" order="1" version="1">
+									<limitations>
+										<UserProfileRef ref="IT:ITC1:UserProfile:busATS:up:1" version="1"/>
+									</limitations>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+							<validableElements>
+								<ValidableElementRef ref="IT:ITC1:ValidableElement:busATS::ve:deviazione" version="1"/>
+							</validableElements>
+						</PreassignedFareProduct>
 						<PreassignedFareProduct id="IT:ITC1:PreassignedFareProduct:busATS:pfp:dm1" version="1">
 							<ValidBetween>
 								<FromDate>2022-01-01T00:00:00.000+02:00</FromDate>
@@ -23882,6 +23949,17 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 									<CanBeCumulative>false</CanBeCumulative>
 									<DistanceMatrixElementRef ref="IT:ITC1:DistanceMatrixElement:busATS:dm:3" version="1"/>
 								</DistanceMatrixElementPrice>
+							</prices>
+						</FareTable>
+						<FareTable id="IT:ITC1:FareTable:busATS:ft:distanceMatrix1_3deviazione" version="1">
+							<prices>
+								<FareStructureElementPrice id="IT:ITC1:DistanceMatrixElementPrice:busATS:distanceMatrix3deviazione" version="1">
+									<Name>Tariffa Torino - Milano</Name>
+									<Description>Tariffa Torino - Milano</Description>
+									<Amount>13.00</Amount>
+									<CanBeCumulative>false</CanBeCumulative>
+									<FareStructureElementRef ref="IT:ITC1:FareStructureElement:busATS:fse:deviazione" version="1"/>
+								</FareStructureElementPrice>
 							</prices>
 						</FareTable>
 						<FareTable id="IT:ITC1:FareTable:busATS:ft:geographicalInterval0-5" version="1">
@@ -24062,6 +24140,27 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 										<SalesOfferPackagePrice id="IT:ITC1:SalesOfferPackagePrice:busATS:sopp:distanceMatrix1_3" version="1">
 											<PricingRule id="IT:ITC1:PricingRule:busATS:pr:distanceMatrix1_3" version="1">
 												<Factor>1</Factor>
+											</PricingRule>
+										</SalesOfferPackagePrice>
+									</prices>
+								</SalesOfferPackageElement>
+							</salesOfferPackageElements>
+						</SalesOfferPackage>
+						<SalesOfferPackage id="IT:ITC1:SalesOfferPackage:busATS:sop:dm3deviazione" version="1">
+							<distributionAssignments>
+								<DistributionAssignmentRef ref="IT:ITC1:DistributionChannel:busATS:dc:1" version="1"/>
+							</distributionAssignments>
+							<salesOfferPackageElements>
+								<!-- Tariffa Torino - Milano-->
+								<SalesOfferPackageElement id="IT:ITC1:SalesOfferPackageElement:busATS:sope:dm3deviazione" version="1" order="1">
+									<fareTables>
+										<FareTableRef ref="IT:ITC1:FareTable:busATS:ft:distanceMatrix1_3deviazione" version="1"/>
+									</fareTables>
+									<FareProductRef ref="IT:ITC1:PreassignedFareProduct:busATS:pfp:deviazione" version="1"/>
+									<prices>
+										<SalesOfferPackagePrice id="IT:ITC1:SalesOfferPackagePrice:busATS:sopp:distanceMatrix1_3deviazione" version="1">
+											<PricingRule id="IT:ITC1:PricingRule:busATS:pr:distanceMatrix1_3deviazione" version="1">
+												<Factor>1.5</Factor>
 											</PricingRule>
 										</SalesOfferPackagePrice>
 									</prices>
