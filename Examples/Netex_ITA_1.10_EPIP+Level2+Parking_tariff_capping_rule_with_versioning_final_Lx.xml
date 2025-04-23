@@ -23531,6 +23531,13 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 						</ValidableElement>
 					</validableElements>
 					<usageParameters>
+						<UsageValidityPeriod id="IT:ITC1:UserProfile:parcheggiTorino:uvp:1" version="1">
+							<StandardDuration>PT8H</StandardDuration>
+							<StartDate>2025-01-01</StartDate>
+							<StartTime>00:00:00</StartTime>
+							<EndDate>2025-12-31</EndDate>
+							<EndTime>00:00:00</EndTime>
+						</UsageValidityPeriod>
 						<UserProfile id="IT:ITC1:UserProfile:parcheggiTorino:up:1" version="1">
 							<UserType>anyone</UserType>
 							<MinimumAge>18</MinimumAge>
@@ -23550,6 +23557,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 								<!--Parcheggio-->
 								<GenericParameterAssignment id="IT:ITC1:GenericParameterAssignment:parcheggiTorino:gpa:1" order="1" version="1">
 									<limitations>
+										<UsageValidityPeriodRef ref="IT:ITC1:UserProfile:parcheggiTorino:uvp:1"/>
 										<UserProfileRef ref="IT:ITC1:UserProfile:parcheggiTorino:up:1" version="1"/>
 									</limitations>
 								</GenericParameterAssignment>
