@@ -716,16 +716,16 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							<DirectionType>inbound</DirectionType>
 							<passingTimes>
 								<TimetabledPassingTime id="IT:ITC1:TimetabledPassingTime:DGMARE:001_01_01A:passingTimes:01" version="1">
-									<StopPointInJourneyPatternRef ref="IT:ITC1:StopPointInJourneyPattern:DGMARE:Civitavecchia" version="1"/>
+									<StopPointInJourneyPatternRef ref="IT:ITC1:StopPointInJourneyPattern:DGMARE:Civitavecchia_A" version="1"/>
 									<DepartureTime>20:00:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime id="IT:ITC1:TimetabledPassingTime:DGMARE:001_01_01A:passingTimes:02" version="1">
-									<StopPointInJourneyPatternRef ref="IT:ITC1:StopPointInJourneyPattern:DGMARE:Arbatax" version="1"/>
+									<StopPointInJourneyPatternRef ref="IT:ITC1:StopPointInJourneyPattern:DGMARE:Arbatax_A" version="1"/>
 									<ArrivalTime>05:00:00</ArrivalTime>
 									<DepartureTime>06:00:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime id="IT:ITC1:TimetabledPassingTime:DGMARE:001_01_01A:passingTimes:03" version="1">
-									<StopPointInJourneyPatternRef ref="IT:ITC1:StopPointInJourneyPattern:DGMARE:Cagliari" version="1"/>
+									<StopPointInJourneyPatternRef ref="IT:ITC1:StopPointInJourneyPattern:DGMARE:Cagliari_A" version="1"/>
 									<ArrivalTime>11:00:00</ArrivalTime>
 								</TimetabledPassingTime>
 							</passingTimes>
@@ -756,16 +756,16 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							<DirectionType>outbound</DirectionType>
 							<passingTimes>
 								<TimetabledPassingTime id="IT:ITC1:TimetabledPassingTime:DGMARE:001_01_01R:passingTimes:01" version="1">
-									<StopPointInJourneyPatternRef ref="IT:ITC1:StopPointInJourneyPattern:DGMARE:Cagliari" version="1"/>
+									<StopPointInJourneyPatternRef ref="IT:ITC1:StopPointInJourneyPattern:DGMARE:Cagliari_R" version="1"/>
 									<DepartureTime>20:00:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime id="IT:ITC1:TimetabledPassingTime:DGMARE:001_01_01R:passingTimes:02" version="1">
-									<StopPointInJourneyPatternRef ref="IT:ITC1:StopPointInJourneyPattern:DGMARE:Arbatax" version="1"/>
+									<StopPointInJourneyPatternRef ref="IT:ITC1:StopPointInJourneyPattern:DGMARE:Arbatax_R" version="1"/>
 									<ArrivalTime>05:00:00</ArrivalTime>
 									<DepartureTime>06:00:00</DepartureTime>
 								</TimetabledPassingTime>
 								<TimetabledPassingTime id="IT:ITC1:TimetabledPassingTime:DGMARE:001_01_01R:passingTimes:03" version="1">
-									<StopPointInJourneyPatternRef ref="IT:ITC1:StopPointInJourneyPattern:DGMARE:Civitavecchia" version="1"/>
+									<StopPointInJourneyPatternRef ref="IT:ITC1:StopPointInJourneyPattern:DGMARE:Civitavecchia_R" version="1"/>
 									<ArrivalTime>11:00:00</ArrivalTime>
 								</TimetabledPassingTime>
 							</passingTimes>
