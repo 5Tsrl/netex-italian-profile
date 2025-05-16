@@ -64,7 +64,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 								</properties>
 							</DayType>
 						</dayTypes>
-						<!--- =======OperatingPeriods 5T======= -->
+						<!--- =======OperatingPeriods======= -->
 						<operatingPeriods>
 							<UicOperatingPeriod id="NL::UicOperatingPeriod:KLM:LV" version="1">
 								<FromDate>2025-09-22T00:00:00</FromDate>
@@ -132,7 +132,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 					</organisations>
 					<!--- =======Tipi veicolo======== -->
 					<vehicleTypes>
-						<!--- =======Tipi veicolo 5T======== -->
+						<!--- =======Tipi veicolo ======== -->
 						<VehicleType id="NL::VehicleType:KLMBoeing777-300" version="1">
 							<PrivateCode>001</PrivateCode>
 							<FuelType>other</FuelType>
@@ -156,7 +156,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 					</vehicleTypes>
 					<!--- =======Modelli veicolo======== -->
 					<vehicleModels>
-						<!--- ====== veicolo 5T======== -->
+						<!--- ====== modello veicolo ======== -->
 						<VehicleModel id="NL::VehicleModel:KLMBoeing777-300" version="1">
 							<Description>Aereo 777-300</Description>
 							<Manufacturer>Boeing</Manufacturer>
@@ -170,7 +170,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 					</vehicleModels>
 					<!--- =======Veicoli======== -->
 					<vehicles>
-						<!--- ====== veicolo 5T======== -->
+						<!--- ====== veicolo ======== -->
 						<Vehicle id="NL::Vehicle:KLMBoeing777-300" version="1">
 							<Name>KLM01</Name>
 							<ShortName>KLM01</ShortName>
@@ -452,7 +452,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 					</scheduledStopPoints>
 					<!--- =======ServiceLinks======== -->
 					<serviceLinks>
-						<!--- =============Bus 5T=============-->
+						<!--- =============Archi=============-->
 						<ServiceLink id="NL::ServiceLink:IATA:BLQ-AMS" version="1">
 							<Distance>995200</Distance>
 							<gml:LineString gml:id="L1">
@@ -474,7 +474,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 					</serviceLinks>
 					<!--- =======StopArea======== -->
 					<stopAreas>
-						<!--- =======StopArea 5T======== -->
+						<!--- =======StopArea ======== -->
 						<StopArea id="NL::StopArea:IATA:AMS" version="1">
 							<Name>Amsterdam</Name>
 							<ShortName>Amsterdam</ShortName>
@@ -538,7 +538,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 					</stopAreas>
 					<!--- =======StopAssignment======== -->
 					<stopAssignments>
-						<!--Fermate Torino Milano-->
+						<!--Assegnazione aeroporti-->
 						<PassengerStopAssignment id="NL::PassengerStopAssignment:IATA:AMS" order="1" version="1">
 							<Description>Amsterdam</Description>
 							<ScheduledStopPointRef ref="NL::ScheduledStopPoint:IATA:AMS" version="1"/>
@@ -560,7 +560,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 					</stopAssignments>
 					<!--- =======JourneyPatterns======== -->
 					<journeyPatterns>
-						<!--- =============Bus 5T=============-->
+						<!--- =============Percorsi=============-->
 						<ServiceJourneyPattern id="NL::ServiceJourneyPattern:KLM:BLQ-AMS" version="1">
 							<Name>Bologna-Amsterdam</Name>
 							<ShortName>Bologna-Amsterdam</ShortName>
@@ -593,8 +593,8 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							<ServiceJourneyPatternType>passenger</ServiceJourneyPatternType>
 						</ServiceJourneyPattern>
 						<ServiceJourneyPattern id="IE::ServiceJourneyPattern:Ryanair:SUF-BLQ" version="1">
-							<Name>Lamezia Terme</Name>
-							<ShortName>Lamezia Terme</ShortName>
+							<Name>Lamezia Terme - Bologna</Name>
+							<ShortName>Lamezia Terme - Bologna</ShortName>
 							<Distance>739000</Distance>
 							<PrivateCode>Lamezia Terme</PrivateCode>
 							<RouteView>
@@ -666,7 +666,7 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
 							<Distance>739000</Distance>
 							<PrivateCode>FR1895</PrivateCode>
 							<TransportMode>air</TransportMode>
-							<DepartureTime>23:55:00+02:00</DepartureTime>
+							<DepartureTime>22:55:00+02:00</DepartureTime>
 							<DepartureDayOffset>0</DepartureDayOffset>
 							<JourneyDuration>PT1H30M0S</JourneyDuration>
 							<dayTypes>
