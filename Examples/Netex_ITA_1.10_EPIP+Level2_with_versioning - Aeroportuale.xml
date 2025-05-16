@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2017 rel. 3 sp1 (x64) (http://www.altova.com) by Rossella Panero (5T S.r.l.) -->
+<!--
+NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes-->
+<PublicationDelivery xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:siri="http://www.siri.org.uk/siri" version="1.0" xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.netex.org.uk/netex ../xsd/NeTEx_publication_Lev2.xsd">
+	<PublicationTimestamp>2021-01-01T12:00:00.000+02:00</PublicationTimestamp>
+	<ParticipantRef>RAP</ParticipantRef>
+	<Description>Esempio di profilo italiano del NeTEx EPIP + Livello 2 + Fare + Alternative Modes</Description>
+	<dataObjects>
+		<!--Composite Frame EPIP LV2 (EPIP - Livello 1 + Livello 2)-->
+		<CompositeFrame id="epd:IT:ITC1:CompositeFrame_EU_PI_STOP_OFFER:EPIP:ita" version="1">
+			<ValidBetween>
+				<FromDate>2021-01-01T00:00:00.000+02:00</FromDate>
+				<ToDate>2021-12-31T23:59:59.999+02:00</ToDate>
+			</ValidBetween>
+			<TypeOfFrameRef ref="epip:EU_PI_LINE_OFFER" versionRef="1"/>
+			<!--- ======= CODESPACEs======== -->
+			<codespaces>
+				<Codespace id="ita">
+					<Xmlns>ita</Xmlns>
+					<XmlnsUrl>http://www.ita.it</XmlnsUrl>
+					<Description>Italian Profile</Description>
+				</Codespace>
+			</codespaces>
+			<!--- =======FRAME DEFAULTS======== -->
+			<FrameDefaults>
+				<DefaultCodespaceRef ref="ita"/>
+				<DefaultLocale>
+					<TimeZone>Europe/Rome</TimeZone>
+				</DefaultLocale>
+			</FrameDefaults>
+			<frames>
+				<ServiceCalendarFrame id="epd:IT:ITC1:ServiceCalendarFrame_EU_PI_CALENDAR:ita" version="1">
+					<TypeOfFrameRef ref="epip:EU_PI_CALENDAR" versionRef="1"/>
+					<ServiceCalendar id="IT:ITC1:ServiceCalendar:Estivo2025" version="1">
+						<Name>Calendario estivo 2025</Name>
+						<ShortName>Estivo</ShortName>
+						<FromDate>2025-04-01</FromDate>
+						<ToDate>2025-10-31</ToDate>
+						<dayTypes>
+							<!--- =======DayTypes 5T======= -->
+							<DayType id="NL::DayType:KLM:LV" version="1">
+								<Name>Calendario Estivo 2025 LV</Name>
+								<ShortName>Estivo LV</ShortName>
+								<Description>Estivo Lunedì Venerdì</Description>
+								<PrivateCode>LV</PrivateCode>
+								<properties>
+									<PropertyOfDay>
+										<DaysOfWeek>Monday Friday</DaysOfWeek>
+										<HolidayTypes>AnyDay</HolidayTypes>
+									</PropertyOfDay>
+								</properties>
+							</DayType>
+							<DayType id="IE::DayType:Ryanair:L" version="1">
+								<Name>Calendario Estivo 2025 L</Name>
+								<ShortName>Estivo L</ShortName>
+								<Description>Estivo Lunedì</Description>
+								<PrivateCode>L</PrivateCode>
+								<properties>
+									<PropertyOfDay>
+										<DaysOfWeek>Monday</DaysOfWeek>
+										<HolidayTypes>AnyDay</HolidayTypes>
+									</PropertyOfDay>
+								</properties>
+							</DayType>
+						</dayTypes>
+						<!--- =======OperatingPeriods 5T======= -->
+						<operatingPeriods>
+							<UicOperatingPeriod id="NL::UicOperatingPeriod:KLM:LV" version="1">
+								<FromDate>2025-09-22T00:00:00</FromDate>
+								<ToDate>2025-10-24T23:59:59</ToDate>
+								<ValidDayBits>1000100</ValidDayBits>
+							</UicOperatingPeriod>
+							<UicOperatingPeriod id="IE::UicOperatingPeriod:Ryanair:L" version="1">
+								<FromDate>2025-08-11T00:00:00</FromDate>
+								<ToDate>2025-08-18T23:59:59</ToDate>
+								<ValidDayBits>1000000</ValidDayBits>
+							</UicOperatingPeriod>
+						</operatingPeriods>
+						<!--- =======DayTypeAssignments======= -->
+						<dayTypeAssignments>
+							<!-- dayTypeAssignment Calendario -->
+							<DayTypeAssignment version="1" order="1" id="NL::DayTypeAssignment:KLM:LV">
+								<OperatingPeriodRef ref="NL::UicOperatingPeriod:KLM:LV" version="1"/>
+								<DayTypeRef version="1" ref="NL::DayType:KLM:LV"/>
+							</DayTypeAssignment>
+							<!-- dayTypeAssignment Calendario G -->
+							<DayTypeAssignment version="1" order="1" id="IE::DayTypeAssignment:Ryanair:L">
+								<OperatingPeriodRef ref="IE::UicOperatingPeriod:Ryanair:L" version="1"/>
+								<DayTypeRef version="1" ref="IE::DayType:Ryanair:L"/>
+							</DayTypeAssignment>
+						</dayTypeAssignments>
+					</ServiceCalendar>
+				</ServiceCalendarFrame>
+				<ResourceFrame id="epd:IT:ITC1:ResourceFrame_EU_PI_COMMON:ita" version="1">
+					<TypeOfFrameRef ref="epip:EU_PI_COMMON" versionRef="1"/>
+					<!--- =======Anagrafica Organisations======== -->
+					<organisations>
+						<!--- =======operatori======== -->
+						<Operator id="NL::Operator::KLM" version="1">
+							<Name>KLM</Name>
+							<ShortName>KLM</ShortName>
+							<ContactDetails>
+								<Email>mediarelations@klm.com</Email>
+								<Phone>+39-02-3859-4998</Phone>
+								<Url>www.klm.com</Url>
+							</ContactDetails>
+							<OrganisationType>operator</OrganisationType>
+							<Address id="NL::Address:KLM1">
+								<CountryName>Nederlands</CountryName>
+								<Street>Amsterdamseweg 55, 1182</Street>
+								<Town>Amstelveen</Town>
+								<PostCode>00000</PostCode>
+							</Address>
+						</Operator>
+						<Operator id="IE::Operator::Ryanair" version="1">
+							<Name>Ryanair</Name>
+							<ShortName>Ryanair</ShortName>
+							<ContactDetails>
+								<Email>support@ryanair-talk.com</Email>
+								<Phone>+39-𝟎𝟐-𝟑𝟎𝟒𝟓-𝟖𝟎-𝟗𝟐</Phone>
+								<Url>www.ryanair.com</Url>
+							</ContactDetails>
+							<OrganisationType>operator</OrganisationType>
+							<Address id="IE::Address:Ryanair1">
+								<CountryName>Nederlands</CountryName>
+								<Street>Airside Business Park, Swords</Street>
+								<Town>Dublin</Town>
+								<PostCode>00000</PostCode>
+							</Address>
+						</Operator>
+					</organisations>
+					<!--- =======Tipi veicolo======== -->
+					<vehicleTypes>
+						<!--- =======Tipi veicolo 5T======== -->
+						<VehicleType id="NL::VehicleType:KLMBoeing777-300" version="1">
+							<PrivateCode>001</PrivateCode>
+							<FuelType>other</FuelType>
+							<capacities>
+								<PassengerCapacity id="NL::PassengerCapacity:KLM1">
+									<TotalCapacity>472</TotalCapacity>
+								</PassengerCapacity>
+							</capacities>
+							<Length>73.86</Length>
+						</VehicleType>
+						<VehicleType id="IE::VehicleType:RyanairAirbusA320-200" version="1">
+							<PrivateCode>001</PrivateCode>
+							<FuelType>other</FuelType>
+							<capacities>
+								<PassengerCapacity id="IE::PassengerCapacity:Ryanair1">
+									<TotalCapacity>146</TotalCapacity>
+								</PassengerCapacity>
+							</capacities>
+							<Length>37.57</Length>
+						</VehicleType>
+					</vehicleTypes>
+					<!--- =======Modelli veicolo======== -->
+					<vehicleModels>
+						<!--- ====== veicolo 5T======== -->
+						<VehicleModel id="NL::VehicleModel:KLMBoeing777-300" version="1">
+							<Description>Aereo 777-300</Description>
+							<Manufacturer>Boeing</Manufacturer>
+							<VehicleTypeRef ref="NL::VehicleType:KLMBoeing777-300" version="1"/>
+						</VehicleModel>
+						<VehicleModel id="KLM::VehicleModel:RyanairAirbusA320-200" version="1">
+							<Description>Aereo A320-200</Description>
+							<Manufacturer>Airbus</Manufacturer>
+							<VehicleTypeRef ref="IE::VehicleType:RyanairAirbusA320-200" version="1"/>
+						</VehicleModel>
+					</vehicleModels>
+					<!--- =======Veicoli======== -->
+					<vehicles>
+						<!--- ====== veicolo 5T======== -->
+						<Vehicle id="NL::Vehicle:KLMBoeing777-300" version="1">
+							<Name>KLM01</Name>
+							<ShortName>KLM01</ShortName>
+							<PrivateCode>KLM01</PrivateCode>
+							<OperatorRef ref="NL::Operator::KLM" version="1"/>
+							<VehicleTypeRef ref="NL::VehicleType:KLMBoeing777-300" version="1"/>
+						</Vehicle>
+						<Vehicle id="IE::VehicleModel:RyanairAirbusA320-200" version="1">
+							<Name>Ryanair01</Name>
+							<ShortName>Ryanair01</ShortName>
+							<PrivateCode>Ryanair01</PrivateCode>
+							<OperatorRef ref="IE::Operator::Ryanair" version="1"/>
+							<VehicleTypeRef ref="IE::VehicleType:RyanairAirbusA320-200" version="1"/>
+						</Vehicle>
+					</vehicles>
+				</ResourceFrame>
+				<SiteFrame id="epd:IT:ITC1:SiteFrame_EU_PI_STOP:ita" version="1">
+					<TypeOfFrameRef ref="epip:EU_PI_STOP" versionRef="1"/>
+					<stopPlaces>
+						<!-- ========== Terminal Aeroporti========= -->
+						<StopPlace id="NL::StopPlace:IATA:AMS" version="1">
+							<Name>Amsterdam</Name>
+							<ShortName>Amsterdam</ShortName>
+							<PrivateCode>AMS</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>4.7642</Longitude>
+									<Latitude>52.3081</Latitude>
+									<Altitude>0</Altitude>
+									<gml:pos>4.7642 52.3081</gml:pos>
+									<Precision>5</Precision>
+								</Location>
+							</Centroid>
+							<AccessModes>foot</AccessModes>
+							<!-- ============LEVELS ===================- -->
+							<levels>
+								<Level id="NL::Level:IATA:AMS" version="1">
+									<Name>Ground </Name>
+									<PublicCode>G</PublicCode>
+								</Level>
+							</levels>
+							<PublicCode>AMS</PublicCode>
+							<TransportMode>air</TransportMode>
+							<StopPlaceType>airport</StopPlaceType>
+							<!-- ============QUAYS ===================- -->
+							<quays>
+								<Quay id="NL::Quay:IATA:AMS-Terminal1" version="1">
+									<Name>Amsterdam Terminal 1</Name>
+									<Description>Amsterdam Terminal 1</Description>
+									<Centroid>
+										<Location>
+											<gml:pos srsName="ITA">4.7642 52.3081</gml:pos>
+										</Location>
+									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
+									<LevelRef ref="NL::Level:IATA:AMS" version="1"/>
+									<Label>Amsterdam</Label>
+									<destinations>
+										<DestinationDisplayView>
+											<Name>Amsterdam</Name>
+										</DestinationDisplayView>
+									</destinations>
+									<QuayType>airlineGate</QuayType>
+								</Quay>
+							</quays>
+						</StopPlace>
+						<StopPlace id="IT:ITF2:ScheduledStopPoint:IATA:SUF" version="1">
+							<Name>Lamezia Terme</Name>
+							<ShortName>Lamezia Terme</ShortName>
+							<PrivateCode>SUF</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>16.242222</Longitude>
+									<Latitude>38.905278</Latitude>
+									<Altitude>0</Altitude>
+									<gml:pos>16.242222 38.905278</gml:pos>
+									<Precision>5</Precision>
+								</Location>
+							</Centroid>
+							<AccessModes>foot</AccessModes>
+							<!-- ============LEVELS ===================- -->
+							<levels>
+								<Level id="IT:ITF2:Level:IATA:SUF" version="1">
+									<Name>Ground </Name>
+									<PublicCode>G</PublicCode>
+								</Level>
+							</levels>
+							<PublicCode>SUF</PublicCode>
+							<TransportMode>air</TransportMode>
+							<StopPlaceType>airport</StopPlaceType>
+							<!-- ============QUAYS ===================- -->
+							<quays>
+								<Quay id="IT:ITF2:Quay:IATA:SUF-Terminal3" version="1">
+									<Name>Lamezia Terme Terminal 3</Name>
+									<Description>Lamezia Terme Terminal 3</Description>
+									<Centroid>
+										<Location>
+											<gml:pos srsName="ITA">16.242222 38.905278</gml:pos>
+										</Location>
+									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
+									<LevelRef ref="IT:ITF2:Level:IATA:SUF" version="1"/>
+									<Label>Lamezia Terme</Label>
+									<destinations>
+										<DestinationDisplayView>
+											<Name>Bologna</Name>
+										</DestinationDisplayView>
+									</destinations>
+									<QuayType>airlineGate</QuayType>
+								</Quay>
+							</quays>
+						</StopPlace>
+						<StopPlace id="IT:ITH5:StopPlace:IATA:BLQ" version="1">
+							<Name>Bologna</Name>
+							<ShortName>Bologna</ShortName>
+							<PrivateCode>BLQ</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>11.27472</Longitude>
+									<Latitude>44.52576</Latitude>
+									<Altitude>0</Altitude>
+									<gml:pos>11.27472 44.52576</gml:pos>
+									<Precision>5</Precision>
+								</Location>
+							</Centroid>
+							<AccessModes>foot</AccessModes>
+							<!-- ============LEVELS ===================- -->
+							<levels>
+								<Level id="IT:ITH5:Level:IATA:BLQ" version="1">
+									<Name>Ground </Name>
+									<PublicCode>G</PublicCode>
+								</Level>
+							</levels>
+							<PublicCode>BLQ</PublicCode>
+							<TransportMode>air</TransportMode>
+							<StopPlaceType>airport</StopPlaceType>
+							<!-- ============QUAYS ===================- -->
+							<quays>
+								<Quay id="IT:ITH5:Quay:IATA:BLQ-Terminal5" version="1">
+									<Name>Bologna Terminal 5</Name>
+									<Description>Bologna Terminal 5</Description>
+									<Centroid>
+										<Location>
+											<gml:pos srsName="ITA">4.7642 52.3081</gml:pos>
+										</Location>
+									</Centroid>
+									<Covered>covered</Covered>
+									<Lighting>wellLit</Lighting>
+									<LevelRef ref="IT:ITH5:Level:IATA:BLQ" version="1"/>
+									<Label>Amsterdam</Label>
+									<destinations>
+										<DestinationDisplayView>
+											<Name>Amsterdam</Name>
+										</DestinationDisplayView>
+									</destinations>
+									<QuayType>airlineGate</QuayType>
+								</Quay>
+							</quays>
+						</StopPlace>
+					</stopPlaces>
+				</SiteFrame>
+				<ServiceFrame id="epd:IT:ITC1:ServiceFrame_EU_PI_NETWORK:ita" version="1">
+					<TypeOfFrameRef ref="epip:EU_PI_NETWORK" versionRef="1"/>
+					<!--- =======Routes======== -->
+					<routes>
+						<Route version="1" id="NL::Route:KLM:Bologna-Amsterdam">
+							<Name>Bologna-Amsterdam</Name>
+							<ShortName>Bologna-Amsterdam</ShortName>
+						</Route>
+						<Route version="1" id="IE::Route:Ryanair:Lamezia-Bologna">
+							<Name>Lamezia-Bologna</Name>
+							<ShortName>Lamezia-Bologna</ShortName>
+						</Route>
+					</routes>
+					<!--- =======Lines======== -->
+					<lines>
+						<!--- =======Lines 5T======== -->
+						<Line id="NL::Line:KLM:Bologna-Amsterdam" version="1">
+							<Name>Bologna-Amsterdam</Name>
+							<ShortName>Bologna-Amsterdam</ShortName>
+							<Description>Bologna-Amsterdam</Description>
+							<TransportMode>air</TransportMode>
+							<Url>www.klm.com</Url>
+							<PublicCode>001</PublicCode>
+							<PrivateCode>001</PrivateCode>
+							<OperatorRef ref="NL::Operator::KLM" version="1"/>
+							<Monitored>true</Monitored>
+						</Line>
+						<Line id="IE::LIne:Ryanair:Lamezia-Bologna" version="1">
+							<Name>Lamezia-Bologna</Name>
+							<ShortName>Lamezia-Bologna</ShortName>
+							<Description>Lamezia-Bologna</Description>
+							<TransportMode>air</TransportMode>
+							<Url>www.ryanair.com</Url>
+							<PublicCode>001</PublicCode>
+							<PrivateCode>001</PrivateCode>
+							<OperatorRef ref="IE::Operator::Ryanair" version="1"/>
+							<Monitored>true</Monitored>
+						</Line>
+					</lines>
+					<!--- =======destinationDisplays======== -->
+					<destinationDisplays>
+						<DestinationDisplay version="1" id="NL::DestinationDisplay:KLM:Bologna-Amsterdam">
+							<Name>Amsterdam</Name>
+							<ShortName>Amsterdam</ShortName>
+							<SideText>Amsterdam</SideText>
+							<FrontText>Amsterdam</FrontText>
+							<PublicCode>01</PublicCode>
+						</DestinationDisplay>
+						<DestinationDisplay version="1" id="IE::DestinationDisplay:Ryanair:Lamezia-Bologna">
+							<Name>Lamezia</Name>
+							<ShortName>Lamezia</ShortName>
+							<SideText>Lamezia</SideText>
+							<FrontText>Lamezia</FrontText>
+							<PublicCode>01</PublicCode>
+						</DestinationDisplay>
+					</destinationDisplays>
+					<!--- ======ScheduledStopPoints======== -->
+					<scheduledStopPoints>
+						<ScheduledStopPoint id="NL::ScheduledStopPoint:IATA:AMS" version="1">
+							<Name>Amsterdam</Name>
+							<Location>
+								<Longitude>4.7642</Longitude>
+								<Latitude>52.3081</Latitude>
+								<Altitude>0</Altitude>
+								<gml:pos>4.7642 52.3081</gml:pos>
+								<Precision>5</Precision>
+							</Location>
+							<stopAreas>
+								<StopAreaRef ref="NL::StopArea:IATA:AMS" version="1"/>
+							</stopAreas>
+							<ShortName>Amsterdam</ShortName>
+							<Description>Amsterdam</Description>
+							<PublicCode>00001</PublicCode>
+							<PrivateCode>00001</PrivateCode>
+							<StopType>airport</StopType>
+							<VehicleModes>air</VehicleModes>
+						</ScheduledStopPoint>
+						<ScheduledStopPoint id="IT:ITF2:ScheduledStopPoint:IATA:SUF" version="1">
+							<Name>Lamezia Terme</Name>
+							<Location>
+								<Longitude>16.242222</Longitude>
+								<Latitude>38.905278</Latitude>
+								<Altitude>0</Altitude>
+								<gml:pos>16.242222 38.905278</gml:pos>
+								<Precision>5</Precision>
+							</Location>
+							<stopAreas>
+								<StopAreaRef ref="IT:ITF2:StopArea:IATA:SUF" version="1"/>
+							</stopAreas>
+							<ShortName>Lamezia Terme</ShortName>
+							<Description>Lamezia Terme</Description>
+							<PublicCode>00002</PublicCode>
+							<PrivateCode>00002</PrivateCode>
+							<StopType>airport</StopType>
+							<VehicleModes>air</VehicleModes>
+						</ScheduledStopPoint>
+						<ScheduledStopPoint id="IT:ITH5:ScheduledStopPoint:IATA:BLQ" version="1">
+							<Name>Bologna</Name>
+							<Location>
+								<Longitude>11.27472</Longitude>
+								<Latitude>44.52576</Latitude>
+								<Altitude>0</Altitude>
+								<gml:pos>11.27472 44.52576</gml:pos>
+								<Precision>5</Precision>
+							</Location>
+							<stopAreas>
+								<StopAreaRef ref="IT:ITH5:StopArea:IATA:BLQ" version="1"/>
+							</stopAreas>
+							<ShortName>Cagliari</ShortName>
+							<Description>Cagliari</Description>
+							<PublicCode>00003</PublicCode>
+							<PrivateCode>00003</PrivateCode>
+							<StopType>airport</StopType>
+							<VehicleModes>air</VehicleModes>
+						</ScheduledStopPoint>
+					</scheduledStopPoints>
+					<!--- =======ServiceLinks======== -->
+					<serviceLinks>
+						<!--- =============Bus 5T=============-->
+						<ServiceLink id="NL::ServiceLink:IATA:BLQ-AMS" version="1">
+							<Distance>995200</Distance>
+							<gml:LineString gml:id="L1">
+								<gml:posList>11.27472 44.52576 4.7642 52.3081</gml:posList>
+							</gml:LineString>
+							<FromPointRef ref="IT:ITH5:ScheduledStopPoint:IATA:BLQ" version="1"/>
+							<ToPointRef ref="NL::ScheduledStopPoint:IATA:AMS" version="1"/>
+							<VehicleMode>air</VehicleMode>
+						</ServiceLink>
+						<ServiceLink id="IE::ServiceLink:IATA:SUF-BLQ" version="1">
+							<Distance>739000</Distance>
+							<gml:LineString gml:id="L1">
+								<gml:posList>16.242222 38.905278 11.27472 44.52576</gml:posList>
+							</gml:LineString>
+							<FromPointRef ref="IT:ITF2:ScheduledStopPoint:IATA:SUF" version="1"/>
+							<ToPointRef ref="IT:ITH5:ScheduledStopPoint:IATA:BLQ" version="1"/>
+							<VehicleMode>air</VehicleMode>
+						</ServiceLink>
+					</serviceLinks>
+					<!--- =======StopArea======== -->
+					<stopAreas>
+						<!--- =======StopArea 5T======== -->
+						<StopArea id="NL::StopArea:IATA:AMS" version="1">
+							<Name>Amsterdam</Name>
+							<ShortName>Amsterdam</ShortName>
+							<Description>Amsterdam</Description>
+							<PrivateCode>AMS</PrivateCode>
+							<members>
+								<ScheduledStopPointRef ref="NL::ScheduledStopPoint:IATA:AMS" version="1"/>
+							</members>
+							<gml:Polygon gml:id="AMS">
+								<gml:interior>
+									<gml:LinearRing>
+										<gml:pos>4.7643 52.3081</gml:pos>
+										<gml:pos>4.7643 52.3082</gml:pos>
+										<gml:pos>4.7642 52.3082</gml:pos>
+										<gml:pos>4.7641 52.3081</gml:pos>
+									</gml:LinearRing>
+								</gml:interior>
+							</gml:Polygon>
+							<PublicCode>AMS</PublicCode>
+						</StopArea>
+						<StopArea id="IT:ITF2:StopArea:IATA:SUF" version="1">
+							<Name>Lamezia Terme</Name>
+							<ShortName>Lamezia Terme</ShortName>
+							<Description>Lamezia Terme</Description>
+							<PrivateCode>SUF</PrivateCode>
+							<members>
+								<ScheduledStopPointRef ref="IT:ITF2:ScheduledStopPoint:IATA:SUF" version="1"/>
+							</members>
+							<gml:Polygon gml:id="SUF">
+								<gml:interior>
+									<gml:LinearRing>
+										<gml:pos>16.242223 38.905278</gml:pos>
+										<gml:pos>16.242223 38.905279</gml:pos>
+										<gml:pos>16.242222 38.905279</gml:pos>
+										<gml:pos>16.242222 38.905278</gml:pos>
+									</gml:LinearRing>
+								</gml:interior>
+							</gml:Polygon>
+							<PublicCode>SUF</PublicCode>
+						</StopArea>
+						<StopArea id="IT:ITH5:StopArea:IATA:BLQ" version="1">
+							<Name>Bologna</Name>
+							<ShortName>Bologna</ShortName>
+							<Description>Bologna</Description>
+							<PrivateCode>BLQ</PrivateCode>
+							<members>
+								<ScheduledStopPointRef ref="IT:ITH5:ScheduledStopPoint:IATA:BLQ" version="1"/>
+							</members>
+							<gml:Polygon gml:id="BLQ">
+								<gml:interior>
+									<gml:LinearRing>
+										<gml:pos>11.27473 44.52576</gml:pos>
+										<gml:pos>11.27473 44.52577</gml:pos>
+										<gml:pos>11.27472 44.52577</gml:pos>
+										<gml:pos>11.27472 44.52576</gml:pos>
+									</gml:LinearRing>
+								</gml:interior>
+							</gml:Polygon>
+							<PublicCode>BLQ</PublicCode>
+						</StopArea>
+					</stopAreas>
+					<!--- =======StopAssignment======== -->
+					<stopAssignments>
+						<!--Fermate Torino Milano-->
+						<PassengerStopAssignment id="NL::PassengerStopAssignment:IATA:AMS" order="1" version="1">
+							<Description>Amsterdam</Description>
+							<ScheduledStopPointRef ref="NL::ScheduledStopPoint:IATA:AMS" version="1"/>
+							<StopPlaceRef ref="NL::StopPlace:IATA:AMS" version="1"/>
+							<QuayRef ref="NL::Quay:IATA:AMS-Terminal1" version="1"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="IT:ITF2:PassengerStopAssignment:IATA:SUF" order="2" version="1">
+							<Description>Lamezia Terme</Description>
+							<ScheduledStopPointRef ref="IT:ITF2:ScheduledStopPoint:IATA:SUF" version="1"/>
+							<StopPlaceRef ref="IT:ITF2:ScheduledStopPoint:IATA:SUF" version="1"/>
+							<QuayRef ref="IT:ITF2:Quay:IATA:SUF-Terminal3" version="1"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="IT:ITH5:PassengerStopAssignment:IATA:BLQ" order="2" version="1">
+							<Description>Bologna</Description>
+							<ScheduledStopPointRef ref="IT:ITH5:ScheduledStopPoint:IATA:BLQ" version="1"/>
+							<StopPlaceRef ref="IT:ITH5:StopPlace:IATA:BLQ" version="1"/>
+							<QuayRef ref="IT:ITH5:Quay:IATA:BLQ-Terminal5" version="1"/>
+						</PassengerStopAssignment>
+					</stopAssignments>
+					<!--- =======JourneyPatterns======== -->
+					<journeyPatterns>
+						<!--- =============Bus 5T=============-->
+						<ServiceJourneyPattern id="NL::ServiceJourneyPattern:KLM:BLQ-AMS" version="1">
+							<Name>Bologna-Amsterdam</Name>
+							<ShortName>Bologna-Amsterdam</ShortName>
+							<Distance>995200</Distance>
+							<PrivateCode>Bologna-Amsterdam</PrivateCode>
+							<RouteView>
+								<VehicleMode>air</VehicleMode>
+								<LineRef ref="NL::Line:KLM:Bologna-Amsterdam" version="1"/>
+							</RouteView>
+							<DirectionType>inbound</DirectionType>
+							<DirectionView>
+								<Name>Bologna-Amsterdam</Name>
+							</DirectionView>
+							<DestinationDisplayView>
+								<Name>Bologna-Amsterdam</Name>
+							</DestinationDisplayView>
+							<pointsInSequence>
+								<StopPointInJourneyPattern id="IT:ITH5:StopPointInJourneyPattern:IATA:BLQ-AMS1" order="1" version="1">
+									<ScheduledStopPointRef ref="IT:ITH5:ScheduledStopPoint:IATA:BLQ" version="1"/>
+									<OnwardServiceLinkRef ref="NL::ServiceLink:IATA:BLQ-AMS" version="1"/>
+									<ForAlighting>false</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="NL::StopPointInJourneyPattern:IATA:BLQ-AMS2" order="2" version="1">
+									<ScheduledStopPointRef ref="NL::ScheduledStopPoint:IATA:AMS" version="1"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>false</ForBoarding>
+								</StopPointInJourneyPattern>
+							</pointsInSequence>
+							<ServiceJourneyPatternType>passenger</ServiceJourneyPatternType>
+						</ServiceJourneyPattern>
+						<ServiceJourneyPattern id="IE::ServiceJourneyPattern:Ryanair:SUF-BLQ" version="1">
+							<Name>Lamezia Terme</Name>
+							<ShortName>Lamezia Terme</ShortName>
+							<Distance>739000</Distance>
+							<PrivateCode>Lamezia Terme</PrivateCode>
+							<RouteView>
+								<VehicleMode>air</VehicleMode>
+								<LineRef ref="IE::LIne:Ryanair:Lamezia-Bologna" version="1"/>
+							</RouteView>
+							<DirectionType>outbound</DirectionType>
+							<DirectionView>
+								<Name>Lamezia-Bologna</Name>
+							</DirectionView>
+							<DestinationDisplayView>
+								<Name>Lamezia-Bologna</Name>
+							</DestinationDisplayView>
+							<pointsInSequence>
+								<StopPointInJourneyPattern id="IT:ITF2:StopPointInJourneyPattern:IATA:SUF-BLQ1" order="1" version="1">
+									<ScheduledStopPointRef ref="IT:ITF2:ScheduledStopPoint:IATA:SUF" version="1"/>
+									<OnwardServiceLinkRef ref="IE::ServiceLink:IATA:SUF-BLQ" version="1"/>
+									<ForAlighting>false</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="IT:ITH5:StopPointInJourneyPattern:IATA:SUF-BLQ2" order="2" version="1">
+									<ScheduledStopPointRef ref="IT:ITH5:ScheduledStopPoint:IATA:BLQ" version="1"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>false</ForBoarding>
+								</StopPointInJourneyPattern>
+							</pointsInSequence>
+							<ServiceJourneyPatternType>passenger</ServiceJourneyPatternType>
+						</ServiceJourneyPattern>
+					</journeyPatterns>
+				</ServiceFrame>
+				<TimetableFrame id="epd:IT:ITC1:TimetableFrame_EU_PI_TIMETABLE:ita" version="1">
+					<TypeOfFrameRef ref="epip:EU_PI_TIMETABLE" versionRef="1"/>
+					<vehicleJourneys>
+						<!--Voli-->
+						<ServiceJourney id="NL::ServiceJourney:KLM:BLQ-AMS" version="1">
+							<Name>Volo Bologna - Amsterdam KL1660</Name>
+							<ShortName>KL1660</ShortName>
+							<Description>Volo Bologna - Amsterdam KL1660</Description>
+							<Distance>995200</Distance>
+							<PrivateCode>KL1660</PrivateCode>
+							<TransportMode>air</TransportMode>
+							<DepartureTime>06:00:00+02:00</DepartureTime>
+							<DepartureDayOffset>0</DepartureDayOffset>
+							<JourneyDuration>PT1H55M0S</JourneyDuration>
+							<dayTypes>
+								<DayTypeRef ref="NL::DayType:KLM:LV" version="1"/>
+							</dayTypes>
+							<ServiceJourneyPatternRef ref="NL::ServiceJourneyPattern:KLM:BLQ-AMS" version="1"/>
+							<VehicleTypeRef ref="NL::VehicleType:KLMBoeing777-300" version="1"/>
+							<OperatorRef ref="NL::Operator::KLM" version="1"/>
+							<DirectionType>inbound</DirectionType>
+							<passingTimes>
+								<TimetabledPassingTime id="IT:ITH5:TimetabledPassingTime:IATA:BLQ-AMS1" version="1">
+									<StopPointInJourneyPatternRef ref="IT:ITH5:StopPointInJourneyPattern:IATA:BLQ-AMS1" version="1"/>
+									<DepartureTime>06:00:00</DepartureTime>
+									<DepartureDayOffset>0</DepartureDayOffset>
+								</TimetabledPassingTime>
+								<TimetabledPassingTime id="NL::TimetabledPassingTime:IATA:BLQ-AMS2" version="1">
+									<StopPointInJourneyPatternRef ref="NL::StopPointInJourneyPattern:IATA:BLQ-AMS2" version="1"/>
+									<ArrivalTime>07:55:00</ArrivalTime>
+									<ArrivalDayOffset>0</ArrivalDayOffset>
+								</TimetabledPassingTime>
+							</passingTimes>
+						</ServiceJourney>
+						<ServiceJourney id="IE::ServiceJourney:Ryanair:SUF-BLQ" version="1">
+							<Name>Volo Lamezia - Bologna FR1895</Name>
+							<ShortName>FR1895</ShortName>
+							<Description>Volo Lamezia - Bologna FR1895</Description>
+							<Distance>739000</Distance>
+							<PrivateCode>FR1895</PrivateCode>
+							<TransportMode>air</TransportMode>
+							<DepartureTime>23:55:00+02:00</DepartureTime>
+							<DepartureDayOffset>0</DepartureDayOffset>
+							<JourneyDuration>PT1H30M0S</JourneyDuration>
+							<dayTypes>
+								<DayTypeRef ref="IE::DayType:Ryanair:L" version="1"/>
+							</dayTypes>
+							<ServiceJourneyPatternRef ref="IE::ServiceJourneyPattern:Ryanair:SUF-BLQ" version="1"/>
+							<VehicleTypeRef ref="IE::VehicleType:RyanairAirbusA320-200" version="1"/>
+							<OperatorRef ref="IE::Operator::Ryanair" version="1"/>
+							<DirectionType>outbound</DirectionType>
+							<passingTimes>
+								<TimetabledPassingTime id="IT:ITF2:TimetabledPassingTimes:IATA:SUF-BLQ1" version="1">
+									<StopPointInJourneyPatternRef ref="IT:ITF2:StopPointInJourneyPattern:IATA:SUF-BLQ1" version="1"/>
+									<DepartureTime>22:55:00</DepartureTime>
+									<DepartureDayOffset>0</DepartureDayOffset>
+								</TimetabledPassingTime>
+								<TimetabledPassingTime id="IT:ITH5:TimeTabledPassingTimes:IATA:SUF-BLQ2" version="1">
+									<StopPointInJourneyPatternRef ref="IT:ITH5:StopPointInJourneyPattern:IATA:SUF-BLQ2" version="1"/>
+									<ArrivalTime>00:25:00</ArrivalTime>
+									<ArrivalDayOffset>1</ArrivalDayOffset>
+								</TimetabledPassingTime>
+							</passingTimes>
+						</ServiceJourney>
+					</vehicleJourneys>
+				</TimetableFrame>
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>
