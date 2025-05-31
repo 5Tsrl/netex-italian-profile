@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2017 rel. 3 sp1 (x64) (http://www.altova.com) by Rossella Panero (5T S.r.l.) -->
 <!--
-NeTEX italian Profile EPIP Aeroporto-->
+NeTEX italian Profile EPIP + Level 2 Aeroporto-->
 <PublicationDelivery xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:siri="http://www.siri.org.uk/siri" version="1.0" xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.netex.org.uk/netex ../xsd/NeTEx_publication_Lev2.xsd">
 	<PublicationTimestamp>2021-01-01T12:00:00.000+02:00</PublicationTimestamp>
 	<ParticipantRef>RAP</ParticipantRef>
 	<Description>Esempio di profilo italiano del NeTEx EPIP Aeroporto</Description>
 	<dataObjects>
-		<!--Composite Frame EPIP LV2 (EPIP)-->
+		<!--Composite Frame EPIP LV2 (EPIP + Level 2)-->
 		<CompositeFrame id="epd:IT:ITC1:CompositeFrame_EU_PI_STOP_OFFER:EPIP:ita" version="1">
 			<ValidBetween>
 				<FromDate>2021-01-01T00:00:00.000+02:00</FromDate>
