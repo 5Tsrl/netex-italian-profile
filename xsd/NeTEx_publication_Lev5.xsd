@@ -1102,7 +1102,7 @@
 			<xsd:field xpath="@version"/>
 		</xsd:keyref>
 		<xsd:key name="Place_AnyVersionedKey">
-			<xsd:selector xpath=".//netex:Place | .//netex:TopographicPlace | .//netex:RoadAddress | .//netex:PostalAddress | .//netex:Garage | .//netex:StopPlace | .//netex:Quay | .//netex:BoardingPosition | .//netex:AccessSpace | .//netex:EquipmentPlace | .//netex:StopPlaceEntrance | .//netex:FlexibleStopPlace | .//netex:FlexibleArea | .//netex:HailAndRideArea | .//netex:PointOfInterest | .//netex:PointOfInterestSpace | .//netex:PointOfInterestEntrance | .//netex:PathJunction | .//netex:SiteEntrance | .//netex:Parking | .//netex:ParkingBay | .//netex:ParkingArea | .//netex:VehicleStoppingPlace"/>
+			<xsd:selector xpath=".//netex:Place | .//netex:TopographicPlace | .//netex:RoadAddress | .//netex:PostalAddress | .//netex:Garage | .//netex:StopPlace | .//netex:Quay | .//netex:BoardingPosition | .//netex:AccessSpace | .//netex:EquipmentPlace | .//netex:StopPlaceEntrance | .//netex:FlexibleStopPlace | .//netex:FlexibleArea | .//netex:HailAndRideArea | .//netex:PointOfInterest | .//netex:PointOfInterestSpace | .//netex:PointOfInterestEntrance | .//netex:PathJunction | .//netex:SiteEntrance | .//netex:Entrance | .//netex:Parking | .//netex:ParkingBay | .//netex:ParkingArea | .//netex:VehicleStoppingPlace"/>
 			<xsd:field xpath="@id"/>
 			<xsd:field xpath="@version"/>
 		</xsd:key>

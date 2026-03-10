@@ -340,7 +340,7 @@
             <xsd:element ref="typesOfValue" minOccurs="0"/>
             <xsd:element name="organisations" type="organisationsL2Structure" minOccurs="0"/>
 			<xsd:element name="groupsOfOperators" type="groupsOfOperatorsStructure" minOccurs="0"/>
-            <xsd:element ref="equipments" minOccurs="0"/>
+            <xsd:element name="equipments" type="equipmentsL2_RelStructure" minOccurs="0"/>
             <xsd:element name="vehicleTypes" type="vehicleTypesL2Structure" minOccurs="0"/>
 			<xsd:element name="vehicleModels" type="vehicleModelsStructure" minOccurs="0"/>
 			<xsd:element name="vehicles" type="vehiclesStructure" minOccurs="0"/>
@@ -599,6 +599,2371 @@ more focused on translations).</xsd:documentation>
         <xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
     </xsd:complexType>
 	<!-- versioni aggiornate per groupsOfOperators (fine) -->
+	<!-- versioni aggiornate per equipments (inizio) -->
+	<xsd:complexType name="equipmentsL2_RelStructure">
+        <xsd:sequence>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element ref="EquipmentRef"/>
+				<xsd:element ref="Equipment" maxOccurs="1"/>
+			</xsd:choice>
+		</xsd:sequence>
+        <xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+    </xsd:complexType>
+	<!-- Equipment padre -->
+	<xsd:element name="Equipment" type="Equipment_VersionStructure" abstract="true">
+		<xsd:annotation>
+			<xsd:documentation>An item of EQUIPMENT of a particular type actually available at a location within a PLACE, such as QUAY, ACCESS SPACE or STOP PATH LINK.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="Equipment_VersionStructure" abstract="true">
+		<xsd:annotation>
+			<xsd:documentation>Type for EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:group ref="EquipmentGroup"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:group name="EquipmentGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for an EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Name" type="MultilingualString" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Name of EQUIPMENT.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="PrivateCode" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="PublicCode" type="PrivateCodeStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>A Public code which may be displayed on equipment to identify it.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Image" type="xsd:anyURI" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Default image for EQUIPMENT.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="TypeOfEquipmentRef" minOccurs="0"/>
+			<xsd:element name="Description" type="MultilingualString" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Further description or other comment for EQUIPMENT.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Note" type="MultilingualString" default="false." minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Further description or other comment for internal use by OPERATOR.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="infoLinks" type="infoLinks_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>INFO LINKs associated with EQUIPMENT +v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="OutOfService" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether the EQUIPMENT is out of service for protracted time. A separate Real time services should be used for short term outages. e.g. SIRI FM.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:element name="TypeOfEquipmentRef" type="TypeOfEquipmentRefStructure"/>
+	<xsd:complexType name="TypeOfEquipmentRefStructure">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- InstalledEquipment -->
+	<xsd:element name="InstalledEquipment" type="Equipment_VersionStructure" abstract="true" substitutionGroup="Equipment">
+		<xsd:annotation>
+			<xsd:documentation>INSTALLED EQUIPMENT describes the different types of LOCATED EQUIPMENT that may be associated with the SITE COMPONENTs.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="InstalledEquipmentRef" type="EquipmentRefStructure" abstract="true" substitutionGroup="EquipmentRef">
+		<xsd:annotation>
+			<xsd:documentation>Reference to an INSTALLED EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!-- PassengerEquipment -->
+	<xsd:element name="PassengerEquipment" type="PassengerEquipment_VersionStructure" abstract="true" substitutionGroup="InstalledEquipment">
+		<xsd:annotation>
+			<xsd:documentation>Equipment for passengers that may be in a fixed within a STOP PLACE.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="PassengerEquipment_VersionStructure" abstract="true">
+		<xsd:annotation>
+			<xsd:documentation>Type for a PASSENGER EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="Equipment_VersionStructure">
+				<xsd:group ref="PassengerEquipmentGroup"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:group name="PassengerEquipmentGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for a PASSENGER EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Fixed" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether the EQUIPMENT is fixed at a place or min a vehicle.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:element name="PassengerEquipmentRef" type="PassengerEquipmentRefStructure" abstract="true" substitutionGroup="InstalledEquipmentRef">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a PASSENGER EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="PassengerEquipmentRefStructure">
+		<xsd:simpleContent>
+			<xsd:extension base="EquipmentRefStructure">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- PlaceEquipment -->
+	<xsd:element name="PlaceEquipment" type="Equipment_VersionStructure" abstract="true" substitutionGroup="InstalledEquipment">
+		<xsd:annotation>
+			<xsd:documentation>An item of equipment of a particular type actually available at a location within a PLACE.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="PlaceEquipmentRef" type="EquipmentRefStructure" abstract="true" substitutionGroup="InstalledEquipmentRef">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a PLACE EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!-- AccessEquipment -->
+	<xsd:element name="AccessEquipment" type="AccessEquipment_VersionStructure" abstract="true" substitutionGroup="PlaceEquipment">
+		<xsd:annotation>
+			<xsd:documentation>Specialisation of PLACE EQUIPMENT dedicated to access (e.g. lifts, entrances, stairs, ramps, etc.).</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="AccessEquipment_VersionStructure" abstract="true">
+		<xsd:annotation>
+			<xsd:documentation>Type for an ACCESS EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="Equipment_VersionStructure">
+				<xsd:sequence>
+					<xsd:group ref="AccessEquipmentGroup">
+						<xsd:annotation>
+							<xsd:documentation>Elements for an ACCESS EQUIPMENT.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:group>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:group name="AccessEquipmentGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for an ACCESS EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Width" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Width of EQUIPMENT or entrance to EQUIPMENT (e.g. Lift).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Height" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Height of EQUIPMENT or entrance to EQUIPMENT (e.g. Lift).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DirectionOfUse" type="DirectionOfUseEnumeration" default="both" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Direction in which EQUIPMENT. can be used. Default is both.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="PassengersPerMinute" type="xsd:integer" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Number of passengers per minute that can use EQUIPMENT.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="RelativeWeighting" type="xsd:integer" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Relative weighting to be given to this item of EQUIPMENT.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="SafeForGuideDog" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether the access is safe for a guide dog. +v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:element name="AccessEquipmentRef" type="AccessEquipmentRefStructure" abstract="true" substitutionGroup="PlaceEquipmentRef">
+		<xsd:annotation>
+			<xsd:documentation>Reference to an ACCESS EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="AccessEquipmentRefStructure">
+		<xsd:simpleContent>
+			<xsd:extension base="EquipmentRefStructure">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- SignEquipment -->
+	<xsd:element name="SignEquipment" type="SignEquipment_VersionStructure" substitutionGroup="PlaceEquipment">
+		<xsd:annotation>
+			<xsd:documentation>Specialisation of PLACE EQUIPMENT for signs (heading signs, etc.).</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="SignEquipment_VersionStructure" abstract="true">
+		<xsd:annotation>
+			<xsd:documentation>Type for SIGN EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="Equipment_VersionStructure">
+				<xsd:sequence>
+					<xsd:group ref="SignEquipmentGroup"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:group name="SignEquipmentGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for a SIGN EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Height" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Height of SIGN in metres.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Width" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Width of sign in metres.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="HeightFromFloor" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Height of bottom edge of sign from floor in metres.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Placement" type="MultilingualString" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Description of location of sign.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="BrandGraphic" type="xsd:anyURI" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Graphic for sign.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="SignGraphic" type="xsd:anyURI" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Graphic or sign.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MachineReadable" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether SIGN is machine readable.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AsBraille" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether SIGN is readable in Braille. +v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AudioTriggerMethod" type="AudioTriggerMethodEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>How the display may be read by the audio tool. +v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="PrintedPresentation" type="PrintPresentationStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Presentatuon characteristics including font size +v1.1 .</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Contrast" type="xsd:decimal" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Luminance gap between text and background. A ratio of at least 3 is expected. +v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="FontSize" type="FontSizeEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Character font size.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:simpleType name="AudioTriggerMethodEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for AudioTriggersMethod </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="presenceDetector"/>
+			<xsd:enumeration value="mobileApp"/>
+			<xsd:enumeration value="internetPage"/>
+			<xsd:enumeration value="specificDevice"/>
+			<xsd:enumeration value="pushButton"/>
+			<xsd:enumeration value="other"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="PrintPresentationStructure">
+		<xsd:annotation>
+			<xsd:documentation>Types describing common presentation properties for Print.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Colour" type="xsd:normalizedString" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Default colour value for printed  graphics associated with ENTITY - e.g. of a LINE, e.g. CMYK.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ColourName" type="xsd:normalizedString" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Name of default colour value for printed graphics associated with entity., eg Pentone name</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ColourSystem" type="xsd:normalizedString" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Name of colour system used for printed ColourName and TextColourName: for example, 
+					- RAL, https://en.wikipedia.org/wiki/RAL_colour_standard;
+					- DIN 6164 http://www.dtpstudio.de/atlas/farbsysteme/DIN%206164_bs00_3.htm; 
+					- Pantone (be aware that Pantone is proprietary), etc.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="BackgroundColour" type="ColourValueType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Default RGB background colour value for printed text and graphics associated with ENTITY - e.g. of a LINE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="BackgroundColourName" type="xsd:normalizedString" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Name of the backgropund colour value (in ColourSystem) for printed text and graphics associated with entity.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TextColour" type="xsd:normalizedString" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Default colour value for printed text associated with entity. CMYK.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TextColourName" type="xsd:normalizedString" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Name of default colour value for printed text associated with entity, in specified ColourSystem.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TextFont" type="xsd:normalizedString" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Identifier of font for printed text.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TextFontName" type="xsd:normalizedString" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Name of font for printed text.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TextLanguage" type="xsd:language" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Default language for printed text.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="FontSize" type="FontSizeEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Default language for printed text +v1.1.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="FontSizeEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for size of font. +v1.1</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="verySmall"/>
+			<xsd:enumeration value="small"/>
+			<xsd:enumeration value="medium"/>
+			<xsd:enumeration value="large"/>
+			<xsd:enumeration value="veryLarge"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:element name="SignEquipmentRef" type="EquipmentRefStructure" abstract="true" substitutionGroup="PlaceEquipmentRef">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a SIGN EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!-- CommunicationService -->
+	<xsd:element name="CommunicationService" type="CommunicationService_VersionStructure" substitutionGroup="Equipment"/>
+	<xsd:complexType name="CommunicationService_VersionStructure">
+		<xsd:complexContent>
+			<xsd:extension base="Equipment_VersionStructure">
+				<xsd:sequence>
+					<xsd:group ref="CommunicationServiceGroup"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+    </xsd:complexType>
+	<xsd:group name="CommunicationServiceGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for a COMMUNICATION SERVICE.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="ServiceList" type="CommunicationServiceListOfEnumerations" minOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>COMMUNICATION SERVICEs available.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:element name="CommunicationServiceRef" type="CommunicationServiceRefStructure" substitutionGroup="EquipmentRef"/>
+	<xsd:complexType name="CommunicationServiceRefStructure">
+		<xsd:simpleContent>
+			<xsd:extension base="EquipmentRefStructure">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- CycleStorageEquipment -->
+	<xsd:element name="CycleStorageEquipment" type="CycleStorageEquipment_VersionStructure" substitutionGroup="PlaceEquipment"/>
+	<xsd:complexType name="CycleStorageEquipment_VersionStructure">
+		<xsd:complexContent>
+			<xsd:extension base="Equipment_VersionStructure">
+				<xsd:sequence>
+					<xsd:group ref="CycleStorageEquipmentGroup"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+    </xsd:complexType>
+	<xsd:group name="CycleStorageEquipmentGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for CYCLE STORAGE EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="NumberOfSpaces" type="xsd:integer" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Number of spaces available.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="CycleStorageType" type="CycleStorageEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Type of storage.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Cage" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>whether shelter is enclosed.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Covered" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether storage is covered.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:simpleType name="CycleStorageEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed value for Cycle Storage.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="racks"/>
+			<xsd:enumeration value="docks"/>
+			<xsd:enumeration value="bars"/>
+			<xsd:enumeration value="railings"/>
+			<xsd:enumeration value="cycleScheme"/>
+			<xsd:enumeration value="lockers"/>
+			<xsd:enumeration value="freestanding"/>
+			<xsd:enumeration value="other"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:element name="CycleStorageEquipmentRef" type="CycleStorageEquipmentRefStructure" substitutionGroup="PlaceEquipmentRef"/>
+	<xsd:complexType name="CycleStorageEquipmentRefStructure">
+		<xsd:simpleContent>
+			<xsd:extension base="EquipmentRefStructure">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- EscalatorEquipment -->
+	<xsd:element name="EscalatorEquipment" type="EscalatorEquipment_VersionStructure" substitutionGroup="AccessEquipment"/>
+	<xsd:complexType name="EscalatorEquipment_VersionStructure">
+		<xsd:complexContent>
+			<xsd:extension base="AccessEquipment_VersionStructure">
+				<xsd:sequence>
+					<xsd:group ref="StairGroup">
+						<xsd:annotation>
+							<xsd:documentation>Elements for STAIR EQUIPMENT.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:group>
+					<xsd:group ref="EscalatorGroup"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+    </xsd:complexType>
+	<xsd:group name="StairGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for STAIR EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Depth" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Depth of Stairs.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="NumberOfSteps" type="xsd:positiveInteger" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Number of Steps on Stairs.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="StepHeight" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Depth of an individual step, in metres rounded to the nearest cm.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="StepLength" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The length of the step, in metres rounded to the nearest cm.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="StepColourContrast" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether there is a colour contrast on step nosings.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="StepCondition" type="StepConditionEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Indicates the regularity of the steps.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="HandrailType" type="HandrailEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Type of handrail.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="HandrailHeight" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Height of handrail from step.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="LowerHandrailHeight" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Height of any additional lower handrail from step.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TactileWriting" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Indicates the presence of signage that can be read tactilely (in Braille for example) on the handrail.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="StairRamp" type="StairRampEnumeration" default="none" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Indicates the presence and type of a ramp included within the staircase.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TopEnd" type="StairEndStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Properties of top of staircase.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="BottomEnd" type="StairEndStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Properties of bottom of staircase.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:simpleType name="StepConditionEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values forthe Step Condition</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="even">
+				<xsd:annotation>
+					<xsd:documentation>The staircase has regular steps, all of the same height and depth.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="uneven">
+				<xsd:annotation>
+					<xsd:documentation>The steps are not all the same size.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="rough">
+				<xsd:annotation>
+					<xsd:documentation>The steps are very different in size, some may be missing or steeply sloped.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="StairRampEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for the stair ramp.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="none"/>
+			<xsd:enumeration value="bicycle">
+				<xsd:annotation>
+					<xsd:documentation>A narrow ramp on the side, designed to push a bicycle.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="luggage">
+				<xsd:annotation>
+					<xsd:documentation>A ramp on the side, designed to roll a suitcase.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="stroller">
+				<xsd:annotation>
+					<xsd:documentation>A pair of ramps with steps in between, intended for pushing a stroller.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="other">
+				<xsd:annotation>
+					<xsd:documentation>Another type of handrail included in the staircase itself.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="unknown"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="StairEndStructure">
+		<xsd:annotation>
+			<xsd:documentation>End of Flight of stairs.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="ContinuingHandrail" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether there is a handrail that continues from previous section.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TexturedSurface" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether there is a textured ground surface.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="VisualContrast" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether there is a colour contrast.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:group name="EscalatorGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for ESCALATOR EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="TactileActuators" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether there are buttons to start the ESCALATOR if it is not moving, and whether these buttons are intended and suited for the visually impaired.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="EnergySaving" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether ESCALATOR is Energy Saving.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DogsMustBeCarried" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether dogs must be carried on ESCALATOR. +v1.1 </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="EscalatorWithLanding" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether ESCALATOR has a landing. +v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MonitoringRemoteControl" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether the escalator is equipped with a remote operation control system.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:element name="EscalatorEquipmentRef" type="EscalatorEquipmentRefStructure" substitutionGroup="AccessEquipmentRef"/>
+	<xsd:complexType name="EscalatorEquipmentRefStructure">
+		<xsd:simpleContent>
+			<xsd:extension base="AccessEquipmentRefStructure">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- HeadingSign -->
+	<xsd:element name="HeadingSign" type="HeadingSign_VersionStructure" substitutionGroup="SignEquipment"/>
+	<xsd:complexType name="HeadingSign_VersionStructure">
+		<xsd:complexContent>
+			<xsd:extension base="SignEquipment_VersionStructure">
+				<xsd:sequence>
+					<xsd:element name="PlaceName" type="MultilingualString">
+						<xsd:annotation>
+							<xsd:documentation>Name of Stop.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:group ref="HeadingSignGroup"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+    </xsd:complexType>
+	<xsd:group name="HeadingSignGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for a HEADING SIGN.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="LineRef" minOccurs="0"/>
+			<xsd:element name="LineName" type="MultilingualString" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Content of Stop.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TransportMode" type="AllVehicleModesOfTransportEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Description of MODE of LINE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="TransportSubmode" minOccurs="0"/>
+			<xsd:element name="LineMap" type="xsd:anyURI" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Graphic or sign for schematic map of lien from STOP PLACE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="DirectionRef" minOccurs="0"/>
+			<xsd:element name="DirectionName" type="MultilingualString" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Content of Stop.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="DestinationDisplayRef" minOccurs="0"/>
+			<xsd:element name="LinePublicCode" type="xsd:normalizedString" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Public Code for Line.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:element name="HeadingSignRef" type="HeadingSignRefStructure" substitutionGroup="SignEquipmentRef"/>
+	<xsd:complexType name="HeadingSignRefStructure">
+		<xsd:simpleContent>
+			<xsd:extension base="EquipmentRefStructure">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- HelpPointEquipment -->
+	<xsd:element name="HelpPointEquipment" type="HelpPointEquipment_VersionStructure" substitutionGroup="PassengerEquipment"/>
+	<xsd:complexType name="HelpPointEquipment_VersionStructure">
+		<xsd:complexContent>
+			<xsd:extension base="PassengerEquipment_VersionStructure">
+				<xsd:sequence>
+					<xsd:group ref="HelpPointEquipmentGroup"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+    </xsd:complexType>
+	<xsd:group name="HelpPointEquipmentGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for a HELP POINT EQUIPMENT type.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="AccessibilityAssessment" minOccurs="0"/>
+			<xsd:element name="HeightFromGround" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Height of HELP POINT from ground.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Phone" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether help point is a phone.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="InductionLoop" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether there is an induction loop.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="InductionLoopSign" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether there is an indication that there is an induction loop.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="StopRequestButton" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether there is a button to request a vehicle to stop.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="StopRequestTimeout" type="xsd:duration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Timeout for a stop request. After this interval after pressing request button  a request will be ignored and a new request must be made.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:element name="HelpPointEquipmentRef" type="HelpPointEquipmentRefStructure" substitutionGroup="PassengerEquipmentRef"/>
+	<xsd:complexType name="HelpPointEquipmentRefStructure">
+		<xsd:simpleContent>
+			<xsd:extension base="PassengerEquipmentRefStructure">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- LiftCallEquipment -->
+	<xsd:element name="LiftCallEquipment" type="LiftCallEquipment_VersionStructure" substitutionGroup="AccessEquipment"/>
+	<xsd:complexType name="LiftCallEquipment_VersionStructure">
+		<xsd:complexContent>
+			<xsd:extension base="AccessEquipment_VersionStructure">
+				<xsd:sequence>
+					<xsd:group ref="LiftCallEquipmentGroup"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+    </xsd:complexType>
+	<xsd:group name="LiftCallEquipmentGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for LIFT call EQUIPMENT type, outside the cabin and specific to a floor.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="CallButtonHeight" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Height of call button from ground.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="RaisedButtons" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether buttons are raised.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="BrailleButtons" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether buttons have braille.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="GroundMarkAlignedWithButton" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Indicates a tactile marker on floor under the buttons (or aligned with). +v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AudioAnnouncements" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether LIFT has AudioAnnouncements.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MagneticInductionLoop" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Indicates existence of a magnetic induction loop. +v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DoorOrientation" type="CompassBearing8Enumeration" minOccurs="0" maxOccurs="2">
+				<xsd:annotation>
+					<xsd:documentation>The direction from which to approach the door(s).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MonitoringRemoteControl" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether the lift is equipped with a remote operation control system</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:simpleType name="CompassBearing8Enumeration">
+		<xsd:annotation>
+			<xsd:documentation>8 point compass.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="SW"/>
+			<xsd:enumeration value="SE"/>
+			<xsd:enumeration value="NW"/>
+			<xsd:enumeration value="NE"/>
+			<xsd:enumeration value="W"/>
+			<xsd:enumeration value="E"/>
+			<xsd:enumeration value="S"/>
+			<xsd:enumeration value="N"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:element name="LiftCallEquipmentRef" type="LiftCallEquipmentRefStructure" substitutionGroup="AccessEquipmentRef"/>
+	<xsd:complexType name="LiftCallEquipmentRefStructure">
+		<xsd:simpleContent>
+			<xsd:extension base="AccessEquipmentRefStructure">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- LiftEquipment -->
+	<xsd:element name="LiftEquipment" type="LiftEquipment_VersionStructure" substitutionGroup="AccessEquipment"/>
+	<xsd:complexType name="LiftEquipment_VersionStructure">
+		<xsd:complexContent>
+			<xsd:extension base="AccessEquipment_VersionStructure">
+				<xsd:sequence>
+					<xsd:group ref="LiftEquipmentGroup"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+    </xsd:complexType>
+	<xsd:group name="LiftEquipmentGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for LIFT EQUIPMENT type.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="LiftDimensionsGroup"/>
+			<xsd:group ref="LiftHandrailGroup"/>
+			<xsd:group ref="LiftButtonsGroup">
+				<xsd:annotation>
+					<xsd:documentation>Elements for Lift button.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:group ref="LiftPropertiesGroup"/>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="LiftDimensionsGroup">
+		<xsd:annotation>
+			<xsd:documentation>Dimension Elements for LIFT EQUIPMENT type.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Depth" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Depth of lift.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MaximumLoad" type="WeightType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Maximum load in Kilos.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="WheelchairPassable" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether lift is judged wheelchair passable.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="WheelchairTurningCircle" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Turning circle within Lift for a wheelchair.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="InternalWidth" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Internal width of lift.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="InternalHeight" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Internal height of lift.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="LiftHandrailGroup">
+		<xsd:annotation>
+			<xsd:documentation>Handrail Elements for LIFT EQUIPMENT type.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="HandrailType" type="HandrailEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Type of handrail.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="HandrailHeight" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Height of handrail from floor.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="LowerHandrailHeight" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Height of lower handrail from floor.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TactileWriting" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Indicates the presence of signage that can be read tactilely (in Braille for example) on the handrail.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="LiftButtonsGroup">
+		<xsd:annotation>
+			<xsd:documentation>Button elements for LIFT EQUIPMENT type.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="CallButtonHeight" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Height of call button from ground (outside the cabin).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DirectionButtonHeight" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Height of direction call button from ground (outside the cabin).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="RaisedButtons" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether buttons are raised (inside and outside the cabin).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="BrailleButtons" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether buttons have braille (inside and outside the cabin).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TactileGroundFloorButton" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Indicates whether there is a tactile marker on the go to ground floor button (inside the cabin). +v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="GroundMarkAlignedWithButton" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Indicates a tactile marker on the floor under, or aligned with, the buttons (outside the cabin). +v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="LiftPropertiesGroup">
+		<xsd:annotation>
+			<xsd:documentation>Loft properties for LIFT EQUIPMENT type.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="ThroughLoader" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether lift is a through loader.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MirrorOnOppositeSide" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether Lift has a mirror on opposite side.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Attendant" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether Lift has an attendant.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Automatic" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether lift is automatic.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ExternalFloorSelection" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether the floor selection is made outside the lift.+v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AlarmButton" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether lift has alarm button.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TactileActuators" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether all buttons have tactile markers suited for the visually impaired.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AudioAnnouncements" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether Lift has AudioAnnouncements.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AccousticAnnouncements" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED - Spelling correction  renamed to audio announcements. THis value will be dropped at  - so</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ReachedFloorAnnouncement" type="ReachedFloorAnnouncementEnumeration" default="visual" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether the elevator car has a visual, tactile or audible display to announce the floor reached. This is different from AudioAnnouncements since AudioAnnouncements can be about different topics than reached floor (closing doors, up-down movement, etc.), and the ReachedFloorAnnouncement can be visual or tactile, and not only audio.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MagneticInductionLoop" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Indicates existence of a Magnetic Induction Loop. +v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="SignageToLift" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether Lift has good signage to find it.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="SuitableForCycles" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether equipment is suitable for cycles.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ButtonsHeight" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Indicates buttons height (in metres, uppermost button inside the cabin).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:simpleType name="ReachedFloorAnnouncementEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for the Reached Floor Announcement</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="none"/>
+			<xsd:enumeration value="visual"/>
+			<xsd:enumeration value="tactile"/>
+			<xsd:enumeration value="audio"/>
+			<xsd:enumeration value="visualAndAudio"/>
+			<xsd:enumeration value="visualAndAudioAndTactile"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:element name="LiftEquipmentRef" type="LiftEquipmentRefStructure" substitutionGroup="AccessEquipmentRef"/>
+	<xsd:complexType name="LiftEquipmentRefStructure">
+		<xsd:simpleContent>
+			<xsd:extension base="AccessEquipmentRefStructure">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- LuggageLockerEquipment -->
+	<xsd:element name="LuggageLockerEquipment" type="LuggageLockerEquipment_VersionStructure" substitutionGroup="PlaceEquipment"/>
+	<xsd:complexType name="LuggageLockerEquipment_VersionStructure">
+		<xsd:complexContent>
+			<xsd:extension base="Equipment_VersionStructure">
+				<xsd:sequence>
+					<xsd:group ref="LuggageLockerEquipmentGroup"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+    </xsd:complexType>
+	<xsd:group name="LuggageLockerEquipmentGroup">
+		<xsd:annotation>
+			<xsd:documentation>Eements for Luggage Locker EQUIPMENT type.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="NumberOfLockers" type="xsd:integer" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Number of LOCKERs.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="LockerWidth" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Width of Locker.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="LockerHeight" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Height of Locker.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="LockerDepth" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Depth of Locker.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="LockerType" type="LockerTypeEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Type of Locker.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="LockingType" type="LockingTypeEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Type of lock. +v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="WheelchairAccepted" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether a wheelchair may be stored in the locker. +v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="BlindAccessible" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether a visually impaired person may use the mechanism. +v1.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:simpleType name="LockerTypeEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed value for Locker Type.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="leftLuggageOffice"/>
+			<xsd:enumeration value="lockers"/>
+			<xsd:enumeration value="oversizeLockers"/>
+			<xsd:enumeration value="bikeRack"/>
+			<xsd:enumeration value="bikeCarriage"/>
+			<xsd:enumeration value="other"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="LockingTypeEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed value for type of locking mechanism.+v1.1.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="key"/>
+			<xsd:enumeration value="keyboard"/>
+			<xsd:enumeration value="mechanicalNumbering"/>
+			<xsd:enumeration value="contactless"/>
+			<xsd:enumeration value="mobileApp"/>
+			<xsd:enumeration value="other"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:element name="LuggageLockerEquipmentRef" type="LuggageLockerEquipmentRefStructure" substitutionGroup="PlaceEquipmentRef"/>
+	<xsd:complexType name="LuggageLockerEquipmentRefStructure">
+		<xsd:simpleContent>
+			<xsd:extension base="EquipmentRefStructure">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- PassengerInformationEquipment -->
+	<xsd:element name="PassengerInformationEquipment" type="PassengerInformationEquipment_VersionStructure" substitutionGroup="PassengerEquipment"/>
+	<xsd:complexType name="PassengerInformationEquipment_VersionStructure">
+		<xsd:complexContent>
+			<xsd:extension base="PassengerEquipment_VersionStructure">
+				<xsd:sequence>
+					<xsd:group ref="PassengerInformationEquipmentGroup"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+    </xsd:complexType>
+	<xsd:group name="PassengerInformationEquipmentGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for a PASSENGER INFORMATION EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="LogicalDisplayRef" minOccurs="0"/>
+			<xsd:element ref="StopPlaceRef" minOccurs="0"/>
+			<xsd:element ref="SiteComponentRef" minOccurs="0"/>
+			<xsd:element name="PassengerInformationEquipmentList" type="PassengerInformationEquipmentListOfEnumerations" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>List of PASSENGER INFORMATION Equipments.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="TypeOfPassengerInformationEquipmentRef" minOccurs="0"/>
+			<xsd:group ref="TicketingEquipmentAccessibilityGroup" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Detailed information about accessibility uses. Borrowed from TicketOffice.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:element ref="PassengerInformationFacilityList" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>List of predefined Passenger Info EQUIPMENT.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="AccessibilityInfoFacilityList" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:element name="LogicalDisplayRef" type="LogicalDisplayRefStructure"/>
+	<xsd:complexType name="LogicalDisplayRefStructure">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:element name="SiteComponentRef" type="SiteComponentRefStructure"/>
+	<xsd:complexType name="SiteComponentRefStructure">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="PassengerInformationEquipmentListOfEnumerations">
+		<xsd:annotation>
+			<xsd:documentation>List of values for PASSENGER INFORMATION EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:list itemType="PassengerInformationEquipmentEnumerationL2"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="PassengerInformationEquipmentEnumerationL2">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for Passenger Information Equipment.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="timetablePoster"/>
+			<xsd:enumeration value="fareInformation"/>
+			<xsd:enumeration value="lineNetworkPlan"/>
+			<xsd:enumeration value="lineTimetable"/>
+			<xsd:enumeration value="stopTimetable"/>
+			<xsd:enumeration value="journeyPlanning"/>
+			<xsd:enumeration value="interactiveKiosk"/>
+			<xsd:enumeration value="informationDesk"/>
+			<xsd:enumeration value="networkStatus"/>
+			<xsd:enumeration value="realTimeDisruptions"/>
+			<xsd:enumeration value="realTimeDepartures"/>
+			<xsd:enumeration value="stationMap"/>
+			<xsd:enumeration value="acousticStationMap"/>
+			<xsd:enumeration value="tactileStationMap"/>
+			<xsd:enumeration value="other"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:element name="TypeOfPassengerInformationEquipmentRef" type="TypeOfPassengerInformationEquipmentRefStructure"/>
+	<xsd:complexType name="TypeOfPassengerInformationEquipmentRefStructure">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:group name="TicketingEquipmentAccessibilityGroup">
+		<xsd:annotation>
+			<xsd:documentation>AccessibilityElements for a TICKETING EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="LowCounterAccess" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether there is a low counter for accessibility.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="HeightOfLowCounter" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Height of counter for accessibility.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="InductionLoops" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether there are induction loops.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TactileInterfaceAvailable" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Indicates whether there is a tactile interface +v1.1.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AudioInterfaceAvailable" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Indicates whether there is an accessible audio interface (allowing a use closed eyes). +v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DisabledPriority" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Indicates a priority access for disabled (no-queue). +v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="WheelchairSuitable" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Indicates whether equipment may be used while seated in a wheelchair. +v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:element name="PassengerInformationEquipmentRef" type="PassengerInformationEquipmentRefStructure" substitutionGroup="PassengerEquipmentRef"/>
+	<xsd:complexType name="PassengerInformationEquipmentRefStructure">
+		<xsd:simpleContent>
+			<xsd:extension base="PassengerEquipmentRefStructure">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- PassengerSafetyEquipment -->
+	<xsd:element name="PassengerSafetyEquipment" type="PassengerSafetyEquipment_VersionStructure" substitutionGroup="PassengerEquipment"/>
+	<xsd:complexType name="PassengerSafetyEquipment_VersionStructure">
+		<xsd:complexContent>
+			<xsd:extension base="PassengerEquipment_VersionStructure">
+				<xsd:sequence>
+					<xsd:group ref="PassengerSafetyEquipmentGroup"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+    </xsd:complexType>
+	<xsd:group name="PassengerSafetyEquipmentGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for a PASSENGER SAFETY EQUIPMENT type.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Cctv" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether there is CCTV.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MobilePhoneCoverage" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether lift there is mobile phone coverage.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="PanicButton" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether there is a panic button.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="SosPanel" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether there is an SOS panel.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="HeightOfSosPanel" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Height of SOS panel.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Lighting" type="LightingEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Type of Lighting in area.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AudioAnnouncements" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether there are Audio Announcements. +v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AcousticAnnouncements" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED - Renamed to AudioAnnouncements for consistency.  Old value kept for backwards compatibility - will be dropped in future release. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AudioAnnouncementType" type="AudioAnnouncementTypeEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Triggering type for Audio Announcements. +v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AudioAnnouncementsTrigger" type="AudioTriggerMethodEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>How to trigger Acoustic Announcements. +v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:simpleType name="AudioAnnouncementTypeEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for AudioAnnouncements </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="onDemand"/>
+			<xsd:enumeration value="automatic"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:element name="PassengerSafetyEquipmentRef" type="PassengerSafetyEquipmentRefStructure" substitutionGroup="PassengerEquipmentRef"/>
+	<xsd:complexType name="PassengerSafetyEquipmentRefStructure">
+		<xsd:simpleContent>
+			<xsd:extension base="PassengerEquipmentRefStructure">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- RampEquipment -->
+	<xsd:element name="RampEquipment" type="RampEquipment_VersionStructure" substitutionGroup="AccessEquipment"/>
+	<xsd:complexType name="RampEquipment_VersionStructure">
+		<xsd:complexContent>
+			<xsd:extension base="AccessEquipment_VersionStructure">
+				<xsd:sequence>
+					<xsd:group ref="RampEquipmentGroup">
+						<xsd:annotation>
+							<xsd:documentation>Elements for RAMP EQUIPMENT.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:group>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+    </xsd:complexType>
+	<xsd:group name="RampEquipmentGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for RAMP EQUIPMEN/</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Length" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Length of ramp in metres. In the case of a mobile ramp associated with a vehicle this element is used to convey the length the ramp needs to be extended from the vehicle. This indicates the minimally necessary width of the Quay.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MaximumLoad" type="WeightType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Maximum load in kilograms. Mainly used for mobile ramps.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Gradient" type="xsd:positiveInteger" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Gradient of ramp in degrees.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="GradientType" type="GradientEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Gradient of ramp fixed values.+v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Pedestal" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether ramp is on a pedestal.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="HandrailType" type="HandrailEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Type of handrail.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="HandrailHeight" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Height of handrail.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="LowerHandrailHeight" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Height of any additional lower handrail.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TactileWriting" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Indicates the presence of signage that can be read tactilely (in Braille for example) on the handrail.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TactileGuidanceStrips" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether ramp has tactile guidance strips.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="VisualGuidanceBands" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether ramp has visual guidance bands or guidance strips.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Temporary" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether ramp is temporary or permanent.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="SuitableForCycles" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether equipment is suitable for cycles.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="RestStopDistance" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The maximum distance between two resting levels, in metres rounded to the nearest cm. It is recommended to install a rest platform at the bottom and top of each ramp, as well as every 10 metres in the case of a long ramp.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="SafetyEdge" type="SafetyEdgeEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether there is a wheel guard (side border intended to block the wheel of the wheelchair to prevent falls).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TurningSpace" type="RampTurningSpacePositionEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Position of the manoeuvring space (for wheelchairs).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:simpleType name="SafetyEdgeEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for Sides of Safety Edge.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="none"/>
+			<xsd:enumeration value="oneSide"/>
+			<xsd:enumeration value="bothSides"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="RampTurningSpacePositionEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for the positions of a turning space for a ramp.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="none"/>
+			<xsd:enumeration value="bottom"/>
+			<xsd:enumeration value="top"/>
+			<xsd:enumeration value="topAndBottom"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:element name="RampEquipmentRef" type="RampEquipmentRefStructure" substitutionGroup="AccessEquipmentRef"/>
+	<xsd:complexType name="RampEquipmentRefStructure">
+		<xsd:simpleContent>
+			<xsd:extension base="AccessEquipmentRefStructure">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- RoughSurface -->
+	<xsd:element name="RoughSurface" type="RoughSurface_VersionStructure" substitutionGroup="AccessEquipment"/>
+	<xsd:complexType name="RoughSurface_VersionStructure">
+		<xsd:complexContent>
+			<xsd:extension base="AccessEquipment_VersionStructure">
+				<xsd:sequence>
+					<xsd:group ref="RoughSurfaceGroup">
+					<xsd:annotation>
+						<xsd:documentation>Elements for a ROUGH SURFACE.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:group>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+    </xsd:complexType>
+	<xsd:group name="RoughSurfaceGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for ROUGH SURFACE.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="SurfaceType" type="SurfaceTypeEnumeration">
+				<xsd:annotation>
+					<xsd:documentation>Type of Surface.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="VisualContrast" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether there is visual contrast compared to the immediate surroundings.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="SuitableForCycles" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether equipment is suitable for cycles.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:element name="RoughSurfaceRef" type="RoughSurfaceRefStructure" substitutionGroup="AccessEquipmentRef"/>
+	<xsd:complexType name="RoughSurfaceRefStructure">
+		<xsd:simpleContent>
+			<xsd:extension base="AccessEquipmentRefStructure">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- ShelterEquipment -->
+	<xsd:element name="ShelterEquipment" type="ShelterEquipment_VersionStructure" substitutionGroup="PlaceEquipment"/>
+	<xsd:complexType name="ShelterEquipment_VersionStructure">
+		<xsd:complexContent>
+			<xsd:extension base="Equipment_VersionStructure">
+				<xsd:sequence>
+					<xsd:group ref="WaitingEquipmentGroup">
+						<xsd:annotation>
+							<xsd:documentation>Elements for waiting rooms and waiting areas.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:group>
+					<xsd:group ref="ShelterEquipmentGroup"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+    </xsd:complexType>
+	<xsd:group name="WaitingEquipmentGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for a WAITING Equipment.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Seats" type="xsd:nonNegativeInteger" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Number of seats in Area.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Width" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Width of area.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Length" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Length of Area.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="StepFree" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether area is step free.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="WheelchairAreaWidth" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Width of Wheelchair Area.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="WheelchairAreaLength" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Width of Wheelchair Area.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="SmokingAllowed" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether smoking is allowed in area.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Heated" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether shelter has heating.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AirConditioned" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether shelter has air conditioining.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="ShelterEquipmentGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for a SHELTER EQUIPMENT type.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Enclosed" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether shelter is enclosed.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DistanceFromNearestKerb" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Distance from Kerb / boarding point.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:element name="ShelterEquipmentRef" type="ShelterEquipmentRefStructure" substitutionGroup="PlaceEquipmentRef"/>
+	<xsd:complexType name="ShelterEquipmentRefStructure">
+		<xsd:simpleContent>
+			<xsd:extension base="EquipmentRefStructure">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- StaircaseEquipment -->
+	<xsd:element name="StaircaseEquipment" type="StaircaseEquipment_VersionStructure" substitutionGroup="AccessEquipment"/>
+	<xsd:complexType name="StaircaseEquipment_VersionStructure">
+		<xsd:complexContent>
+			<xsd:extension base="AccessEquipment_VersionStructure">
+				<xsd:sequence>
+					<xsd:group ref="StairGroup">
+						<xsd:annotation>
+							<xsd:documentation>Elements for STAIR EQUIPMENT.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:group>
+					<xsd:group ref="StaircaseGroup"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+    </xsd:complexType>
+	<xsd:group name="StaircaseGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for STAIRCASE EQUIPMENT type.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="ContinuousHandrail" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether Handrail is continuous across staircase.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="WithoutRiser" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether openwork stairs (no riser). +v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="SpiralStair" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether Stairs are spiral.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="NumberOfFlights" type="xsd:integer" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Number of flights of Stairs.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="flights" type="stairFlights_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Flight of stairs.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:complexType name="stairFlights_RelStructure">
+		<xsd:sequence>
+			<xsd:element ref="StairFlight" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:element name="StairFlight" type="StairFlight_VersionStructure">
+		<xsd:annotation>
+			<xsd:documentation>FLIGHT of Stairs.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="StairFlight_VersionStructure">
+		<xsd:annotation>
+			<xsd:documentation>An individual flight of a STAIR CASE.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:sequence>
+				<xsd:group ref="DataManagedObjectElement_Group"/>
+			</xsd:sequence>
+			<xsd:sequence>
+				<xsd:group ref="StairGroup"/>
+				<xsd:element name="ContinuousHandrail" type="xsd:boolean" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Whether Handrail is continuous from previous stage.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="EntityAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:element name="StaircaseEquipmentRef" type="StaircaseEquipmentRefStructure" substitutionGroup="AccessEquipmentRef"/>
+	<xsd:complexType name="StaircaseEquipmentRefStructure">
+		<xsd:simpleContent>
+			<xsd:extension base="AccessEquipmentRefStructure">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- TicketingEquipment -->
+	<xsd:element name="TicketingEquipment" type="TicketingEquipment_VersionStructure" substitutionGroup="PassengerEquipment"/>
+	<xsd:complexType name="TicketingEquipment_VersionStructure">
+		<xsd:complexContent>
+			<xsd:extension base="PassengerEquipment_VersionStructure">
+				<xsd:sequence>
+					<xsd:group ref="TicketingEquipmentGroup"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+    </xsd:complexType>
+	<xsd:group name="TicketingEquipmentGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for a TICKETING EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="VehicleModes" type="AllModesListOfEnumerations" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Modes for which ticketing services apply.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="TicketingEquipmentPropertiesGroup"/>
+			<xsd:group ref="TicketingEquipmentServiceGroup"/>
+			<xsd:group ref="TicketingEquipmentAccessibilityGroup"/>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:simpleType name="AllModesListOfEnumerations">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for List of ALL MODES of transport.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:list itemType="AllModesEnumerationL2"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="AllModesEnumerationL2">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for r MODES: TPEG pti_table 01.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="all"/>
+			<xsd:enumeration value="anyMode"/>
+			<xsd:enumeration value="unknown"/>
+			<xsd:enumeration value="air"/>
+			<xsd:enumeration value="bus"/>
+			<xsd:enumeration value="trolleyBus"/>
+			<xsd:enumeration value="tram"/>
+			<xsd:enumeration value="coach"/>
+			<xsd:enumeration value="rail"/>
+			<xsd:enumeration value="intercityRail"/>
+			<xsd:enumeration value="urbanRail"/>
+			<xsd:enumeration value="metro"/>
+			<xsd:enumeration value="water"/>
+			<xsd:enumeration value="ferry"/>
+			<xsd:enumeration value="cableway"/>
+			<xsd:enumeration value="funicular"/>
+			<xsd:enumeration value="lift"/>
+			<xsd:enumeration value="snowAndIce"/>
+			<xsd:enumeration value="taxi"/>
+			<xsd:enumeration value="selfDrive">
+				<xsd:annotation>
+					<xsd:documentation>See pti12_x.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="foot"/>
+			<xsd:enumeration value="bicycle"/>
+			<xsd:enumeration value="motorcycle"/>
+			<xsd:enumeration value="scooter"/>
+			<xsd:enumeration value="car"/>
+			<xsd:enumeration value="shuttle"/>
+			<!-- NOT IN tpeg -->
+			<!-- NOT IN tpeg -->
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:group name="TicketingEquipmentPropertiesGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for a TICKETING EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="TicketMachines" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether there are ticket machines.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="NumberOfMachines" type="xsd:integer" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Number of ticket machines.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="HeightOfMachineInterface" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Height of the ticket machine interface. +v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="TicketingFacilityList" minOccurs="0"/>
+			<xsd:element ref="TicketingServiceFacilityList" minOccurs="0"/>
+			<xsd:element name="TicketOffice" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether there is a distinct ticket office.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TicketCounter" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether there is a ticket counter.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="NumberOfTills" type="xsd:integer" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Number of ticket windows.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="QueueManagement" type="QueueManagementEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Queue management.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:simpleType name="QueueManagementEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed value for Queue Management.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="none"/>
+			<xsd:enumeration value="maze"/>
+			<xsd:enumeration value="separateLines"/>
+			<xsd:enumeration value="ticketed"/>
+			<xsd:enumeration value="other"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:group name="TicketingEquipmentServiceGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for a TICKETING EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="PaymentMethods" type="PaymentMethodListOfEnumerationsL2" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Payment methods allowed.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TicketTypesAvailable" type="TicketTypeListOfEnumerations" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Types of Ticket available.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ScopeOfTicketsAvailable" type="ScopeOfTicketListOfEnumerationsL2" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Scope of Ticket available.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:simpleType name="PaymentMethodListOfEnumerationsL2">
+		<xsd:annotation>
+			<xsd:documentation>List of payment methods.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:list itemType="PaymentMethodEnumerationL2"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="PaymentMethodEnumerationL2">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for Payment method.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="cash">
+				<xsd:annotation>
+					<xsd:documentation>Payment in coins or notes accepted.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="cashExactChangeOnly">
+				<xsd:annotation>
+					<xsd:documentation>Payment in coins or notes accepted, must be exact amount.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="cashAndCard">
+				<xsd:annotation>
+					<xsd:documentation>Payment with either cash or debit / credit card   accepted.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="coin">
+				<xsd:annotation>
+					<xsd:documentation>Payment in specie (coins) only.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="banknote">
+				<xsd:annotation>
+					<xsd:documentation>Payment in cash with banknotes (but no coins).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="cheque">
+				<xsd:annotation>
+					<xsd:documentation>Payment with personal Bankers' cheque.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="travellersCheque">
+				<xsd:annotation>
+					<xsd:documentation>Payment with Traveller's cheque.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="postalOrder">
+				<xsd:annotation>
+					<xsd:documentation>Payment by Postal order.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="companyCheque">
+				<xsd:annotation>
+					<xsd:documentation>Payment with Company cheque.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="creditCard">
+				<xsd:annotation>
+					<xsd:documentation>Payment by credit card  (E.g. Visa, MasterCard, etc).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="debitCard">
+				<xsd:annotation>
+					<xsd:documentation>Payment by Bank debit  card.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="cardsOnly">
+				<xsd:annotation>
+					<xsd:documentation>Paymentonly with debit or credit card (no cash).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="travelCard">
+				<xsd:annotation>
+					<xsd:documentation>Payment with stored value travel card or smartcard.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="contactlessPaymentCard">
+				<xsd:annotation>
+					<xsd:documentation>NFC Payment by contactless credit or debit card </xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="contactlessTravelCard">
+				<xsd:annotation>
+					<xsd:documentation>NFC Payment with stored value travel card or smartcard .</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="directDebit">
+				<xsd:annotation>
+					<xsd:documentation>Electronic payment by direct debit at retailers request from customer's bank account .</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="bankTransfer">
+				<xsd:annotation>
+					<xsd:documentation>Electronic payment from customer account to retailers account.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="epayDevice">
+				<xsd:annotation>
+					<xsd:documentation>Electronic payment with on device  application (e.g. ApplePay, GooglePay etc).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="epayAccount">
+				<xsd:annotation>
+					<xsd:documentation>Electronic payment direct from account (e.g. PayPal etc).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="sms">
+				<xsd:annotation>
+					<xsd:documentation>Payment by SMS charge to mobile account.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="mobilePhone">
+				<xsd:annotation>
+					<xsd:documentation>Payment with mobile device  / mobile app. [Use more specific MOBILE app] </xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="mobileApp">
+				<xsd:annotation>
+					<xsd:documentation>Payment with mobile device  / mobile app. +v1.2.2</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="voucher">
+				<xsd:annotation>
+					<xsd:documentation>Payment with coupons or vouchers.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="token">
+				<xsd:annotation>
+					<xsd:documentation>Payment with physical tokens.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="warrant">
+				<xsd:annotation>
+					<xsd:documentation>Payment with warrant issued by an organisation (e.g. Army, government).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="mileagePoints">
+				<xsd:annotation>
+					<xsd:documentation>Payment in mileage points.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="other">
+				<xsd:annotation>
+					<xsd:documentation>Other means of payment .</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- defined wrongly in epip: point to TicketingFacilityEnumeration instead of ScopeOfTicketEnumeration -->
+	<xsd:simpleType name="ScopeOfTicketListOfEnumerationsL2">
+		<xsd:annotation>
+			<xsd:documentation>List of values for SCOPEs of TICKET.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:list itemType="ScopeOfTicketEnumeration"/>
+	</xsd:simpleType>
+	<xsd:element name="TicketingEquipmentRef" type="TicketingEquipmentRefStructure" substitutionGroup="PassengerEquipmentRef"/>
+	<xsd:complexType name="TicketingEquipmentRefStructure">
+		<xsd:simpleContent>
+			<xsd:extension base="PassengerEquipmentRefStructure">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- TicketValidatorEquipment -->
+	<xsd:element name="TicketValidatorEquipment" type="TicketValidatorEquipment_VersionStructure" substitutionGroup="PassengerEquipment"/>
+	<xsd:complexType name="TicketValidatorEquipment_VersionStructure">
+		<xsd:complexContent>
+			<xsd:extension base="PassengerEquipment_VersionStructure">
+				<xsd:sequence>
+					<xsd:group ref="TicketValidatorGroup"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+    </xsd:complexType>
+	<xsd:group name="TicketValidatorGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for a TICKET VALIDATOR EQUIPMENT type.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="TicketValidatorType" type="TicketValidatorListOfEnumerations" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Types of validation supported by validator.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AudioValidationFeedback" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether there is audio validation feedback.+v1.1.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="VisualValidationFeedback" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether there is visual validation feedback. +v1.1.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TactileValidationFeedback" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether there is tactical validation feedback.+v1.1.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ValidationGuidance" type="MultilingualString" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Free text describing use of validator  (how title may be presented, how to find validator, etc.). +v1.1.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:simpleType name="TicketValidatorListOfEnumerations">
+		<xsd:annotation>
+			<xsd:documentation>List of TICKET VALIDATOR EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:list itemType="TicketValidatorEnumeration"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="TicketValidatorEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed value for Ticket Validator.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="paperStamp"/>
+			<xsd:enumeration value="contactLess"/>
+			<xsd:enumeration value="magnetic"/>
+			<xsd:enumeration value="other"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:element name="TicketValidatorEquipmentRef" type="TicketValidatorEquipmentRefStructure" substitutionGroup="PassengerEquipmentRef"/>
+	<xsd:complexType name="TicketValidatorEquipmentRefStructure">
+		<xsd:simpleContent>
+			<xsd:extension base="PassengerEquipmentRefStructure">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- EntranceEquipment -->
+	<xsd:element name="EntranceEquipment" type="EntranceEquipment_VersionStructure" substitutionGroup="AccessEquipment"/>
+	<xsd:complexType name="EntranceEquipment_VersionStructure">
+		<xsd:complexContent>
+			<xsd:extension base="AccessEquipment_VersionStructure">
+				<xsd:sequence>
+					<xsd:element name="Door" type="xsd:boolean" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Whether there is a door in the entrance. If false, opening does not have door.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="KeptOpen" type="xsd:boolean" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Whether the door is kept open.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="Barrier" type="xsd:boolean" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Whether there is a physical barrier across the doorway.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:group ref="EntranceAccessibilityGroup"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+    </xsd:complexType>
+	<xsd:group name="EntranceAccessibilityGroup">
+		<xsd:annotation>
+			<xsd:documentation>Accessibility elements for ENTRANCE EQUIPMENT type.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="DropKerbOutside" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether there is a drop Kerb outside door. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AcousticSensor" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether door has acoustic sensors.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AutomaticDoor" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether doors are automatic.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DoorControlElementHeight" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Indicates door control element height. This could be e.g. a door handle or a door button.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="GlassDoor" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether door is made of glass.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Airlock" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether there is an airlock. +v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="WheelchairPassable" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Door can be passed in a wheel chair.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="WheelchairUnaided" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Can be passed in a wheel chair unaided.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AudioOrVideoIntercom" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether there is an audio or video communication needed for access. +v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="EntranceAttention" type="EntranceAttentionEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Nature of doorbell help point etc needed to operate door.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DoorstepMark" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether there is a tactile doorstep mark. +v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="NecessaryForceToOpen" type="NecessaryForceEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Necessary force to open the door. +v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="SuitableForCycles" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether equipment is suitable for cycles.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AudioPassthroughIndicator" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether there is an audio signal indicating passing through.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="RampDoorbell" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>When there is a removable ramp, whether the entrance has a dedicated doorbell to ask for the ramp.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Recognizable" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether the entrance is easily identifiable in its environment taking into account architecture, signage and visual contrast.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TurningSpacePosition" type="EntranceTurningSpacePositionEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Position of the turning space: the manoeuvring space for wheelchairs is a space left in the immediate vicinity of the door to operate it correctly and is (should be) materialised by a rectangle located at the base of the door.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="WheelchairTurningCircle" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Turning circle within the turning space for a wheelchair.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:simpleType name="EntranceTurningSpacePositionEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for the positions of a turning space for an Entrance.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="none"/>
+			<xsd:enumeration value="outside"/>
+			<xsd:enumeration value="inside"/>
+			<xsd:enumeration value="insideAndOutside"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:element name="EntranceEquipmentRef" type="EntranceEquipmentRefStructure" substitutionGroup="AccessEquipmentRef"/>
+	<xsd:complexType name="EntranceEquipmentRefStructure">
+		<xsd:simpleContent>
+			<xsd:extension base="AccessEquipmentRefStructure">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- AssistanceService -->
+	<xsd:element name="AssistanceService" type="AssistanceService_VersionStructure" substitutionGroup="Equipment"/>
+	<xsd:complexType name="AssistanceService_VersionStructure">
+		<xsd:complexContent>
+			<xsd:extension base="Equipment_VersionStructure">
+				<xsd:sequence>
+					<xsd:group ref="AssistanceServiceGroup"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+    </xsd:complexType>
+	<xsd:group name="AssistanceServiceGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for an ASSISTANCE SERVICE.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="AssistanceFacilityList" minOccurs="0"/>
+			<xsd:element name="AssistanceAvailability" type="AssistanceAvailabilityEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Availability of assistance service.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Staffing" type="StaffingEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Staffing service.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AccessibilityToolList" type="AccessibilityToolListOfEnumerations" minOccurs="0"/>
+			<xsd:element name="Languages" type="LanguageListOfEnumerations" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Languages spoken for assistance.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AccessibilityTrainedStaff" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether staff are accessibility trained.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="EmergencyServiceList" type="EmergencyServiceListOfEnumerations" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Emergency service assistance available.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="SafetyFacilityList" type="SafetyFacilityListOfEnumerations" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Safety facilities.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:element name="AssistanceServiceRef" type="AssistanceServiceRefStructure" substitutionGroup="EquipmentRef"/>
+	<xsd:complexType name="AssistanceServiceRefStructure">
+		<xsd:simpleContent>
+			<xsd:extension base="EquipmentRefStructure">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- versioni aggiornate per equipments (fine) -->
+	<xsd:element name="FlexibleLineRef" type="LineRefStructure" substitutionGroup="LineRef">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a FLEXIBLE LINE.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
 	<!-- versioni aggiornate per vehicleTypes (inizio) -->
     <xsd:complexType name="vehicleTypesL2Structure">
         <xsd:choice maxOccurs="unbounded">
@@ -843,6 +3208,11 @@ more focused on translations).</xsd:documentation>
 				<xsd:element ref="VehicleTypeRef" minOccurs="0"/>
 				<xsd:element ref="TrainRef" minOccurs="0"/>
 			</xsd:choice>
+			<xsd:element name="actualVehicleEquipments" type="equipmentsL2_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>ACTUAL EQUIPMENT found in VEHICLE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
         </xsd:sequence>
         <xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
     </xsd:complexType>
@@ -909,9 +3279,24 @@ POIs will be provided in NeTEx datasets; they will in most cases be defined in e
 					<xsd:documentation>Whether STOP PLACE is a border crossing, that is a point, at which an international boundary between two countries may be crossed.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
+			<xsd:element name="unlocalisedEquipments" type="explicitEquipments_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Items of EQUIPMENT associated with STOP PLACE but not assigned to a point within it. More Localized EQUIPMENT should be included in an EQUIPMENT place.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 			<xsd:element ref="Weighting" minOccurs="0"/>
 			<xsd:element ref="StopPlaceWeight" minOccurs="0"/>
 			<xsd:element name="quays" type="quaysL2_RelStructure" minOccurs="0"/>
+			<xsd:element name="accessSpaces" type="accessSpaces_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>ACCESS SPACEs within the STOP PLACE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="pathLinks" type="sitePathLinks_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>PATH LINKs for SITE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 		</xsd:sequence>
 		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
 	</xsd:complexType>
@@ -959,21 +3344,14 @@ POIs will be provided in NeTEx datasets; they will in most cases be defined in e
 					<xsd:documentation>LEVELs found within SITE.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element ref="entrances" minOccurs="0">
+			<!-- modificate le entrances per level 2 -->
+			<xsd:element name="entrances" type="entrancesL2_RelStructure" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>ENTRANCEs to and within SITE</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:group>
-	<xsd:complexType name="levelsL2_RelStructure">
-		<xsd:choice maxOccurs="unbounded">
-			<!-- aggiunto LevelRef per level 2 -->
-			<xsd:element ref="LevelRef"/>
-			<xsd:element ref="Level"/>
-		</xsd:choice>
-		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
-	</xsd:complexType>
 	<xsd:complexType name="quaysL2_RelStructure">
 		<xsd:choice maxOccurs="unbounded">
 			<xsd:element ref="QuayRef"/>
@@ -983,7 +3361,7 @@ POIs will be provided in NeTEx datasets; they will in most cases be defined in e
     </xsd:complexType>
     <xsd:complexType name="QuayL2_VersionStructure">
         <xsd:sequence>
-            <xsd:group ref="StopPlaceSpaceGroup"/>
+            <xsd:group ref="StopPlaceSpaceGroupL2"/>
             <xsd:element ref="PublicCode" minOccurs="0">
                 <xsd:annotation>
                     <xsd:documentation>Pubic identifier code of QUAY.</xsd:documentation>
@@ -1017,6 +3395,68 @@ POIs will be provided in NeTEx datasets; they will in most cases be defined in e
         </xsd:sequence>
         <xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
     </xsd:complexType>
+	<xsd:group name="StopPlaceSpaceGroupL2">
+		<xsd:sequence>
+			<xsd:group ref="SiteComponentGroupL2"/>
+			<xsd:element ref="Label" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Label of STOP PLACE SPACE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- modificate le entrances per level 2 -->
+			<xsd:element name="entrances" type="entrancesL2_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>ENTRANCEs to and within SITE</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Length" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Length of SPACE in metres.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Width" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Width of SPACE in metres.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="SiteComponentGroupL2">
+		<xsd:sequence>
+			<xsd:group ref="SiteElementObjectElementGroup"/>
+			<xsd:element ref="LevelRef" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to level of SITE COMPONENT within SITE</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- aggiunti i placeEquipments-->
+			<xsd:group ref="AllEquipmentGroup"/>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="AllEquipmentGroup">
+		<xsd:annotation>
+			<xsd:documentation>EQUIPMENT elements.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="placeEquipments" type="placeEquipments_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Items of fixed EQUIPMENT that may be located in places within the SITE  ELEMENT.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:complexType name="placeEquipments_RelStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for a list of LOCAL SERVICEs.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:choice maxOccurs="unbounded">
+				<xsd:element ref="InstalledEquipmentRef"/>
+				<xsd:element ref="InstalledEquipment" maxOccurs="1"/>
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
 	<xsd:complexType name="destinationDisplayViews_RelStructure">
 		<xsd:choice maxOccurs="unbounded">
 			<xsd:element ref="DestinationDisplayRef"/>
@@ -1030,6 +3470,394 @@ POIs will be provided in NeTEx datasets; they will in most cases be defined in e
         </xsd:sequence>
         <xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
     </xsd:complexType>
+	<xsd:complexType name="levelsL2_RelStructure">
+		<xsd:choice maxOccurs="unbounded">
+			<!-- aggiunto LevelRef per level 2 -->
+			<xsd:element ref="LevelRef"/>
+			<xsd:element name="Level" type="LevelL2_VersionStructure"/>
+		</xsd:choice>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:complexType name="LevelL2_VersionStructure">
+		<xsd:sequence>
+			<xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:group ref="LevelL2Group"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:group name="LevelL2Group">
+		<xsd:annotation>
+			<xsd:documentation>Elements of a SITE LEVEL.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Name" type="MultilingualString" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Name of LEVEL.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ShortName" type="MultilingualString" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Short Name of LEVEL.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Description" type="MultilingualString" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Description of LEVEL.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="PublicCode" type="xsd:normalizedString" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Public code for LEVEL.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="PublicUse" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether level is for public use.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- aggiunto per il livello 2 -->
+			<xsd:element name="RelativeLevelOrder" type="xsd:integer" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Order of LEVELs. The level numbers are not absolute, but only give a relative order within the SITE. 0 should be the ground floor, even when it is often difficult to determine which one that is in a complex structure. Complex buildings can be modelled with multiple SITEs and referenced by SiteRef.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AccessibilityAssessment" type="AccessibilityAssessmentStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Accessibility values associated with LEVEL.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AllAreasWheelchairAccessible" type="xsd:boolean" default="true" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether all areas of the LEVEL are wheelchair accessible.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:complexType name="entrancesL2_RelStructure">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element ref="EntranceRef"/>
+			<xsd:element name="Entrance" type="SiteEntrance_VersionStructure"/>
+		</xsd:choice>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:complexType name="SiteEntrance_VersionStructure">
+		<xsd:sequence>
+			<xsd:element name="Name" type="MultilingualString" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Name of GROUP OF ENTITies.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ShortName" type="MultilingualString" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Short Name of GROUP OF ENTITies.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Description" type="MultilingualString" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Further Description of a GROUP OF ENTITies.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="Centroid" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Centre Coordinates of ZONE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="PostalAddress" minOccurs="0"/>
+			<!-- TODO questo sarebbe da aggiungere al livello 5 
+			<xsd:element ref="AccessibilityAssessment" minOccurs="0"/>
+			-->
+			<xsd:element name="AccessModes" type="AccessModeListOfEnumerations" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Allowed MODEs to access SITE ELEMENT.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="SiteElementPropertiesGroup">
+				<xsd:annotation>
+					<xsd:documentation>Elements of a SITE ELEMENT.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:element ref="LevelRef" minOccurs="0"/>
+			<xsd:group ref="AllEquipmentGroup"/>
+			<xsd:group ref="SiteEntranceGroup"/>
+			<xsd:group ref="ExternalEntranceGroup"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:group name="ExternalEntranceGroup">
+		<xsd:annotation>
+			<xsd:documentation>External entrance elements of a SITE ENTRANCE.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="DroppedKerbOutside" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether nearest crossing to ENTRANCE has dropped kerb.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DropOffPointClose" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether there is a drop off point close by to ENTRANCE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:complexType name="explicitEquipments_RelStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for a list of LOCAL SERVICEs.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:choice maxOccurs="unbounded">
+				<xsd:element ref="InstalledEquipmentRef"/>
+				<xsd:element ref="InstalledEquipment"/>
+				<xsd:element ref="CommunicationServiceRef"/>
+				<xsd:element ref="CommunicationService"/>
+				<xsd:element ref="AssistanceServiceRef"/>
+				<xsd:element ref="AssistanceService"/>
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:complexType name="accessSpaces_RelStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for a list of ACCESS SPACEs.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element ref="AccessSpaceRef"/>
+			<xsd:element name="AccessSpace" type="AccessSpace_VersionStructure"/>
+		</xsd:choice>
+        <xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+    </xsd:complexType>
+	<xsd:complexType name="AccessSpace_VersionStructure">
+        <xsd:sequence>
+            <xsd:group ref="StopPlaceSpaceGroupL2"/>
+            <xsd:element name="AccessSpaceType" type="AccessSpaceTypeEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Type of ACCESS SPACE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="PassageType" type="PassageTypeEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Type of passage associated with ACCESS SPACE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+            <xsd:element name="ParentAccessSpaceRef" type="AccessSpaceRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>if ACCESS SPACE is a subzone of another ACCESS SPACE identifies parent,</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+        </xsd:sequence>
+        <xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+    </xsd:complexType>
+	<xsd:complexType name="sitePathLinks_RelStructure">
+		<xsd:annotation>
+			<xsd:documentation>PATH LINKs for SITE.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element name="PathLinkRef" type="PathLinkRefStructure"/>
+			<xsd:element name="SitePathLink" type="PathLink_VersionStructure"/>
+		</xsd:choice>
+        <xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+    </xsd:complexType>
+	<xsd:complexType name="PathLinkRefStructure">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="PathLink_VersionStructure">
+		<xsd:sequence>
+			<xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:element ref="Name" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Name of LINK.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- torna ad essere facoltativo dal livello 2 -->
+			<xsd:element ref="Distance" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Mandatory in EPIP. Length of LINK.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="gml:LineString" minOccurs="0"/>
+			<xsd:element name="From" type="PathLinkEndStructure">
+				<xsd:annotation>
+					<xsd:documentation>Origin end of PATH LINK.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="To" type="PathLinkEndStructure">
+				<xsd:annotation>
+					<xsd:documentation>Destination end of PATH LINK.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="PathLinkElementGroup"/>
+			<xsd:group ref="PathPropertiesGroup"/>
+			<xsd:element ref="LevelRef" minOccurs="0"/>
+			<xsd:group ref="AllEquipmentGroup"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:group name="PathLinkElementGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements of a PATH SITE ELEMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:choice minOccurs="0">
+				<xsd:element name="AccessibilityAssessmentRef" type="AccessibilityAssessmentRefStructure"/>
+				<xsd:element ref="AccessibilityAssessment" minOccurs="0" maxOccurs="1"/>
+			</xsd:choice>
+			<xsd:element name="AccessModes" type="AccessModeListOfEnumerations" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Allowed MODEs to use in component.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="SiteElementPropertiesGroup"/>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="PathPropertiesGroup">
+		<xsd:annotation>
+			<xsd:documentation>Common elements of a PATH.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="NumberOfSteps" type="xsd:nonNegativeInteger" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Number of steps to take PATH LINK.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AllowedUse" type="PathDirectionEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Allowed direction of use: one way or two way. Default is two way.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Transition" type="TransitionEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether PATH LINK is up down or level in from to direction.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Gradient" type="xsd:integer" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Maximum gradient in degrees  (in the direction of the PATH LINK way). +v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="GradientType" type="GradientEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Coded value of the maximum gradient.+v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TiltAngle" type="xsd:integer" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Maximum Tilt angle in degrees between -20 and 20 (in the direction of the PATH LINK way). +v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TiltType" type="TiltTypeEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Coded value of the maximum  tilt.  See allowed va;ues. +v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AccessFeatureType" type="AccessFeatureEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Type of physical feature of PATH LINK.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="PassageType" type="PassageTypeEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Type of passage feature of PATH LINK.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TactileWarningStrip" type="TactileWarningStripEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Nature of the  tactile warning strips (in the direction of the PATH LINK). +v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TactileGuidingStrip" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Indicates whether there are guiding strips. +v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:simpleType name="AccessFeatureEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for an access feature.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="lift"/>
+			<xsd:enumeration value="escalator"/>
+			<xsd:enumeration value="freightElevator"/>
+			<xsd:enumeration value="travelator"/>
+			<xsd:enumeration value="ramp"/>
+			<xsd:enumeration value="stairs"/>
+			<xsd:enumeration value="seriesOfStairs"/>
+			<xsd:enumeration value="shuttle"/>
+			<xsd:enumeration value="crossing"/>
+			<xsd:enumeration value="barrier"/>
+			<xsd:enumeration value="narrowEntrance"/>
+			<xsd:enumeration value="hall"/>
+			<xsd:enumeration value="concourse"/>
+			<xsd:enumeration value="confinedSpace"/>
+			<xsd:enumeration value="queueManagement"/>
+			<xsd:enumeration value="none"/>
+			<xsd:enumeration value="unknown"/>
+			<xsd:enumeration value="other"/>
+			<xsd:enumeration value="openSpace"/>
+			<xsd:enumeration value="street"/>
+			<xsd:enumeration value="pavement"/>
+			<xsd:enumeration value="footpath"/>
+			<xsd:enumeration value="passage"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="TactileWarningStripEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for TactileWarningStrip </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="tactileStripAtBeginning"/>
+			<xsd:enumeration value="tactileStripAtEnd"/>
+			<xsd:enumeration value="tactileStripAtBothEnds"/>
+			<xsd:enumeration value="noTactileStrip"/>
+			<xsd:enumeration value="unknown"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="PathDirectionEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for flow direction.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="oneWay"/>
+			<xsd:enumeration value="twoWay"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="TransitionEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for path transition.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="up"/>
+			<xsd:enumeration value="down"/>
+			<xsd:enumeration value="level"/>
+			<xsd:enumeration value="upAndDown"/>
+			<xsd:enumeration value="downAndUp"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="TiltTypeEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for tilt. +v1.1</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="strongLeftTilt"/>
+			<xsd:enumeration value="mediumLeftTilt"/>
+			<xsd:enumeration value="nearlyFlat"/>
+			<xsd:enumeration value="mediumRightTilt"/>
+			<xsd:enumeration value="strongRightTilt"/>
+			<xsd:enumeration value="unknown"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="AccessibilityAssessmentRefStructure">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
 	<!-- parte aggiuntiva legata al parking diversa dalla versione povera dell'epip -->
 	<xsd:complexType name="parkingsL2_RelStructure">
 		<xsd:sequence>
@@ -1406,11 +4234,11 @@ for Frame. Default is SI Metres.</xsd:documentation>
 		</xsd:sequence>
 	</xsd:group>
 	<!-- versioni aggiornate per routes (fine) -->
-	<!-- versioni aggiornate per lines (fine) -->
+	<!-- versioni aggiornate per lines (inizio) -->
 	<xsd:complexType name="linesL2_RelStructure">
-		<xsd:choice>
-			<xsd:element name="Line" type="LineL2Structure" maxOccurs="unbounded"/>
-			<xsd:element ref="FlexibleLine" maxOccurs="unbounded">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element name="Line" type="LineL2Structure"/>
+			<xsd:element name="FlexibleLine" type="FlexibleLineL2Structure">
 				<xsd:annotation>
 					<xsd:documentation>A group of FLEXIBLE ROUTEs of which is generally known to the public by a similar name or number and which have common booking arrangements.</xsd:documentation>
 				</xsd:annotation>
@@ -1424,7 +4252,7 @@ for Frame. Default is SI Metres.</xsd:documentation>
 			<xsd:group ref="LineGroupL2"/>
 		</xsd:sequence>
 		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
-	</xsd:complexType>
+    </xsd:complexType>
 	<xsd:group name="LineGroupL2">
 		<xsd:sequence>
 			<xsd:element ref="Name"/>
@@ -1435,6 +4263,12 @@ for Frame. Default is SI Metres.</xsd:documentation>
 			<xsd:element ref="Url" minOccurs="0"/>
 			<xsd:element ref="PublicCode" minOccurs="0"/>
 			<xsd:element ref="PrivateCode" minOccurs="0"/>
+			<!-- aggiunto ExternalLineRef per level 2 -->
+			<xsd:element name="ExternalLineRef" type="ExternalObjectRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>An alternative  code that uniquely identifies the LINE specifically for use in AVMS systems. For VDV compatibility.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 			<xsd:choice minOccurs="0">
 				<xsd:element ref="OperatorRef"/>
 				<xsd:element ref="AuthorityRef"/>
@@ -1475,6 +4309,38 @@ PATTERN for POINTs ON ROUTE, and the SERVICE LINKs for ROUTE LINKs </xsd:documen
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:group>
+	<xsd:complexType name="ExternalObjectRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for a reference.to an external object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:normalizedString">
+				<xsd:attribute name="type" type="xsd:normalizedString">
+					<xsd:annotation>
+						<xsd:documentation>Type of reference.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="ref" type="xsd:normalizedString" use="required">
+					<xsd:annotation>
+						<xsd:documentation>Reference to an entity in an external system.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="FlexibleLineL2Structure">
+		<xsd:sequence>
+			<xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:group ref="LineGroupL2"/>
+			<xsd:element name="FlexibleLineType" type="FlexibleLineTypeEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Type of FLEXIBLE LINE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="BookingArrangementsGroup"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+    </xsd:complexType>
 	<!-- versioni aggiornate per lines (fine) -->
 	<!-- versioni aggiornate per destinationDisplays (inizio) -->
 	<xsd:complexType name="destinationDisplaysL2_RelStructure">
@@ -1603,6 +4469,12 @@ PATTERN for POINTs ON ROUTE, and the SERVICE LINKs for ROUTE LINKs </xsd:documen
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="gml:LineString" minOccurs="0"/>
+			<!-- aggiunto per livello 2 -->
+			<xsd:element name="projections" type="projections_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>PROJECTIONs of the LINK.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 			<xsd:element ref="FromPointRef">
 				<xsd:annotation>
 					<xsd:documentation>Identifier of SCHEDULED STOP POINT from which Link starts.</xsd:documentation>
@@ -1618,6 +4490,33 @@ PATTERN for POINTs ON ROUTE, and the SERVICE LINKs for ROUTE LINKs </xsd:documen
 		</xsd:sequence>
 		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
 	</xsd:complexType>
+	<xsd:complexType name="projections_RelStructure">
+		<xsd:sequence>
+			<xsd:choice maxOccurs="unbounded">
+				<xsd:element name="LinkSequenceProjectionRef" type="LinkSequenceProjectionRefStructure"/>
+				<xsd:element name="LinkSequenceProjection" type="LinkSequenceProjection_VersionStructure"/>
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="ModificationSetAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:complexType name="LinkSequenceProjectionRefStructure">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+	<xsd:complexType name="LinkSequenceProjection_VersionStructure">
+		<xsd:choice>
+			<xsd:element name="points" type="pointRefs_RelStructure" minOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>POINTs in PROJECTION.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="gml:LineString" maxOccurs="1"/>
+		</xsd:choice>
+        <xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+    </xsd:complexType>
 	<!-- versioni aggiornate per serviceLinks (fine) -->
 	<!-- versioni aggiornate per stopAreas (inizio) -->
 	<xsd:complexType name="stopAreas_RelStructure">
@@ -2046,7 +4945,7 @@ describing the stop sequence in the EPIP).</xsd:documentation>
 					<xsd:documentation>Requirements for TRAIN SIZE.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element ref="FlexibleServiceProperties" minOccurs="0"/>
+			<xsd:element name="FlexibleServiceProperties" type="FlexibleServicePropertiesL2_VersionStructure" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:group>
 	<xsd:complexType name="LineViewStructure">
@@ -2132,6 +5031,105 @@ describing the stop sequence in the EPIP).</xsd:documentation>
 			</xsd:extension>
         </xsd:simpleContent>
     </xsd:complexType>
+	<xsd:complexType name="FlexibleServicePropertiesL2_VersionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for FLEXIBLE SERVICE PROPERTies.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="DataManagedObjectElement_Group"/>
+			<xsd:element ref="TypeOfFlexibleServiceRef" minOccurs="0"/>
+			<xsd:element name="FlexibleServiceType" type="FlexibleServiceEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Flexible service type is FixedPassingTimes/DynamicPassingTimes/FixedHeadwayFrequency (in the last value, this provides a maximum waiting time, but no passing time is defined, all is done dynamically depending on the demand). A NotFlexible value is probably also required to clearly state that a Stop (i.e. Point in JP) is not flexible when others are.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="CancellationPossible" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether cancellation is always possible (meaning the Operator can decided to cancel, usually because there are not enough people, or they are too busy to run service).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ChangeOfTimePossible" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether the time of the service may be altered.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="BookingArrangementsL2Group"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="DataManagedObjectAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:group name="BookingArrangementsL2Group">
+		<xsd:annotation>
+			<xsd:documentation>Elements for BOOKING ARRANGEMENTs.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="BookingContact" type="ContactDetailsL2Structure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Contact for Booking. +v1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="BookingMethods" type="BookingMethodListOfEnumerations" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Allowed Ways of Making a BOOKING.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="BookingAccess" type="BookingAccessEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Who can make a booking. Default is public.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="BookWhen" type="PurchaseWhenEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>When Booking can be made. +V1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="BuyWhen" type="PurchaseMomentListOfEnumerations" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>When purchase can be made.  +V1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="LatestBookingTime" type="binding_friendly_time" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Latest time in day that booking can be made.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MinimumBookingPeriod" type="xsd:duration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Minimum interval in advance of departure day or time that Service may be ordered.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MaximumBookingPeriod" type="xsd:duration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Maximum interval in advance of departure day or time that Service may be ordered. +V1.2..2</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="BookingUrl" type="xsd:anyURI" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>URL for booking. +V1.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="BookingNote" type="MultilingualString" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Note about booking the FLEXIBLE LINE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:complexType name="ContactDetailsL2Structure">
+		<xsd:sequence>
+			<xsd:element ref="Email" minOccurs="0"/>
+			<xsd:element ref="Phone" minOccurs="0"/>
+			<xsd:element ref="Url" minOccurs="0"/>
+			<!-- aggiunta per livello 2 -->
+			<xsd:element name="ContactRef" type="ContactRefStructure" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ContactRefStructure">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:normalizedString">
+				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
 	<!-- versioni aggiornate per vehicleJourneys (fine) -->
 	<!-- versioni aggiunte per typesOfService (inizio) -->
 	<xsd:complexType name="typesOfService_RelStructure">

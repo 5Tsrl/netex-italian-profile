@@ -21,7 +21,7 @@
             <xsd:element ref="typesOfValue" minOccurs="0"/>
             <xsd:element name="organisations" type="organisationsL3Structure" minOccurs="0"/>
 			<xsd:element name="groupsOfOperators" type="groupsOfOperatorsStructure" minOccurs="0"/>
-            <xsd:element ref="equipments" minOccurs="0"/>
+            <xsd:element name="equipments" type="equipmentsL2_RelStructure" minOccurs="0"/>
             <xsd:element name="vehicleTypes" type="vehicleTypesL2Structure" minOccurs="0"/>
 			<xsd:element name="vehicleModels" type="vehicleModelsStructure" minOccurs="0"/>
 			<xsd:element name="vehicles" type="vehiclesStructure" minOccurs="0"/>
