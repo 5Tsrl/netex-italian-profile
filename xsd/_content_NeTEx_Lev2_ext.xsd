@@ -724,7 +724,6 @@ more focused on translations).</xsd:documentation>
 	<xsd:complexType name="PassengerEquipmentRefStructure">
 		<xsd:simpleContent>
 			<xsd:extension base="EquipmentRefStructure">
-				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
 			</xsd:extension>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -806,7 +805,6 @@ more focused on translations).</xsd:documentation>
 	<xsd:complexType name="AccessEquipmentRefStructure">
 		<xsd:simpleContent>
 			<xsd:extension base="EquipmentRefStructure">
-				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
 			</xsd:extension>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -1017,7 +1015,6 @@ more focused on translations).</xsd:documentation>
 	<xsd:complexType name="CommunicationServiceRefStructure">
 		<xsd:simpleContent>
 			<xsd:extension base="EquipmentRefStructure">
-				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
 			</xsd:extension>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -1078,7 +1075,6 @@ more focused on translations).</xsd:documentation>
 	<xsd:complexType name="CycleStorageEquipmentRefStructure">
 		<xsd:simpleContent>
 			<xsd:extension base="EquipmentRefStructure">
-				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
 			</xsd:extension>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -1279,7 +1275,6 @@ more focused on translations).</xsd:documentation>
 	<xsd:complexType name="EscalatorEquipmentRefStructure">
 		<xsd:simpleContent>
 			<xsd:extension base="AccessEquipmentRefStructure">
-				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
 			</xsd:extension>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -1339,7 +1334,6 @@ more focused on translations).</xsd:documentation>
 	<xsd:complexType name="HeadingSignRefStructure">
 		<xsd:simpleContent>
 			<xsd:extension base="EquipmentRefStructure">
-				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
 			</xsd:extension>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -1396,7 +1390,6 @@ more focused on translations).</xsd:documentation>
 	<xsd:complexType name="HelpPointEquipmentRefStructure">
 		<xsd:simpleContent>
 			<xsd:extension base="PassengerEquipmentRefStructure">
-				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
 			</xsd:extension>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -1477,7 +1470,6 @@ more focused on translations).</xsd:documentation>
 	<xsd:complexType name="LiftCallEquipmentRefStructure">
 		<xsd:simpleContent>
 			<xsd:extension base="AccessEquipmentRefStructure">
-				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
 			</xsd:extension>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -1702,7 +1694,6 @@ more focused on translations).</xsd:documentation>
 	<xsd:complexType name="LiftEquipmentRefStructure">
 		<xsd:simpleContent>
 			<xsd:extension base="AccessEquipmentRefStructure">
-				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
 			</xsd:extension>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -1794,7 +1785,6 @@ more focused on translations).</xsd:documentation>
 	<xsd:complexType name="LuggageLockerEquipmentRefStructure">
 		<xsd:simpleContent>
 			<xsd:extension base="EquipmentRefStructure">
-				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
 			</xsd:extension>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -1934,7 +1924,6 @@ more focused on translations).</xsd:documentation>
 	<xsd:complexType name="PassengerInformationEquipmentRefStructure">
 		<xsd:simpleContent>
 			<xsd:extension base="PassengerEquipmentRefStructure">
-				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
 			</xsd:extension>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -2019,7 +2008,6 @@ more focused on translations).</xsd:documentation>
 	<xsd:complexType name="PassengerSafetyEquipmentRefStructure">
 		<xsd:simpleContent>
 			<xsd:extension base="PassengerEquipmentRefStructure">
-				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
 			</xsd:extension>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -2150,7 +2138,6 @@ more focused on translations).</xsd:documentation>
 	<xsd:complexType name="RampEquipmentRefStructure">
 		<xsd:simpleContent>
 			<xsd:extension base="AccessEquipmentRefStructure">
-				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
 			</xsd:extension>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -2195,7 +2182,6 @@ more focused on translations).</xsd:documentation>
 	<xsd:complexType name="RoughSurfaceRefStructure">
 		<xsd:simpleContent>
 			<xsd:extension base="AccessEquipmentRefStructure">
-				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
 			</xsd:extension>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -2288,7 +2274,6 @@ more focused on translations).</xsd:documentation>
 	<xsd:complexType name="ShelterEquipmentRefStructure">
 		<xsd:simpleContent>
 			<xsd:extension base="EquipmentRefStructure">
-				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
 			</xsd:extension>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -2374,7 +2359,6 @@ more focused on translations).</xsd:documentation>
 	<xsd:complexType name="StaircaseEquipmentRefStructure">
 		<xsd:simpleContent>
 			<xsd:extension base="AccessEquipmentRefStructure">
-				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
 			</xsd:extension>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -2686,7 +2670,6 @@ more focused on translations).</xsd:documentation>
 	<xsd:complexType name="TicketingEquipmentRefStructure">
 		<xsd:simpleContent>
 			<xsd:extension base="PassengerEquipmentRefStructure">
-				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
 			</xsd:extension>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -2754,7 +2737,6 @@ more focused on translations).</xsd:documentation>
 	<xsd:complexType name="TicketValidatorEquipmentRefStructure">
 		<xsd:simpleContent>
 			<xsd:extension base="PassengerEquipmentRefStructure">
-				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
 			</xsd:extension>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -2896,7 +2878,6 @@ more focused on translations).</xsd:documentation>
 	<xsd:complexType name="EntranceEquipmentRefStructure">
 		<xsd:simpleContent>
 			<xsd:extension base="AccessEquipmentRefStructure">
-				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
 			</xsd:extension>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -2954,7 +2935,6 @@ more focused on translations).</xsd:documentation>
 	<xsd:complexType name="AssistanceServiceRefStructure">
 		<xsd:simpleContent>
 			<xsd:extension base="EquipmentRefStructure">
-				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
 			</xsd:extension>
 		</xsd:simpleContent>
 	</xsd:complexType>

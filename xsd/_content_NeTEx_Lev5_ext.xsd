@@ -203,7 +203,6 @@
 	<xsd:complexType name="AccessVehicleEquipmentRefStructure">
 		<xsd:simpleContent>
 			<xsd:extension base="PassengerEquipmentRefStructure">
-				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
 			</xsd:extension>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -251,7 +250,7 @@
 			</xsd:element>
 			<xsd:element name="WheelchairTurningCircle" type="LengthType" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Height of Access Area.</xsd:documentation>
+					<xsd:documentation>Wheelchair turning circle.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="CompanionSeat" type="xsd:boolean" minOccurs="0">
@@ -268,7 +267,6 @@
 		</xsd:annotation>
 		<xsd:simpleContent>
 			<xsd:extension base="PassengerEquipmentRefStructure">
-				<xsd:attributeGroup ref="VersionOfObjectRefAttributeGroup"/>
 			</xsd:extension>
 		</xsd:simpleContent>
 	</xsd:complexType>
