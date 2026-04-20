@@ -24471,6 +24471,10 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 					<!--- =======Tipi veicolo 5T======== -->
 					<vehicleModelProfiles>
 						<CycleModelProfile id="IT:ITC1:CycleModelProfile:BikeSharingTorino:vehicleType:Bike01" version="1">
+							<ValidBetween>
+								<FromDate>2026-01-01T00:00:00.000+02:00</FromDate>
+								<ToDate>2026-12-31T23:59:59.000+02:00</ToDate>
+							</ValidBetween>
 							<ChildSeat>olderChild</ChildSeat>
 							<Battery>false</Battery>
 							<Lamps>true</Lamps>
@@ -24479,6 +24483,10 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 							<Lock>true</Lock>
 						</CycleModelProfile>
 						<CycleModelProfile id="IT:ITC1:CycleModelProfile:BikeSharingTorino:vehicleType:Bike02" version="1">
+							<ValidBetween>
+								<FromDate>2026-01-01T00:00:00.000+02:00</FromDate>
+								<ToDate>2026-12-31T23:59:59.000+02:00</ToDate>
+							</ValidBetween>
 							<ChildSeat>olderChild</ChildSeat>
 							<Battery>true</Battery>
 							<Lamps>true</Lamps>
@@ -24776,6 +24784,10 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 					</vehicleTypes>
 					<vehicleModelProfiles>
 						<CarModelProfile id="IT:ITC1:CarModelProfile:CarSharingTorino:vehicleModel:Car01" version="1">
+							<ValidBetween>
+								<FromDate>2026-01-01T00:00:00.000+02:00</FromDate>
+								<ToDate>2026-12-31T23:59:59.000+02:00</ToDate>
+							</ValidBetween>
 							<ChildSeat>baby</ChildSeat>
 							<Seats>4</Seats>
 							<Doors>5</Doors>
@@ -24793,6 +24805,10 @@ NeTEX italian Profile EPIP + Level 2 + Fare + Alternative Modes Revisione 2023-0
 							<SkiRack>false</SkiRack>
 						</CarModelProfile>
 						<CarModelProfile id="IT:ITC1:CarModelProfile:CarSharingTorino:vehicleModel:Car02" version="1">
+							<ValidBetween>
+								<FromDate>2026-01-01T00:00:00.000+02:00</FromDate>
+								<ToDate>2026-12-31T23:59:59.000+02:00</ToDate>
+							</ValidBetween>
 							<ChildSeat>baby</ChildSeat>
 							<Seats>4</Seats>
 							<Doors>5</Doors>
